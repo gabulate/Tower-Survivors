@@ -7,10 +7,15 @@ namespace TowerSurvivors.PlayerScripts
     public class MovementController : MonoBehaviour
     {
         public float Speed = 10;
-        public GameObject charachter;
+        public SpriteRenderer _sprite;
 
         [SerializeField]
         private Vector2 _input;
+
+        private void Awake()
+        {
+            TryGetComponent(out _sprite);
+        }
 
         void Update()
         {
@@ -25,11 +30,11 @@ namespace TowerSurvivors.PlayerScripts
 
             if (_input.x > 0)
             {
-                charachter.transform.localScale = new Vector3(1, 1, 1);
+                _sprite.flipX = false;
             }
             else if (_input.x < 0)
             {
-                charachter.transform.localScale = new Vector3(-1, 1, 1);
+                _sprite.flipX = true;
             }
         }
     }

@@ -8,18 +8,19 @@ namespace TowerSurvivors.PlayerScripts
 {
     public class PlayerHealth : MonoBehaviour
     {
+        [SerializeField]
         private SpriteRenderer _sprite;
 
         [SerializeField]
         private bool _isInvincible = false;
-        private LayerMask _enemyLayer = 1 << 6;
+        //private LayerMask _enemyLayer = 1 << 6;
 
         public float health = 100f;
         public float invulnerableTime = 0.2f;
 
         private void Awake()
         {
-            _sprite = GetComponent<SpriteRenderer>();
+            TryGetComponent(out _sprite);
         }
 
         public void TakeDamage(float damage)
@@ -40,6 +41,11 @@ namespace TowerSurvivors.PlayerScripts
                 StartCoroutine(Invincivility(invulnerableTime));
         }
 
+        /// <summary>
+        /// Makes the player inmune to attacks for the amount of seconds given.
+        /// </summary>
+        /// <param name="seconds">Number of seconds that the player will be invulnerable.</param>
+        /// <returns></returns>
         IEnumerator Invincivility(float seconds)
         {
             _isInvincible = true;
@@ -59,19 +65,13 @@ namespace TowerSurvivors.PlayerScripts
             _isInvincible = false;
         }
 
+        /// <summary>
+        /// Restarts the current level.
+        /// </summary>
         public void Die()
         {
             Debug.Log("te has morido :(");
             StartCoroutine(RestartLevel());
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (_enemyLayer == (_enemyLayer | (1 << other.gameObject.layer)))
-            {
-                Enemy e = other.GetComponent<Enemy>();
-                Debug.Log(other.gameObject + " did " + e.damage + " damage.");
-            }
         }
 
         private IEnumerator RestartLevel()
