@@ -355,7 +355,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -426,8 +426,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2.16, y: 2.7006595}
-    newSize: {x: 2.16, y: 2.7006595}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b0d086105a2ce46a618fb3b91de047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 2.5
   _sprite: {fileID: 0}
   _input: {x: 0, y: 0}
 --- !u!4 &599981223
@@ -568,12 +568,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4546780517243948922, guid: ab30e6782522a5c40aa2d8d7da838eb6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a154932b59f22b847ba6f9d28d1a02ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.16, y: 2.7006595}
+  m_Size: {x: 0.64, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -15722,12 +15722,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7e7f6de9ccb554a90adde3e1e996bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  range: 0
   damage: 10
   attackCooldown: 1
   currentCooldown: 0
   areaSize: 1
+  projectileSpeed: 2
   projectileAmnt: 1
-  passTroughAmnt: 0
+  passThroughAmnt: 0
 --- !u!212 &1194588235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15878,7 +15882,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743500331}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 1, z: 0}
+  m_CellSize: {x: 0.5, y: 0.5, z: 0}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
