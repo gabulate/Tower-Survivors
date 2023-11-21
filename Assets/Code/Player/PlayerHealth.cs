@@ -6,22 +6,17 @@ using UnityEngine.SceneManagement;
 
 namespace TowerSurvivors.PlayerScripts
 {
+    /// <summary>
+    /// MonoBehaviour that keeps track of the player's health, takes damage and dies.
+    /// </summary>
     public class PlayerHealth : MonoBehaviour
     {
-        [SerializeField]
-        private SpriteRenderer _sprite;
-
         [SerializeField]
         private bool _isInvincible = false;
         //private LayerMask _enemyLayer = 1 << 6;
 
         public float health = 100f;
         public float invulnerableTime = 0.2f;
-
-        private void Awake()
-        {
-            TryGetComponent(out _sprite);
-        }
 
         public void TakeDamage(float damage)
         {
@@ -36,9 +31,10 @@ namespace TowerSurvivors.PlayerScripts
             {
                 Die();
             }
-
-            if (gameObject.activeSelf)
+            else
+            {
                 StartCoroutine(Invincivility(invulnerableTime));
+            }
         }
 
         /// <summary>
@@ -58,7 +54,7 @@ namespace TowerSurvivors.PlayerScripts
             while (elapsedTime < seconds)
             {
                 elapsedTime += Time.deltaTime;
-                _sprite.material.color = Color.Lerp(initialColor, targetColor, elapsedTime / seconds);
+                Player.Sprite.material.color = Color.Lerp(initialColor, targetColor, elapsedTime / seconds);
                 yield return null;
             }
 
@@ -66,19 +62,18 @@ namespace TowerSurvivors.PlayerScripts
         }
 
         /// <summary>
-        /// Restarts the current level.
+        /// Plays an animation when dying and calls the method Die() on The Player class
         /// </summary>
         public void Die()
         {
             Debug.Log("te has morido :(");
-            StartCoroutine(RestartLevel());
+
+            _isInvincible = true;
+            Player.Movement.EnableMovement(false);
+            Player.Sprite.material.color = Color.black;
+            Player.Instance.Die();
         }
 
-        private IEnumerator RestartLevel()
-        {
-            _sprite.enabled = false;
-            yield return new WaitForSeconds(5);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+        
     }
 }

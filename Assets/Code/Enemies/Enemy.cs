@@ -30,7 +30,6 @@ namespace TowerSurvivors.Enemies
 
         public UnityEvent<Enemy> e_Die = new UnityEvent<Enemy>();
 
-        // Start is called before the first frame update
         void Start()
         {
             TryGetComponent(out _animator);
@@ -39,7 +38,7 @@ namespace TowerSurvivors.Enemies
         }
         private void FixedUpdate()
         {
-            //If current cooldown is bigger than 0, it will subtract the amount of time passed since last FixedUpdate
+            //currentCooldown is always counting down to 0, when it reaches 0, the enemy is allowed to attack
             currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
             Move();
         }
@@ -59,7 +58,7 @@ namespace TowerSurvivors.Enemies
                 //Debug.Log(gameObject.name + " HIT for " + damage + " damage!");
                 Player.Health.TakeDamage(damage);
 
-                //Sets a cooldown in between attacks
+                //Resets the cooldown
                 currentCooldown = attackCooldown;
             }
         }
@@ -74,13 +73,13 @@ namespace TowerSurvivors.Enemies
         {
             Vector3 targetPosition = Player.Instance.transform.position;
 
-            // Calculate the direction to move towards
+            //Calculate the direction to move towards
             Vector2 moveDirection = (targetPosition - transform.position).normalized;
 
-            // Apply force to the Rigidbody
-            _rb.velocity = new Vector2(moveDirection.x * speed, moveDirection.y * speed);
+            //Apply force to the Rigidbody
+            _rb.velocity = new Vector2(moveDirection.x * speed * Time.fixedDeltaTime, moveDirection.y * speed * Time.fixedDeltaTime);
 
-            // Flip the sprite based on the movement direction
+            //Flip the sprite based on the movement direction
             if (moveDirection.x > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
@@ -115,6 +114,7 @@ namespace TowerSurvivors.Enemies
             else
             {
                 //Something something
+                //Maybe add a sound or visual effect in the future
             }
 
             if (gameObject.activeSelf)
@@ -130,6 +130,7 @@ namespace TowerSurvivors.Enemies
         {
             isInvincible = true;
 
+            //Changes the enemie's color and fades it back to normal.
             Color initialColor = Color.red;
             Color targetColor = Color.white;
 

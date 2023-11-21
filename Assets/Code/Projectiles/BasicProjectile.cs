@@ -16,10 +16,17 @@ namespace TowerSurvivors.Projectiles
         protected Rigidbody2D _rb;
 
         public float damage = 1;
-        public int passThrough = 0;
+        public int passThrough = 0; //The amount of enemies the projectile can go through before destroying itself
         public float speed = 0;
         public Vector3 direction;
 
+        /// <summary>
+        /// Sets the projectile's attributes.
+        /// </summary>
+        /// <param name="damage">Amount of damage the projetile deals.</param>
+        /// <param name="passThrough">The amount of enemies the projectile can go through before destroying itself.</param>
+        /// <param name="speed">Speed of the projectile.</param>
+        /// <param name="direction">Direction the projetile will move towards.</param>
         public virtual void SetAttributes(float damage, int passThrough, float speed, Vector3 direction)
         {
             this.damage = damage;
@@ -30,6 +37,7 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
+            //When hitting an enemy, deals damage and subtract the passThrough property by 1.
             if(_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
@@ -43,6 +51,7 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void FixedUpdate()
         {
+            //Moves the projectile at a uniform speed in the direction given.
             _rb.velocity = direction * speed;
         }
 
