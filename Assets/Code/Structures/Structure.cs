@@ -11,6 +11,7 @@ namespace TowerSurvivors
     /// </summary>
     public class Structure : MonoBehaviour
     {
+        protected static readonly LayerMask _enemyLayer = 1 << 6;
         protected Animator _animator;
 
         public GameObject prefab;
@@ -21,6 +22,7 @@ namespace TowerSurvivors
         public float currentCooldown = 0f;
         public float areaSize = 1;
         public float projectileSpeed = 2;
+        public float duration = 5f;
         public int projectileAmnt = 1;
         public int passThroughAmnt = 0;
 
@@ -38,21 +40,49 @@ namespace TowerSurvivors
             if(currentCooldown <= 0)
             {
                 Attack();
+                currentCooldown = attackCooldown;
             }
         }
 
         protected void Attack()
         {
-            //TODO: GET THE CLOSEST TARGET
+            //GET THE CLOSEST TARGET WITHIN RANGE
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range, _enemyLayer);
+            Transform targetObject = null;
+            float closestDistance = float.MaxValue;
 
-            //TODO: TAKE INTO ACCOUNT THE ROTATION OF THE TOWER AND APPLY IT TO THE PROJECTILE
-            GameObject e = Instantiate(prefab, firePoint.position, firePoint.rotation);
+            foreach (Collider2D col in hits)
+            {
+                Transform targetTransform = col.transform;
 
-            //Calculates the direction of the target
-            /*Vector3 direction = (targetObject.position - e.transform.position).normalized;*/
-            //Sets the corresponding attributes to the projectile
-            /*e.GetComponent<BasicProjectile>().SetAttributes(damage, passThroughAmnt, projectileSpeed, direction);*/
-            e.transform.localScale = new Vector3(areaSize, areaSize, 1);
+                //Calculate the distance between the current target and the current position.
+                float distanceToTarget = Vector2.Distance(transform.position, targetTransform.position);
+
+                //Check if the current target is closer than the previous closest target.
+                if (distanceToTarget < closestDistance)
+                {
+                    targetObject = targetTransform;
+                    closestDistance = distanceToTarget;
+                }
+            }
+
+            if (targetObject != null)
+            {
+                //TODO: TAKE INTO ACCOUNT THE ROTATION OF THE TOWER AND APPLY IT TO THE PROJECTILE
+                //TODO: FLIP THE SPRITE ACCORDINGLY
+                GameObject e = Instantiate(prefab, firePoint.position, firePoint.rotation);
+
+                //Calculates the direction of the target
+                Vector3 direction = (targetObject.position - e.transform.position).normalized;
+                //Sets the corresponding attributes to the projectile
+                e.GetComponent<BasicProjectile>().SetAttributes(damage, passThroughAmnt, projectileSpeed, direction, duration);
+                e.transform.localScale = new Vector3(areaSize, areaSize, 1);
+            }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.DrawWireSphere(transform.position, range);
         }
     }
 }
