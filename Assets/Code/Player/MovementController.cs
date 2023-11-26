@@ -15,6 +15,8 @@ namespace TowerSurvivors.PlayerScripts
         private bool _canMove = true;
         [SerializeField]
         private Vector2 _input;
+        [SerializeField]
+        private Rigidbody2D _rb;
 
         void Update()
         {
@@ -33,6 +35,7 @@ namespace TowerSurvivors.PlayerScripts
 
         private void Move()
         {
+            _rb.velocity = Vector2.zero;
             if (!_canMove)
             {
                 Player.PlayerAnimator.SetFloat("speed", 0);

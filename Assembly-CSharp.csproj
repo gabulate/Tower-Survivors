@@ -62,6 +62,8 @@
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
     <Compile Include="Assets\Code\Player\MovementController.cs" />
+    <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\StructurePrefabsScriptableObject.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
@@ -70,8 +72,6 @@
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\StructurePrefabsScriptableObject.cs" />
-    <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\Pixel Art Top Down - Basic\Changelog.txt" />

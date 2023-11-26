@@ -12,8 +12,12 @@ namespace TowerSurvivors.Projectiles
     public class BasicProjectile : MonoBehaviour
     {
         protected static readonly LayerMask _enemyLayer = 1 << 6;
+
+        [SerializeField]
         protected Animator _animator;
+        [SerializeField]
         protected Rigidbody2D _rb;
+        [SerializeField] Collider2D _collider;
 
         protected float _timeLeft;
 
@@ -41,24 +45,17 @@ namespace TowerSurvivors.Projectiles
             _timeLeft = duration;
         }
 
-        protected void Awake()
-        {
-            _rb = GetComponent<Rigidbody2D>();
-            //_animator = GetComponent<Animator>();
-        }
-
         protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
-            //checks to avoid doing damage if it can't pass through more objects
-            if (passThrough <= 0)
-                return;
 
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
             if(_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
+                
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
                 passThrough--;
-                if(passThrough < 0)
+                //If it can't pass through anymore enemies, destroys itself.
+                if(passThrough <= -1)
                 {
                     DestroyAnim();
                 }
@@ -82,11 +79,12 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void DestroyAnim()
         {
+            _collider.enabled = false;
             if (_animator != null)
             {
                 _animator.SetTrigger("destroy");
             }
-            Destroy(gameObject, 3);
+            Destroy(gameObject, 1);
         }
     }
 }

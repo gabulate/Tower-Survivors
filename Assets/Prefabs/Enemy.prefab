@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2481510417470673281}
   - component: {fileID: 7737579253535172183}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2481510418343764498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.46, y: -0.46, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.83, y: 7.83}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -150,7 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e28974eddb838d44b1109df36618593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
+  _animator: {fileID: 5283096947707001971}
+  _rb: {fileID: 2481510418343764492}
+  _collider: {fileID: 1517514155189219189}
+  isAlive: 1
+  HP: 5
   invulnerableTime: 0.2
   isInvincible: 0
   speed: 60

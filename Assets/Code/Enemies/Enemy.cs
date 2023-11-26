@@ -14,9 +14,14 @@ namespace TowerSurvivors.Enemies
     {
         protected static readonly LayerMask _playerLayer = 1 << 3;
 
+        [SerializeField]
         protected Animator _animator;
+        [SerializeField]
         protected Rigidbody2D _rb;
+        [SerializeField]
+        protected Collider2D _collider;
 
+        public bool isAlive = true;
         public float HP = 100f;
         public float invulnerableTime = 0.2f;
         public bool isInvincible = false;
@@ -50,10 +55,17 @@ namespace TowerSurvivors.Enemies
         /// <param name="collision"></param>
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (currentCooldown > 0)
-                return;
+            if (currentCooldown <= 0 && isAlive)
+                Attack(collision.gameObject);
+        }
 
-            if(_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
+        /// <summary>
+        /// Gets the player health component and does damage accordingly
+        /// </summary>
+        /// <param name="target"></param>
+        protected void Attack(GameObject target)
+        {
+            if (_playerLayer == (_playerLayer | (1 << target.layer)))
             {
                 //Debug.Log(gameObject.name + " HIT for " + damage + " damage!");
                 Player.Health.TakeDamage(damage);
@@ -71,6 +83,13 @@ namespace TowerSurvivors.Enemies
         /// </summary>
         private void Move()
         {
+            if (!isAlive)
+            {
+                _rb.velocity = Vector2.zero;
+                return;
+            }
+                
+
             Vector3 targetPosition = Player.Instance.transform.position;
 
             //Calculate the direction to move towards
@@ -152,15 +171,19 @@ namespace TowerSurvivors.Enemies
         /// </summary>
         public void Die()
         {
+            isAlive = false;
             e_Die.Invoke(this);
-            StartCoroutine(DestroyCoroutine());
+            DestroyAnim();
         }
 
-        private IEnumerator DestroyCoroutine()
+        private void DestroyAnim()
         {
-            //Something something
-            yield return new WaitForEndOfFrame();
-            Destroy(this.gameObject);
+            _collider.enabled = false;
+            if (_animator != null)
+            {
+                _animator.SetTrigger("destroy");
+            }
+            Destroy(gameObject, 1);
         }
         #endregion
     }
