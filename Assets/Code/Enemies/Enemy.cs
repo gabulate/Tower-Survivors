@@ -126,18 +126,12 @@ namespace TowerSurvivors.Enemies
             HP -= damage;
             //Debug.Log("Damage taken: " + damage);
 
+            StartCoroutine(Invincivility(invulnerableTime));
+
             if (HP <= 0)
             {
                 Die();
             }
-            else
-            {
-                //Something something
-                //Maybe add a sound or visual effect in the future
-            }
-
-            if (gameObject.activeSelf)
-                StartCoroutine(Invincivility(invulnerableTime));
         }
 
         /// <summary>
@@ -149,21 +143,18 @@ namespace TowerSurvivors.Enemies
         {
             isInvincible = true;
 
-            //Changes the enemie's color and fades it back to normal.
-            Color initialColor = Color.red;
-            Color targetColor = Color.white;
-
             float elapsedTime = 0f;
+            _sprite.material.SetFloat("_Fade", 1);
 
             while (elapsedTime < seconds)
             {
                 elapsedTime += Time.deltaTime;
-                _sprite.material.color = Color.Lerp(initialColor, targetColor, elapsedTime / seconds);
                 yield return null;
             }
 
-            isInvincible = false;
+            _sprite.material.SetFloat("_Fade", 0);
 
+            isInvincible = false;
         }
 
         /// <summary>

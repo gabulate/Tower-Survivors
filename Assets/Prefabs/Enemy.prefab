@@ -106,7 +106,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 560f4db90b673384a8a77c997cad8ad4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   _collider: {fileID: 1517514155189219189}
   isAlive: 1
   HP: 5
-  invulnerableTime: 0.2
+  invulnerableTime: 0.15
   isInvincible: 0
   speed: 60
   damage: 10

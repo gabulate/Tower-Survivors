@@ -35,7 +35,8 @@ namespace TowerSurvivors.Projectiles
         /// <param name="speed">Speed of the projectile.</param>
         /// <param name="direction">Direction the projetile will move towards.</param>
         /// <param name="duration">Amount of time the projectile will exist before despawning.</param>
-        public virtual void SetAttributes(float damage, int passThrough, float speed, Vector3 direction, float duration)
+        /// <param name="size">The scale size of the projectile</param>
+        public virtual void SetAttributes(float damage, int passThrough, float speed, Vector3 direction, float duration, float size)
         {
             this.damage = damage;
             this.passThrough = passThrough;
@@ -43,6 +44,7 @@ namespace TowerSurvivors.Projectiles
             this.direction = direction;
             this.duration = duration;
             _timeLeft = duration;
+            transform.localScale = new Vector3(size, size, size);
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)

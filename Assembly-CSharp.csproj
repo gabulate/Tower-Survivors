@@ -72,6 +72,7 @@
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
+    <Compile Include="Assets\Code\Structures\Cannon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\Pixel Art Top Down - Basic\Changelog.txt" />
