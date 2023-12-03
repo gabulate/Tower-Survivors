@@ -10,12 +10,34 @@ namespace TowerSurvivors.PlayerScripts
     /// </summary>
     public class Player : MonoBehaviour
     {
+        //Controllers//////////////////////////////////////////////////////////////////////////////////
         public static Player Instance { get; private set; }
         public static PlayerHealth Health { get; private set; }
         public static MovementController Movement { get; private set; }
 
+        //Player Properties//////////////////////////////////////////////////////////////////////////
         public static SpriteRenderer Sprite { get; private set; }
         public static Animator PlayerAnimator { get; private set; }
+
+        [SerializeField]
+        private int _level = 1;
+        public int Level
+        {
+            get => _level;
+            private set => _level = value;
+        }
+
+        [SerializeField]
+        private int _xp = 0;
+        [SerializeField]
+        private int _XpForNextLevel = 5;
+        public int XpForNextLevel
+        {
+            get => _XpForNextLevel;
+            private set => _XpForNextLevel = value;
+        }
+
+        public int TotalXpCollected = 0;
 
         void Awake()
         {
@@ -25,6 +47,52 @@ namespace TowerSurvivors.PlayerScripts
             Sprite = GetComponentInChildren<SpriteRenderer>();
             PlayerAnimator = GetComponentInChildren<Animator>();
         }
+
+        #region Level and Xp
+
+        /// <summary>
+        /// Adds xp to the player and levels up when necessary.
+        /// </summary>
+        /// <param name="xp">Amount of xp to be added.</param>
+        public void AddXp(int xp)
+        {
+            _xp += xp;
+            TotalXpCollected += xp;
+
+            if(_xp >= XpForNextLevel)
+            {
+                LevelUp();
+            }
+        }
+
+        private void LevelUp()
+        {
+            Level++;
+
+            _xp -= XpForNextLevel;
+
+            if(Level < 20)
+            {
+                XpForNextLevel += 10;
+            }
+            else if(Level < 40)
+            {
+                XpForNextLevel += 13;
+            }
+            else
+            {
+                XpForNextLevel += 16;
+            }
+
+            //TODO: Display LevelUp Menu
+
+            if (_xp >= XpForNextLevel) //Remember to take this into account
+            {
+                LevelUp();
+            }
+        }
+        #endregion
+
 
         /// <summary>
         /// Dies! :(

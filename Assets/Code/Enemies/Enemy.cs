@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
+using TowerSurvivors.PickUps;
 using TowerSurvivors.PlayerScripts;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,6 +22,9 @@ namespace TowerSurvivors.Enemies
         protected Rigidbody2D _rb;
         [SerializeField]
         protected Collider2D _collider;
+
+        public float ChanceToDropXp = 0.4f;
+        public int Xp = 1;
 
         public bool isAlive = true;
         public float HP = 100f;
@@ -56,23 +61,20 @@ namespace TowerSurvivors.Enemies
         private void OnTriggerStay2D(Collider2D collision)
         {
             if (currentCooldown <= 0 && isAlive)
-                Attack(collision.gameObject);
+                if (_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
+                    AttackPlayer(collision.gameObject);
         }
 
         /// <summary>
         /// Gets the player health component and does damage accordingly
         /// </summary>
         /// <param name="target"></param>
-        protected void Attack(GameObject target)
+        protected void AttackPlayer(GameObject target)
         {
-            if (_playerLayer == (_playerLayer | (1 << target.layer)))
-            {
-                //Debug.Log(gameObject.name + " HIT for " + damage + " damage!");
-                Player.Health.TakeDamage(damage);
+            Player.Health.TakeDamage(damage);
 
-                //Resets the cooldown
-                currentCooldown = attackCooldown;
-            }
+            //Resets the cooldown
+            currentCooldown = attackCooldown;
         }
 
         #endregion
@@ -163,8 +165,26 @@ namespace TowerSurvivors.Enemies
         public void Die()
         {
             isAlive = false;
+            DropXp();
             e_Die.Invoke(this);
             DestroyAnim();
+        }
+
+        /// <summary>
+        /// Decides to drop xp or not based on RNG.
+        /// Gets the xp Object from a pool.
+        /// </summary>
+        protected void DropXp()
+        {
+            //TODO: RANDOM CHANCE TO GET XP
+
+            GameObject xp = GameManager.Instance.XpPool.GetPooledObject();
+            if(xp != null)
+            {
+                xp.GetComponent<XpPickUp>().Xp = Xp;
+                xp.transform.position = transform.position;
+                xp.SetActive(true);
+            }
         }
 
         private void DestroyAnim()
