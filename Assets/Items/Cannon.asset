@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcbb98f4769ed3845bf2c7ddf71f80dd, type: 3}
-  m_Name: ProjectilePrefabs
+  m_Script: {fileID: 11500000, guid: 587f46e5558d36d49be9320ad9293a82, type: 3}
+  m_Name: Cannon
   m_EditorClassIdentifier: 
-  projectilePrefabs:
-  - {fileID: 0}
+  itemName: Cannon
+  icon: {fileID: 21300000, guid: c054769a2ba117944b2e1b7baf260c5c, type: 3}
+  type: 0
+  prefab: {fileID: 3104818242787931347, guid: 406f29f4ab5b2964593ed58b00c6aa68, type: 3}

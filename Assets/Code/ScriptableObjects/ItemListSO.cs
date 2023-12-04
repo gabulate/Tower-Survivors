@@ -8,9 +8,9 @@ namespace TowerSurvivors.ScriptableObjects
     /// NOT IMPLEMENTED YET, just testing
     /// Will be used to hold the list of structures and their corresponding stats, including levelups
     /// </summary>
-    [CreateAssetMenu(fileName = "ProjectilePrefabs", menuName = "ScriptableObjects/ProjectilePrefabs")]
-    public class StructurePrefabsScriptableObject : ScriptableObject
+    [CreateAssetMenu(fileName = "ItemList", menuName = "ScriptableObjects/ItemList")]
+    public class ItemListSO : ScriptableObject
     {
-        public List<GameObject> projectilePrefabs;
+        public List<ItemSO> itemList;
     }
 }

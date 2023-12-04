@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,10 +15,13 @@ namespace TowerSurvivors.PlayerScripts
         public static Player Instance { get; private set; }
         public static PlayerHealth Health { get; private set; }
         public static MovementController Movement { get; private set; }
-
-        //Player Properties//////////////////////////////////////////////////////////////////////////
+        public static InventoryManager Inventory { get; private set; }
         public static SpriteRenderer Sprite { get; private set; }
         public static Animator PlayerAnimator { get; private set; }
+
+        //Player Properties//////////////////////////////////////////////////////////////////////////
+
+        public ItemSO startingItem;
 
         [SerializeField]
         private int _level = 1;
@@ -46,6 +50,12 @@ namespace TowerSurvivors.PlayerScripts
             Movement = GetComponent<MovementController>();
             Sprite = GetComponentInChildren<SpriteRenderer>();
             PlayerAnimator = GetComponentInChildren<Animator>();
+            Inventory = GetComponent<InventoryManager>();
+        }
+
+        private void Start()
+        {
+            Inventory.AddItem(startingItem);
         }
 
         #region Level and Xp

@@ -8,7 +8,7 @@ namespace TowerSurvivors.Game
     public class AssetsHolder : MonoBehaviour
     {
         public static AssetsHolder Instance;
-        public StructurePrefabsScriptableObject projectilePrefabs;
+        public ItemListSO itemList;
 
         private void Awake()
         {
