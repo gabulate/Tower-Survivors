@@ -57,7 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\TopDownCharacterController.cs" />
+    <Compile Include="Assets\Code\GUI\InventoryDebugger.cs" />
     <Compile Include="Assets\Code\Projectiles\AutoDestroy.cs" />
+    <Compile Include="Assets\Code\Player\InventoryManager.cs" />
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
@@ -75,13 +77,12 @@
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\Player\InventoryManager.cs" />
-    <Compile Include="Assets\Code\GUI\InventoryDebugger.cs" />
+    <Compile Include="Assets\Code\GUI\GameHUD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

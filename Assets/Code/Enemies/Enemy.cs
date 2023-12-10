@@ -62,14 +62,13 @@ namespace TowerSurvivors.Enemies
         {
             if (currentCooldown <= 0 && isAlive)
                 if (_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
-                    AttackPlayer(collision.gameObject);
+                    AttackPlayer();
         }
 
         /// <summary>
         /// Gets the player health component and does damage accordingly
         /// </summary>
-        /// <param name="target"></param>
-        protected void AttackPlayer(GameObject target)
+        protected void AttackPlayer()
         {
             Player.Health.TakeDamage(damage);
 

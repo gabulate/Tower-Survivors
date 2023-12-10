@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Enemies;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace TowerSurvivors.PlayerScripts
@@ -16,7 +17,16 @@ namespace TowerSurvivors.PlayerScripts
         //private LayerMask _enemyLayer = 1 << 6;
 
         public float health = 100f;
+        public float maxHealth = 100f;
         public float invulnerableTime = 0.2f;
+
+        public UnityEvent<float, float> e_healthChanged;
+
+        private void Start()
+        {
+            health = maxHealth;
+            e_healthChanged.Invoke(health, maxHealth);
+        }
 
         public void TakeDamage(float damage)
         {
@@ -26,6 +36,8 @@ namespace TowerSurvivors.PlayerScripts
             }
 
             health -= damage;
+            e_healthChanged.Invoke(health, maxHealth);
+
             Debug.Log("Current health: " + health);
             if (health <= 0)
             {

@@ -6,7 +6,7 @@ using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 
-namespace TowerSurvivors
+namespace TowerSurvivors.GUI
 {
     public class InventoryDebugger : MonoBehaviour
     {

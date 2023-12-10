@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace TowerSurvivors.PlayerScripts
@@ -43,6 +44,8 @@ namespace TowerSurvivors.PlayerScripts
 
         public int TotalXpCollected = 0;
 
+        public UnityEvent<int, int> e_xpChanged;
+
         void Awake()
         {
             Instance = this;
@@ -68,6 +71,7 @@ namespace TowerSurvivors.PlayerScripts
         {
             _xp += xp;
             TotalXpCollected += xp;
+            e_xpChanged.Invoke(_xp, XpForNextLevel);
 
             if(_xp >= XpForNextLevel)
             {
@@ -93,6 +97,8 @@ namespace TowerSurvivors.PlayerScripts
             {
                 XpForNextLevel += 16;
             }
+
+            e_xpChanged.Invoke(0, XpForNextLevel);
 
             //TODO: Display LevelUp Menu
 
