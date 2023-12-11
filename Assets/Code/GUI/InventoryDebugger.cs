@@ -13,6 +13,7 @@ namespace TowerSurvivors.GUI
         public TMP_Dropdown dropdown;
         public ItemListSO items;
         private List<string> _options;
+        [SerializeField]
         private string _itemName;
 
         void Start()

@@ -10,6 +10,8 @@ namespace TowerSurvivors.Game
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+
+        [Header("Object Pools")]
         public ObjectPool XpPool;
 
         void Awake()

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace TowerSurvivors
+namespace TowerSurvivors.GUI
 {
     public class GameHUD : MonoBehaviour
     {
@@ -15,17 +15,47 @@ namespace TowerSurvivors
         private void Start()
         {
             Player.Instance.e_xpChanged.AddListener(UpdateXpBar);
-            //Player.Health.e_healthChanged.AddListener(UpdateHealth);
+            Player.Health.e_healthChanged.AddListener(UpdateHealth);
         }
 
         public void UpdateXpBar(int current, int max)
         {
-            xpBar.value = (float)current / max;
+            StartCoroutine(SmoothChangeXp(0.2f, current, max));
         }
 
         public void UpdateHealth(float current, float max)
         {
-            hpBar.value = current / max;
+            StartCoroutine(SmoothChangeHealth(0.2f, current, max));
+        }
+
+        IEnumerator SmoothChangeXp(float seconds, float current, float max)
+        {
+
+            float elapsedTime = 0f;
+            float oldValue = xpBar.value;
+            float targetValue = current / max;
+
+            while (elapsedTime < seconds)
+            {
+                xpBar.value = Mathf.Lerp(oldValue, targetValue, (elapsedTime / seconds));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+        }
+
+        IEnumerator SmoothChangeHealth(float seconds, float current, float max)
+        {
+
+            float elapsedTime = 0f;
+            float oldValue = hpBar.value;
+            float targetValue = current / max;
+
+            while (elapsedTime < seconds)
+            {
+                hpBar.value = Mathf.Lerp(oldValue, targetValue, (elapsedTime / seconds));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
         }
 
         public void OnDisable()

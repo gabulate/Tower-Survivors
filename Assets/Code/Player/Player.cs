@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -12,7 +14,7 @@ namespace TowerSurvivors.PlayerScripts
     /// </summary>
     public class Player : MonoBehaviour
     {
-        //Controllers//////////////////////////////////////////////////////////////////////////////////
+        #region Player Controllers
         public static Player Instance { get; private set; }
         public static PlayerHealth Health { get; private set; }
         public static MovementController Movement { get; private set; }
@@ -20,8 +22,12 @@ namespace TowerSurvivors.PlayerScripts
         public static SpriteRenderer Sprite { get; private set; }
         public static Animator PlayerAnimator { get; private set; }
 
-        //Player Properties//////////////////////////////////////////////////////////////////////////
+        public Transform PassiveItems;
+        public Transform StructureItems;
+        #endregion
 
+        #region Player Properties
+        [Header("Player Level Properties")]
         public ItemSO startingItem;
 
         [SerializeField]
@@ -41,10 +47,20 @@ namespace TowerSurvivors.PlayerScripts
             get => _XpForNextLevel;
             private set => _XpForNextLevel = value;
         }
-
         public int TotalXpCollected = 0;
-
         public UnityEvent<int, int> e_xpChanged;
+        #endregion
+
+        #region Player Stats & Buffs
+        [Header("Stats & Buffs")]
+        public float coolDownReduction = 0f;
+        public float speedBoost = 0f;
+        public float visionDistance = 0f;
+        public float damageBoost = 0f;
+        public float projectileSpeedBoost = 0f;
+        public float areaSizeIncrease = 0f;
+        public float extraProjectileAmnt = 0f;
+        #endregion
 
         void Awake()
         {
@@ -59,6 +75,18 @@ namespace TowerSurvivors.PlayerScripts
         private void Start()
         {
             Inventory.AddItem(startingItem);
+        }
+
+        public void AddPassiveItem(ItemSO item)
+        {
+            GameObject obj = Instantiate(item.prefab, PassiveItems);
+            obj.GetComponent<PassiveItem>().ApplyEffect();
+            ApplyBuffs();
+        }
+
+        public void ApplyBuffs()
+        {
+            PassiveItem[] passiveItems = GetComponentsInChildren<PassiveItem>();
         }
 
         #region Level and Xp

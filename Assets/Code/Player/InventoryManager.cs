@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
 using TowerSurvivors.GUI;
+using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 
@@ -17,6 +19,10 @@ namespace TowerSurvivors.PlayerScripts
 
         public GameObject inventoryItemPrefab;
 
+        /// <summary>
+        /// Looks for an available item slot and does different things depending on the item type.
+        /// </summary>
+        /// <param name="item"></param>
         public void AddItem(ItemSO item)
         {
             if(item.type == ItemType.Structure)
@@ -28,13 +34,14 @@ namespace TowerSurvivors.PlayerScripts
                     if (itemInSlot == null)
                     {
                         SpawnNewItem(item, slot);
+
+
                         return;
                     }
                 }
                 Debug.LogWarning("Inventory full.");
-                //TODO: DO Something if there aren't any available slots
             }
-            else
+            else //Passive Item
             {
                 for (int i = 0; i < PassiveItemSlots.Length; i++)
                 {
@@ -43,12 +50,49 @@ namespace TowerSurvivors.PlayerScripts
                     if (itemInSlot == null)
                     {
                         SpawnNewItem(item, slot);
+                        Player.Instance.AddPassiveItem(item);
                         return;
                     }
                 }
                 Debug.LogWarning("Inventory full.");
+            }
+        }
 
-                //TODO: DO Something if there aren't any available slots
+        /// <summary>
+        /// Adds an item to the indicated slot.
+        /// </summary>
+        /// <param name="item">Scriptable Object cointaining the item's atributes.</param>
+        /// <param name="slot">Slot where the item will be added.</param>
+        private void SpawnNewItem(ItemSO item, InventorySlot slot)
+        {
+            GameObject newItemGO = Instantiate(inventoryItemPrefab, slot.transform);
+            InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
+            inventoryItem.InitialiseItem(item);
+        }
+
+        /// <summary>
+        /// Deletes all the items from all of the slots.
+        /// </summary>
+        public void DeleteAllItems()
+        {
+            for (int i = 0; i < StructureSlots.Length; i++)
+            {
+                InventorySlot slot = StructureSlots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                if (itemInSlot != null)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+            }
+
+            for (int i = 0; i < PassiveItemSlots.Length; i++)
+            {
+                InventorySlot slot = PassiveItemSlots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                if (itemInSlot != null)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
             }
         }
 
@@ -88,45 +132,6 @@ namespace TowerSurvivors.PlayerScripts
             }
 
             return false;
-        }
-
-
-        /// <summary>
-        /// Adds an item to the indicated slot.
-        /// </summary>
-        /// <param name="item">Scriptable Object cointaining the item's atributes.</param>
-        /// <param name="slot">Slot where the item will be added.</param>
-        private void SpawnNewItem(ItemSO item, InventorySlot slot)
-        {
-            GameObject newItemGO = Instantiate(inventoryItemPrefab, slot.transform);
-            InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
-            inventoryItem.InitialiseItem(item);
-        }
-
-        /// <summary>
-        /// Deletes all the items from all of the slots.
-        /// </summary>
-        public void DeleteAllItems()
-        {
-            for (int i = 0; i < StructureSlots.Length; i++)
-            {
-                InventorySlot slot = StructureSlots[i];
-                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-                if (itemInSlot != null)
-                {
-                    Destroy(itemInSlot.gameObject);
-                }
-            }
-
-            for (int i = 0; i < PassiveItemSlots.Length; i++)
-            {
-                InventorySlot slot = PassiveItemSlots[i];
-                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-                if (itemInSlot != null)
-                {
-                    Destroy(itemInSlot.gameObject);
-                }
-            }
         }
     }
 }

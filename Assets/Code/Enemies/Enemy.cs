@@ -23,6 +23,7 @@ namespace TowerSurvivors.Enemies
         [SerializeField]
         protected Collider2D _collider;
 
+        [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
         public int Xp = 1;
 
@@ -175,11 +176,13 @@ namespace TowerSurvivors.Enemies
         /// </summary>
         protected void DropXp()
         {
-            //TODO: RANDOM CHANCE TO GET XP
-
             GameObject xp = GameManager.Instance.XpPool.GetPooledObject();
             if(xp != null)
             {
+                float randomValue = Random.Range(0f, 1f);
+                if (randomValue > ChanceToDropXp)
+                    return;
+
                 xp.GetComponent<XpPickUp>().Xp = Xp;
                 xp.transform.position = transform.position;
                 xp.SetActive(true);
