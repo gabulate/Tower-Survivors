@@ -17,11 +17,13 @@ namespace TowerSurvivors.Structures
         protected Animator _animator;
         [SerializeField]
         protected Transform _firePoint;
-        
+
+        public bool canAttack = false;
 
         public GameObject prefab;
         public Transform targetObject;
         protected Vector3 _targetPos;
+
         public float range;
         public float damage = 10f;
         public float attackCooldown = 1f;
@@ -33,6 +35,15 @@ namespace TowerSurvivors.Structures
         public float timeBetweenMultipleShots = 0.5f; //In case projectileAmnt is bigger than 1;
         public int passThroughAmnt = 0;
 
+        public bool uniqueOrientation = true;
+        private Orientation _orientation;
+
+        private void OnEnable()
+        {
+            //Override this function for strucutres with multiple orientations.
+            transform.rotation = Quaternion.Euler(Vector3.zero);
+        }
+
         protected virtual void FixedUpdate()
         {
             //Method to override
@@ -42,6 +53,11 @@ namespace TowerSurvivors.Structures
         {
              //TODO: Add a stat counter for everytime this structure attacks
              //Override for the attack
+        }
+
+        public virtual void ChangeOrientation(Orientation orientation)
+        {
+            _orientation = orientation;
         }
 
         protected virtual IEnumerator SpawnProjectile(float delay)
@@ -56,5 +72,13 @@ namespace TowerSurvivors.Structures
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(transform.position, range);
         }
+    }
+
+    public enum Orientation
+    {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
     }
 }

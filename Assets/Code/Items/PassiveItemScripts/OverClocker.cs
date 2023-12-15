@@ -10,6 +10,7 @@ namespace TowerSurvivors.PassiveItems
     {
         public override void ApplyEffect()
         {
+            //Gives the player the amount of cooldown reduction set by the levels Scriptable Object
             Player.Instance.coolDownReduction = EffectLevels.EffectIntensityByLevel[level - 1];
         }
 

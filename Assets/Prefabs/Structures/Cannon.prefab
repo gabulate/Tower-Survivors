@@ -314,7 +314,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104818242787931351}
-  - component: {fileID: 3104818242787931346}
   - component: {fileID: 3104818242787931350}
   - component: {fileID: 3104818242787931349}
   m_Layer: 0
@@ -342,18 +341,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3104818242787931346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3104818242787931347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fdffc19570ab046851f97c4676acb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &3104818242787931350
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -384,6 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 3104818241496701934}
   _firePoint: {fileID: 3104818242012436481}
+  canAttack: 0
   prefab: {fileID: 3666265593167655993, guid: 7f1463107b0ac6a42afd0f43b5e1617b, type: 3}
   targetObject: {fileID: 0}
   range: 4
@@ -396,4 +384,5 @@ MonoBehaviour:
   projectileAmnt: 1
   timeBetweenMultipleShots: 0.5
   passThroughAmnt: 0
+  uniqueOrientation: 1
   _cannon: {fileID: 3104818241496701928}

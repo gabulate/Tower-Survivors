@@ -81,7 +81,7 @@ namespace TowerSurvivors.PlayerScripts
             Debug.Log("te has morido :(");
 
             _isInvincible = true;
-            Player.Movement.EnableMovement(false);
+            Player.PlayerInput.EnableMovement(false);
             Player.Sprite.material.color = Color.black;
             Player.Instance.Die();
         }

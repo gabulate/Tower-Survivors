@@ -12,6 +12,9 @@ namespace TowerSurvivors.Structures
 
         protected override void FixedUpdate()
         {
+            if (!canAttack)
+                return;
+
             //If current cooldown is bigger than 0, it will subtract the amount of time passed since last FixedUpdate
             currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
             RotateCannon();

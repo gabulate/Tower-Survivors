@@ -65,7 +65,6 @@
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
-    <Compile Include="Assets\Code\Player\MovementController.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
@@ -74,18 +73,21 @@
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
     <Compile Include="Assets\Code\Structures\Structure.cs" />
     <Compile Include="Assets\Code\Projectiles\BasicProjectile.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\PassiveItemLevelsSO.cs" />
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Code\Items\PassiveItemScripts\PassiveItem.cs" />
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
+    <Compile Include="Assets\Code\Items\PassiveItemScripts\OverClocker.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
+    <Compile Include="Assets\Code\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\Items\PassiveItemScripts\PassiveItem.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\PassiveItemLevelsSO.cs" />
-    <Compile Include="Assets\Code\Items\PassiveItemScripts\OverClocker.cs" />
+    <Compile Include="Assets\Code\Structures\StructureManager.cs" />
+    <Compile Include="Assets\Code\Game\EnemySpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

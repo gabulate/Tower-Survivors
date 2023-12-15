@@ -17,7 +17,41 @@ namespace TowerSurvivors.PlayerScripts
         public InventorySlot[] StructureSlots;
         public InventorySlot[] PassiveItemSlots;
 
-        public GameObject inventoryItemPrefab;
+        public InventoryItem selectedItem;
+
+        [SerializeField]
+        private GameObject _inventoryItemPrefab;
+
+
+        public void SelectItem(int slot)
+        {
+            if (slot >= StructureSlots.Length || slot < 0)
+                return;
+
+            if (selectedItem != null)
+            {
+                selectedItem.UnHighLight();
+                selectedItem = null;
+            }
+
+            foreach (InventorySlot s in StructureSlots)
+            {
+                s.UnHighLight();
+            }
+
+            StructureSlots[slot].GetComponent<InventorySlot>().HighLight();
+            InventoryItem item = StructureSlots[slot].GetComponentInChildren<InventoryItem>();
+            if (item == null)
+                return;
+
+            item.HighLight();
+            selectedItem = item;
+        }
+
+        public void UseItem()
+        {
+            Destroy(selectedItem.gameObject);
+        }
 
         /// <summary>
         /// Looks for an available item slot and does different things depending on the item type.
@@ -65,7 +99,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <param name="slot">Slot where the item will be added.</param>
         private void SpawnNewItem(ItemSO item, InventorySlot slot)
         {
-            GameObject newItemGO = Instantiate(inventoryItemPrefab, slot.transform);
+            GameObject newItemGO = Instantiate(_inventoryItemPrefab, slot.transform);
             InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
             inventoryItem.InitialiseItem(item);
         }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.Structures;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,13 +18,12 @@ namespace TowerSurvivors.PlayerScripts
         #region Player Controllers
         public static Player Instance { get; private set; }
         public static PlayerHealth Health { get; private set; }
-        public static MovementController Movement { get; private set; }
+        public static PlayerInputController PlayerInput { get; private set; }
         public static InventoryManager Inventory { get; private set; }
         public static SpriteRenderer Sprite { get; private set; }
         public static Animator PlayerAnimator { get; private set; }
 
         public Transform PassiveItems;
-        public Transform StructureItems;
         #endregion
 
         #region Player Properties
@@ -53,20 +53,23 @@ namespace TowerSurvivors.PlayerScripts
 
         #region Player Stats & Buffs
         [Header("Stats & Buffs")]
+        public float rangeIncrease = 0f;
+        public float damageIncrease = 0f;
         public float coolDownReduction = 0f;
-        public float speedBoost = 0f;
-        public float visionDistance = 0f;
-        public float damageBoost = 0f;
-        public float projectileSpeedBoost = 0f;
         public float areaSizeIncrease = 0f;
-        public float extraProjectileAmnt = 0f;
+        public float projectileSpeedBoost = 0f;
+        public float durationIncrease = 0f;
+        public int ProjectileAmntIncrease = 0;
+
+        public float speedBoost = 0f;
+        public float visionBoost = 0f;
         #endregion
 
         void Awake()
         {
             Instance = this;
             Health = GetComponent<PlayerHealth>();
-            Movement = GetComponent<MovementController>();
+            PlayerInput = GetComponent<PlayerInputController>();
             Sprite = GetComponentInChildren<SpriteRenderer>();
             PlayerAnimator = GetComponentInChildren<Animator>();
             Inventory = GetComponent<InventoryManager>();
@@ -86,7 +89,21 @@ namespace TowerSurvivors.PlayerScripts
 
         public void ApplyBuffs()
         {
-            PassiveItem[] passiveItems = GetComponentsInChildren<PassiveItem>();
+            Structure[] structures = StructureManager.Instance.GetStructures();
+
+            foreach(Structure s in structures)
+            {
+                s.range += rangeIncrease;
+                s.damage += damageIncrease;
+                s.attackCooldown -= s.attackCooldown * coolDownReduction;
+                s.areaSize += areaSizeIncrease;
+                s.projectileSpeed += projectileSpeedBoost;
+                s.duration += durationIncrease;
+                s.projectileAmnt += ProjectileAmntIncrease;
+
+            }
+            PlayerInput.Speed = PlayerInput.initialSpeed + speedBoost;
+            Camera.main.orthographicSize = 5 + visionBoost;
         }
 
         #region Level and Xp
