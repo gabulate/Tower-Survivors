@@ -93,6 +93,7 @@ namespace TowerSurvivors.PlayerScripts
 
             foreach(Structure s in structures)
             {
+                //CHANGE THIS SO IT USES THE INITIAL STRUCTURE VALUES AND DOESN'T KEEP INCREASING ON TOP OF THE BUFFS
                 s.range += rangeIncrease;
                 s.damage += damageIncrease;
                 s.attackCooldown -= s.attackCooldown * coolDownReduction;

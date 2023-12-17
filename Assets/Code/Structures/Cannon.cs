@@ -132,11 +132,5 @@ namespace TowerSurvivors.Structures
 
             _cannon.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-
-        protected override void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, range);
-        }
     }
 }

@@ -65,7 +65,12 @@ namespace TowerSurvivors.PlayerScripts
 
         private void PlaceStructure()
         {
+            //Return if the player isn't holding a structure
             if (structureSelected == null)
+                return;
+
+            //Return if the structure is not on a valid place
+            if (!structureSelected.CheckIfPlaceable())
                 return;
 
             StructureManager.Instance.PlaceStructure(structureSelected);
@@ -94,8 +99,11 @@ namespace TowerSurvivors.PlayerScripts
             {
                 selectedItemGO = Instantiate(Player.Inventory.selectedItem.item.prefab, transform);
                 structureSelected = selectedItemGO.GetComponent<Structure>();
+                structureSelected.range += Player.Instance.rangeIncrease;
+                structureSelected.EnableStructure(false);
             }
 
+            structureSelected.CheckIfPlaceable();
             //Flip accordingly
             int flipityflop = Player.Sprite.flipX ? -1 : 1;
             selectedItemGO.transform.localPosition = new Vector3(_offset * flipityflop, 0, 0);

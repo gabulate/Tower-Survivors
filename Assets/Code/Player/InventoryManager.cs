@@ -22,7 +22,10 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private GameObject _inventoryItemPrefab;
 
-
+        /// <summary>
+        /// Selects the slot number specified.
+        /// </summary>
+        /// <param name="slot">Slot number, must be in range from 0 to the amount of slots avlaiable -1.</param>
         public void SelectItem(int slot)
         {
             if (slot >= StructureSlots.Length || slot < 0)
@@ -48,6 +51,9 @@ namespace TowerSurvivors.PlayerScripts
             selectedItem = item;
         }
 
+        /// <summary>
+        /// Removes the selected Item from the Inventory
+        /// </summary>
         public void UseItem()
         {
             Destroy(selectedItem.gameObject);
@@ -68,8 +74,7 @@ namespace TowerSurvivors.PlayerScripts
                     if (itemInSlot == null)
                     {
                         SpawnNewItem(item, slot);
-
-
+                        SelectItem(i);
                         return;
                     }
                 }

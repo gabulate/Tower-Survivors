@@ -11,7 +11,7 @@ namespace TowerSurvivors.Structures
         public void PlaceStructure(Structure structure)
         {
             structure.transform.parent = transform;
-            structure.canAttack = true;
+            structure.EnableStructure(true);
         }
 
         public Structure[] GetStructures()
