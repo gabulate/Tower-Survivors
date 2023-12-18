@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78b72b20592f9f4aa2543be092d8315, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 59c2ce8d05cff134d9dd99fd701c878a, type: 2}
   _animator: {fileID: 3104818241496701934}
   _firePoint: {fileID: 3104818242012436481}
   _shadow: {fileID: 3104818242348080731}
@@ -466,16 +467,17 @@ MonoBehaviour:
   _margin: 2
   uniqueOrientation: 1
   _orientation: 0
-  range: 4
-  damage: 10
-  attackCooldown: 3
-  currentCooldown: 0
-  areaSize: 1
-  projectileSpeed: 8
-  duration: 1
-  projectileAmnt: 1
-  timeBetweenMultipleShots: 0.5
-  passThroughAmnt: 0
+  stats:
+    range: 4
+    damage: 10
+    attackCooldown: 3
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 8
+    duration: 1
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
   _cannon: {fileID: 3104818241496701928}
 --- !u!1 &7709932291148084797
 GameObject:

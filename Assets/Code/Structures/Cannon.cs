@@ -16,10 +16,10 @@ namespace TowerSurvivors.Structures
                 return;
 
             //If current cooldown is bigger than 0, it will subtract the amount of time passed since last FixedUpdate
-            currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
+            stats.currentCooldown = stats.currentCooldown <= 0 ? 0 : stats.currentCooldown - Time.fixedDeltaTime;
             RotateCannon();
 
-            if (currentCooldown <= 0)
+            if (stats.currentCooldown <= 0)
             {
                 Attack();
             }
@@ -39,7 +39,7 @@ namespace TowerSurvivors.Structures
             _targetPos = targetObject.position;
 
             //if target has left the range, forget it
-            if (Vector2.Distance(transform.position, _targetPos) > range)
+            if (Vector2.Distance(transform.position, _targetPos) > stats.range)
             {
                 targetObject = null;
                 return;
@@ -48,19 +48,19 @@ namespace TowerSurvivors.Structures
             RotateCannon();
 
             //Spawns the amount of projectiles given by calling the Coroutine multiple times each other with some delay.
-            for (int i = 0; i < projectileAmnt; i++)
+            for (int i = 0; i < stats.projectileAmnt; i++)
             {
-                StartCoroutine(SpawnProjectile(i * timeBetweenMultipleShots));
+                StartCoroutine(SpawnProjectile(i * stats.timeBetweenMultipleShots));
             }
             //Reset cooldown
-            currentCooldown = attackCooldown;
+            stats.currentCooldown = stats.attackCooldown;
         }
 
         //Tries to find the closest target and returns true if it finds one within range
         protected bool GetClosestTarget()
         {
             //GET THE CLOSEST TARGET WITHIN RANGE/////////////////////////
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, range, _enemyLayer);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, stats.range, _enemyLayer);
 
             //If didn't find any targets, return
             if (hits.Length == 0)
@@ -94,15 +94,9 @@ namespace TowerSurvivors.Structures
             //Calculates the direction of the target
             Vector3 direction = (_targetPos - e.transform.position).normalized;
             //Sets the corresponding attributes to the projectile
-            e.GetComponent<BasicProjectile>().SetAttributes(
-                damage, 
-                passThroughAmnt, 
-                projectileSpeed, 
-                direction, 
-                duration, 
-                areaSize);
+            e.GetComponent<BasicProjectile>().SetAttributes(stats, direction);
 
-            e.transform.localScale = new Vector3(areaSize, areaSize, 1);
+            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
 
             //Play firing animation
             _animator.ResetTrigger("fire");

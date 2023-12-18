@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ namespace TowerSurvivors.Game
     {
         public static GameManager Instance;
 
+        public static bool isPaused = false;
+
         [Header("Object Pools")]
         public ObjectPool XpPool;
 
@@ -20,6 +23,23 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
-        }    
+        }
+
+        public void LevelUp()
+        {
+            LevelUpMenu.Instance.LevelUp();
+        }
+
+        public static void PauseGame(bool paused)
+        {
+            isPaused = paused;
+            Time.timeScale = paused ? 0 : 1;
+        }
+
+        internal static void TogglePause()
+        {
+            isPaused = !isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
+        }
     }
 }

@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  EffectLevels: {fileID: 11400000, guid: d5fdbd9623647524c86f85de4a032e0f, type: 2}
+  item: {fileID: 11400000, guid: 50aca50bd21149f44b982816c2d5c32c, type: 2}

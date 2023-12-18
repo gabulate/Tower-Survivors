@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
 using TowerSurvivors.Structures;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace TowerSurvivors.PlayerScripts
 {
@@ -20,7 +22,7 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private Rigidbody2D _rb;
         [SerializeField]
-        private float _offset = 1f;
+        private float _placingRange = 1f;
         [SerializeField]
         private int selectedItemIndex = 0;
         [SerializeField]
@@ -28,8 +30,23 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private Structure structureSelected;
 
+        private Camera _cam;
+
+        private void Start()
+        {
+            _cam = Camera.main;
+        }
+
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameManager.TogglePause();
+            }
+
+            if (GameManager.isPaused)
+                return;
+
             _input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
             float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
@@ -38,7 +55,7 @@ namespace TowerSurvivors.PlayerScripts
             if (scrollWheelInput != 0f)
             {
                 int scrollDirection = Mathf.RoundToInt(Mathf.Sign(scrollWheelInput));
-                selectedItemIndex = (selectedItemIndex + scrollDirection + 5) % 5;
+                selectedItemIndex = (selectedItemIndex - scrollDirection + 5) % 5;
                 Player.Inventory.SelectItem(selectedItemIndex);
             }
 
@@ -52,14 +69,24 @@ namespace TowerSurvivors.PlayerScripts
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 PlaceStructure();
+            } 
+            else if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (!EventSystem.current.IsPointerOverGameObject())
+                    PlaceStructure();
             }
 
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                Application.Quit();
+                ChangeStructureOrientation();
+            }
+            else if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                if (!EventSystem.current.IsPointerOverGameObject())
+                    ChangeStructureOrientation();
             }
         }
 
@@ -99,51 +126,31 @@ namespace TowerSurvivors.PlayerScripts
             {
                 selectedItemGO = Instantiate(Player.Inventory.selectedItem.item.prefab, transform);
                 structureSelected = selectedItemGO.GetComponent<Structure>();
-                structureSelected.range += Player.Instance.rangeIncrease;
+                structureSelected.stats.range += Player.Instance.stats.rangeIncrease;
                 structureSelected.EnableStructure(false);
             }
 
             structureSelected.CheckIfPlaceable();
-            //Flip accordingly
-            int flipityflop = Player.Sprite.flipX ? -1 : 1;
-            selectedItemGO.transform.localPosition = new Vector3(_offset * flipityflop, 0, 0);
 
-            if(!structureSelected.uniqueOrientation)
+            //Put the structure towards where the mouse is
+            Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition);
+            float distance = Vector2.Distance(mousePosition, transform.position);
+            if (distance > _placingRange)
             {
-                ChangeStructureOrientation();
+                Vector3 fromOriginToObject = mousePosition - transform.position; //~GreenPosition~ - *BlackCenter*
+                fromOriginToObject *= _placingRange / distance; //Multiply by radius //Divide by Distance
+                selectedItemGO.transform.position = transform.position + fromOriginToObject; //*BlackCenter* + all that Math
+            }
+            else
+            {
+                selectedItemGO.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
             }
         }
 
         private void ChangeStructureOrientation()
         {
-            float absX = Mathf.Abs(_input.x);
-            float absY = Mathf.Abs(_input.y);
-
-            // Check which component has a higher absolute value to determine the dominant direction
-            if (absX > absY)
-            {
-                // Check if the movement is towards the right or left
-                if (_input.x > 0)
-                {
-                    structureSelected.ChangeOrientation(Orientation.RIGHT);
-                }
-                else if (_input.x < 0)
-                {
-                    structureSelected.ChangeOrientation(Orientation.LEFT);
-                }
-            }
-            else if (absY > absX)
-            {
-                // Check if the movement is towards up or down
-                if (_input.y > 0)
-                {
-                    structureSelected.ChangeOrientation(Orientation.UP);
-                }
-                else if (_input.y < 0)
-                {
-                    structureSelected.ChangeOrientation(Orientation.DOWN);
-                }
-            }
+            if (structureSelected)
+                structureSelected.ChangeOrientation();
         }
 
         private void FixedUpdate()

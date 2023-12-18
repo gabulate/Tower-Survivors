@@ -58,6 +58,11 @@ namespace TowerSurvivors.GUI
             }
         }
 
+        public void SelectItem(int index)
+        {
+            Player.Inventory.SelectItem(index);
+        }
+
         public void OnDisable()
         {
             Player.Instance.e_xpChanged.RemoveListener(UpdateXpBar);

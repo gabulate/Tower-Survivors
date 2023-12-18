@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Structures;
@@ -53,16 +55,7 @@ namespace TowerSurvivors.PlayerScripts
 
         #region Player Stats & Buffs
         [Header("Stats & Buffs")]
-        public float rangeIncrease = 0f;
-        public float damageIncrease = 0f;
-        public float coolDownReduction = 0f;
-        public float areaSizeIncrease = 0f;
-        public float projectileSpeedBoost = 0f;
-        public float durationIncrease = 0f;
-        public int ProjectileAmntIncrease = 0;
-
-        public float speedBoost = 0f;
-        public float visionBoost = 0f;
+        public PlayerStats stats;
         #endregion
 
         void Awake()
@@ -80,31 +73,48 @@ namespace TowerSurvivors.PlayerScripts
             Inventory.AddItem(startingItem);
         }
 
-        public void AddPassiveItem(ItemSO item)
-        {
-            GameObject obj = Instantiate(item.prefab, PassiveItems);
-            obj.GetComponent<PassiveItem>().ApplyEffect();
-            ApplyBuffs();
-        }
-
         public void ApplyBuffs()
         {
+            //Set every buff to 0 to not apply buffs on top of eachother
+            stats.rangeIncrease = 0f;
+            stats.damageIncrease = 0f;
+            stats.coolDownReduction = 0f;
+            stats.areaSizeIncrease = 0f;
+            stats.projectileSpeedBoost = 0f;
+            stats.durationIncrease = 0f;
+            stats.ProjectileAmntIncrease = 0;
+            stats.speedBoost = 0f;
+            stats.visionBoost = 0f;
+
             Structure[] structures = StructureManager.Instance.GetStructures();
+            PassiveItem[] passives = PassiveItemManager.Instance.GetPassives();
+
+            foreach (PassiveItem p in passives)
+            {
+                p.ApplyEffect();
+            }
 
             foreach(Structure s in structures)
             {
-                //CHANGE THIS SO IT USES THE INITIAL STRUCTURE VALUES AND DOESN'T KEEP INCREASING ON TOP OF THE BUFFS
-                s.range += rangeIncrease;
-                s.damage += damageIncrease;
-                s.attackCooldown -= s.attackCooldown * coolDownReduction;
-                s.areaSize += areaSizeIncrease;
-                s.projectileSpeed += projectileSpeedBoost;
-                s.duration += durationIncrease;
-                s.projectileAmnt += ProjectileAmntIncrease;
-
+                s.ApplyBuffs(stats);
             }
-            PlayerInput.Speed = PlayerInput.initialSpeed + speedBoost;
-            Camera.main.orthographicSize = 5 + visionBoost;
+
+            PlayerInput.Speed = PlayerInput.initialSpeed + stats.speedBoost;
+            Camera.main.orthographicSize = 5 + stats.visionBoost;
+        }
+
+        internal void RemoveAllBuffs()
+        {
+            //Set every buff to 0 to not apply buffs on top of eachother
+            stats.rangeIncrease = 0f;
+            stats.damageIncrease = 0f;
+            stats.coolDownReduction = 0f;
+            stats.areaSizeIncrease = 0f;
+            stats.projectileSpeedBoost = 0f;
+            stats.durationIncrease = 0f;
+            stats.ProjectileAmntIncrease = 0;
+            stats.speedBoost = 0f;
+            stats.visionBoost = 0f;
         }
 
         #region Level and Xp
@@ -147,6 +157,7 @@ namespace TowerSurvivors.PlayerScripts
             e_xpChanged.Invoke(0, XpForNextLevel);
 
             //TODO: Display LevelUp Menu
+            GameManager.Instance.LevelUp();
 
             if (_xp >= XpForNextLevel) //Remember to take this into account
             {
@@ -170,5 +181,19 @@ namespace TowerSurvivors.PlayerScripts
             yield return new WaitForSeconds(5);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    [System.Serializable]
+    public class PlayerStats
+    {
+        public float rangeIncrease = 0f;
+        public float damageIncrease = 0f;
+        public float coolDownReduction = 0f;
+        public float areaSizeIncrease = 0f;
+        public float projectileSpeedBoost = 0f;
+        public float durationIncrease = 0f;
+        public int ProjectileAmntIncrease = 0;
+        public float speedBoost = 0f;
+        public float visionBoost = 0f;
     }
 }

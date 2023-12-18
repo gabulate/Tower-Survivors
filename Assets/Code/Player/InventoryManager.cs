@@ -65,7 +65,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <param name="item"></param>
         public void AddItem(ItemSO item)
         {
-            if(item.type == ItemType.Structure)
+            if(item.GetType() == typeof(StructureItemSO))
             {
                 for (int i = 0; i < StructureSlots.Length; i++)
                 {
@@ -89,7 +89,7 @@ namespace TowerSurvivors.PlayerScripts
                     if (itemInSlot == null)
                     {
                         SpawnNewItem(item, slot);
-                        Player.Instance.AddPassiveItem(item);
+                        PassiveItemManager.Instance.AddPassiveItem(item);
                         return;
                     }
                 }
@@ -133,6 +133,7 @@ namespace TowerSurvivors.PlayerScripts
                     Destroy(itemInSlot.gameObject);
                 }
             }
+            PassiveItemManager.Instance.RemoveAllItems();
         }
 
         /// <summary>

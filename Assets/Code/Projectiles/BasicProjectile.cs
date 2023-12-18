@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Enemies;
+using TowerSurvivors.Structures;
 using UnityEngine;
 
 namespace TowerSurvivors.Projectiles
@@ -36,15 +37,15 @@ namespace TowerSurvivors.Projectiles
         /// <param name="direction">Direction the projetile will move towards.</param>
         /// <param name="duration">Amount of time the projectile will exist before despawning.</param>
         /// <param name="size">The scale size of the projectile</param>
-        public virtual void SetAttributes(float damage, int passThrough, float speed, Vector3 direction, float duration, float size)
+        public virtual void SetAttributes(StructureStats stats, Vector3 direction)
         {
-            this.damage = damage;
-            this.passThrough = passThrough;
-            this.speed = speed;
+            this.damage = stats.damage;
+            this.passThrough = stats.passThroughAmnt;
+            this.speed = stats.projectileSpeed;
             this.direction = direction;
-            this.duration = duration;
-            _timeLeft = duration;
-            transform.localScale = new Vector3(size, size, size);
+            this.duration = stats.duration;
+            _timeLeft = stats.duration;
+            transform.localScale = new Vector3(stats.areaSize, stats.areaSize, stats.areaSize);
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)

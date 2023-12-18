@@ -4,14 +4,16 @@ using UnityEngine;
 
 namespace TowerSurvivors.ScriptableObjects
 {
-    [CreateAssetMenu(fileName = "InventoryItem", menuName = "ScriptableObjects/InventoryItem")]
     public class ItemSO : ScriptableObject
     {
         public string itemName;
+        [TextArea]
+        public string description;
         public Sprite icon;
-        public ItemType type;
+        //public ItemType type;
         public GameObject prefab;
 
+        public float probability = 5;
     }
 
     public enum ItemType

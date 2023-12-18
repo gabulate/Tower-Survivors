@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Projectiles;
+using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 
 namespace TowerSurvivors.Structures
@@ -15,6 +17,7 @@ namespace TowerSurvivors.Structures
         protected static readonly LayerMask _structureLayer = 1 << 7;
 
         [Header("Must Have References")]
+        public StructureItemSO item;
         [SerializeField]
         protected Animator _animator;
         [SerializeField]
@@ -40,16 +43,8 @@ namespace TowerSurvivors.Structures
         protected static Color _notPlaceableColor = new(1f, 0.1f, 0f, 0.4f);
 
         [Header("Structure Stats")]
-        public float range;
-        public float damage = 10f;
-        public float attackCooldown = 1f;
-        public float currentCooldown = 0f;
-        public float areaSize = 1;
-        public float projectileSpeed = 2;
-        public float duration = 5f;
-        public int projectileAmnt = 1;
-        public float timeBetweenMultipleShots = 0.5f; //In case projectileAmnt is bigger than 1;
-        public int passThroughAmnt = 0;
+        public int level = 1;
+        public StructureStats stats;
 
 
         private void OnEnable()
@@ -58,15 +53,19 @@ namespace TowerSurvivors.Structures
             transform.rotation = Quaternion.Euler(Vector3.zero);
         }
 
-        protected virtual void FixedUpdate()
+        public void ApplyBuffs(PlayerStats playerStats)
         {
-            //Method to override
-        }
+            stats.range = item.levels[level - 1].range + playerStats.rangeIncrease;
+            stats.damage = item.levels[level - 1].damage + playerStats.damageIncrease;
 
-        protected virtual void Attack()
-        {
-            //TODO: Add a stat counter for everytime this structure attacks
-            //Override for the attack
+            stats.attackCooldown = item.levels[level - 1].attackCooldown;
+            //Calculates the percentaje from the current level
+            stats.attackCooldown -= item.levels[level - 1].attackCooldown * playerStats.coolDownReduction;
+
+            stats.areaSize = item.levels[level - 1].areaSize + playerStats.areaSizeIncrease;
+            stats.projectileSpeed = item.levels[level - 1].projectileSpeed + playerStats.projectileSpeedBoost;
+            stats.duration = item.levels[level - 1].duration + playerStats.durationIncrease;
+            stats.projectileAmnt = item.levels[level - 1].projectileAmnt + playerStats.ProjectileAmntIncrease;
         }
 
         public void EnableStructure(bool enabled)
@@ -79,7 +78,7 @@ namespace TowerSurvivors.Structures
             if (!enabled)
             {
                 _outline.transform.localScale = Vector3.one * _margin;
-                _rangeOutline.transform.localScale = Vector3.one * range;
+                _rangeOutline.transform.localScale = Vector3.one * stats.range;
             }
         }
 
@@ -96,9 +95,62 @@ namespace TowerSurvivors.Structures
             return placeable;
         }
 
+
+        #region Orientation
         public virtual void ChangeOrientation(Orientation orientation)
         {
             _orientation = orientation;
+            switch (orientation)
+            {
+                case Orientation.UP:
+                    break;
+                case Orientation.DOWN:
+                    break;
+                case Orientation.LEFT:
+                    break;
+                case Orientation.RIGHT:
+                    break;
+            }
+            UpdateOrientation();
+        }
+        public virtual void ChangeOrientation()
+        {
+            switch (_orientation)
+            {
+                case Orientation.UP:
+                    _orientation = Orientation.DOWN;
+                    break;
+                case Orientation.DOWN:
+                    _orientation = Orientation.LEFT;
+                    break;
+                case Orientation.LEFT:
+                    _orientation = Orientation.RIGHT;
+                    break;
+                case Orientation.RIGHT:
+                    _orientation = Orientation.UP;
+                    break;
+            }
+
+            UpdateOrientation();
+        }
+
+        public void UpdateOrientation()
+        {
+            Debug.LogWarning("Orientation: " + _orientation + ". Changing orientation not implemented yet.");
+        }
+
+        #endregion
+
+        #region Overridables
+        protected virtual void FixedUpdate()
+        {
+            //Method to override
+        }
+
+        protected virtual void Attack()
+        {
+            //TODO: Add a stat counter for everytime this structure attacks
+            //Override for the attack
         }
 
         protected virtual IEnumerator SpawnProjectile(float delay)
@@ -107,13 +159,30 @@ namespace TowerSurvivors.Structures
             //Meant to be overridden
         }
 
+        #endregion
+
         //Draws a circle of the structure's attack range
         protected virtual void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, range);
+            Gizmos.DrawWireSphere(transform.position, stats.range);
             Gizmos.DrawWireCube(_outline.transform.position, new Vector3(_margin, _margin, _margin));
         }
+    }
+
+    [System.Serializable]
+    public class StructureStats
+    {
+        public float range = 4;
+        public float damage = 10f;
+        public float attackCooldown = 1f;
+        public float currentCooldown = 0f;
+        public float areaSize = 1;
+        public float projectileSpeed = 5;
+        public float duration = 3f;
+        public int projectileAmnt = 1;
+        public float timeBetweenMultipleShots = 0.5f; //In case projectileAmnt is bigger than 1;
+        public int passThroughAmnt = 0;
     }
 
     public enum Orientation
