@@ -18,7 +18,11 @@ namespace TowerSurvivors.Game
 
         public Structure[] GetStructures()
         {
-            return GetComponentsInChildren<Structure>();
+            if(transform.childCount > 0)
+            {
+                return GetComponentsInChildren<Structure>();
+            }
+            return new Structure[0];
         }
 
         void Awake()

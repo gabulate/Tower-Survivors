@@ -88,8 +88,13 @@ namespace TowerSurvivors.PlayerScripts
                     InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
                     if (itemInSlot == null)
                     {
-                        SpawnNewItem(item, slot);
-                        PassiveItemManager.Instance.AddPassiveItem(item);
+                        //If the item is not already in the inventory, spawn it
+                        if(PassiveItemManager.Instance.InInventory(item as PassiveItemSO) == null)
+                        {
+                            SpawnNewItem(item, slot);
+                        }
+
+                        PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
                         return;
                     }
                 }

@@ -12,10 +12,26 @@ namespace TowerSurvivors.Game
     {
         public static PassiveItemManager Instance;
 
-        public void AddPassiveItem(ItemSO item)
+        public void AddOrLevelUp(PassiveItemSO item)
         {
-            GameObject obj = Instantiate(item.prefab, transform);
-            obj.GetComponent<PassiveItem>().ApplyEffect();
+            PassiveItem p = InInventory(item);
+            if (p == null)
+            {
+                Instantiate(item.prefab, transform);
+            }
+            else
+            {
+                if (p.level > p.item.levels.Count)
+                {
+                    Debug.LogWarning("Tried to updgrade item beyond its maximum level.");
+                    return;
+                }
+
+                p.level++;
+                if (p.level == p.item.levels.Count)
+                    p.isMaxed = true;
+            }
+            
             Player.Instance.ApplyBuffs();
         }
 
@@ -30,6 +46,35 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+        }
+
+        /// <summary>
+        /// Returns the current level of the item specified. Returns 0 if the item is not currently in the inventory.
+        /// </summary>
+        /// <param name="item">Item to look for.</param>
+        /// <returns></returns>
+        public int GetCurrentLevel(PassiveItemSO item)
+        {
+            foreach(PassiveItem p in GetPassives())
+            {
+                if(p.item.itemName == item.itemName)
+                {
+                    return p.level;
+                }
+            }
+            return 0;
+        }
+
+        public PassiveItem InInventory(PassiveItemSO item)
+        {
+            foreach (PassiveItem p in GetPassives())
+            {
+                if (p.item.itemName == item.itemName)
+                {
+                    return p;
+                }
+            }
+            return null;
         }
 
         internal void RemoveAllItems()

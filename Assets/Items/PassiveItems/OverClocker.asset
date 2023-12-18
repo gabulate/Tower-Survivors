@@ -19,12 +19,13 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.1
-    Description: All structures fire 10% faster.
+    Description: Runs structures to their maximum capacity, reducing their attack
+      cooldown by 10%.
   - EffectIntensityByLevel: 0.2
-    Description: All structures fire 20% faster.
+    Description: Cooldown reduction augments to 20%.
   - EffectIntensityByLevel: 0.3
-    Description: All structures fire 30% faster.
+    Description: Cooldown reduction augments to 30%.
   - EffectIntensityByLevel: 0.4
-    Description: All structures fire 40% faster.
+    Description: Cooldown reduction augments to 40%.
   - EffectIntensityByLevel: 0.5
-    Description: All structures fire 50% faster.
+    Description: Cooldown reduction augments to 50%.

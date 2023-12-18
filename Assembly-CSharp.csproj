@@ -61,6 +61,7 @@
     <Compile Include="Assets\Code\Projectiles\AutoDestroy.cs" />
     <Compile Include="Assets\Code\Player\InventoryManager.cs" />
     <Compile Include="Assets\Code\GUI\GameHUD.cs" />
+    <Compile Include="Assets\Code\GUI\LevelUpOption.cs" />
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
@@ -68,7 +69,9 @@
     <Compile Include="Assets\Code\Game\GameManager.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
+    <Compile Include="Assets\Code\Game\PassiveItemManager.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\StructureItemSO.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
     <Compile Include="Assets\Code\PickUps\PickUp.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
@@ -80,18 +83,15 @@
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
+    <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
     <Compile Include="Assets\Code\Player\PlayerInputController.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\GUI\LevelUpOption.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\StructureItemSO.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
-    <Compile Include="Assets\Code\Game\PassiveItemManager.cs" />
-    <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

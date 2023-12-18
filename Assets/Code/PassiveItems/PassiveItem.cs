@@ -12,16 +12,16 @@ namespace TowerSurvivors.PassiveItems
     public class PassiveItem : MonoBehaviour
     {
         public int level;
+        public bool isMaxed = false;
         public PassiveItemSO item;
 
         public virtual void ApplyEffect()
         {
-            Player.Instance.ApplyBuffs();
+            Destroy(gameObject, 1f);
         }
 
         public virtual void RemoveEffect()
         {
-            Player.Instance.ApplyBuffs();
         }
     }
 }
