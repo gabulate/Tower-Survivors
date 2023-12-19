@@ -4,6 +4,7 @@ using TowerSurvivors.Game;
 using TowerSurvivors.GUI;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.Structures;
 using UnityEngine;
 
 namespace TowerSurvivors.PlayerScripts
@@ -18,6 +19,7 @@ namespace TowerSurvivors.PlayerScripts
         public InventorySlot[] PassiveItemSlots;
 
         public InventoryItem selectedItem;
+        public int selectedIndex;
 
         [SerializeField]
         private GameObject _inventoryItemPrefab;
@@ -30,6 +32,7 @@ namespace TowerSurvivors.PlayerScripts
         {
             if (slot >= StructureSlots.Length || slot < 0)
                 return;
+            selectedIndex = slot;
 
             if (selectedItem != null)
             {
@@ -73,7 +76,8 @@ namespace TowerSurvivors.PlayerScripts
                     InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
                     if (itemInSlot == null)
                     {
-                        SpawnNewItem(item, slot);
+                        GameObject instance = StructureManager.Instance.AddToInventory(item as StructureItemSO, i);
+                        SpawnNewItem(item, slot, instance);
                         SelectItem(i);
                         return;
                     }
@@ -88,13 +92,14 @@ namespace TowerSurvivors.PlayerScripts
                     InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
                     if (itemInSlot == null)
                     {
+                        GameObject instance = PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
+
                         //If the item is not already in the inventory, spawn it
                         if(PassiveItemManager.Instance.InInventory(item as PassiveItemSO) == null)
                         {
-                            SpawnNewItem(item, slot);
+                            SpawnNewItem(item, slot, instance);
                         }
 
-                        PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
                         return;
                     }
                 }
@@ -107,11 +112,32 @@ namespace TowerSurvivors.PlayerScripts
         /// </summary>
         /// <param name="item">Scriptable Object cointaining the item's atributes.</param>
         /// <param name="slot">Slot where the item will be added.</param>
-        private void SpawnNewItem(ItemSO item, InventorySlot slot)
+        private void SpawnNewItem(ItemSO item, InventorySlot slot, GameObject instance)
         {
             GameObject newItemGO = Instantiate(_inventoryItemPrefab, slot.transform);
             InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
-            inventoryItem.InitialiseItem(item);
+            inventoryItem.InitialiseItem(item, instance);
+        }
+
+        public void PickUpStructure(Structure structure)
+        {
+            if (!AvailablePassiveItemSlot())
+            {
+                //TODO: play can't pick up sound
+                return;
+            }
+
+            for (int i = 0; i < StructureSlots.Length; i++)
+            {
+                InventorySlot slot = StructureSlots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                if (itemInSlot == null)
+                {
+                    SpawnNewItem(structure.item, slot, structure.gameObject);
+                    SelectItem(i);
+                    return;
+                }
+            }
         }
 
         /// <summary>

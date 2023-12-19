@@ -24,8 +24,6 @@ namespace TowerSurvivors.PlayerScripts
         public static InventoryManager Inventory { get; private set; }
         public static SpriteRenderer Sprite { get; private set; }
         public static Animator PlayerAnimator { get; private set; }
-
-        public Transform PassiveItems;
         #endregion
 
         #region Player Properties
@@ -159,13 +157,16 @@ namespace TowerSurvivors.PlayerScripts
             //TODO: Display LevelUp Menu
             GameManager.Instance.LevelUp();
 
-            if (_xp >= XpForNextLevel) //Remember to take this into account
+        }
+        #endregion
+
+        public void CheckForLevelUp()
+        {
+            if (_xp >= XpForNextLevel) 
             {
                 LevelUp();
             }
         }
-        #endregion
-
 
         /// <summary>
         /// Dies! :(

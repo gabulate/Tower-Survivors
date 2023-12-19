@@ -19,6 +19,9 @@ namespace TowerSurvivors.Game
         private LevelUpOption[] _options;
 
         [SerializeField]
+        private Animator _animator;
+
+        [SerializeField]
         private List<ItemSO> selectedItems = new List<ItemSO>();
 
         [SerializeField]
@@ -26,7 +29,6 @@ namespace TowerSurvivors.Game
 
         public void LevelUp()
         {
-            GameManager.PauseGame(true);
             ItemListSO items = AssetsHolder.Instance.itemList;
 
             selectedItems = GetRandomItems(items.itemList);
@@ -37,28 +39,36 @@ namespace TowerSurvivors.Game
                 _options[i].gameObject.SetActive(true);
             }
 
-            ShowMenu();
+            StartCoroutine(ShowMenu());
         }
 
         private List<ItemSO> GetRandomItems(List<ItemSO> list)
         {
             //Create a duplicate of the list
-            List<ItemSO> availabelItems = list.Select(i => Instantiate(i)).ToList();
+            List<ItemSO> availableItems = list.Select(i => Instantiate(i)).ToList();
 
             //Iterate backwards for safe removing
-            for (int i = availabelItems.Count - 1; i >= 0; i--)
+            for (int i = availableItems.Count - 1; i >= 0; i--)
             {
-                if(availabelItems[i].GetType() == typeof(StructureItemSO))
+                if(availableItems[i].GetType() == typeof(StructureItemSO))
                 {
                     //TODO: Maybe add a maximum of allowed structures.
+                    if (!Player.Inventory.AvailableStrucutreSlot())
+                    {
+                        availableItems.RemoveAt(i);
+                    }
                 }
                 else
                 {
-                    PassiveItem pi = PassiveItemManager.Instance.InInventory(availabelItems[i] as PassiveItemSO);
+                    PassiveItem pi = PassiveItemManager.Instance.InInventory(availableItems[i] as PassiveItemSO);
                     //If the passive item is already maxed, remove it from the available items
                     if(pi != null && pi.isMaxed)
                     {
-                        availabelItems.RemoveAt(i);
+                        availableItems.RemoveAt(i);
+                    } 
+                    else if (!Player.Inventory.AvailablePassiveItemSlot())
+                    {
+                        availableItems.RemoveAt(i);
                     }
                 }
             }
@@ -66,19 +76,20 @@ namespace TowerSurvivors.Game
             List<ItemSO> resultList = new List<ItemSO>();
 
             //If there are no available items
-            if (availabelItems.Count == 0)
+            if (availableItems.Count == 0)
             {
+                Debug.Log("No available items.");
                 resultList.Add(_nothingItem);
                 return resultList;
             }
 
             for (int i = 0; i < 3; i++)
             {
-                ItemSO item = GetRandomFromList(availabelItems);
+                ItemSO item = GetRandomFromList(availableItems);
                 if(item != null)
                 {
                     resultList.Add(item);
-                    availabelItems.Remove(item);
+                    availableItems.Remove(item);
                 }
                 else
                 {
@@ -120,22 +131,30 @@ namespace TowerSurvivors.Game
         public void GiveItem(ItemSO item)
         {
             Player.Inventory.AddItem(item);
-            HideMenu();
-            GameManager.PauseGame(false);
+            StartCoroutine(HideMenu());
         }
 
-        private void ShowMenu()
+        private IEnumerator ShowMenu()
         {
             _menu.SetActive(true);
+            _animator.SetBool("show", true);
+            yield return new WaitForSeconds(0.1f);
+            GameManager.PauseGame(true);
         }
 
-        private void HideMenu()
+        private IEnumerator HideMenu()
         {
-            foreach(LevelUpOption op in _options)
+            GameManager.PauseGame(false);
+            _animator.SetBool("show", false);
+
+            yield return new WaitForSeconds(0.1f);
+            foreach (LevelUpOption op in _options)
             {
                 op.gameObject.SetActive(false);
             }
             _menu.SetActive(false);
+            yield return new WaitForSeconds(0.1f);
+            Player.Instance.CheckForLevelUp();
         }
 
         void Awake()
@@ -147,7 +166,7 @@ namespace TowerSurvivors.Game
         }
         private void Start()
         {
-            HideMenu();
+            StartCoroutine(HideMenu());
         }
     }
 }

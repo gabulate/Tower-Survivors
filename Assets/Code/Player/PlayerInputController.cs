@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Game;
 using TowerSurvivors.Structures;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace TowerSurvivors.PlayerScripts
@@ -12,6 +14,7 @@ namespace TowerSurvivors.PlayerScripts
     /// </summary>
     public class PlayerInputController : MonoBehaviour
     {
+        private static readonly LayerMask _structureLayer = 1 << 7;
         public float initialSpeed = 2;
         public float Speed = 2;
 
@@ -24,13 +27,19 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private float _placingRange = 1f;
         [SerializeField]
-        private int selectedItemIndex = 0;
+        private int _selectedItemIndex = 0;
         [SerializeField]
-        private GameObject selectedItemGO;
+        private GameObject _selectedItemGO;
         [SerializeField]
-        private Structure structureSelected;
+        private Structure _structureSelected;
+        [SerializeField]
+        private Structure _hoveredStructure;
 
         private Camera _cam;
+        [SerializeField]
+        private Vector3 mousePosition;
+        [SerializeField]
+        private float _mouseHoverRange = 2;
 
         private void Start()
         {
@@ -55,8 +64,8 @@ namespace TowerSurvivors.PlayerScripts
             if (scrollWheelInput != 0f)
             {
                 int scrollDirection = Mathf.RoundToInt(Mathf.Sign(scrollWheelInput));
-                selectedItemIndex = (selectedItemIndex - scrollDirection + 5) % 5;
-                Player.Inventory.SelectItem(selectedItemIndex);
+                _selectedItemIndex = (_selectedItemIndex - scrollDirection + 5) % 5;
+                Player.Inventory.SelectItem(_selectedItemIndex);
             }
 
             // Handle number key input
@@ -64,8 +73,8 @@ namespace TowerSurvivors.PlayerScripts
             {
                 if (Input.GetKeyDown(KeyCode.Alpha0 + i))
                 {
-                    selectedItemIndex = i - 1;
-                    Player.Inventory.SelectItem(selectedItemIndex);
+                    _selectedItemIndex = i - 1;
+                    Player.Inventory.SelectItem(_selectedItemIndex);
                 }
             }
 
@@ -93,70 +102,123 @@ namespace TowerSurvivors.PlayerScripts
         private void PlaceStructure()
         {
             //Return if the player isn't holding a structure
-            if (structureSelected == null)
+            if (_structureSelected == null)
+            {
                 return;
+            }
 
             //Return if the structure is not on a valid place
-            if (!structureSelected.CheckIfPlaceable())
+            if (!_structureSelected.CheckIfPlaceable())
+            {
+                //TODO: Play can't place sound
                 return;
+            }
+            
+            if(_hoveredStructure != null)
+            {
+                //DO upgrade stuff
+            }
 
-            StructureManager.Instance.PlaceStructure(structureSelected);
+            StructureManager.Instance.PlaceStructure(_structureSelected);
 
             Player.Inventory.UseItem();
-            selectedItemGO = null;
-            structureSelected = null;
+            _selectedItemGO = null;
+            _structureSelected = null;
             Player.Instance.ApplyBuffs();
         }
 
-        private void ShowStructureOutline()
+        private void CheckMouseHover()
         {
+            Collider2D hit = Physics2D.OverlapCircle(mousePosition, _mouseHoverRange, _structureLayer);
+            
+            if(hit != null)
+            {
+                _hoveredStructure = hit.GetComponent<Structure>();
+                if (_structureSelected != null)
+                {
+                    _hoveredStructure.ShowLevelUpStats(_structureSelected);
+                    _structureSelected.OutLine(false);
+                } 
+
+            }
+            else
+            {
+                if(_hoveredStructure != null)
+                {
+                    _hoveredStructure.OutLine(false);
+                    _hoveredStructure = null;
+                }
+                else
+                {
+                    if(_structureSelected != null)
+                    {
+                        _structureSelected.OutLine(true);
+                    }
+                    AssetsHolder.Instance.HUD.HideUpBox();
+                }
+            }
+        }
+
+        private void CheckMouse()
+        {
+            mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition);
+            CheckMouseHover();
             //If the player has no structure selected
             if (Player.Inventory.selectedItem == null)
             {
                 //If there's an item selected, remove it from the scene
-                if(selectedItemGO != null)
+                if(_selectedItemGO != null)
                 {
-                    Destroy(selectedItemGO);
+                    _selectedItemGO.SetActive(false);
+                    _selectedItemGO = null;
+                    _structureSelected = null;
                 }
                 return;
             }
 
-            //If an item was selected, spawn it
-            if(selectedItemGO == null)
+            if(_selectedItemGO != null && _selectedItemGO != Player.Inventory.selectedItem.itemInstance)
             {
-                selectedItemGO = Instantiate(Player.Inventory.selectedItem.item.prefab, transform);
-                structureSelected = selectedItemGO.GetComponent<Structure>();
-                structureSelected.stats.range += Player.Instance.stats.rangeIncrease;
-                structureSelected.EnableStructure(false);
+                _selectedItemGO.SetActive(false);
+                _selectedItemGO = null;
             }
 
-            structureSelected.CheckIfPlaceable();
+            //If an item was selected, enable it
+            if (_selectedItemGO == null)
+            {
+                _selectedItemGO = Player.Inventory.selectedItem.itemInstance;
+                _selectedItemGO.SetActive(true);
+                _structureSelected = _selectedItemGO.GetComponent<Structure>();
+                _structureSelected.stats.range += Player.Instance.stats.rangeIncrease;
+                _structureSelected.EnableStructure(false);
+            }
+
+            _structureSelected.CheckIfPlaceable();
 
             //Put the structure towards where the mouse is
-            Vector3 mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition);
             float distance = Vector2.Distance(mousePosition, transform.position);
             if (distance > _placingRange)
             {
                 Vector3 fromOriginToObject = mousePosition - transform.position; //~GreenPosition~ - *BlackCenter*
                 fromOriginToObject *= _placingRange / distance; //Multiply by radius //Divide by Distance
-                selectedItemGO.transform.position = transform.position + fromOriginToObject; //*BlackCenter* + all that Math
+                _selectedItemGO.transform.position = transform.position + fromOriginToObject; //*BlackCenter* + all that Math
+                _selectedItemGO.transform.position = new Vector3(_selectedItemGO.transform.position.x, _selectedItemGO.transform.position.y, _selectedItemGO.transform.position.y);
             }
             else
             {
-                selectedItemGO.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+                _selectedItemGO.transform.position = new Vector3(mousePosition.x, mousePosition.y, mousePosition.y);
             }
         }
 
         private void ChangeStructureOrientation()
         {
-            if (structureSelected)
-                structureSelected.ChangeOrientation();
+            if (_structureSelected)
+                _structureSelected.ChangeOrientation();
         }
 
         private void FixedUpdate()
         {
             Move();
-            ShowStructureOutline();
+            CheckMouse();
         }
 
         private void Move()
@@ -193,6 +255,11 @@ namespace TowerSurvivors.PlayerScripts
         public void EnableMovement(bool enabled)
         {
             _canMove = enabled;
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(mousePosition, _mouseHoverRange);
         }
     }
 }

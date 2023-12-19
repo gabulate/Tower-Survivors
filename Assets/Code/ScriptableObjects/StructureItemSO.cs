@@ -13,6 +13,7 @@ namespace TowerSurvivors.ScriptableObjects
     [System.Serializable]
     public class StructureItemLevels
     {
+        public int neededLevel = 1;
         [TextArea]
         public string upgradeDescription; 
         public float range;

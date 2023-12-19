@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Projectiles;
 using TowerSurvivors.ScriptableObjects;
@@ -29,6 +31,7 @@ namespace TowerSurvivors.Structures
         [SerializeField]
         protected SpriteRenderer _rangeOutline;
         public GameObject prefab;
+        [SerializeField]
 
         [Header("Meta Atributtes")]
         public bool canAttack = false;
@@ -41,6 +44,7 @@ namespace TowerSurvivors.Structures
         protected Orientation _orientation;
         protected static Color _placeableColor = new(0f, 0.255f, 0.690f, 0.4f);
         protected static Color _notPlaceableColor = new(1f, 0.1f, 0f, 0.4f);
+
 
         [Header("Structure Stats")]
         public int level = 1;
@@ -72,8 +76,6 @@ namespace TowerSurvivors.Structures
         {
             canAttack = enabled;
             GetComponent<Collider2D>().enabled = enabled;
-            _outline.enabled = !enabled;
-            _rangeOutline.enabled = !enabled;
             _shadow.enabled = enabled;
             if (!enabled)
             {
@@ -84,8 +86,6 @@ namespace TowerSurvivors.Structures
 
         public bool CheckIfPlaceable()
         {
-            _outline.enabled = true;
-
             Collider2D[] hits = Physics2D.OverlapBoxAll(_outline.transform.position, Vector2.one * _margin, 0, _structureLayer);
 
             bool placeable = hits.Length <= 0;
@@ -95,6 +95,25 @@ namespace TowerSurvivors.Structures
             return placeable;
         }
 
+        public virtual void ShowLevelUpStats(Structure selectedStructure)
+        {
+            if (selectedStructure.GetType() == GetType())
+            {
+                if (selectedStructure.level == item.levels[level - 1].neededLevel)
+                {
+                    AssetsHolder.Instance.HUD.HoverStructure(this, true);
+                    OutLine(true);
+                    return;
+                }
+                AssetsHolder.Instance.HUD.HoverStructure(this, false);
+            }
+        }
+
+        public void OutLine(bool outline)
+        {
+            _outline.enabled = outline;
+            _rangeOutline.enabled = outline;
+        }
 
         #region Orientation
         public virtual void ChangeOrientation(Orientation orientation)
@@ -113,6 +132,9 @@ namespace TowerSurvivors.Structures
             }
             UpdateOrientation();
         }
+
+        
+
         public virtual void ChangeOrientation()
         {
             switch (_orientation)

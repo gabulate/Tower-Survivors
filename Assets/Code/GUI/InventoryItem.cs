@@ -8,14 +8,16 @@ namespace TowerSurvivors.GUI
 {
     public class InventoryItem : MonoBehaviour
     {
+        public GameObject itemInstance;
         public ItemSO item;
         public Image icon;
         private Material _mat;
 
-        public void InitialiseItem(ItemSO newItem)
+        public void InitialiseItem(ItemSO newItem, GameObject instance)
         {
             item = newItem;
             icon.sprite = newItem.icon;
+            itemInstance = instance;
         }
 
         public void HighLight()

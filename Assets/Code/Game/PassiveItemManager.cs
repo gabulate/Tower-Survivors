@@ -12,19 +12,24 @@ namespace TowerSurvivors.Game
     {
         public static PassiveItemManager Instance;
 
-        public void AddOrLevelUp(PassiveItemSO item)
+        /// <summary>
+        /// Checks if the item is already in the inventory, and if not spawns it
+        /// </summary>
+        /// <param name="item">ScriptableObject of the item.</param>
+        /// <returns>Game object containing the PassiveItem component.</returns>
+        public GameObject AddOrLevelUp(PassiveItemSO item)
         {
             PassiveItem p = InInventory(item);
             if (p == null)
             {
-                Instantiate(item.prefab, transform);
+                return Instantiate(item.prefab, transform);
             }
             else
             {
                 if (p.level > p.item.levels.Count)
                 {
                     Debug.LogWarning("Tried to updgrade item beyond its maximum level.");
-                    return;
+                    return p.gameObject;
                 }
 
                 p.level++;
@@ -33,6 +38,7 @@ namespace TowerSurvivors.Game
             }
             
             Player.Instance.ApplyBuffs();
+            return p.gameObject;
         }
 
         public PassiveItem[] GetPassives()

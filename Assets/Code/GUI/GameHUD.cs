@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.PlayerScripts;
+using TowerSurvivors.Structures;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,11 +12,25 @@ namespace TowerSurvivors.GUI
     {
         public Slider xpBar;
         public Slider hpBar;
+        public StructureUpgradeBox upBox;
 
         private void Start()
         {
             Player.Instance.e_xpChanged.AddListener(UpdateXpBar);
             Player.Health.e_healthChanged.AddListener(UpdateHealth);
+        }
+
+        public void HoverStructure(Structure structure, bool canUpgrade)
+        {
+            if(structure != null)
+                upBox.gameObject.SetActive(true);
+
+            upBox.SetValues(structure, canUpgrade);
+        }
+
+        public void HideUpBox()
+        {
+            upBox.gameObject.SetActive(false);
         }
 
         public void UpdateXpBar(int current, int max)

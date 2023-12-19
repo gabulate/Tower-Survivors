@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.GUI;
 
 namespace TowerSurvivors.Game
 {
@@ -9,6 +10,7 @@ namespace TowerSurvivors.Game
     {
         public static AssetsHolder Instance;
         public ItemListSO itemList;
+        public GameHUD HUD;
 
         private void Awake()
         {

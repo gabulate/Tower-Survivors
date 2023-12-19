@@ -50,7 +50,6 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
-
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
             if(_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
