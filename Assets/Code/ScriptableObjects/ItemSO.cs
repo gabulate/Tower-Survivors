@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace TowerSurvivors.ScriptableObjects
 {
+    /// <summary>
+    /// Base class for items, gets extended to PassiveItemSO ans StructureItemSO
+    /// </summary>
     public class ItemSO : ScriptableObject
     {
         public string itemName;
@@ -14,11 +17,5 @@ namespace TowerSurvivors.ScriptableObjects
         public GameObject prefab;
 
         public float probability = 5;
-    }
-
-    public enum ItemType
-    {
-        Structure,
-        Passive
     }
 }

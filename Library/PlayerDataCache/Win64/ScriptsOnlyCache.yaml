@@ -6,12 +6,18 @@ ScriptsOnlyBuild:
     - TowerSurvivors.GUI.InventoryDebugger
     - TowerSurvivors.GUI.InventoryItem
     - TowerSurvivors.GUI.InventorySlot
+    - TowerSurvivors.GUI.LevelUpOption
+    - TowerSurvivors.GUI.StructureUpgradeBox
     - TowerSurvivors.Game.AssetsHolder
     - TowerSurvivors.Game.CameraFollowScript
     - TowerSurvivors.Game.EnemySpawner
     - TowerSurvivors.Game.GameManager
+    - TowerSurvivors.Game.LevelUpMenu
     - TowerSurvivors.Game.ObjectPool
+    - TowerSurvivors.Game.PassiveItemManager
+    - TowerSurvivors.Game.StructureManager
     - TowerSurvivors.PassiveItems.OverClocker
+    - TowerSurvivors.PassiveItems.PassiveItem
     - TowerSurvivors.PickUps.XpPickUp
     - TowerSurvivors.PlayerScripts.InventoryManager
     - TowerSurvivors.PlayerScripts.Player
@@ -19,10 +25,9 @@ ScriptsOnlyBuild:
     - TowerSurvivors.PlayerScripts.PlayerInputController
     - TowerSurvivors.Projectiles.BasicProjectile
     - TowerSurvivors.ScriptableObjects.ItemListSO
-    - TowerSurvivors.ScriptableObjects.ItemSO
-    - TowerSurvivors.ScriptableObjects.PassiveItemLevelsSO
+    - TowerSurvivors.ScriptableObjects.PassiveItemSO
+    - TowerSurvivors.ScriptableObjects.StructureItemSO
     - TowerSurvivors.Structures.Cannon
-    - TowerSurvivors.Structures.StructureManager
     - TowerSurvivors.Util.SpriteSortingOrder
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -86,7 +91,9 @@ ScriptsOnlyBuild:
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
+    - UnityEditor.Graphing.GraphObject
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     - UnityEditor.ShaderGraph.SubGraphAsset
     Unity.TextMeshPro.dll:
     - TMPro.TMP_Dropdown
@@ -127,6 +134,11 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
+    Assembly-CSharp:
+    - TowerSurvivors.PlayerScripts.PlayerStats
+    - TowerSurvivors.ScriptableObjects.PassiveItemLevels
+    - TowerSurvivors.ScriptableObjects.StructureItemLevels
+    - TowerSurvivors.Structures.StructureStats
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIPrefabBundle
     Unity.RenderPipelines.Universal.Runtime:
@@ -180,6 +192,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.LevelUpOption
+    methodName: GiveItem
+  - assembly: Assembly-CSharp
     fullTypeName: TowerSurvivors.GUI.InventoryDebugger
     methodName: DeleteItems
   - assembly: Assembly-CSharp
@@ -187,6 +202,27 @@ ScriptsOnlyBuild:
     methodName: AddItem
   - assembly: Assembly-CSharp
     fullTypeName: TowerSurvivors.GUI.InventoryDebugger
+    methodName: SelectItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.LevelUpOption
+    methodName: GiveItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.LevelUpOption
+    methodName: GiveItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.GameHUD
+    methodName: SelectItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.GameHUD
+    methodName: SelectItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.GameHUD
+    methodName: SelectItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.GameHUD
+    methodName: SelectItem
+  - assembly: Assembly-CSharp
+    fullTypeName: TowerSurvivors.GUI.GameHUD
     methodName: SelectItem
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerUIntField
@@ -256,9 +292,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 846}
-    - Class: 114
-      Script: {instanceID: 1738}
+      Script: {instanceID: 848}
     - Class: 114
       Script: {instanceID: 1740}
     - Class: 114
@@ -268,145 +302,157 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1746}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1748}
     - Class: 114
-      Script: {instanceID: 1916}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 2076}
+      Script: {instanceID: 1922}
     - Class: 114
-      Script: {instanceID: 2136}
+      Script: {instanceID: 2082}
     - Class: 114
-      Script: {instanceID: 2404}
+      Script: {instanceID: 2142}
     - Class: 114
-      Script: {instanceID: 2484}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2508}
+      Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 2514}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2738}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2698}
     - Class: 114
-      Script: {instanceID: 2934}
+      Script: {instanceID: 2746}
     - Class: 114
-      Script: {instanceID: 3142}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3154}
+      Script: {instanceID: 2942}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3520}
+      Script: {instanceID: 3162}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 3448}
     - Class: 114
-      Script: {instanceID: 3618}
+      Script: {instanceID: 3506}
     - Class: 114
-      Script: {instanceID: 3682}
+      Script: {instanceID: 3530}
     - Class: 114
-      Script: {instanceID: 3812}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 3816}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 3932}
+      Script: {instanceID: 3692}
     - Class: 114
-      Script: {instanceID: 4248}
+      Script: {instanceID: 3822}
     - Class: 114
-      Script: {instanceID: 4364}
+      Script: {instanceID: 3826}
     - Class: 114
-      Script: {instanceID: 4512}
+      Script: {instanceID: 3942}
     - Class: 114
-      Script: {instanceID: 4520}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 4598}
+      Script: {instanceID: 4374}
     - Class: 114
-      Script: {instanceID: 4706}
+      Script: {instanceID: 4522}
     - Class: 114
-      Script: {instanceID: 4814}
+      Script: {instanceID: 4530}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4608}
     - Class: 114
-      Script: {instanceID: 5230}
+      Script: {instanceID: 4716}
     - Class: 114
-      Script: {instanceID: 5262}
+      Script: {instanceID: 4804}
     - Class: 114
-      Script: {instanceID: 5416}
+      Script: {instanceID: 4826}
     - Class: 114
-      Script: {instanceID: 5560}
+      Script: {instanceID: 4902}
     - Class: 114
-      Script: {instanceID: 5572}
+      Script: {instanceID: 4944}
     - Class: 114
-      Script: {instanceID: 5588}
+      Script: {instanceID: 5244}
     - Class: 114
-      Script: {instanceID: 5648}
+      Script: {instanceID: 5276}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 5430}
     - Class: 114
-      Script: {instanceID: 5868}
+      Script: {instanceID: 5574}
     - Class: 114
-      Script: {instanceID: 5870}
+      Script: {instanceID: 5586}
     - Class: 114
-      Script: {instanceID: 5894}
+      Script: {instanceID: 5602}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 5662}
     - Class: 114
-      Script: {instanceID: 6206}
+      Script: {instanceID: 5672}
     - Class: 114
-      Script: {instanceID: 6310}
+      Script: {instanceID: 5882}
     - Class: 114
-      Script: {instanceID: 6472}
+      Script: {instanceID: 5884}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 5908}
     - Class: 114
-      Script: {instanceID: 6530}
+      Script: {instanceID: 6196}
     - Class: 114
-      Script: {instanceID: 6558}
+      Script: {instanceID: 6322}
     - Class: 114
-      Script: {instanceID: 6566}
+      Script: {instanceID: 6484}
     - Class: 114
-      Script: {instanceID: 6692}
+      Script: {instanceID: 6490}
     - Class: 114
-      Script: {instanceID: 6728}
+      Script: {instanceID: 6542}
     - Class: 114
-      Script: {instanceID: 6782}
+      Script: {instanceID: 6546}
     - Class: 114
-      Script: {instanceID: 6804}
+      Script: {instanceID: 6570}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6578}
     - Class: 114
-      Script: {instanceID: 6856}
+      Script: {instanceID: 6704}
     - Class: 114
-      Script: {instanceID: 6938}
+      Script: {instanceID: 6740}
     - Class: 114
-      Script: {instanceID: 6974}
+      Script: {instanceID: 6794}
     - Class: 114
-      Script: {instanceID: 7110}
+      Script: {instanceID: 6816}
     - Class: 114
-      Script: {instanceID: 7232}
+      Script: {instanceID: 6858}
     - Class: 114
-      Script: {instanceID: 7268}
+      Script: {instanceID: 6868}
     - Class: 114
-      Script: {instanceID: 7296}
+      Script: {instanceID: 6950}
     - Class: 114
-      Script: {instanceID: 7612}
+      Script: {instanceID: 6986}
     - Class: 114
-      Script: {instanceID: 7804}
+      Script: {instanceID: 7122}
     - Class: 114
-      Script: {instanceID: 7968}
+      Script: {instanceID: 7218}
     - Class: 114
-      Script: {instanceID: 7972}
+      Script: {instanceID: 7246}
     - Class: 114
-      Script: {instanceID: 8172}
+      Script: {instanceID: 7310}
     - Class: 114
-      Script: {instanceID: 8318}
+      Script: {instanceID: 7626}
     - Class: 114
-      Script: {instanceID: 8442}
+      Script: {instanceID: 7818}
     - Class: 114
-      Script: {instanceID: 8456}
+      Script: {instanceID: 7982}
     - Class: 114
-      Script: {instanceID: 8596}
+      Script: {instanceID: 7986}
+    - Class: 114
+      Script: {instanceID: 8186}
+    - Class: 114
+      Script: {instanceID: 8302}
+    - Class: 114
+      Script: {instanceID: 8334}
+    - Class: 114
+      Script: {instanceID: 8458}
+    - Class: 114
+      Script: {instanceID: 8472}
+    - Class: 114
+      Script: {instanceID: 8612}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -548,7 +594,7 @@ ScriptsOnlyBuild:
     className: CompositeShadowCaster2D
   - hash:
       serializedVersion: 2
-      Hash: d40d486c5f6faada7fcddeabe58eca55
+      Hash: fab368f9fdeecb1d0f69f636a8ebc061
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PlayerScripts
     className: InventoryManager
@@ -590,7 +636,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 8b29ba50d798d312c3c6e11fc71f0f9f
+      Hash: b46d54b8d6926bb3751eb93e19cdbf15
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.GUI
     className: GameHUD
@@ -642,6 +688,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerGroup
+  - hash:
+      serializedVersion: 2
+      Hash: ea2e66efd5cb42f4460710dcf2499275
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.GUI
+    className: LevelUpOption
   - hash:
       serializedVersion: 2
       Hash: 6b5c6b210e3cae4d85b183302716bc6f
@@ -716,9 +768,9 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e645db89d5afb2c1a01b8c73f00d31ec
     assemblyName: Assembly-CSharp.dll
-    namespaceName: TowerSurvivors.Structures
+    namespaceName: TowerSurvivors.Game
     className: StructureManager
   - hash:
       serializedVersion: 2
@@ -780,6 +832,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: b3e2ac1aa9d369b11ad0e495bb2b8b6f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.GUI
+    className: StructureUpgradeBox
   - hash:
       serializedVersion: 2
       Hash: 185b457f2d52afc3ef98d0c37d841af5
@@ -968,7 +1026,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: 68bf03da3099feff63768b5dcfce8b64
+      Hash: 085d8d6589eb09fd95233323e3d7dde1
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Game
     className: AssetsHolder
@@ -1016,6 +1074,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.Game
+    className: PassiveItemManager
+  - hash:
+      serializedVersion: 2
       Hash: 75de60bccbd35c2e82026d4a60733734
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1032,6 +1096,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cainos.PixelArtTopDown_Basic
     className: LayerTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: 9e7ad3d09b27d1dec84504bc9fbc1c57
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.ScriptableObjects
+    className: StructureItemSO
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1094,7 +1164,7 @@ ScriptsOnlyBuild:
     className: EnemySpawner
   - hash:
       serializedVersion: 2
-      Hash: 73d2521595aae422cc43c5f6eb9dc8e4
+      Hash: 45157c0b24d06588504e5f7d83ed9c4c
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Structures
     className: Structure
@@ -1250,12 +1320,6 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: ab35a87f6c49d0b143035845d13cf9b7
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: TowerSurvivors.ScriptableObjects
-    className: PassiveItemLevelsSO
-  - hash:
-      serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1286,7 +1350,7 @@ ScriptsOnlyBuild:
     className: Enemy
   - hash:
       serializedVersion: 2
-      Hash: fa4c77eb444fc507bf8085675d6dad3e
+      Hash: 65502ed81eca35a562c90ffa7a702f70
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PassiveItems
     className: PassiveItem
@@ -1328,7 +1392,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerBitField
   - hash:
       serializedVersion: 2
-      Hash: 74d71bedd842c2be85fbb89fa3d7f501
+      Hash: 540783ea687edc8a6f978a52413e40c2
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Structures
     className: Cannon
@@ -1424,6 +1488,12 @@ ScriptsOnlyBuild:
     className: HexagonalRuleTile
   - hash:
       serializedVersion: 2
+      Hash: ba25f315a6369ce25d89f483855c40bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.Game
+    className: LevelUpMenu
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1442,7 +1512,7 @@ ScriptsOnlyBuild:
     className: LensFlareDataSRP
   - hash:
       serializedVersion: 2
-      Hash: d69f8827775e75f1158810521219517e
+      Hash: 89e0739840dc6434a2f2a6b226b8efdc
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.ScriptableObjects
     className: ItemSO
@@ -1454,7 +1524,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: fa4c77eb444fc507bf8085675d6dad3e
+      Hash: 65502ed81eca35a562c90ffa7a702f70
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PassiveItems
     className: OverClocker
@@ -1532,7 +1602,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 661a40f82c1dc1702e3230f4d7f51908
+      Hash: 30cf54987af8a271647b5b16671918a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PlayerScripts
     className: Player
@@ -1592,7 +1662,7 @@ ScriptsOnlyBuild:
     className: PaniniProjection
   - hash:
       serializedVersion: 2
-      Hash: 9c3e41d927178cd4271db2061004e489
+      Hash: 0d50835d75ca04035ecde7963b137b20
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PlayerScripts
     className: PlayerInputController
@@ -1608,6 +1678,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: PixelPerfectCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 83a4cd31d94726d99f7b6cf4cf7c71b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.ScriptableObjects
+    className: PassiveItemSO
   - hash:
       serializedVersion: 2
       Hash: 0a3fa1a367fddc65eb32515029503334
@@ -1628,7 +1704,7 @@ ScriptsOnlyBuild:
     className: UniversalRendererData
   - hash:
       serializedVersion: 2
-      Hash: 01b57340b470ec3d45f8d603f0fa81cc
+      Hash: 639cd67fa0572f7913f566e6cfa8fa6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.GUI
     className: InventoryItem

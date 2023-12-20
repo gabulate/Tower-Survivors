@@ -18,36 +18,65 @@ MonoBehaviour:
   prefab: {fileID: 3104818242787931347, guid: 406f29f4ab5b2964593ed58b00c6aa68, type: 3}
   probability: 5
   levels:
-  - upgradeDescription: First Level
+  - neededLevel: 1
+    upgradeDescription: First Level
     range: 4
     damage: 10
     attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 8
+    projectileSpeed: 6
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
-  - upgradeDescription: Level 2. Range increased by 1
+  - neededLevel: 1
+    upgradeDescription: Range and projectile speed increased. Projectiles pass through
+      1 more enemy.
     range: 5
     damage: 10
     attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 8
+    projectileSpeed: 10
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 0
-  - upgradeDescription: Level 3. Damage increased by 5
-    range: 5
-    damage: 15
+    passThroughAmnt: 1
+  - neededLevel: 1
+    upgradeDescription: Damage increased by 10. Range increased.
+    range: 6
+    damage: 20
     attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 8
+    projectileSpeed: 10
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 0
+    passThroughAmnt: 1
+  - neededLevel: 1
+    upgradeDescription: Damage increased by 10. Projectiles pass through 1 more enemy.
+    range: 6
+    damage: 30
+    attackCooldown: 3
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 10
+    duration: 1
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 2
+  - neededLevel: 1
+    upgradeDescription: Damage increased by 10. Range increased. Projectile speed
+      increased.
+    range: 7
+    damage: 40
+    attackCooldown: 3
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 15
+    duration: 1
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 2

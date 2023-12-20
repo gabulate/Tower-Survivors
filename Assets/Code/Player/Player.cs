@@ -49,6 +49,7 @@ namespace TowerSurvivors.PlayerScripts
         }
         public int TotalXpCollected = 0;
         public UnityEvent<int, int> e_xpChanged;
+        public UnityEvent<int> e_leveledUp;
         #endregion
 
         #region Player Stats & Buffs
@@ -152,7 +153,8 @@ namespace TowerSurvivors.PlayerScripts
                 XpForNextLevel += 16;
             }
 
-            e_xpChanged.Invoke(0, XpForNextLevel);
+            e_xpChanged.Invoke(_xp, XpForNextLevel);
+            e_leveledUp.Invoke(Level);
 
             //TODO: Display LevelUp Menu
             GameManager.Instance.LevelUp();

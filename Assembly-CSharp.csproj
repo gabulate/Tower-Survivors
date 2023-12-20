@@ -66,6 +66,7 @@
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
@@ -92,7 +93,6 @@
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

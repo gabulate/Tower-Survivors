@@ -60,7 +60,7 @@ namespace TowerSurvivors.Game
                 }
                 else
                 {
-                    PassiveItem pi = PassiveItemManager.Instance.InInventory(availableItems[i] as PassiveItemSO);
+                    PassiveItem pi = PassiveItemManager.Instance.GetFromInventory(availableItems[i] as PassiveItemSO);
                     //If the passive item is already maxed, remove it from the available items
                     if(pi != null && pi.isMaxed)
                     {
@@ -144,17 +144,20 @@ namespace TowerSurvivors.Game
 
         private IEnumerator HideMenu()
         {
-            GameManager.PauseGame(false);
-            _animator.SetBool("show", false);
-
-            yield return new WaitForSeconds(0.1f);
-            foreach (LevelUpOption op in _options)
+            if (_menu.activeSelf)
             {
-                op.gameObject.SetActive(false);
+                GameManager.PauseGame(false);
+                _animator.SetBool("show", false);
+
+                yield return new WaitForSeconds(0.1f);
+                foreach (LevelUpOption op in _options)
+                {
+                    op.gameObject.SetActive(false);
+                }
+                _menu.SetActive(false);
+                yield return new WaitForSeconds(0.1f);
+                Player.Instance.CheckForLevelUp();
             }
-            _menu.SetActive(false);
-            yield return new WaitForSeconds(0.1f);
-            Player.Instance.CheckForLevelUp();
         }
 
         void Awake()

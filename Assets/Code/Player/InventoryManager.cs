@@ -86,24 +86,31 @@ namespace TowerSurvivors.PlayerScripts
             }
             else //Passive Item
             {
-                for (int i = 0; i < PassiveItemSlots.Length; i++)
+                //If the item is not already in the inventory, spawn it
+                if (!PassiveItemManager.Instance.InInventory(item as PassiveItemSO))
                 {
-                    InventorySlot slot = PassiveItemSlots[i];
-                    InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-                    if (itemInSlot == null)
+                    for (int i = 0; i < PassiveItemSlots.Length; i++)
                     {
-                        GameObject instance = PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
-
-                        //If the item is not already in the inventory, spawn it
-                        if(PassiveItemManager.Instance.InInventory(item as PassiveItemSO) == null)
+                        InventorySlot slot = PassiveItemSlots[i];
+                        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                        if (itemInSlot == null)
                         {
+                            GameObject instance = PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
                             SpawnNewItem(item, slot, instance);
+                            break;
                         }
-
-                        return;
                     }
                 }
-                Debug.LogWarning("Inventory full.");
+                else
+                {
+                    PassiveItemManager.Instance.AddOrLevelUp(item as PassiveItemSO);
+                    foreach (InventorySlot it in PassiveItemSlots)
+                    {
+                        InventoryItem ii = it.GetComponentInChildren<InventoryItem>();
+                        if(ii)
+                            ii.UpdateInfo();
+                    }
+                }
             }
         }
 
@@ -121,23 +128,15 @@ namespace TowerSurvivors.PlayerScripts
 
         public void PickUpStructure(Structure structure)
         {
-            if (!AvailablePassiveItemSlot())
+            InventoryItem itemInSlot = StructureSlots[selectedIndex].GetComponentInChildren<InventoryItem>();
+            if (itemInSlot == null)
             {
-                //TODO: play can't pick up sound
+                SpawnNewItem(structure.item, StructureSlots[selectedIndex], structure.gameObject);
+                StructureManager.Instance.PickUpStructure(structure);
+                SelectItem(selectedIndex);
                 return;
             }
 
-            for (int i = 0; i < StructureSlots.Length; i++)
-            {
-                InventorySlot slot = StructureSlots[i];
-                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-                if (itemInSlot == null)
-                {
-                    SpawnNewItem(structure.item, slot, structure.gameObject);
-                    SelectItem(i);
-                    return;
-                }
-            }
         }
 
         /// <summary>

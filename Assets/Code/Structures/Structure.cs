@@ -42,12 +42,14 @@ namespace TowerSurvivors.Structures
         public bool uniqueOrientation = true;
         [SerializeField]
         protected Orientation _orientation;
-        protected static Color _placeableColor = new(0f, 0.255f, 0.690f, 0.4f);
-        protected static Color _notPlaceableColor = new(1f, 0.1f, 0f, 0.4f);
-
+        protected static Color _placeableColor = new(0f, 0.255f, 0.690f, 0.4f); //Blueish
+        protected static Color _notPlaceableColor = new(1f, 0.1f, 0f, 0.4f);//Redish
+        protected static Color _normalRangeColor = new Color(1f, 0.92f, 0.016f, 0.4f); // Yellowish
+        protected static Color _increasedRangeColor = new Color(0.125f, 0.8f, 0.004f, 0.4f); // Greenish
 
         [Header("Structure Stats")]
         public int level = 1;
+        public bool isMaxed = false;
         public StructureStats stats;
 
 
@@ -55,6 +57,7 @@ namespace TowerSurvivors.Structures
         {
             //Override this function for strucutres with multiple orientations.
             transform.rotation = Quaternion.Euler(Vector3.zero);
+            _rangeOutline.color = _normalRangeColor;
         }
 
         public void ApplyBuffs(PlayerStats playerStats)
@@ -86,6 +89,12 @@ namespace TowerSurvivors.Structures
 
         public bool CheckIfPlaceable()
         {
+            if (!StructureManager.Instance.CanPlace())
+            {
+                _outline.color = _notPlaceableColor;
+                return false;
+            }
+
             Collider2D[] hits = Physics2D.OverlapBoxAll(_outline.transform.position, Vector2.one * _margin, 0, _structureLayer);
 
             bool placeable = hits.Length <= 0;
@@ -97,16 +106,71 @@ namespace TowerSurvivors.Structures
 
         public virtual void ShowLevelUpStats(Structure selectedStructure)
         {
+            if (isMaxed)
+            {
+                AssetsHolder.Instance.HUD.HoverStructureMax(this);
+                return;
+            }
+
+            if (!selectedStructure)
+            {
+                AssetsHolder.Instance.HUD.HoverStructure(this, false);
+                _rangeOutline.transform.localScale = Vector3.one * stats.range;
+                _rangeOutline.color = _normalRangeColor;
+                return;
+            }
+
             if (selectedStructure.GetType() == GetType())
             {
-                if (selectedStructure.level == item.levels[level - 1].neededLevel)
+                if (selectedStructure.level == item.levels[level].neededLevel)
                 {
                     AssetsHolder.Instance.HUD.HoverStructure(this, true);
-                    OutLine(true);
+
+                    //Shows the range that the structure will have next level, and changes its color if the next level has a range increase
+                    if(item.levels[level].range > item.levels[level -1].range)
+                    {
+                        //Gets the range the structure would be the next level, taking into consideration current buffs
+                        float nextRange = stats.range + (item.levels[level].range - item.levels[level - 1].range);
+                        _rangeOutline.transform.localScale = Vector3.one * nextRange;
+                        _rangeOutline.color = _increasedRangeColor;
+                    }
+                    else
+                    {
+                        _rangeOutline.transform.localScale = Vector3.one * stats.range;
+                        _rangeOutline.color = _normalRangeColor;
+                    }
+
                     return;
                 }
                 AssetsHolder.Instance.HUD.HoverStructure(this, false);
             }
+        }
+
+        /// <summary>
+        /// Tries to upgrade with the selected structure.
+        /// </summary>
+        /// <param name="selectedStructure">Structure that will be used to upgrade.</param>
+        /// <returns>True if the structure met the requirements, false if not.</returns>
+        public virtual bool Upgrade(Structure selectedStructure)
+        {
+            if (isMaxed)
+                return false;
+
+            if (selectedStructure.GetType() == GetType())
+            {
+                if (selectedStructure.level == item.levels[level - 1].neededLevel)
+                {
+                    level++;
+                    Debug.Log("UPGRADED to level: " + level);
+                    if (level == item.levels.Count)
+                        isMaxed = true;
+                    
+                    return true;
+                }
+            }
+            //TODO: PLAY can't place audio
+            Debug.Log("Already at max level: " + level+"!");
+            return false;
         }
 
         public void OutLine(bool outline)

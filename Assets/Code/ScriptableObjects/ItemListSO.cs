@@ -5,10 +5,8 @@ using UnityEngine;
 namespace TowerSurvivors.ScriptableObjects
 {
     /// <summary>
-    /// NOT IMPLEMENTED YET, just testing
-    /// Will be used to hold the list of structures and their corresponding stats, including levelups
+    /// Scriptable object to hold a list of items
     /// </summary>
-    [CreateAssetMenu(fileName = "ItemList", menuName = "ScriptableObjects/ItemList")]
     public class ItemListSO : ScriptableObject
     {
         public List<ItemSO> itemList;

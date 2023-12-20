@@ -19,26 +19,33 @@ namespace TowerSurvivors.Game
         /// <returns>Game object containing the PassiveItem component.</returns>
         public GameObject AddOrLevelUp(PassiveItemSO item)
         {
-            PassiveItem p = InInventory(item);
-            if (p == null)
+            if (!InInventory(item))
             {
                 return Instantiate(item.prefab, transform);
             }
             else
             {
-                if (p.level > p.item.levels.Count)
+                foreach (PassiveItem p in GetPassives())
                 {
-                    Debug.LogWarning("Tried to updgrade item beyond its maximum level.");
-                    return p.gameObject;
-                }
+                    if (p.item.itemName == item.itemName)
+                    {
+                        if (p.level >= p.item.levels.Count)
+                        {
+                            Debug.LogWarning("Tried to updgrade item beyond its maximum level.");
+                            return p.gameObject;
+                        }
 
-                p.level++;
-                if (p.level == p.item.levels.Count)
-                    p.isMaxed = true;
+                        p.level++;
+                        if (p.level == p.item.levels.Count)
+                            p.isMaxed = true;
+                        Player.Instance.ApplyBuffs();
+                        break;
+                    }
+                }
             }
-            
-            Player.Instance.ApplyBuffs();
-            return p.gameObject;
+
+            //Should never happen since it checks with InInventory()
+            return null;
         }
 
         public PassiveItem[] GetPassives()
@@ -52,6 +59,18 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+        }
+
+        internal PassiveItem GetFromInventory(PassiveItemSO item)
+        {
+            foreach (PassiveItem p in GetPassives())
+            {
+                if (p.item.itemName == item.itemName)
+                {
+                    return p;
+                }
+            }
+            return null;
         }
 
         /// <summary>
@@ -71,16 +90,16 @@ namespace TowerSurvivors.Game
             return 0;
         }
 
-        public PassiveItem InInventory(PassiveItemSO item)
+        public bool InInventory(PassiveItemSO item)
         {
             foreach (PassiveItem p in GetPassives())
             {
                 if (p.item.itemName == item.itemName)
                 {
-                    return p;
+                    return true;
                 }
             }
-            return null;
+            return false;
         }
 
         internal void RemoveAllItems()
