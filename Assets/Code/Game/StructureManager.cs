@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Audio;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Structures;
@@ -11,6 +12,7 @@ namespace TowerSurvivors.Game
     public class StructureManager : MonoBehaviour
     {
         public static StructureManager Instance;
+        public SoundClip placeSound;
 
         public int MaximumStructures = 3;
         public Transform placedStructres;
@@ -29,6 +31,8 @@ namespace TowerSurvivors.Game
             structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, structure.transform.position.y);
             structure.EnableStructure(true);
             structure.OutLine(false);
+
+            AudioPlayer.Instance.PlaySFX(placeSound, structure.transform.position);
 
             e_StAmntChanged.Invoke(structures.Length +1, MaximumStructures);
         }

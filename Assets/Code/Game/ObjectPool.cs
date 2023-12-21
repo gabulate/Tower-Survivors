@@ -9,6 +9,7 @@ namespace TowerSurvivors.Game
         public static ObjectPool Instance;
         public int PoolLenght = 20;
         public bool Expandable = false;
+        public int maximumLenght = 30;
 
         private List<GameObject> _pooledObjects;
         [SerializeField]
@@ -42,7 +43,7 @@ namespace TowerSurvivors.Game
                 }
             }
 
-            if (Expandable)
+            if (Expandable && _pooledObjects.Count < maximumLenght)
             {
                 GameObject obj = Instantiate(_prefab);
                 obj.SetActive(false);

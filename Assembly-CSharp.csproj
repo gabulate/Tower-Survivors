@@ -67,10 +67,12 @@
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
+    <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
     <Compile Include="Assets\Code\Game\PassiveItemManager.cs" />
+    <Compile Include="Assets\Code\App Managers\AudioPlayer.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\StructureItemSO.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
@@ -79,11 +81,13 @@
     <Compile Include="Assets\Code\Game\EnemySpawner.cs" />
     <Compile Include="Assets\Code\Structures\Structure.cs" />
     <Compile Include="Assets\Code\Projectiles\BasicProjectile.cs" />
+    <Compile Include="Assets\Code\App Managers\SoundClip.cs" />
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Code\PassiveItems\PassiveItem.cs" />
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\SpriteColorAnimation.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
+    <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />

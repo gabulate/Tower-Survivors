@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Audio;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
 
@@ -56,6 +57,24 @@ namespace TowerSurvivors.Structures
             stats.currentCooldown = stats.attackCooldown;
         }
 
+        protected override IEnumerator SpawnProjectile(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            //Instantiates the projectile////////////////////////////////////////////////
+            GameObject e = Instantiate(prefab, _firePoint.position, _firePoint.rotation);
+            //Calculates the direction of the target
+            Vector3 direction = (_targetPos - e.transform.position).normalized;
+            //Sets the corresponding attributes to the projectile
+            e.GetComponent<BasicProjectile>().SetAttributes(stats, direction);
+
+            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
+
+            //Play firing animation and firing sound
+            _animator.ResetTrigger("fire");
+            _animator.SetTrigger("fire");
+            AudioPlayer.Instance.PlaySFX(firingSound, transform.position);
+        }
+
         //Tries to find the closest target and returns true if it finds one within range
         protected bool GetClosestTarget()
         {
@@ -84,23 +103,6 @@ namespace TowerSurvivors.Structures
                 }
             }
             return true;
-        }
-
-        protected override IEnumerator SpawnProjectile(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            //Instantiates the projectile////////////////////////////////////////////////
-            GameObject e = Instantiate(prefab, _firePoint.position, _firePoint.rotation);
-            //Calculates the direction of the target
-            Vector3 direction = (_targetPos - e.transform.position).normalized;
-            //Sets the corresponding attributes to the projectile
-            e.GetComponent<BasicProjectile>().SetAttributes(stats, direction);
-
-            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
-
-            //Play firing animation
-            _animator.ResetTrigger("fire");
-            _animator.SetTrigger("fire");
         }
 
         /// <summary>

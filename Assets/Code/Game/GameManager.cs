@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace TowerSurvivors.Game
 {
@@ -13,6 +14,8 @@ namespace TowerSurvivors.Game
         public static GameManager Instance;
 
         public static bool isPaused = false;
+
+        public UnityEvent<bool> e_Paused;
 
         [Header("Object Pools")]
         public ObjectPool XpPool;

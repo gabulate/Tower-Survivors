@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2634864658033034730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3104818241496701929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0699, y: 0.3498, z: 1}
+  m_LocalPosition: {x: -0.0699, y: 0.3498, z: 0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -462,12 +462,20 @@ MonoBehaviour:
   _outline: {fileID: 6596666160729074548}
   _rangeOutline: {fileID: 1178024037927105226}
   prefab: {fileID: 3666265593167655993, guid: 7f1463107b0ac6a42afd0f43b5e1617b, type: 3}
+  firingSound:
+    clip: {fileID: 8300000, guid: e9df5fb769568b1409681e220a8801d9, type: 3}
+    volume: 0.5
+    pitch: 1
+    varyPitch: 0
+    minPitch: -1
+    maxPitch: 2
   canAttack: 0
   targetObject: {fileID: 0}
   _margin: 2
   uniqueOrientation: 1
   _orientation: 0
   level: 1
+  isMaxed: 0
   stats:
     range: 4
     damage: 10
@@ -505,7 +513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7709932291148084797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 0.1}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
   m_Children: []

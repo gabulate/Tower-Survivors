@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Audio;
 using TowerSurvivors.Game;
 using TowerSurvivors.PickUps;
 using TowerSurvivors.PlayerScripts;
@@ -16,12 +17,15 @@ namespace TowerSurvivors.Enemies
     {
         protected static readonly LayerMask _playerLayer = 1 << 3;
 
+        [Header("Must Have References")]
         [SerializeField]
         protected Animator _animator;
         [SerializeField]
         protected Rigidbody2D _rb;
         [SerializeField]
         protected Collider2D _collider;
+        [SerializeField]
+        protected SoundClip hurtSound = new SoundClip(1, 1.5f);
 
         [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
@@ -126,6 +130,7 @@ namespace TowerSurvivors.Enemies
             }
 
             HP -= damage;
+            AudioPlayer.Instance.PlaySFX(hurtSound, transform.position);
             //Debug.Log("Damage taken: " + damage);
 
             StartCoroutine(Invincivility(invulnerableTime));

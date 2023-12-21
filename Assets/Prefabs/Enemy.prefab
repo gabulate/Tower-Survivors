@@ -154,6 +154,15 @@ MonoBehaviour:
   _animator: {fileID: 5283096947707001971}
   _rb: {fileID: 2481510418343764492}
   _collider: {fileID: 1517514155189219189}
+  hurtSound:
+    clip: {fileID: 8300000, guid: 670821269d3b32b42b801b7979a8fa09, type: 3}
+    volume: 0.5
+    pitch: 1
+    varyPitch: 1
+    minPitch: 1
+    maxPitch: 1.5
+  ChanceToDropXp: 0.4
+  Xp: 1
   isAlive: 1
   HP: 5
   invulnerableTime: 0.15
