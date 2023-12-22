@@ -152,6 +152,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afcf9bad6499a04a861e381175501fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpSound:
+    clip: {fileID: 8300000, guid: f518f4bd07eb9d94ab25d3d747ce7ff8, type: 3}
+    volume: 0.75
+    pitch: 1
+    varyPitch: 1
+    minPitch: 1
+    maxPitch: 1.5
+    loop: 0
+  Xp: 1
 --- !u!58 &4408514262936657965
 CircleCollider2D:
   m_ObjectHideFlags: 0

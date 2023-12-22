@@ -21,7 +21,10 @@ namespace TowerSurvivors.Game
         {
             if (!InInventory(item))
             {
-                return Instantiate(item.prefab, transform);
+                GameObject go = Instantiate(item.prefab, transform);
+                Player.Instance.ApplyBuffs();
+
+                return go;
             }
             else
             {

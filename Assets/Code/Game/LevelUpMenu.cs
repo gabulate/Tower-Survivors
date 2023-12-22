@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TowerSurvivors.Audio;
 using TowerSurvivors.GUI;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.PlayerScripts;
@@ -140,6 +141,7 @@ namespace TowerSurvivors.Game
             _animator.SetBool("show", true);
             yield return new WaitForSeconds(0.1f);
             GameManager.PauseGame(true);
+            AudioPlayer.Instance.PauseMusic(true);
         }
 
         private IEnumerator HideMenu()
@@ -148,6 +150,7 @@ namespace TowerSurvivors.Game
             {
                 GameManager.PauseGame(false);
                 _animator.SetBool("show", false);
+                AudioPlayer.Instance.PauseMusic(false);
 
                 yield return new WaitForSeconds(0.1f);
                 foreach (LevelUpOption op in _options)

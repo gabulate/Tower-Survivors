@@ -10,7 +10,7 @@ namespace TowerSurvivors.Audio
     {
         public AudioClip clip;
         [Range(0, 1)]
-        public float volume = 0.5f;
+        public float volume = 1f;
         [Range(-3, 3)]
         public float pitch = 1;
         
@@ -19,6 +19,14 @@ namespace TowerSurvivors.Audio
         public float minPitch = -1;
         [Range(-3, 3)]
         public float maxPitch = 2;
+        public bool loop = false;
+
+        public SoundClip()
+        {
+            volume = 1;
+            pitch = 1;
+            varyPitch = false;
+        }
 
         public SoundClip(float minPitch, float maxPitch)
         {

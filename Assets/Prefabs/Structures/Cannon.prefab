@@ -469,6 +469,7 @@ MonoBehaviour:
     varyPitch: 0
     minPitch: -1
     maxPitch: 2
+    loop: 0
   canAttack: 0
   targetObject: {fileID: 0}
   _margin: 2

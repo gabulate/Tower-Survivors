@@ -9,34 +9,113 @@ namespace TowerSurvivors.Audio
     {
         [SerializeField]
         private AudioSource source;
+        public SoundClip clip;
         [SerializeField]
-        private SoundClip clip;
+        private bool musicMode = false;
+        private bool repeating = false;
 
+        /// <summary>
+        /// Plays a sound to be heard everywhere.
+        /// </summary>
+        /// <param name="soundClip">The soundClip to be played.</param>
         public void PlayFX(SoundClip soundClip)
         {
+            source.spatialBlend = 0.0f;
+
+            clip = soundClip;
+            PlayFX();
+        }
+
+        /// <summary>
+        /// Plays a sound with 3D spatial blend.
+        /// </summary>
+        /// <param name="soundClip">The soundClip to be played.</param>
+        /// <param name="position">The position from where the sound will be heard.</param>
+        public void PlayFX(SoundClip soundClip, Vector3 position)
+        {
+            transform.position = position;
             source.spatialBlend = 0.8f;
 
             clip = soundClip;
-            source.clip = soundClip.clip;
-            source.volume = soundClip.volume * GameSettings.SFXVolume;
+            PlayFX();
+        }
+
+        private void PlayFX()
+        {
+            source.clip = clip.clip;
+            source.volume = clip.volume * GameSettings.SFXVolume;
 
             VaryPitch();
             source.Play();
             StartCoroutine(DisableObject());
         }
 
-        public void PlayFX(SoundClip soundClip, Vector3 position)
+        /// <summary>
+        /// Plays a music track and loops it.
+        /// </summary>
+        /// <param name="musicTrack">the music track to be played.</param>
+        public void PlayMusic(SoundClip musicTrack)
         {
-            transform.position = position;
+            musicMode = true;
             source.spatialBlend = 0;
 
-            clip = soundClip;
-            source.clip = soundClip.clip;
-            source.volume = soundClip.volume * GameSettings.SFXVolume;
+            clip = musicTrack;
+            source.clip = musicTrack.clip;
+            source.volume = musicTrack.volume * GameSettings.MusicVolume;
+            source.loop = true;
 
-            VaryPitch();
             source.Play();
-            StartCoroutine(DisableObject());
+        }
+
+        public void Pause()
+        {
+            source.Pause();
+        }
+
+        public void UnPause()
+        {
+            source.UnPause();
+        }
+
+        /// <summary>
+        /// Stops the sound or music being played.
+        /// </summary>
+        public void Stop()
+        {
+            source.Stop();
+            repeating = false;
+        }
+
+        public IEnumerator PlayRepeating(SoundClip soundClip, float timeBetween)
+        {
+            source.spatialBlend = 0.0f;
+
+            clip = soundClip;
+
+            WaitForSeconds waitSeconds = new WaitForSeconds(timeBetween);
+
+            while (repeating)
+            {
+                PlayFX();
+                yield return waitSeconds;
+            }
+        }
+
+        public IEnumerator PlayRepeating(SoundClip soundClip, float timeBetween, Transform transform)
+        {
+            source.spatialBlend = 0.8f;
+
+            clip = soundClip;
+            repeating = true;
+
+            WaitForSeconds waitSeconds = new WaitForSeconds(timeBetween);
+
+            while (repeating)
+            {
+                transform.position = transform.position;
+                PlayFX();
+                yield return waitSeconds;
+            }
         }
 
         private IEnumerator DisableObject()
@@ -61,7 +140,14 @@ namespace TowerSurvivors.Audio
         {
             if (!paused)
             {
-                source.volume = source.volume = clip.volume * GameSettings.SFXVolume;
+                if (musicMode)
+                {
+                    source.volume = source.volume = clip.volume * GameSettings.MusicVolume;
+                }
+                else
+                {
+                    source.volume = source.volume = clip.volume * GameSettings.SFXVolume;
+                }
             }
         }
 

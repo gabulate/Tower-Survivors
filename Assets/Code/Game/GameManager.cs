@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,6 +16,8 @@ namespace TowerSurvivors.Game
 
         public static bool isPaused = false;
 
+        public SoundClip gameMusic;
+
         public UnityEvent<bool> e_Paused;
 
         [Header("Object Pools")]
@@ -26,6 +29,11 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+        }
+
+        private void Start()
+        {
+            AudioPlayer.Instance.PlayMusic(gameMusic);
         }
 
         public void LevelUp()
