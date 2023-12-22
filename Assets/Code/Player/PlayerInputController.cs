@@ -102,7 +102,6 @@ namespace TowerSurvivors.PlayerScripts
             if (_structureSelected == null)
                 return;
             
-            Debug.Log(_hoveredStructure);
             //If the player is hovering it over another structure, check if it can be upgraded
             if (_hoveredStructure != null)
             {

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
     <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\EnemyWaveSO.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
     <Compile Include="Assets\Code\Game\PassiveItemManager.cs" />
@@ -97,7 +98,7 @@
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\EnemyWaveSO.cs" />
+    <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

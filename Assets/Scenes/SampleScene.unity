@@ -273,8 +273,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: c89b30226ba894d4dbbc05d5659d955c, type: 2}
+  - {fileID: 11400000, guid: caa16bd6016224a4280af50993dd0f85, type: 2}
+  - {fileID: 11400000, guid: 5d11b93e52646e048b54edab6e227de8, type: 2}
+  - {fileID: 11400000, guid: bc648e412533f9649957b1f206bf3532, type: 2}
+  - {fileID: 11400000, guid: 705d708c87b21b147ac76b9f012abd5d, type: 2}
+  totalDuration: 1020
   currentWave: {fileID: 0}
+  currentWaveIndex: 0
   currentCooldown: 0
+  timeTilNextWave: 0
   min: {x: -20, y: -20}
   max: {x: 20, y: 20}
 --- !u!1001 &246995447

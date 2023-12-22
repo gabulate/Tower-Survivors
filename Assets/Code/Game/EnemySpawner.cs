@@ -1,7 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.Util;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,25 +14,95 @@ namespace TowerSurvivors.Game
     {
         [SerializeReference]
         public List<EnemyWaveSO> waves;
+#if UNITY_EDITOR
+        private List<EnemyWaveSO> previousWaves;
+
+        private void OnValidate()
+        {
+            if (previousWaves == null || !ListEquals(previousWaves, waves))
+            {
+                totalDuration = 0;
+                for (int i = 0; i < waves.Count; i++)
+                {
+                    totalDuration += waves[i].duration;
+                }
+
+                // Update the previousWaves
+                previousWaves = new List<EnemyWaveSO>(waves);
+            }
+        }
+
+        private bool ListEquals(List<EnemyWaveSO> list1, List<EnemyWaveSO> list2)
+        {
+            if (list1 == null || list2 == null)
+            {
+                return list1 == list2;
+            }
+
+            if (list1.Count != list2.Count)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < list1.Count; i++)
+            {
+                if (list1[i] != list2[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+#endif
+
+        [SerializeField, ShowOnly]
+        private float totalDuration = 0;
         [SerializeField]
         private EnemyWaveSO currentWave;
-        public float currentCooldown;
+        [SerializeField]
+        private int currentWaveIndex = 0;
+        [SerializeField]
+        private float currentCooldown;
+        [SerializeField]
+        private float timeTilNextWave = 0;
         public Vector2 min;
         public Vector2 max;
 
+
         private void Start()
         {
-            currentWave = waves[0];
-            currentCooldown = waves[0].cooldown;
+            currentWaveIndex = 0;
+            currentWave = waves[currentWaveIndex];
+            currentCooldown = 0;
+            timeTilNextWave = currentWave.duration;
         }
 
         private void Update()
         {
             currentCooldown -= Time.deltaTime;
-            if(currentCooldown <= 0)
+            timeTilNextWave -= Time.deltaTime;
+
+            if (currentCooldown <= 0)
             {
                 SpawnEnemies();
                 currentCooldown = currentWave.cooldown;
+            }
+            if(timeTilNextWave <= 0)
+            {
+                currentWaveIndex++;
+                if(currentWaveIndex == waves.Count)
+                {
+                    Debug.Log("The enemy spawner wave queue has reached its end, will restart from the first one");
+                    currentWaveIndex = 0;
+                    currentWave = waves[currentWaveIndex];
+                    currentCooldown = currentWave.cooldown;
+                    timeTilNextWave = currentWave.duration;
+                    return;
+                }
+                currentWave = waves[currentWaveIndex];
+                currentCooldown = currentWave.cooldown;
+                timeTilNextWave = currentWave.duration;
             }
         }
 
@@ -61,18 +134,22 @@ namespace TowerSurvivors.Game
                 switch (random)
                 {
                     case 1:
+                        //Bottom
                         x = Random.Range(min.x, max.x);
                         y = min.y;
                         break;
                     case 2:
+                        //Top
                         x = Random.Range(min.x, max.x);
                         y = max.y;
                         break;
                     case 3:
+                        //Left
                         x = min.x;
                         y = Random.Range(min.y, max.y);
                         break;
                     case 4:
+                        //Right
                         x = max.x;
                         y = Random.Range(min.y, max.y);
                         break;

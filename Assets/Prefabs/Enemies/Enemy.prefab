@@ -161,7 +161,8 @@ MonoBehaviour:
     varyPitch: 1
     minPitch: 1
     maxPitch: 1.5
-  ChanceToDropXp: 0.4
+    loop: 0
+  ChanceToDropXp: 0.7
   Xp: 1
   isAlive: 1
   HP: 5

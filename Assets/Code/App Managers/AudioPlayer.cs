@@ -56,6 +56,9 @@ namespace TowerSurvivors.Audio
         public void PlaySFX(SoundClip soundClip)
         {
             SoundObject so = GetPooledSound();
+            if (!so)
+                return;
+
             so.gameObject.SetActive(true);
             so.PlayFX(soundClip);
         }
@@ -63,11 +66,12 @@ namespace TowerSurvivors.Audio
         public void PlaySFX(SoundClip soundClip, Vector3 position)
         {
             SoundObject so = GetPooledSound();
-            if (so)
-            {
-                so.gameObject.SetActive(true);
+            if (!so)
+                return;
+
+            so.gameObject.SetActive(true);
                 so.PlayFX(soundClip, position);
-            }
+            
         }
 
         /// <summary>
@@ -78,6 +82,9 @@ namespace TowerSurvivors.Audio
         public void PlayRepeating(SoundClip soundClip, float timeBetween)
         {
             SoundObject so = GetPooledSound();
+            if (!so)
+                return;
+
             so.gameObject.SetActive(true);
             StartCoroutine(so.PlayRepeating(soundClip, timeBetween));
         }
