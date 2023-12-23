@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Audio;
@@ -14,9 +15,11 @@ namespace TowerSurvivors.Game
         public static StructureManager Instance;
         public SoundClip placeSound;
 
-        public int MaximumStructures = 3;
+        public int initialMaximumStructures = 5;
+        public int MaximumStructures = 5;
         public Transform placedStructres;
         public Transform hiddenStructures;
+        public Structure[] structures;
 
         public UnityEvent<int, int> e_StAmntChanged;
 
@@ -39,11 +42,12 @@ namespace TowerSurvivors.Game
 
         public Structure[] GetStructures()
         {
-            if(placedStructres.childCount > 0)
+            if(placedStructres.childCount != structures.Length)
             {
-                return placedStructres.GetComponentsInChildren<Structure>();
+                structures =  placedStructres.GetComponentsInChildren<Structure>();
+                return structures;
             }
-            return new Structure[0];
+            return structures;
         }
 
         public GameObject AddToInventory(StructureItemSO item, int index)
@@ -80,6 +84,12 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+        }
+
+        public void IncreaseStructureLimit(int extraStructures)
+        {
+            MaximumStructures = initialMaximumStructures + extraStructures;
+            e_StAmntChanged.Invoke(structures.Length, MaximumStructures);
         }
     }
 }

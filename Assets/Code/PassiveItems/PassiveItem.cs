@@ -11,7 +11,7 @@ namespace TowerSurvivors.PassiveItems
     /// </summary>
     public class PassiveItem : MonoBehaviour
     {
-        public int level;
+        public int level = 1;
         public bool isMaxed = false;
         public PassiveItemSO item;
 

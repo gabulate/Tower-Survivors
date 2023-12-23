@@ -94,11 +94,12 @@
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
+    <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
     <Compile Include="Assets\Code\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
+    <Compile Include="Assets\Code\PassiveItems\Hammer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
