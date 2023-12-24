@@ -9,7 +9,7 @@ namespace TowerSurvivors.PassiveItems
     {
         public override void ApplyEffect()
         {
-            //Gives the player the amount of cooldown reduction set by the levels Scriptable Object
+            //Gives the player the amount of extra structures set by the levels Scriptable Object
             Player.Instance.stats.extraStructures += (int)item.levels[level - 1].EffectIntensityByLevel;
         }
 

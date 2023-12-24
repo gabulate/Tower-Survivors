@@ -82,6 +82,8 @@ namespace TowerSurvivors.PlayerScripts
 
             _isInvincible = true;
             Player.PlayerInput.EnableMovement(false);
+            GetComponent<Rigidbody2D>().simulated = false;
+            GetComponent<BoxCollider2D>().enabled = false;
             Player.Sprite.material.color = Color.black;
             Player.Instance.Die();
         }

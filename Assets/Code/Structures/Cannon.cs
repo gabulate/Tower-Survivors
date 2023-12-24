@@ -63,7 +63,8 @@ namespace TowerSurvivors.Structures
             //Instantiates the projectile////////////////////////////////////////////////
             GameObject e = Instantiate(prefab, _firePoint.position, _firePoint.rotation);
             //Calculates the direction of the target
-            Vector3 direction = (_targetPos - e.transform.position).normalized;
+            Vector2 direction = _targetPos - e.transform.position;
+            direction.Normalize();
             //Sets the corresponding attributes to the projectile
             e.GetComponent<BasicProjectile>().SetAttributes(stats, direction);
 

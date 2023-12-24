@@ -26,7 +26,7 @@ namespace TowerSurvivors.Projectiles
         public float speed = 0;
         public float duration = 5f;
         public int passThrough = 0; //The amount of enemies the projectile can go through before destroying itself
-        public Vector3 direction;
+        public Vector2 direction;
 
         /// <summary>
         /// Sets the projectile's attributes.
@@ -37,7 +37,7 @@ namespace TowerSurvivors.Projectiles
         /// <param name="direction">Direction the projetile will move towards.</param>
         /// <param name="duration">Amount of time the projectile will exist before despawning.</param>
         /// <param name="size">The scale size of the projectile</param>
-        public virtual void SetAttributes(StructureStats stats, Vector3 direction)
+        public virtual void SetAttributes(StructureStats stats, Vector2 direction)
         {
             this.damage = stats.damage;
             this.passThrough = stats.passThroughAmnt;
@@ -68,6 +68,7 @@ namespace TowerSurvivors.Projectiles
         {
             //Moves the projectile at a uniform speed in the direction given.
             _rb.velocity = direction * speed;
+
 
             if (_timeLeft <= 0)
             {
