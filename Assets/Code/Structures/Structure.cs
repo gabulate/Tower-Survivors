@@ -199,8 +199,6 @@ namespace TowerSurvivors.Structures
             UpdateOrientation();
         }
 
-        
-
         public virtual void ChangeOrientation()
         {
             switch (_orientation)

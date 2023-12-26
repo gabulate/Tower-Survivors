@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638358481028821724
-    m_Hash: 3425628131
+      ticks: 638391418240232886
+    m_Hash: 3970069278
   m_LockFileStatus:
     m_FilePath: C:/Unity/Tower Survivors/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638358481034679249
-    m_Hash: 4177266249
+      ticks: 638391418240494910
+    m_Hash: 1759224534
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,149 +22,6 @@ m_LocalPackages:
 m_ProjectPath: C:/Unity/Tower Survivors/Packages
 m_EditorVersion: 2021.3.18f1 (3129e69bc0c7)
 m_ResolvedPackages:
-- packageId: com.unity.collab-proxy@2.0.0
-  testable: 0
-  isDirectDependency: 1
-  version: 2.0.0
-  source: 1
-  resolvedPath: C:\Unity\Tower Survivors\Library\PackageCache\com.unity.collab-proxy@2.0.0
-  assetPath: Packages/com.unity.collab-proxy
-  name: com.unity.collab-proxy
-  displayName: Version Control
-  author:
-    name: 
-    email: 
-    url: 
-  category: Editor
-  type: asset
-  description: The Version Control package gives you the ability to use either Collaborate
-    or Plastic SCM for Unity (beta) in the Unity editor. To use Plastic SCM for Unity
-    (beta), a Plastic SCM subscription is required. Learn more about how you can
-    get started for free by visiting plasticscm.com.
-  status: 0
-  errors: []
-  versions:
-    all:
-    - 1.2.3-preview
-    - 1.2.4-preview
-    - 1.2.6
-    - 1.2.7
-    - 1.2.9
-    - 1.2.11
-    - 1.2.15
-    - 1.2.16
-    - 1.2.17-preview.3
-    - 1.3.2
-    - 1.3.3
-    - 1.3.4
-    - 1.3.5
-    - 1.3.6
-    - 1.3.7
-    - 1.3.8
-    - 1.3.9
-    - 1.4.9
-    - 1.5.7
-    - 1.6.0
-    - 1.7.1
-    - 1.8.0
-    - 1.9.0
-    - 1.10.2
-    - 1.11.2
-    - 1.12.5
-    - 1.13.5
-    - 1.14.1
-    - 1.14.4
-    - 1.14.7
-    - 1.14.9
-    - 1.14.12
-    - 1.14.13
-    - 1.14.15
-    - 1.14.16
-    - 1.14.17
-    - 1.14.18
-    - 1.15.1
-    - 1.15.4
-    - 1.15.7
-    - 1.15.9
-    - 1.15.12
-    - 1.15.13
-    - 1.15.15
-    - 1.15.16
-    - 1.15.17
-    - 1.15.18
-    - 1.17.0
-    - 1.17.1
-    - 1.17.2
-    - 1.17.6
-    - 1.17.7
-    - 2.0.0-preview.6
-    - 2.0.0-preview.8
-    - 2.0.0-preview.15
-    - 2.0.0-preview.17
-    - 2.0.0-preview.20
-    - 2.0.0-preview.21
-    - 2.0.0-preview.22
-    - 2.0.0
-    - 2.0.1
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
-    - 2.2.0
-    compatible:
-    - 2.0.0
-    - 2.0.1
-    - 2.0.3
-    - 2.0.4
-    - 2.0.5
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
-    - 2.2.0
-    verified: 2.0.7
-  dependencies: []
-  resolvedDependencies: []
-  keywords:
-  - backup
-  - cloud
-  - collab
-  - collaborate
-  - collaboration
-  - control
-  - plastic
-  - plasticscm
-  - source
-  - team
-  - teams
-  - version
-  - vcs
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-    configSource: 0
-  hideInEditor: 0
-  isAssetStorePackage: 0
-  datePublishedTicks: 638095491550000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.collab-proxy@2.0/manual/index.html
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.cloud.collaborate.git
-    revision: a1b1151e0c90bc327ea95678473c1f3a935b2c9e
-    path: 
-  unityLifecycle:
-    version: 2.0.0
-    nextVersion: 
 - packageId: com.unity.feature.2d@1.0.0
   testable: 0
   isDirectDependency: 1
@@ -333,6 +190,7 @@ m_ResolvedPackages:
     - 3.0.24
     - 3.0.25
     - 3.0.26
+    - 3.0.27
     compatible:
     - 3.0.18
     - 3.0.20
@@ -341,7 +199,8 @@ m_ResolvedPackages:
     - 3.0.24
     - 3.0.25
     - 3.0.26
-    verified: 3.0.26
+    - 3.0.27
+    verified: 3.0.27
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -713,6 +572,8 @@ m_ResolvedPackages:
     - 1.3.8
     - 1.3.9
     - 1.4.0
+    - 1.4.1
+    - 1.4.2
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -730,6 +591,8 @@ m_ResolvedPackages:
     - 1.3.8
     - 1.3.9
     - 1.4.0
+    - 1.4.1
+    - 1.4.2
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -898,6 +761,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.4
     - 3.2.0-pre.5
     - 3.2.0-pre.6
+    - 3.2.0-pre.7
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
@@ -908,6 +772,7 @@ m_ResolvedPackages:
     - 3.2.0-pre.4
     - 3.2.0-pre.5
     - 3.2.0-pre.6
+    - 3.2.0-pre.7
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -3522,6 +3387,7 @@ m_ResolvedPackages:
     - 1.8.8
     - 1.8.9
     - 1.8.10
+    - 1.8.11
     compatible:
     - 1.6.6
     - 1.7.0-pre.1
@@ -3541,6 +3407,7 @@ m_ResolvedPackages:
     - 1.8.8
     - 1.8.9
     - 1.8.10
+    - 1.8.11
     verified: 1.6.6
   dependencies:
   - name: com.unity.mathematics
@@ -4022,6 +3889,7 @@ m_ResolvedPackages:
     - 7.0.10
     - 7.0.11
     - 7.0.12
+    - 7.0.13
     - 8.0.0-pre.3
     - 8.0.0-pre.4
     - 8.0.0
@@ -4043,12 +3911,14 @@ m_ResolvedPackages:
     - 10.0.1
     - 10.0.2
     - 10.0.3
+    - 10.1.0
     compatible:
     - 7.0.9
     - 7.0.10
     - 7.0.11
     - 7.0.12
-    verified: 7.0.12
+    - 7.0.13
+    verified: 7.0.13
   dependencies:
   - name: com.unity.2d.common
     version: 6.0.6
@@ -4259,6 +4129,7 @@ m_ResolvedPackages:
     - 6.0.5
     - 6.0.6
     - 6.0.7
+    - 6.0.8
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
@@ -4270,13 +4141,15 @@ m_ResolvedPackages:
     - 8.0.0
     - 8.0.1
     - 8.0.2
+    - 8.0.3
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
     - 9.0.1
     compatible:
     - 6.0.7
-    verified: 6.0.7
+    - 6.0.8
+    verified: 6.0.8
   dependencies:
   - name: com.unity.2d.animation
     version: 7.0.9
@@ -4849,6 +4722,7 @@ m_ResolvedPackages:
     - 6.0.4
     - 6.0.5
     - 6.0.6
+    - 6.0.7
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
@@ -4859,14 +4733,17 @@ m_ResolvedPackages:
     - 8.0.0-pre.2
     - 8.0.0
     - 8.0.1
+    - 8.0.2
     - 9.0.0-pre.1
     - 9.0.0-pre.2
     - 9.0.0
     - 9.0.1
     - 9.0.2
+    - 9.0.3
     compatible:
     - 6.0.6
-    verified: 6.0.6
+    - 6.0.7
+    verified: 6.0.7
   dependencies:
   - name: com.unity.2d.sprite
     version: 1.0.0

@@ -19,6 +19,7 @@ namespace TowerSurvivors.Projectiles
         [SerializeField]
         protected Rigidbody2D _rb;
         [SerializeField] Collider2D _collider;
+        protected bool _enough = false;
 
         protected float _timeLeft;
 
@@ -50,6 +51,9 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)
         {
+            if (_enough)
+                return;
+
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
             if(_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
@@ -82,6 +86,7 @@ namespace TowerSurvivors.Projectiles
 
         protected virtual void DestroyAnim()
         {
+            _enough = true;
             _collider.enabled = false;
             if (_animator != null)
             {

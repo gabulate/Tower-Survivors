@@ -39,6 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Fade: 0
+    - _ShowOutline_ON: 1
     m_Colors:
     - _HurtColor: {r: 1, g: 0.9103774, b: 0.9103774, a: 0}
   m_BuildTextureStacks: []
