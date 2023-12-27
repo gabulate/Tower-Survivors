@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
+  m_Name: Telescope
+  m_EditorClassIdentifier: 
+  itemName: Telescope
+  description: Lets you see further away.
+  icon: {fileID: 21300000, guid: 8dd8d093c66ffdc42a673819f7375a9c, type: 3}
+  prefab: {fileID: 7857037618160338902, guid: 9eeb67d7aa307304b8e02bec4a046817, type: 3}
+  probability: 5
+  levels:
+  - EffectIntensityByLevel: 0.8
+    Description: Lets you see further away.
+  - EffectIntensityByLevel: 1
+    Description: Lets you see further away.
+  - EffectIntensityByLevel: 1.6
+    Description: Lets you see further away.
+  - EffectIntensityByLevel: 2.4
+    Description: Lets you see further away.
+  - EffectIntensityByLevel: 3.2
+    Description: Lets you see further away.
+  - EffectIntensityByLevel: 4
+    Description: Lets you see further away.

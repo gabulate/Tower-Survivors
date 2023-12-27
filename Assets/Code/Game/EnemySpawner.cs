@@ -66,8 +66,10 @@ namespace TowerSurvivors.Game
         private float currentCooldown;
         [SerializeField]
         private float timeTilNextWave = 0;
-        public Vector2 min;
-        public Vector2 max;
+        public Vector2 currentMin;
+        public Vector2 currentMax;
+        public Vector2 targetMin;
+        public Vector2 targetMax;
 
 
         private void Start()
@@ -86,6 +88,7 @@ namespace TowerSurvivors.Game
             if (currentCooldown <= 0)
             {
                 SpawnEnemies();
+                UpdateBoundaries();
                 currentCooldown = currentWave.cooldown;
             }
             if(timeTilNextWave <= 0)
@@ -104,6 +107,21 @@ namespace TowerSurvivors.Game
                 currentCooldown = currentWave.cooldown;
                 timeTilNextWave = currentWave.duration;
             }
+        }
+
+        private void UpdateBoundaries()
+        {
+            if(targetMin.x <= currentMin.x)
+                currentMin.x--;
+
+            if (targetMin.y <= currentMin.y)
+                currentMin.y--;
+
+            if (targetMax.x > currentMax.x)
+                currentMax.x++;
+
+            if (targetMax.y > currentMax.y)
+                currentMax.y++;
         }
 
         private void SpawnEnemies()
@@ -135,23 +153,23 @@ namespace TowerSurvivors.Game
                 {
                     case 1:
                         //Bottom
-                        x = Random.Range(min.x, max.x);
-                        y = min.y;
+                        x = Random.Range(currentMin.x, currentMax.x);
+                        y = currentMin.y;
                         break;
                     case 2:
                         //Top
-                        x = Random.Range(min.x, max.x);
-                        y = max.y;
+                        x = Random.Range(currentMin.x, currentMax.x);
+                        y = currentMax.y;
                         break;
                     case 3:
                         //Left
-                        x = min.x;
-                        y = Random.Range(min.y, max.y);
+                        x = currentMin.x;
+                        y = Random.Range(currentMin.y, currentMax.y);
                         break;
                     case 4:
                         //Right
-                        x = max.x;
-                        y = Random.Range(min.y, max.y);
+                        x = currentMax.x;
+                        y = Random.Range(currentMin.y, currentMax.y);
                         break;
                 }
 
@@ -169,11 +187,20 @@ namespace TowerSurvivors.Game
             Gizmos.color = Color.yellow;
 
             // Calculate the center and size of the box
-            Vector3 center = new Vector3((max.x + min.x) / 2f, (max.y + min.y) / 2f, 0f);
-            Vector3 size = new Vector3(max.x - min.x, max.y - min.y, 0f);
+            Vector3 center = new Vector3((currentMax.x + currentMin.x) / 2f, (currentMax.y + currentMin.y) / 2f, 0f);
+            Vector3 size = new Vector3(currentMax.x - currentMin.x, currentMax.y - currentMin.y, 0f);
 
             // Draw the wireframe box
             Gizmos.DrawWireCube(center, size);
+
+            Gizmos.color = Color.red;
+
+            // Calculate the center and size of the box
+            Vector3 centerr = new Vector3((targetMax.x + targetMin.x) / 2f, (targetMax.y + targetMin.y) / 2f, 0f);
+            Vector3 sizee = new Vector3(targetMax.x - targetMin.x, targetMax.y - targetMin.y, 0f);
+
+            // Draw the wireframe box
+            Gizmos.DrawWireCube(centerr, sizee);
         }
     }
 }

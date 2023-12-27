@@ -16,9 +16,13 @@ namespace TowerSurvivors.Game
 
         public static bool isPaused = false;
 
+        public static float secondsPassed = 0;
+        private static int _enemiesKilled = 0;
+
         public SoundClip gameMusic;
 
         public UnityEvent<bool> e_Paused;
+        public UnityEvent<int> e_KillCountUpdated;
 
         [Header("Object Pools")]
         public ObjectPool XpPool;
@@ -31,9 +35,21 @@ namespace TowerSurvivors.Game
                 Destroy(gameObject);
         }
 
+        public void AddToKillCOunt(int amount)
+        {
+            _enemiesKilled += amount;
+            e_KillCountUpdated.Invoke(_enemiesKilled);
+        }
+
         private void Start()
         {
             AudioPlayer.Instance.PlayMusic(gameMusic);
+            _enemiesKilled = 0;
+        }
+
+        private void FixedUpdate()
+        {
+            secondsPassed += Time.fixedDeltaTime;
         }
 
         public void LevelUp()

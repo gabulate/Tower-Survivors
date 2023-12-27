@@ -18,6 +18,8 @@ namespace TowerSurvivors.GUI
         public Slider hpBar;
         public StructureUpgradeBox upBox;
         public TextMeshProUGUI structureQtyText;
+        public TextMeshProUGUI timerText;
+        public TextMeshProUGUI enemiesKilledText;
 
         private void Start()
         {
@@ -25,6 +27,25 @@ namespace TowerSurvivors.GUI
             Player.Instance.e_leveledUp.AddListener(UpdateLevel);
             Player.Health.e_healthChanged.AddListener(UpdateHealth);
             StructureManager.Instance.e_StAmntChanged.AddListener(UpdateStructureQty);
+            GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
+        }
+
+        private void Update()
+        {
+            timerText.text = FormatTime(GameManager.secondsPassed);
+        }
+
+        public static string FormatTime(float timeInSeconds)
+        {
+            int minutes = (int)(timeInSeconds / 60);
+            int seconds = (int)(timeInSeconds % 60);
+
+            return $"{minutes:D2}:{seconds:D2}";
+        }
+
+        public void UpdateKillCount(int count)
+        {
+            enemiesKilledText.text = count.ToString();
         }
 
         public void UpdateStructureQty(int current, int max)

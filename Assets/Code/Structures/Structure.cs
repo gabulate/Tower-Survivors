@@ -75,6 +75,8 @@ namespace TowerSurvivors.Structures
             stats.projectileSpeed = item.levels[level - 1].projectileSpeed + playerStats.projectileSpeedBoost;
             stats.duration = item.levels[level - 1].duration + playerStats.durationIncrease;
             stats.projectileAmnt = item.levels[level - 1].projectileAmnt + playerStats.ProjectileAmntIncrease;
+            stats.passThroughAmnt = item.levels[level - 1].passThroughAmnt;
+            stats.timeBetweenMultipleShots = item.levels[level - 1].timeBetweenMultipleShots;
         }
 
         public void EnableStructure(bool enabled)

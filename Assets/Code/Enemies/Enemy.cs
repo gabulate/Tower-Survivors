@@ -170,6 +170,7 @@ namespace TowerSurvivors.Enemies
         public void Die()
         {
             isAlive = false;
+            GameManager.Instance.AddToKillCOunt(1);
             DropXp();
             e_Die.Invoke(this);
             DestroyAnim();

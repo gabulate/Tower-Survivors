@@ -18,8 +18,11 @@ ScriptsOnlyBuild:
     - TowerSurvivors.Game.ObjectPool
     - TowerSurvivors.Game.PassiveItemManager
     - TowerSurvivors.Game.StructureManager
+    - TowerSurvivors.PassiveItems.Hammer
     - TowerSurvivors.PassiveItems.OverClocker
     - TowerSurvivors.PassiveItems.PassiveItem
+    - TowerSurvivors.PassiveItems.RunningShoes
+    - TowerSurvivors.PassiveItems.Telescope
     - TowerSurvivors.PickUps.XpPickUp
     - TowerSurvivors.PlayerScripts.InventoryManager
     - TowerSurvivors.PlayerScripts.Player
@@ -38,7 +41,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -300,173 +302,179 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 848}
+      Script: {instanceID: 836}
     - Class: 114
-      Script: {instanceID: 1740}
+      Script: {instanceID: 1728}
+    - Class: 114
+      Script: {instanceID: 1730}
+    - Class: 114
+      Script: {instanceID: 1732}
+    - Class: 114
+      Script: {instanceID: 1734}
+    - Class: 114
+      Script: {instanceID: 1736}
     - Class: 114
       Script: {instanceID: 1742}
     - Class: 114
-      Script: {instanceID: 1744}
+      Script: {instanceID: 1890}
     - Class: 114
-      Script: {instanceID: 1746}
+      Script: {instanceID: 2040}
     - Class: 114
-      Script: {instanceID: 1748}
+      Script: {instanceID: 2094}
     - Class: 114
-      Script: {instanceID: 1756}
-    - Class: 114
-      Script: {instanceID: 1920}
-    - Class: 114
-      Script: {instanceID: 2080}
-    - Class: 114
-      Script: {instanceID: 2140}
+      Script: {instanceID: 2334}
     - Class: 114
       Script: {instanceID: 2408}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2432}
     - Class: 114
-      Script: {instanceID: 2512}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2590}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2598}
     - Class: 114
-      Script: {instanceID: 2696}
+      Script: {instanceID: 2642}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2824}
     - Class: 114
-      Script: {instanceID: 2940}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 3160}
+      Script: {instanceID: 3276}
+    - Class: 114
+      Script: {instanceID: 3330}
+    - Class: 114
+      Script: {instanceID: 3354}
+    - Class: 114
+      Script: {instanceID: 3418}
     - Class: 114
       Script: {instanceID: 3446}
     - Class: 114
-      Script: {instanceID: 3504}
-    - Class: 114
-      Script: {instanceID: 3528}
-    - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3508}
     - Class: 114
       Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 3692}
+      Script: {instanceID: 3632}
     - Class: 114
-      Script: {instanceID: 3822}
+      Script: {instanceID: 3676}
     - Class: 114
-      Script: {instanceID: 3826}
+      Script: {instanceID: 3736}
     - Class: 114
-      Script: {instanceID: 3872}
+      Script: {instanceID: 4012}
     - Class: 114
-      Script: {instanceID: 3944}
+      Script: {instanceID: 4120}
+    - Class: 114
+      Script: {instanceID: 4252}
     - Class: 114
       Script: {instanceID: 4260}
     - Class: 114
-      Script: {instanceID: 4376}
+      Script: {instanceID: 4336}
     - Class: 114
-      Script: {instanceID: 4524}
+      Script: {instanceID: 4438}
+    - Class: 114
+      Script: {instanceID: 4516}
     - Class: 114
       Script: {instanceID: 4532}
     - Class: 114
-      Script: {instanceID: 4610}
+      Script: {instanceID: 4570}
     - Class: 114
-      Script: {instanceID: 4718}
+      Script: {instanceID: 4602}
     - Class: 114
-      Script: {instanceID: 4806}
+      Script: {instanceID: 4642}
     - Class: 114
-      Script: {instanceID: 4828}
+      Script: {instanceID: 4920}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4950}
     - Class: 114
-      Script: {instanceID: 4906}
+      Script: {instanceID: 5094}
     - Class: 114
-      Script: {instanceID: 4948}
+      Script: {instanceID: 5228}
     - Class: 114
-      Script: {instanceID: 5248}
+      Script: {instanceID: 5240}
     - Class: 114
-      Script: {instanceID: 5280}
+      Script: {instanceID: 5254}
     - Class: 114
-      Script: {instanceID: 5434}
+      Script: {instanceID: 5310}
     - Class: 114
-      Script: {instanceID: 5578}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5590}
+      Script: {instanceID: 5508}
     - Class: 114
-      Script: {instanceID: 5606}
+      Script: {instanceID: 5510}
     - Class: 114
-      Script: {instanceID: 5666}
+      Script: {instanceID: 5532}
     - Class: 114
-      Script: {instanceID: 5676}
+      Script: {instanceID: 5774}
     - Class: 114
-      Script: {instanceID: 5886}
+      Script: {instanceID: 5804}
     - Class: 114
-      Script: {instanceID: 5888}
+      Script: {instanceID: 5922}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 5982}
     - Class: 114
-      Script: {instanceID: 6202}
+      Script: {instanceID: 6078}
     - Class: 114
-      Script: {instanceID: 6328}
+      Script: {instanceID: 6084}
     - Class: 114
-      Script: {instanceID: 6490}
+      Script: {instanceID: 6130}
     - Class: 114
-      Script: {instanceID: 6496}
+      Script: {instanceID: 6134}
     - Class: 114
-      Script: {instanceID: 6548}
+      Script: {instanceID: 6156}
     - Class: 114
-      Script: {instanceID: 6552}
+      Script: {instanceID: 6164}
     - Class: 114
-      Script: {instanceID: 6576}
+      Script: {instanceID: 6276}
     - Class: 114
-      Script: {instanceID: 6584}
+      Script: {instanceID: 6310}
     - Class: 114
-      Script: {instanceID: 6710}
+      Script: {instanceID: 6364}
     - Class: 114
-      Script: {instanceID: 6746}
+      Script: {instanceID: 6386}
     - Class: 114
-      Script: {instanceID: 6800}
+      Script: {instanceID: 6422}
     - Class: 114
-      Script: {instanceID: 6822}
+      Script: {instanceID: 6432}
     - Class: 114
-      Script: {instanceID: 6864}
+      Script: {instanceID: 6508}
     - Class: 114
-      Script: {instanceID: 6874}
+      Script: {instanceID: 6542}
     - Class: 114
-      Script: {instanceID: 6956}
+      Script: {instanceID: 6616}
     - Class: 114
-      Script: {instanceID: 6992}
+      Script: {instanceID: 6664}
     - Class: 114
-      Script: {instanceID: 7074}
+      Script: {instanceID: 6754}
     - Class: 114
-      Script: {instanceID: 7130}
+      Script: {instanceID: 6780}
     - Class: 114
-      Script: {instanceID: 7226}
+      Script: {instanceID: 6838}
     - Class: 114
-      Script: {instanceID: 7254}
+      Script: {instanceID: 7132}
     - Class: 114
-      Script: {instanceID: 7318}
+      Script: {instanceID: 7302}
     - Class: 114
-      Script: {instanceID: 7634}
+      Script: {instanceID: 7452}
     - Class: 114
-      Script: {instanceID: 7826}
+      Script: {instanceID: 7456}
     - Class: 114
-      Script: {instanceID: 7990}
+      Script: {instanceID: 7628}
     - Class: 114
-      Script: {instanceID: 7994}
+      Script: {instanceID: 7738}
     - Class: 114
-      Script: {instanceID: 8194}
+      Script: {instanceID: 7770}
     - Class: 114
-      Script: {instanceID: 8310}
+      Script: {instanceID: 7880}
     - Class: 114
-      Script: {instanceID: 8342}
+      Script: {instanceID: 7894}
     - Class: 114
-      Script: {instanceID: 8466}
+      Script: {instanceID: 8022}
     - Class: 114
-      Script: {instanceID: 8480}
-    - Class: 114
-      Script: {instanceID: 8620}
+      Script: {instanceID: 40680}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -650,7 +658,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: c49808b8e9f8cff2fe7396903e9d5ffe
+      Hash: 7423d84d7b5d228e7a90e85fdbbc447e
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.GUI
     className: GameHUD
@@ -782,7 +790,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: bcd131902dc8bc4564b4b2a26f5b540d
+      Hash: 063015b71e9c80fd8a5acaa94a6f1c14
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Game
     className: StructureManager
@@ -908,7 +916,7 @@ ScriptsOnlyBuild:
     className: DecalRendererFeature
   - hash:
       serializedVersion: 2
-      Hash: 2200c8b2fea12251400e87c8cdd06f5e
+      Hash: e66b83d08b63d5fee2ea672d46efb903
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Game
     className: GameManager
@@ -926,6 +934,12 @@ ScriptsOnlyBuild:
     className: EnemyWaveSO
   - hash:
       serializedVersion: 2
+      Hash: 463014e4f89fe3759c5793d2d6e717e8
+    assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
+    namespaceName: UnityEngine.Rendering.Universal
+    className: UniversalRenderPipelineAsset
+  - hash:
+      serializedVersion: 2
       Hash: 27ec3360f0c0a6803ba71cc3106480b8
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -936,12 +950,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
     namespaceName: UnityEngine.Rendering.Universal
     className: ForwardRendererData
-  - hash:
-      serializedVersion: 2
-      Hash: 463014e4f89fe3759c5793d2d6e717e8
-    assemblyName: Unity.RenderPipelines.Universal.Runtime.dll
-    namespaceName: UnityEngine.Rendering.Universal
-    className: UniversalRenderPipelineAsset
   - hash:
       serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
@@ -1184,7 +1192,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: dd259cfa2a5d31c3e640dbc95252cc56
+      Hash: aa4ed2cd520abc7229f5ea7d56967f00
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Game
     className: EnemySpawner
@@ -1208,7 +1216,7 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: e5160b96bf056f29f977fca97ed4a4f9
+      Hash: 4c09512822785dfc88d02c694146fc10
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.Projectiles
     className: BasicProjectile
@@ -1310,16 +1318,16 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerPanel
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: GroupTrack
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinUpdateHelper
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: GroupTrack
   - hash:
       serializedVersion: 2
       Hash: 91b88754bf9811ac48197b0030dd8c88
@@ -1340,6 +1348,12 @@ ScriptsOnlyBuild:
     className: VolumeComponent
   - hash:
       serializedVersion: 2
+      Hash: 65502ed81eca35a562c90ffa7a702f70
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.PassiveItems
+    className: Hammer
+  - hash:
+      serializedVersion: 2
       Hash: 6b3057497eb6f0e52612476af702bf8c
     assemblyName: Unity.RenderPipelines.Core.Runtime.dll
     namespaceName: UnityEngine.Rendering.UI
@@ -1350,6 +1364,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 65502ed81eca35a562c90ffa7a702f70
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.PassiveItems
+    className: RunningShoes
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -1634,7 +1654,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: ebd0df743f5c597c21c57cf6f2cc30d4
+      Hash: 43ca957d539d8688fb4210c09de92e56
     assemblyName: Assembly-CSharp.dll
     namespaceName: TowerSurvivors.PlayerScripts
     className: Player
@@ -1788,6 +1808,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 65502ed81eca35a562c90ffa7a702f70
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: TowerSurvivors.PassiveItems
+    className: Telescope
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
