@@ -128,7 +128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7e39579557be37a46a85583a69197212, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a7c48663c0502747b9b65a564d49166, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   _rb: {fileID: 2481510418343764492}
   _collider: {fileID: 1517514155189219189}
   hurtSound:
-    clip: {fileID: 8300000, guid: 670821269d3b32b42b801b7979a8fa09, type: 3}
+    clip: {fileID: 8300000, guid: f56dbf16773f1fe478fbca556836b0cb, type: 3}
     volume: 0.5
     pitch: 1
     varyPitch: 1
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2481510418343764498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fdffc19570ab046851f97c4676acb6, type: 3}
+  m_Script: {fileID: 11500000, guid: ca87322a4b2d4c141922d96cd0d16588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &2481510418343764492
@@ -317,12 +317,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 168bfe3881f3cc44b9fe578ca21ae264, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cf82b0b9f0c07a42ac77c51bf673461, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.7372549}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.5, y: 0.1875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

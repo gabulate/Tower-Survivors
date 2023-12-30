@@ -83,7 +83,7 @@ namespace TowerSurvivors.PlayerScripts
             stats.durationIncrease = 0f;
             stats.ProjectileAmntIncrease = 0;
             stats.speedBoost = 0f;
-            stats.visionBoost = 0f;
+            stats.visionBoost = 5f;
             stats.extraStructures = 0;
 
             Structure[] structures = StructureManager.Instance.GetStructures();
@@ -100,7 +100,7 @@ namespace TowerSurvivors.PlayerScripts
             }
             //Buffs not related to structures
             PlayerInput.Speed = PlayerInput.initialSpeed + stats.speedBoost;
-            Camera.main.orthographicSize = 5 + stats.visionBoost;
+            Camera.main.orthographicSize = stats.visionBoost;
             StructureManager.Instance.IncreaseStructureLimit(stats.extraStructures);
         }
 

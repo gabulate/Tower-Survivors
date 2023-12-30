@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Overclocker
   description: Runs structures to their maximum capacity, reducing their attack cooldown.
-  icon: {fileID: 21300000, guid: 6469cd6ade4d9bc47bab49c6456cde11, type: 3}
+  icon: {fileID: 21300000, guid: d825578c298728b41be15841a0a0bdf7, type: 3}
   prefab: {fileID: 8527654739395879988, guid: 8e26d2d2435f92d479fb0958d007a1b5, type: 3}
   probability: 5
   levels:

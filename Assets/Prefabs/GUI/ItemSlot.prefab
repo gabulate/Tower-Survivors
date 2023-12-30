@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d4c9211658a966345a0278bc72163a32, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8c4343e5510b0c4f955d5e7bfa9ef28, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   icon: {fileID: 931658792178267011}
-  normalColor: {r: 0, g: 0, b: 0, a: 0.19607843}
+  normalColor: {r: 1, g: 1, b: 1, a: 0.19607843}
   selectedColor: {r: 1, g: 1, b: 1, a: 0.39215687}

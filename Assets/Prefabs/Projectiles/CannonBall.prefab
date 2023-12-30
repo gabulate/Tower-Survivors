@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3666265593167655971}
   - component: {fileID: 3666265593167655970}
-  - component: {fileID: 3666265593167655973}
   - component: {fileID: 3666265593167655972}
   - component: {fileID: 3666265593167655975}
   - component: {fileID: 6499422120482752279}
   - component: {fileID: 968542639993858825}
+  - component: {fileID: 4488264773285591903}
   m_Layer: 8
   m_Name: CannonBall
   m_TagString: Untagged
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0d7780a6ec56e214697b4f490de5d9ea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0755ed578d9f39b48a7bb143299f7b8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -89,18 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3666265593167655973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3666265593167655993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78fdffc19570ab046851f97c4676acb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &3666265593167655972
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -178,3 +166,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4488264773285591903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3666265593167655993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca87322a4b2d4c141922d96cd0d16588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
