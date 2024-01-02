@@ -18,7 +18,8 @@ namespace TowerSurvivors.Projectiles
         protected Animator _animator;
         [SerializeField]
         protected Rigidbody2D _rb;
-        [SerializeField] Collider2D _collider;
+        [SerializeField] 
+        protected Collider2D _collider;
         protected bool _enough = false;
 
         protected float _timeLeft;

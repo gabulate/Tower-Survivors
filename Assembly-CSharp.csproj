@@ -102,6 +102,8 @@
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
+    <Compile Include="Assets\Code\Structures\Sniper.cs" />
+    <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

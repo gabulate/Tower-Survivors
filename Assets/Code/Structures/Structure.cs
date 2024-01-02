@@ -252,11 +252,19 @@ namespace TowerSurvivors.Structures
         //Draws a circle of the structure's attack range
         protected virtual void OnDrawGizmosSelected()
         {
-            _outline.transform.localScale = Vector3.one * _margin;
-            _rangeOutline.transform.localScale = Vector3.one * stats.range;
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, stats.range);
-            Gizmos.DrawWireCube(_outline.transform.position, new Vector3(_margin, _margin, _margin));
+            try
+            {
+                _outline.transform.localScale = Vector3.one * _margin;
+                _rangeOutline.transform.localScale = Vector3.one * stats.range;
+                Gizmos.color = Color.yellow;
+                Gizmos.DrawWireSphere(transform.position, stats.range);
+                Gizmos.color = Color.blue;
+                Gizmos.DrawWireCube(_outline.transform.position, new Vector3(_margin, _margin, _margin));
+            }
+            catch
+            {
+
+            }
         }
     }
 

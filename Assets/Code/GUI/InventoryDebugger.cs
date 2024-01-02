@@ -29,6 +29,18 @@ namespace TowerSurvivors.GUI
 
             dropdown.AddOptions(_options);
             _itemName = _options[0];
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                _active = !_active;
+
+                GetComponent<Image>().enabled = _active;
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Transform child = transform.GetChild(i);
+                    child.gameObject.SetActive(_active);
+                }
+            }
         }
 
         private void Update()

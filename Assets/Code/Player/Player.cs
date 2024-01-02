@@ -144,15 +144,15 @@ namespace TowerSurvivors.PlayerScripts
 
             if(Level < 20)
             {
-                XpForNextLevel += 10;
+                XpForNextLevel += 5;
             }
             else if(Level < 40)
             {
-                XpForNextLevel += 13;
+                XpForNextLevel += 10;
             }
             else
             {
-                XpForNextLevel += 16;
+                XpForNextLevel += 15;
             }
 
             e_xpChanged.Invoke(_xp, XpForNextLevel);
@@ -183,6 +183,7 @@ namespace TowerSurvivors.PlayerScripts
 
         private IEnumerator RestartLevel()
         {
+            GameManager.Instance.Restart();
             yield return new WaitForSeconds(5);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

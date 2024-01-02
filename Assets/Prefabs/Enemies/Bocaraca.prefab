@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8061092947824743290}
   - component: {fileID: 8061092947824743289}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AttackCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

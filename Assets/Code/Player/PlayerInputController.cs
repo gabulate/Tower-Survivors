@@ -57,7 +57,7 @@ namespace TowerSurvivors.PlayerScripts
                 return;
 
 
-            _input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            _input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
             float scrollWheelInput = Input.GetAxis("Mouse ScrollWheel");
 

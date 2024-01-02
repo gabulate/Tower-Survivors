@@ -68,5 +68,10 @@ namespace TowerSurvivors.Game
             isPaused = !isPaused;
             Time.timeScale = isPaused ? 0 : 1;
         }
+
+        internal void Restart()
+        {
+            secondsPassed = 0;
+        }
     }
 }
