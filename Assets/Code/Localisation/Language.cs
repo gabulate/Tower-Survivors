@@ -7,7 +7,7 @@ namespace TowerSurvivors.Localisation
     public class Language
     {
         private static Dictionary<string, string> currentLanguage = new Dictionary<string, string>();
-        private static int languageCol;
+        private static int languageCol = 1;
 
         public static void InitialiseLanguage(TextAsset csv, string language)
         {
@@ -38,7 +38,15 @@ namespace TowerSurvivors.Localisation
                 string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
                 for (int j = 0; j < row.Length; j++)
                 {
-                    languageData[i, j] = row[j];
+                    try
+                    {
+                        if (row[j] != "")
+                            languageData[i, j] = row[j].Trim().Replace(';', ',');
+                    }
+                    catch
+                    {
+                        Debug.LogWarning("Couldn't load Row: " + i + " Col: " + j);
+                    }
                 }
             }
 
@@ -63,7 +71,7 @@ namespace TowerSurvivors.Localisation
         {
             try
             {
-                return currentLanguage[key.ToUpper()];
+                return currentLanguage[key.ToUpper().Trim()];
             }
             catch
             {

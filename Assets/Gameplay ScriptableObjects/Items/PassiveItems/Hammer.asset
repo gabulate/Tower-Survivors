@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
   m_Name: Hammer
   m_EditorClassIdentifier: 
-  itemName: Hammer
-  description: Increases the number of maximum allowed structures by 1.
+  itemNameKey: HAMMER_NAME
+  descriptionKey: HAMMER_DSC
   icon: {fileID: 21300000, guid: f1ee3a58e22289541a61e2595ad7b0ad, type: 3}
   prefab: {fileID: 209754003940991139, guid: 96ec793f6a7472046a8d123edf33aa9f, type: 3}
   probability: 5
   levels:
   - EffectIntensityByLevel: 1
-    Description: Increases the number of maximum allowed structures by 1.
+    DescriptionKey: UPG_EXTRASTR1
   - EffectIntensityByLevel: 2
-    Description: Increases the number of maximum allowed structures by 1.
+    DescriptionKey: UPG_EXTRASTR1
   - EffectIntensityByLevel: 3
-    Description: Increases the number of maximum allowed structures by 1.
+    DescriptionKey: UPG_EXTRASTR1
   - EffectIntensityByLevel: 4
-    Description: Increases the number of maximum allowed structures by 1.
+    DescriptionKey: UPG_EXTRASTR1
   - EffectIntensityByLevel: 5
-    Description: Increases the number of maximum allowed structures by 1.
+    DescriptionKey: UPG_EXTRASTR1

@@ -12,20 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
   m_Name: OverClocker
   m_EditorClassIdentifier: 
-  itemName: Overclocker
-  description: Runs structures to their maximum capacity, reducing their attack cooldown.
+  itemNameKey: OVERCLOCKER_NAME
+  descriptionKey: OVERCLOCKER_DSC
   icon: {fileID: 21300000, guid: d825578c298728b41be15841a0a0bdf7, type: 3}
   prefab: {fileID: 8527654739395879988, guid: 8e26d2d2435f92d479fb0958d007a1b5, type: 3}
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.1
-    Description: Runs structures to their maximum capacity, reducing their attack
-      cooldown by 10%.
+    DescriptionKey: UPG_COOLDOWNALL10
   - EffectIntensityByLevel: 0.2
-    Description: Cooldown reduction augments to 20%.
+    DescriptionKey: UPG_COOLDOWNALL20
   - EffectIntensityByLevel: 0.3
-    Description: Cooldown reduction augments to 30%.
+    DescriptionKey: UPG_COOLDOWNALL30
   - EffectIntensityByLevel: 0.4
-    Description: Cooldown reduction augments to 40%.
+    DescriptionKey: UPG_COOLDOWNALL40
   - EffectIntensityByLevel: 0.5
-    Description: Cooldown reduction augments to 50%.
+    DescriptionKey: UPG_COOLDOWNALL50

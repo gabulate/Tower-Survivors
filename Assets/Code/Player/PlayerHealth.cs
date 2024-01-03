@@ -55,15 +55,12 @@ namespace TowerSurvivors.PlayerScripts
         {
             _isInvincible = true;
 
-            Color initialColor = Color.red;
-            Color targetColor = Color.white;
-
             float elapsedTime = 0f;
 
             while (elapsedTime < seconds)
             {
                 elapsedTime += Time.deltaTime;
-                Player.Sprite.material.color = Color.Lerp(initialColor, targetColor, elapsedTime / seconds);
+                Player.Sprite.material.SetFloat("_Fade", 1 - (elapsedTime / seconds));
                 yield return null;
             }
 
@@ -81,7 +78,9 @@ namespace TowerSurvivors.PlayerScripts
             Player.PlayerInput.EnableMovement(false);
             GetComponent<Rigidbody2D>().simulated = false;
             GetComponent<BoxCollider2D>().enabled = false;
-            Player.Sprite.material.color = Color.black;
+            Player.Sprite.material.SetFloat("_Fade", 1);
+
+            Player.Sprite.material.SetColor("_HurtColor", Color.black);
             Player.Instance.Die();
         }
 

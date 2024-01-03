@@ -1,15 +1,49 @@
-﻿KEY,English,Spanish
+﻿KEY,EN,ES
+General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat)(Amount); Add combined attributes as needed. Look Below for examples.,Strings can be formatted using {0}; {1}; etc. for when they need a variable name.
 Main Menu Text---,Main Menu Text---,Texto del menú principal---
 PLAY,Play,Jugar
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
-LEVEL,Level,Nivel
+LEVELUP,Level Up!,Subiste de nivel!
+LEVEL,Needed:,Se necesita:
 CONFIG,Settings,Configuraciones
 STRUCTURE,Structure,Estructura
 ITEM,Item,Ítem
-CANNON,Cannon,Cañón
+NOTHINGITEM_NAME,Nothing.,Nada.
+NOTHINGITEM_DSC,Does nothing.,No hace nada.
+CANNON_NAME,Cannon,Cañón
 CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
-CANNON_UPG_1,Range and projectile speed increased. Projectiles pass through 1 more enemy.,Rango y velocidad de projectiles aumentados. Los projectiles pueden atravesar 1 enemigo más.
-CANNON_UPG_2,Damage increased by 10. Range increased.,Daño aumentado por 10. Rango aumentado.
-CANNON_UPG_3,Damage increased by 10. Projectiles pass through 1 more enemy.,Daño aumentado por 10. Los projectiles pueden atravesar un enemigo más.
-CANNON_UPG_4,Damage increased by 10. Cooldown reduced by 1 second.,Daño aumentado por 10. Enfriamiento reducido por 1 segundo.
+SNIPER_NAME,Mark's Man-Tower,Torre de operaciones de Marcos
+SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por my compa Marcos; él nunca falla!
+OVERCLOCKER_NAME,Overclocker,Super cargador
+OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
+HAMMER_NAME,Hammer,Martillo
+HAMMER_DSC,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
+RUNNINGSHOES_NAME,Running shoes,Zapatos deportivos
+RUNNINGSHOES_DSC,Sneakers that make you run faster.,Tenis que te hacen correr más rápido.
+TELESCOPE_NAME,Telescope,Telescopio
+TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
+Upgrades----,Upgrades---,Mejoras---
+UPG_RANGE,Range increased.,Rango aumentado.
+UPG_RANGE_DAMAGE10,Range increased and Damage increased by 10.,Rango aumentado y Daño aumentado en 10. 
+UPG_RANGE_SPEED,Range and projectile speed increased.,Rango y velocidad de projectiles aumentados.
+UPG_RANGE_SPEED_PASSTH1,Range and projectile speed increased. Projectiles pass through 1 more enemy.,Rango y velocidad de projectiles aumentados. Los projectiles pueden atravesar 1 enemigo más.
+UPG_DAMAGE10,Damage increased by 10.,Daño aumentado en 10.
+UPG_DAMAGE20,Damage increased by 20.,Daño aumentado en 20.
+UPG_DAMAGE10_COOLDOWN1,Damage increased by 10. Cooldown reduced by 1 second.,Daño aumentado por 10. Enfriamiento reducido por 1 segundo.
+UPG_DAMAGE20_COOLDOWN1,Damage increased by 20. Cooldown reduced by 1 second.,Daño aumentado por 20. Enfriamiento reducido por 1 segundo.
+UPG_DAMAGE10_PASSTH1,Damage increased by 10. Projectiles pass through 1 more enemy.,Daño aumentado por 10. Los projectiles pueden atravesar un enemigo más.
+UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
+UPG_COOLDOWNALL10,Cooldown reduced by 10% on all structures.,Enfriamiento reducido 10% en todas las estructuras.
+UPG_COOLDOWNALL20,Cooldown reduction increased to 20% on all structures.,Reducción de enfriamiento aumentado a 20% en todas las estructuras.
+UPG_COOLDOWNALL30,Cooldown reduction increased to 30% on all structures.,Reducción de enfriamiento aumentado a 30% en todas las estructuras.
+UPG_COOLDOWNALL40,Cooldown reduction increased to 40% on all structures.,Reducción de enfriamiento aumentado a 40% en todas las estructuras.
+UPG_COOLDOWNALL50,Cooldown reduction increased to 50% on all structures.,Reducción de enfriamiento aumentado a 50% en todas las estructuras.
+UPG_SIZE,Projectile size increased.,Aumenta el tamaño de los projectiles.
+UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los projectiles.
+UPG_DURATION,Projectile duration increased.,Aumenta la duración de los projectiles.
+UPG_AMOUNT,Projectile amount increased by 1.,Cantidad de projectiles aumentada en 1.
+UPG_PASSTH,Projectiles can pass through 1 more enemy.,Los projectiles pueden atravesar a 1 enemigo más.
+UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
+UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
+UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.

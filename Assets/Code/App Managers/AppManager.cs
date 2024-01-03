@@ -19,13 +19,13 @@ namespace TowerSurvivors
             else if (Instance != this)
                 Destroy(gameObject);
             DontDestroyOnLoad(this.gameObject);
+            Language.InitialiseLanguage(languagesCSV, language);
+            PlayerPrefs.SetString("language", language);
         }
 
         private void Start()
         {
-
-            Language.InitialiseLanguage(languagesCSV, language);
-            PlayerPrefs.SetString("language", language);
+            
         }
     }
 }

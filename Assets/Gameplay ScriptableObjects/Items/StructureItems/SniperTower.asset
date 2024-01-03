@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35eca5ebc2bc2354097fae25a0d95c2b, type: 3}
   m_Name: SniperTower
   m_EditorClassIdentifier: 
-  itemName: Mark's Man-Tower
-  description: High range, high damage sniper, operated by my buddy Mark, he doesn't
-    miss!
+  itemNameKey: SNIPER_NAME
+  descriptionKey: SNIPER_DSC
   icon: {fileID: 21300000, guid: 7b2c84307a8f4da4087c74f28eca77a2, type: 3}
   prefab: {fileID: 5225501810248713695, guid: 2beeb3ad9a6993e45974173eabb3e216, type: 3}
   probability: 5
   levels:
   - neededLevel: 1
-    upgradeDescription: First Level.
+    DescriptionKey: first
     range: 10
     damage: 50
     attackCooldown: 5
@@ -32,8 +31,8 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    upgradeDescription: Range increased.
-    range: 13
+    DescriptionKey: UPG_RANGE
+    range: 15
     damage: 50
     attackCooldown: 5
     currentCooldown: 0
@@ -44,9 +43,21 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    upgradeDescription: Cooldown reduced by 1 second.
-    range: 13
-    damage: 50
+    DescriptionKey: UPG_DAMAGE10_COOLDOWN1
+    range: 15
+    damage: 60
+    attackCooldown: 4
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    DescriptionKey: UPG_DAMAGE20
+    range: 15
+    damage: 20
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1

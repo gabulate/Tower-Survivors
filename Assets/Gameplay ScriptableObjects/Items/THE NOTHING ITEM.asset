@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
   m_Name: THE NOTHING ITEM
   m_EditorClassIdentifier: 
-  itemName: Nothing
-  description: This item only appears when there are no more available options
-  icon: {fileID: 21300000, guid: 168bfe3881f3cc44b9fe578ca21ae264, type: 3}
+  itemNameKey: NOTHINGITEM_NAME
+  descriptionKey: NOTHINGITEM_DSC
+  icon: {fileID: 21300000, guid: 3cf82b0b9f0c07a42ac77c51bf673461, type: 3}
   prefab: {fileID: 8289305869320662313, guid: ff4c7facc67d0fe47bbef58a6ebf6e58, type: 3}
   probability: 0
   levels:
   - EffectIntensityByLevel: 0
-    Description: Nothing.
+    DescriptionKey: NOTHINGITEM_DSC

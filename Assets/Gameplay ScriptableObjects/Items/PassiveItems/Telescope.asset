@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
   m_Name: Telescope
   m_EditorClassIdentifier: 
-  itemName: Telescope
-  description: Lets you see further away.
+  itemNameKey: TELESCOPE_NAME
+  descriptionKey: TELESCOPE_DSC
   icon: {fileID: 21300000, guid: 56c571e1b00495a428d1995f1c7f44c3, type: 3}
   prefab: {fileID: 7857037618160338902, guid: 9eeb67d7aa307304b8e02bec4a046817, type: 3}
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.8
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION
   - EffectIntensityByLevel: 1
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION
   - EffectIntensityByLevel: 1.6
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION
   - EffectIntensityByLevel: 2.4
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION
   - EffectIntensityByLevel: 3.2
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION
   - EffectIntensityByLevel: 4
-    Description: Lets you see further away.
+    DescriptionKey: UPG_VISION

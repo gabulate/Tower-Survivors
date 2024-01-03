@@ -18,7 +18,7 @@ namespace TowerSurvivors.GUI
         {
             this.item = item;
             icon.sprite = item.icon;
-            itemName.text = item.itemNameKey;
+            itemName.text = Language.Get(item.itemNameKey);
 
             if (item.GetType() == typeof(StructureItemSO))
             {

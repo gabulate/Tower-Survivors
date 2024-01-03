@@ -7,6 +7,8 @@ using TowerSurvivors.PassiveItems;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
+using TMPro;
+using TowerSurvivors.Localisation;
 
 namespace TowerSurvivors.Game
 {
@@ -21,6 +23,9 @@ namespace TowerSurvivors.Game
 
         [SerializeField]
         private Animator _animator;
+
+        [SerializeField]
+        private TextMeshProUGUI _levelUpText; 
 
         [SerializeField]
         private List<ItemSO> selectedItems = new List<ItemSO>();
@@ -173,6 +178,7 @@ namespace TowerSurvivors.Game
         private void Start()
         {
             StartCoroutine(HideMenu());
+            _levelUpText.text = Language.Get("LEVELUP");
         }
     }
 }
