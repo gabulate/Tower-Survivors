@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace TowerSurvivors.Audio
@@ -13,7 +10,7 @@ namespace TowerSurvivors.Audio
         public float volume = 1f;
         [Range(-3, 3)]
         public float pitch = 1;
-        
+
         public bool varyPitch;
         [Range(-3, 3)]
         public float minPitch = -1;

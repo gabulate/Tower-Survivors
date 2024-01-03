@@ -1,11 +1,8 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Game;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Structures;
-using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -94,7 +91,7 @@ namespace TowerSurvivors.PlayerScripts
                 p.ApplyEffect();
             }
 
-            foreach(Structure s in structures)
+            foreach (Structure s in structures)
             {
                 s.ApplyBuffs(stats);
             }
@@ -130,7 +127,7 @@ namespace TowerSurvivors.PlayerScripts
             TotalXpCollected += xp;
             e_xpChanged.Invoke(_xp, XpForNextLevel);
 
-            if(_xp >= XpForNextLevel)
+            if (_xp >= XpForNextLevel)
             {
                 LevelUp();
             }
@@ -142,11 +139,11 @@ namespace TowerSurvivors.PlayerScripts
 
             _xp -= XpForNextLevel;
 
-            if(Level < 20)
+            if (Level < 20)
             {
                 XpForNextLevel += 5;
             }
-            else if(Level < 40)
+            else if (Level < 40)
             {
                 XpForNextLevel += 10;
             }
@@ -166,7 +163,7 @@ namespace TowerSurvivors.PlayerScripts
 
         public void CheckForLevelUp()
         {
-            if (_xp >= XpForNextLevel) 
+            if (_xp >= XpForNextLevel)
             {
                 LevelUp();
             }

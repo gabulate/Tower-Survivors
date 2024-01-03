@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,6 +42,7 @@ namespace TowerSurvivors.Game
         {
             AudioPlayer.Instance.PlayMusic(gameMusic);
             _enemiesKilled = 0;
+            GameSettings.LoadSettings();
         }
 
         private void FixedUpdate()

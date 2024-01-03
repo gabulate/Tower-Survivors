@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
+using TowerSurvivors.Localisation;
 using TowerSurvivors.Structures;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,8 +28,9 @@ namespace TowerSurvivors.GUI
         {
             transform.position = structure.transform.position;
             int nextLevel = structure.level + 1;
-            Title.text = "Upgrade to level: " + nextLevel;
-            Description.text = structure.item.levels[structure.level].upgradeDescription;
+            Title.text = string.Format(Language.Get("UPGRADETO"), nextLevel);
+            Description.text = Language.Get(structure.item.levels[structure.level].DescriptionKey);
+            Requirements.text = Language.Get("LEVEL");
 
             icon.gameObject.SetActive(true);
             Requirements.gameObject.SetActive(true);
@@ -39,16 +38,16 @@ namespace TowerSurvivors.GUI
             icon.sprite = structure.item.icon;
             Requirements.color = canUpgrade ? yesColor : noColor;
             iconBack.color = canUpgrade ? yesColor : noColor;
-            
+
         }
 
         internal void SetValuesMax(Structure structure)
         {
             transform.position = structure.transform.position;
-            Title.text = "Max level " + structure.item.itemName + ".";
+            Title.text = "Max level " + structure.item.itemNameKey + ".";
             Description.text = "Maximum level reached!";
 
-            
+
             icon.gameObject.SetActive(false);
             Requirements.gameObject.SetActive(false);
             iconBack.gameObject.SetActive(false);

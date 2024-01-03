@@ -1,6 +1,7 @@
 using UnityEngine;
 
-namespace TowerSurvivors.Util {
+namespace TowerSurvivors.Util
+{
     /// <summary>
     /// Monobehaviour that makes objects further up in the world look like they're behind.
     /// </summary>

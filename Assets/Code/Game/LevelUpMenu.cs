@@ -51,7 +51,7 @@ namespace TowerSurvivors.Game
             //Iterate backwards for safe removing
             for (int i = availableItems.Count - 1; i >= 0; i--)
             {
-                if(availableItems[i].GetType() == typeof(StructureItemSO))
+                if (availableItems[i].GetType() == typeof(StructureItemSO))
                 {
                     //TODO: Maybe add a maximum of allowed structures.
                     if (!Player.Inventory.AvailableStrucutreSlot())
@@ -63,10 +63,10 @@ namespace TowerSurvivors.Game
                 {
                     PassiveItem pi = PassiveItemManager.Instance.GetFromInventory(availableItems[i] as PassiveItemSO);
                     //If the passive item is already maxed, remove it from the available items
-                    if(pi != null && pi.isMaxed)
+                    if (pi != null && pi.isMaxed)
                     {
                         availableItems.RemoveAt(i);
-                    } 
+                    }
                     else if (!Player.Inventory.AvailablePassiveItemSlot())
                     {
                         availableItems.RemoveAt(i);
@@ -87,7 +87,7 @@ namespace TowerSurvivors.Game
             for (int i = 0; i < 3; i++)
             {
                 ItemSO item = GetRandomFromList(availableItems);
-                if(item != null)
+                if (item != null)
                 {
                     resultList.Add(item);
                     availableItems.Remove(item);
@@ -103,7 +103,7 @@ namespace TowerSurvivors.Game
 
         public ItemSO GetRandomFromList(List<ItemSO> list)
         {
-            if(list.Count == 0)
+            if (list.Count == 0)
             {
                 return null;
             }

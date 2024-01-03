@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
@@ -28,7 +27,7 @@ namespace TowerSurvivors.Structures
 
         protected override void Attack()
         {
-            if(targetObject == null)
+            if (targetObject == null)
             {
                 if (!GetClosestTarget())
                 {

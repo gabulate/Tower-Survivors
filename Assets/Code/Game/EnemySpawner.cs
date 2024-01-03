@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Util;
-using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -91,10 +88,10 @@ namespace TowerSurvivors.Game
                 UpdateBoundaries();
                 currentCooldown = currentWave.cooldown;
             }
-            if(timeTilNextWave <= 0)
+            if (timeTilNextWave <= 0)
             {
                 currentWaveIndex++;
-                if(currentWaveIndex == waves.Count)
+                if (currentWaveIndex == waves.Count)
                 {
                     Debug.Log("The enemy spawner wave queue has reached its end, will restart from the first one");
                     currentWaveIndex = 0;
@@ -111,7 +108,7 @@ namespace TowerSurvivors.Game
 
         private void UpdateBoundaries()
         {
-            if(targetMin.x <= currentMin.x)
+            if (targetMin.x <= currentMin.x)
                 currentMin.x--;
 
             if (targetMin.y <= currentMin.y)

@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using TowerSurvivors.Localisation;
 
 namespace TowerSurvivors
 {
@@ -25,6 +25,11 @@ namespace TowerSurvivors
 
             SetResolution(PlayerPrefs.GetInt("resX", Screen.currentResolution.width),
                 PlayerPrefs.GetInt("resY", Screen.currentResolution.height));
+        }
+
+        public static void SetLanguage(string language)
+        {
+            PlayerPrefs.SetString("language", language);
         }
 
         public static void SetFPS(float fps)

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using UnityEngine;
 
@@ -16,7 +14,7 @@ namespace TowerSurvivors.PickUps
             if (_playerLayer == (_playerLayer | (1 << collider.gameObject.layer)))
             {
                 ExecPickUp();
-               AudioPlayer.Instance.PlaySFX(pickUpSound);
+                AudioPlayer.Instance.PlaySFX(pickUpSound);
             }
         }
 

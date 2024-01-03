@@ -1,0 +1,15 @@
+﻿KEY,English,Spanish
+Main Menu Text---,Main Menu Text---,Texto del menú principal---
+PLAY,Play,Jugar
+Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
+UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
+LEVEL,Level,Nivel
+CONFIG,Settings,Configuraciones
+STRUCTURE,Structure,Estructura
+ITEM,Item,Ítem
+CANNON,Cannon,Cañón
+CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
+CANNON_UPG_1,Range and projectile speed increased. Projectiles pass through 1 more enemy.,Rango y velocidad de projectiles aumentados. Los projectiles pueden atravesar 1 enemigo más.
+CANNON_UPG_2,Damage increased by 10. Range increased.,Daño aumentado por 10. Rango aumentado.
+CANNON_UPG_3,Damage increased by 10. Projectiles pass through 1 more enemy.,Daño aumentado por 10. Los projectiles pueden atravesar un enemigo más.
+CANNON_UPG_4,Damage increased by 10. Cooldown reduced by 1 second.,Daño aumentado por 10. Enfriamiento reducido por 1 segundo.

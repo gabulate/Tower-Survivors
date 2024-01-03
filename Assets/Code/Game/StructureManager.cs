@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
@@ -37,14 +34,14 @@ namespace TowerSurvivors.Game
 
             AudioPlayer.Instance.PlaySFX(placeSound, structure.transform.position);
 
-            e_StAmntChanged.Invoke(structures.Length +1, MaximumStructures);
+            e_StAmntChanged.Invoke(structures.Length + 1, MaximumStructures);
         }
 
         public Structure[] GetStructures()
         {
-            if(placedStructres.childCount != structures.Length)
+            if (placedStructres.childCount != structures.Length)
             {
-                structures =  placedStructres.GetComponentsInChildren<Structure>();
+                structures = placedStructres.GetComponentsInChildren<Structure>();
                 return structures;
             }
             return structures;

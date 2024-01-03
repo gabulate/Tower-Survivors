@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TowerSurvivors.Projectiles
@@ -22,7 +21,7 @@ namespace TowerSurvivors.Projectiles
 
         void Update()
         {
-            if(CurrentSeconds <= 0)
+            if (CurrentSeconds <= 0)
             {
                 StartCoroutine(DestroyAnim());
             }
@@ -34,7 +33,7 @@ namespace TowerSurvivors.Projectiles
 
         IEnumerator DestroyAnim()
         {
-            if(_animator != null)
+            if (_animator != null)
             {
                 _animator.SetTrigger("destroy");
             }

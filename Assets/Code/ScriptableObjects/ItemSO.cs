@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace TowerSurvivors.ScriptableObjects
@@ -9,9 +7,9 @@ namespace TowerSurvivors.ScriptableObjects
     /// </summary>
     public class ItemSO : ScriptableObject
     {
-        public string itemName;
+        public string itemNameKey;
         [TextArea]
-        public string description;
+        public string descriptionKey;
         public Sprite icon;
         //public ItemType type;
         public GameObject prefab;

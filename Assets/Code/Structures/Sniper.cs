@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
@@ -90,7 +89,7 @@ namespace TowerSurvivors.Structures
             Transform targetTransform = hits[rand].transform;
 
             targetObject = targetTransform;
-            
+
             return true;
         }
 

@@ -1,9 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using TowerSurvivors.Enemies;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 namespace TowerSurvivors.PlayerScripts
 {
@@ -88,6 +85,6 @@ namespace TowerSurvivors.PlayerScripts
             Player.Instance.Die();
         }
 
-        
+
     }
 }

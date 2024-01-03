@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Enemies;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -44,7 +43,7 @@ namespace TowerSurvivors.Projectiles
                 }
             }
 
-            
+
             DestroyAnim();
         }
 

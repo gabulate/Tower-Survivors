@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -70,8 +69,8 @@ namespace TowerSurvivors.Audio
                 return;
 
             so.gameObject.SetActive(true);
-                so.PlayFX(soundClip, position);
-            
+            so.PlayFX(soundClip, position);
+
         }
 
         /// <summary>

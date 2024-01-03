@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +14,6 @@ namespace TowerSurvivors.ScriptableObjects
     {
         public float EffectIntensityByLevel;
         [TextArea]
-        public string Description;
+        public string DescriptionKey;
     }
 }

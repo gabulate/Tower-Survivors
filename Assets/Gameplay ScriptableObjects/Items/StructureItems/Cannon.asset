@@ -12,17 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35eca5ebc2bc2354097fae25a0d95c2b, type: 3}
   m_Name: Cannon
   m_EditorClassIdentifier: 
-  itemName: Cannon
-  description: 'Cannon that shoots towards its nearest enemy.
-
-    Can be placed
-    on top of another cannon to upgrade it.'
+  itemNameKey: 
+  descriptionKey: CANNON_DSC
   icon: {fileID: 21300000, guid: 76eda68b66725f542bd6fe139f8ca6a3, type: 3}
   prefab: {fileID: 3104818242787931347, guid: 406f29f4ab5b2964593ed58b00c6aa68, type: 3}
   probability: 5
   levels:
   - neededLevel: 1
-    upgradeDescription: First Level
+    DescriptionKey: First Level
     range: 4
     damage: 10
     attackCooldown: 3
@@ -34,8 +31,7 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 0
   - neededLevel: 1
-    upgradeDescription: Range and projectile speed increased. Projectiles pass through
-      1 more enemy.
+    DescriptionKey: CANNON_UPG_1
     range: 5
     damage: 10
     attackCooldown: 3
@@ -47,7 +43,7 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 1
   - neededLevel: 1
-    upgradeDescription: Damage increased by 10. Range increased.
+    DescriptionKey: CANNON_UPG_2
     range: 6
     damage: 20
     attackCooldown: 3
@@ -59,7 +55,7 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 1
   - neededLevel: 1
-    upgradeDescription: Damage increased by 10. Projectiles pass through 1 more enemy.
+    DescriptionKey: CANNON_UPG_3
     range: 6
     damage: 30
     attackCooldown: 3
@@ -71,7 +67,7 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 2
   - neededLevel: 1
-    upgradeDescription: Damage increased by 10. Cooldown reduced by 1 second.
+    DescriptionKey: CANNON_UPG_4
     range: 7
     damage: 50
     attackCooldown: 2

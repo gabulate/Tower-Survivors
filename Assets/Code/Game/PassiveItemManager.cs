@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
@@ -30,7 +27,7 @@ namespace TowerSurvivors.Game
             {
                 foreach (PassiveItem p in GetPassives())
                 {
-                    if (p.item.itemName == item.itemName)
+                    if (p.item.itemNameKey == item.itemNameKey)
                     {
                         if (p.level >= p.item.levels.Count)
                         {
@@ -68,7 +65,7 @@ namespace TowerSurvivors.Game
         {
             foreach (PassiveItem p in GetPassives())
             {
-                if (p.item.itemName == item.itemName)
+                if (p.item.itemNameKey == item.itemNameKey)
                 {
                     return p;
                 }
@@ -83,9 +80,9 @@ namespace TowerSurvivors.Game
         /// <returns></returns>
         public int GetCurrentLevel(PassiveItemSO item)
         {
-            foreach(PassiveItem p in GetPassives())
+            foreach (PassiveItem p in GetPassives())
             {
-                if(p.item.itemName == item.itemName)
+                if (p.item.itemNameKey == item.itemNameKey)
                 {
                     return p.level;
                 }
@@ -97,7 +94,7 @@ namespace TowerSurvivors.Game
         {
             foreach (PassiveItem p in GetPassives())
             {
-                if (p.item.itemName == item.itemName)
+                if (p.item.itemNameKey == item.itemNameKey)
                 {
                     return true;
                 }
@@ -107,7 +104,7 @@ namespace TowerSurvivors.Game
 
         internal void RemoveAllItems()
         {
-            foreach(PassiveItem p in GetPassives())
+            foreach (PassiveItem p in GetPassives())
             {
                 p.RemoveEffect();
                 Destroy(p.gameObject);

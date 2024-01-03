@@ -1,10 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Game;
 using TowerSurvivors.Structures;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace TowerSurvivors.PlayerScripts
@@ -84,7 +80,7 @@ namespace TowerSurvivors.PlayerScripts
             {
                 if (!EventSystem.current.IsPointerOverGameObject())
                     SecondaryAction();
-            } 
+            }
             else if (Input.GetKeyDown(KeyCode.E))
             {
                 PlaceStructure();
@@ -101,7 +97,7 @@ namespace TowerSurvivors.PlayerScripts
             //Return if the player isn't holding a structure
             if (_structureSelected == null)
                 return;
-            
+
             //If the player is hovering it over another structure, check if it can be upgraded
             if (_hoveredStructure != null)
             {
@@ -118,7 +114,7 @@ namespace TowerSurvivors.PlayerScripts
                 Destroy(_selectedItemGO);
             }
             //Return if the structure is not on a valid place
-            else if(!_structureSelected.CheckIfPlaceable())
+            else if (!_structureSelected.CheckIfPlaceable())
             {
                 //TODO: Play can't place sound
                 return;
@@ -149,14 +145,14 @@ namespace TowerSurvivors.PlayerScripts
             if (Player.Inventory.selectedItem == null)
             {
                 //If there's an item selected, remove it from the scene
-                if(_selectedItemGO != null)
+                if (_selectedItemGO != null)
                 {
                     _selectedItemGO.SetActive(false);
                     _selectedItemGO = null;
                     _structureSelected = null;
                 }
                 return;
-            } 
+            }
 
             if (_selectedItemGO != null && _selectedItemGO != Player.Inventory.selectedItem.itemInstance)
             {
@@ -239,13 +235,13 @@ namespace TowerSurvivors.PlayerScripts
                 AssetsHolder.Instance.HUD.HideUpBox();
             }
 
-            if(_structureSelected)
+            if (_structureSelected)
                 _structureSelected.OutLine(!_hoveredStructure);
         }
 
         private void SecondaryAction()
         {
-            if(_structureSelected && !StructureManager.Instance.CanPlace())
+            if (_structureSelected && !StructureManager.Instance.CanPlace())
             {
                 //TODO: Play can't place sound
                 return;

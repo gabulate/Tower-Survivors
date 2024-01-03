@@ -1,10 +1,7 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
-using TowerSurvivors.Projectiles;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 
@@ -131,7 +128,7 @@ namespace TowerSurvivors.Structures
                     AssetsHolder.Instance.HUD.HoverStructure(this, true);
 
                     //Shows the range that the structure will have next level, and changes its color if the next level has a range increase
-                    if(item.levels[level].range > item.levels[level -1].range)
+                    if (item.levels[level].range > item.levels[level - 1].range)
                     {
                         //Gets the range the structure would be the next level, taking into consideration current buffs
                         float nextRange = stats.range + (item.levels[level].range - item.levels[level - 1].range);
@@ -168,12 +165,12 @@ namespace TowerSurvivors.Structures
                     Debug.Log("UPGRADED to level: " + level);
                     if (level == item.levels.Count)
                         isMaxed = true;
-                    
+
                     return true;
                 }
             }
             //TODO: PLAY can't place audio
-            Debug.Log("Already at max level: " + level+"!");
+            Debug.Log("Already at max level: " + level + "!");
             return false;
         }
 

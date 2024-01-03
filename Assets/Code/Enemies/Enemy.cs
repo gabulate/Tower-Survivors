@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Game;
 using TowerSurvivors.PickUps;
@@ -94,7 +93,7 @@ namespace TowerSurvivors.Enemies
                 _rb.velocity = Vector2.zero;
                 return;
             }
-                
+
 
             Vector3 targetPosition = Player.Instance.transform.position;
 
@@ -183,7 +182,7 @@ namespace TowerSurvivors.Enemies
         protected void DropXp()
         {
             GameObject xp = GameManager.Instance.XpPool.GetPooledObject();
-            if(xp != null)
+            if (xp != null)
             {
                 float randomValue = Random.Range(0f, 1f);
                 if (randomValue > ChanceToDropXp)

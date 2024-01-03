@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
+using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Structures;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-using TMPro;
-using TowerSurvivors.Game;
 
 namespace TowerSurvivors.GUI
 {
@@ -60,7 +57,7 @@ namespace TowerSurvivors.GUI
 
         public void HoverStructure(Structure structure, bool canUpgrade)
         {
-            if(structure != null)
+            if (structure != null)
                 upBox.gameObject.SetActive(true);
 
             upBox.SetValues(structure, canUpgrade);

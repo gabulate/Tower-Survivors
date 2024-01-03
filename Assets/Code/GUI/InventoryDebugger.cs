@@ -1,10 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
-using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
+using TowerSurvivors.ScriptableObjects;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace TowerSurvivors.GUI
@@ -24,7 +23,7 @@ namespace TowerSurvivors.GUI
             _options = new List<string>();
             for (int i = 0; i < items.itemList.Count; i++)
             {
-                _options.Add(items.itemList[i].itemName);
+                _options.Add(items.itemList[i].itemNameKey);
             }
 
             dropdown.AddOptions(_options);
@@ -60,12 +59,12 @@ namespace TowerSurvivors.GUI
 
         public void SelectItem(int itemId)
         {
-            _itemName = items.itemList[itemId].itemName;
+            _itemName = items.itemList[itemId].itemNameKey;
         }
 
         public void AddItem()
         {
-            ItemSO foundItem = items.itemList.Find(item => item.itemName == _itemName);
+            ItemSO foundItem = items.itemList.Find(item => item.itemNameKey == _itemName);
 
             if (foundItem != null)
             {

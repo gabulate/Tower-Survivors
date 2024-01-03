@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.GUI;
+using TowerSurvivors.ScriptableObjects;
+using UnityEngine;
 
 namespace TowerSurvivors.Game
 {
@@ -16,7 +14,7 @@ namespace TowerSurvivors.Game
         {
             if (Instance == null)
                 Instance = this;
-            else if(Instance != this)
+            else if (Instance != this)
                 Destroy(gameObject);
         }
     }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Enemies;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -18,7 +16,7 @@ namespace TowerSurvivors.Projectiles
         protected Animator _animator;
         [SerializeField]
         protected Rigidbody2D _rb;
-        [SerializeField] 
+        [SerializeField]
         protected Collider2D _collider;
         protected bool _enough = false;
 
@@ -56,13 +54,13 @@ namespace TowerSurvivors.Projectiles
                 return;
 
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
-            if(_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
+            if (_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
-                
+
                 collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
                 passThrough--;
                 //If it can't pass through anymore enemies, destroys itself.
-                if(passThrough <= -1)
+                if (passThrough <= -1)
                 {
                     DestroyAnim();
                 }

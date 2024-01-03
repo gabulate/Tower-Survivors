@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.PlayerScripts;
-using UnityEngine;
 
 namespace TowerSurvivors.PassiveItems
 {
@@ -15,7 +12,7 @@ namespace TowerSurvivors.PassiveItems
 
         public override void RemoveEffect()
         {
-            Player.Instance.stats.speedBoost= 0;
+            Player.Instance.stats.speedBoost = 0;
         }
     }
 }

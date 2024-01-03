@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 

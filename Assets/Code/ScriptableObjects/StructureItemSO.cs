@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +14,7 @@ namespace TowerSurvivors.ScriptableObjects
     {
         public int neededLevel = 1;
         [TextArea]
-        public string upgradeDescription; 
+        public string DescriptionKey;
         public float range;
         public float damage = 10f;
         public float attackCooldown = 1f;

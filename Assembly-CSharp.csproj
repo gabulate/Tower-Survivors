@@ -72,6 +72,7 @@
     <Compile Include="Assets\Code\Game\GameManager.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\EnemyWaveSO.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\CameraFollow.cs" />
+    <Compile Include="Assets\Code\Structures\Sniper.cs" />
     <Compile Include="Assets\Code\PassiveItems\Telescope.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
+    <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\LayerTrigger.cs" />
     <Compile Include="Assets\Sprites\Pixel Art Top Down - Basic\Script\PropsAltar.cs" />
@@ -102,8 +104,9 @@
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
-    <Compile Include="Assets\Code\Structures\Sniper.cs" />
-    <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
+    <Compile Include="Assets\Code\Localisation\Language.cs" />
+    <Compile Include="Assets\Code\App Managers\AppManager.cs" />
+    <Compile Include="Assets\Code\GUI\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

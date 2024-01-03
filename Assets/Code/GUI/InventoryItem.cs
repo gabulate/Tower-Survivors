@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
@@ -30,7 +27,7 @@ namespace TowerSurvivors.GUI
             else
                 l = instance.GetComponent<PassiveItem>().level;
 
-            if(l > 1)
+            if (l > 1)
             {
                 level.enabled = true;
                 level.text = l.ToString();
@@ -64,7 +61,7 @@ namespace TowerSurvivors.GUI
 
         public void HighLight()
         {
-            if(_mat == null)
+            if (_mat == null)
             {
                 _mat = Instantiate(icon.material);
                 icon.material = _mat;

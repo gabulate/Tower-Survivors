@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.PlayerScripts;
-using UnityEngine;
 
 namespace TowerSurvivors.PassiveItems
 {

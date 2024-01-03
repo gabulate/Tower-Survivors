@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TowerSurvivors.Game;
 using TowerSurvivors.GUI;
-using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -68,7 +65,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <param name="item"></param>
         public void AddItem(ItemSO item)
         {
-            if(item.GetType() == typeof(StructureItemSO))
+            if (item.GetType() == typeof(StructureItemSO))
             {
                 for (int i = 0; i < StructureSlots.Length; i++)
                 {
@@ -107,7 +104,7 @@ namespace TowerSurvivors.PlayerScripts
                     foreach (InventorySlot it in PassiveItemSlots)
                     {
                         InventoryItem ii = it.GetComponentInChildren<InventoryItem>();
-                        if(ii)
+                        if (ii)
                             ii.UpdateInfo();
                     }
                 }

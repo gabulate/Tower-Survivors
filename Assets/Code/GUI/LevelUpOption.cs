@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using TowerSurvivors.Game;
-using TowerSurvivors.PassiveItems;
+using TowerSurvivors.Localisation;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,17 +18,17 @@ namespace TowerSurvivors.GUI
         {
             this.item = item;
             icon.sprite = item.icon;
-            itemName.text = item.itemName;
-            
-            if(item.GetType() == typeof(StructureItemSO))
+            itemName.text = item.itemNameKey;
+
+            if (item.GetType() == typeof(StructureItemSO))
             {
-                description.text = item.description;
+                description.text = Language.Get(item.descriptionKey);
             }
             else
             {
                 PassiveItemSO i = item as PassiveItemSO;
                 int currentLevel = PassiveItemManager.Instance.GetCurrentLevel(i);
-                description.text = i.levels[currentLevel].Description;
+                description.text = Language.Get(i.levels[currentLevel].DescriptionKey);
             }
 
         }
