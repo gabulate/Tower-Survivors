@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\FindMissingScriptEditor.cs" />
+    <Compile Include="Assets\Editor\PlayerPrefsEditorWindow.cs" />
     <Compile Include="Assets\Editor\ShowOnlyDrawer.cs" />
   </ItemGroup>
   <ItemGroup>

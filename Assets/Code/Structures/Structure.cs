@@ -1,5 +1,6 @@
 using System.Collections;
 using TowerSurvivors.Audio;
+using TowerSurvivors.Enemies;
 using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
@@ -35,6 +36,7 @@ namespace TowerSurvivors.Structures
         [Header("Meta Atributtes")]
         public bool canAttack = false;
         public Transform targetObject;
+        public Enemy targetEnemy;
         protected Vector3 _targetPos;
         [SerializeField]
         protected float _margin = 1;

@@ -2,19 +2,23 @@
 General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat)(Amount); Add combined attributes as needed. Look Below for examples.,Strings can be formatted using {0}; {1}; etc. for when they need a variable name.
 Main Menu Text---,Main Menu Text---,Texto del menú principal---
 PLAY,Play,Jugar
+CONFIG,Settings,Configuraciones
+ABOUT,About,Acerca de
+EXIT,Exit,Salir
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
 LEVELUP,Level Up!,Subiste de nivel!
 LEVEL,Needed:,Se necesita:
-CONFIG,Settings,Configuraciones
+MAXLEVEL,Max level: {0}.,{0} a máximo nivel.
+MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
 STRUCTURE,Structure,Estructura
 ITEM,Item,Ítem
 NOTHINGITEM_NAME,Nothing.,Nada.
 NOTHINGITEM_DSC,Does nothing.,No hace nada.
 CANNON_NAME,Cannon,Cañón
 CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
-SNIPER_NAME,Mark's Man-Tower,Torre de operaciones de Marcos
-SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por my compa Marcos; él nunca falla!
+SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador
+SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por my compa Franco; él nunca falla!
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo
@@ -26,6 +30,7 @@ TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased.,Rango aumentado.
 UPG_RANGE_DAMAGE10,Range increased and Damage increased by 10.,Rango aumentado y Daño aumentado en 10. 
+UPG_RANGE_DAMAGE20,Range increased and Damage increased by 20.,Rango aumentado y Daño aumentado en 20. 
 UPG_RANGE_SPEED,Range and projectile speed increased.,Rango y velocidad de projectiles aumentados.
 UPG_RANGE_SPEED_PASSTH1,Range and projectile speed increased. Projectiles pass through 1 more enemy.,Rango y velocidad de projectiles aumentados. Los projectiles pueden atravesar 1 enemigo más.
 UPG_DAMAGE10,Damage increased by 10.,Daño aumentado en 10.

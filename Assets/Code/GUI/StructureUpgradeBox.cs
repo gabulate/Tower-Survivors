@@ -44,8 +44,8 @@ namespace TowerSurvivors.GUI
         internal void SetValuesMax(Structure structure)
         {
             transform.position = structure.transform.position;
-            Title.text = "Max level " + structure.item.itemNameKey + ".";
-            Description.text = "Maximum level reached!";
+            Title.text = string.Format(Language.Get("MAXLEVEL"), Language.Get(structure.item.itemNameKey));
+            Description.text = Language.Get("MAXLEVELREACHED");
 
 
             icon.gameObject.SetActive(false);

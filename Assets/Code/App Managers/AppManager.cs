@@ -17,15 +17,23 @@ namespace TowerSurvivors
             if (Instance == null)
                 Instance = this;
             else if (Instance != this)
+            {
                 Destroy(gameObject);
+                return;
+            }
+                
             DontDestroyOnLoad(this.gameObject);
-            Language.InitialiseLanguage(languagesCSV, language);
-            PlayerPrefs.SetString("language", language);
+
+            if (PlayerPrefs.HasKey("language"))
+            {
+                Language.InitialiseLanguage(languagesCSV, PlayerPrefs.GetString("language"));
+            }          
         }
 
-        private void Start()
+        public void SetLanguage(string language)
         {
-            
+            PlayerPrefs.SetString("language", language);
+            Language.InitialiseLanguage(languagesCSV, PlayerPrefs.GetString("language"));
         }
     }
 }

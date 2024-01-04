@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,12 +58,17 @@ namespace TowerSurvivors.Localisation
                 try
                 {
                     string key = languageData[i, 0];
+                    if (key == "" || key == null)
+                    {
+                        break;
+                    }
                     string value = languageData[i, languageCol];
                     currentLanguage.Add(key, value);
                 }
-                catch
+                catch(Exception e)
                 {
-                    break;
+                    Debug.LogError(e.Message);
+                    Debug.LogError("Couldn't load Row: " + i + " Col: " + languageCol);
                 }
             }
         }

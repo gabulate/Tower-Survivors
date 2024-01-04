@@ -1,6 +1,7 @@
 using System.Collections;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Game;
+using TowerSurvivors.GUI;
 using TowerSurvivors.PickUps;
 using TowerSurvivors.PlayerScripts;
 using UnityEngine;
@@ -129,7 +130,13 @@ namespace TowerSurvivors.Enemies
             }
 
             HP -= damage;
-            AudioPlayer.Instance.PlaySFX(hurtSound, transform.position);
+
+            try
+            {
+                AudioPlayer.Instance.PlaySFX(hurtSound, transform.position);
+                DamageNumberController.Instance.ShowDamageNumber((int)damage, transform.position);
+            }
+            catch { }
             //Debug.Log("Damage taken: " + damage);
 
             StartCoroutine(Invincivility(invulnerableTime));

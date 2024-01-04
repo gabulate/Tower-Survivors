@@ -1,5 +1,6 @@
 using System.Collections;
 using TowerSurvivors.Audio;
+using TowerSurvivors.Enemies;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ namespace TowerSurvivors.Structures
 
         protected override void Attack()
         {
-            if (targetObject == null)
+            if (targetEnemy == null || !targetEnemy.isAlive)
             {
                 if (!GetClosestTarget())
                 {
@@ -36,12 +37,12 @@ namespace TowerSurvivors.Structures
             }
 
             //Store the position in a different variable to avoid null references
-            _targetPos = targetObject.position;
+            _targetPos = targetEnemy.transform.position;
 
             //if target has left the range, forget it
             if (Vector2.Distance(transform.position, _targetPos) > stats.range)
             {
-                targetObject = null;
+                targetEnemy = null;
                 return;
             }
 
@@ -98,7 +99,7 @@ namespace TowerSurvivors.Structures
                 //Check if the current target is closer than the previous closest target.
                 if (distanceToTarget < closestDistance)
                 {
-                    targetObject = targetTransform;
+                    targetEnemy = targetTransform.GetComponent<Enemy>();
                     closestDistance = distanceToTarget;
                 }
             }
@@ -110,13 +111,13 @@ namespace TowerSurvivors.Structures
         /// </summary>
         protected void RotateCannon()
         {
-            if (targetObject == null)
+            if (targetEnemy == null)
                 return;
 
-            var dir = targetObject.position - _cannon.transform.position;
+            var dir = targetEnemy.transform.position - _cannon.transform.position;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             //Flip the sprite based on the target's position
-            if ((transform.position.x - targetObject.position.x) > 0)
+            if ((transform.position.x - targetEnemy.transform.position.x) > 0)
             {
                 transform.localScale = new Vector3(1, 1, 1);
                 angle -= 180;

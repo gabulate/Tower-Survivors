@@ -20,7 +20,7 @@ MonoBehaviour:
   levels:
   - neededLevel: 1
     DescriptionKey: first
-    range: 10
+    range: 8
     damage: 50
     attackCooldown: 5
     currentCooldown: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     passThroughAmnt: 0
   - neededLevel: 1
     DescriptionKey: UPG_RANGE
-    range: 15
+    range: 12
     damage: 50
     attackCooldown: 5
     currentCooldown: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
     passThroughAmnt: 0
   - neededLevel: 1
     DescriptionKey: UPG_DAMAGE10_COOLDOWN1
-    range: 15
+    range: 12
     damage: 60
     attackCooldown: 4
     currentCooldown: 0
@@ -56,8 +56,20 @@ MonoBehaviour:
     passThroughAmnt: 0
   - neededLevel: 1
     DescriptionKey: UPG_DAMAGE20
-    range: 15
-    damage: 20
+    range: 12
+    damage: 80
+    attackCooldown: 4
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    DescriptionKey: UPG_RANGE_DAMAGE20
+    range: 12
+    damage: 80
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1

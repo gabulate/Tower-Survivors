@@ -1,610 +1,409 @@
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
 { "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
 { "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 0, "tid": 1, "ts": 1703643868431036, "dur": 3196890, "ph": "X", "name": "Build Player", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643868431415, "dur": 40724, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643868472145, "dur": 559921, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643869032068, "dur": 1672967, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643870705038, "dur": 910880, "ph": "X", "name": "Run Backend", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643871615919, "dur": 12006, "ph": "X", "name": "Finish", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643871661972, "dur": 16, "ph": "X", "name": "", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453246702, "dur": 104306, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453246718, "dur": 2829, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453249548, "dur": 100609, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453350159, "dur": 848, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453351449, "dur": 28, "ph": "X", "name": "", "args": {} },
 { "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1703643868991384, "dur":1982, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868993381, "dur":772, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1703643868994225, "dur":53, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1703643868994279, "dur":478, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1703643868994798, "dur":1143, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868995941, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997469, "dur":218, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997687, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997699, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997703, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997714, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997716, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997724, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997726, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997734, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997737, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997748, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997751, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997759, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997762, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997769, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997772, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997783, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997784, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643868997811, "dur":15596, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1703643868995194, "dur":758, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643868995954, "dur":1505, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643868995525, "dur":452, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643868995977, "dur":1486, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643868995359, "dur":605, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643868995965, "dur":1531, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643868995694, "dur":299, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643868995993, "dur":1490, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643868995825, "dur":179, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643868996004, "dur":1468, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643868995925, "dur":87, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643868996012, "dur":1494, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643868996028, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643868996029, "dur":1433, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643868996149, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643868996149, "dur":1391, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643869016435, "dur":1744, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1703643871662150, "dur": 411, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
-{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
-{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
-{ "pid": 35942, "tid": 1, "ts": 1703643870163681, "dur": 515417, "ph": "X", "name": "BuildProgram", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870165937, "dur": 93067, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870553500, "dur": 80326, "ph": "X", "name": "OutputData.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870633832, "dur": 45251, "ph": "X", "name": "Backend.Write", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870635551, "dur": 15975, "ph": "X", "name": "JsonToString", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870688695, "dur": 2076, "ph": "X", "name": "", "args": {} },
-{ "pid": 35942, "tid": 1, "ts": 1703643870687134, "dur": 3677, "ph": "X", "name": "Write chrome-trace events", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643871662647, "dur": 171, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
-{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
-,{ "pid":12345, "tid":0, "ts":1703643870827195, "dur":3239, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643870830449, "dur":370, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
-,{ "pid":12345, "tid":0, "ts":1703643870830899, "dur":49, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
-,{ "pid":12345, "tid":0, "ts":1703643870830948, "dur":538, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
-,{ "pid":12345, "tid":0, "ts":1703643870831542, "dur":1359, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643870832901, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871591498, "dur":199, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871591697, "dur":99, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871591796, "dur":188, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871591984, "dur":39, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592023, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592028, "dur":28, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592056, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592060, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592069, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592073, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592084, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592087, "dur":27, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592114, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592117, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592127, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592130, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592138, "dur":1, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592160, "dur":3, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871592244, "dur":3460, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
-,{ "pid":12345, "tid":1, "ts":1703643870831980, "dur":934, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870832918, "dur":8092, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870841037, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1703643870841043, "dur":17295, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870858343, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/app.info" }}
-,{ "pid":12345, "tid":1, "ts":1703643870858346, "dur":11104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870869454, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643870869628, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870869709, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643870869819, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870869892, "dur":10288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/WinPixEventRuntime.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643870880181, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870880264, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.WindModule.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643870880317, "dur":68107, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870948426, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VehiclesModule.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643870948533, "dur":1538, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870950072, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643870950158, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870950290, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityCurlModule.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643870950363, "dur":19147, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870969511, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UmbraModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643870969612, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643870969733, "dur":460, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UI.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643870970194, "dur":33467, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871003662, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871003740, "dur":27537, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871031278, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871031369, "dur":36931, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871068302, "dur":133, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871068436, "dur":21699, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871090137, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871090203, "dur":21823, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112029, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112125, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112216, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClothModule.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112291, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112404, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ARModule.pdb" }}
-,{ "pid":12345, "tid":1, "ts":1703643871112476, "dur":23720, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871136199, "dur":331391, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871467591, "dur":141, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871467734, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Core.dll" }}
-,{ "pid":12345, "tid":1, "ts":1703643871467785, "dur":73013, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871540805, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1703643871541050, "dur":11, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":1, "ts":1703643871541068, "dur":43647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.assets.resS" }}
-,{ "pid":12345, "tid":1, "ts":1703643871584782, "dur":6684, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870832304, "dur":632, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870832936, "dur":8084, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870841037, "dur":494, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":2, "ts":1703643870841531, "dur":50289, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870891824, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.WindModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870891925, "dur":56506, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870948432, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870948550, "dur":1578, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870950130, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870950204, "dur":114, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870950319, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityConnectModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870950383, "dur":19210, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870969594, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870969693, "dur":24796, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994493, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TLSModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994576, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994660, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TilemapModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994705, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994777, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TilemapModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994842, "dur":108, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870994951, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextRenderingModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995027, "dur":166, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995195, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995280, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995392, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995450, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995544, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995587, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995658, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995699, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995788, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995829, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995897, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643870995947, "dur":32869, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871028821, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.StreamingModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871028938, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029039, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.StreamingModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029083, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029151, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SpriteShapeModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029195, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029296, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029359, "dur":95, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029454, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SpriteMaskModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029537, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029620, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871029659, "dur":35804, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065466, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ProfilerModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065543, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065618, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.PhysicsModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065661, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065728, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.PhysicsModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065777, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065842, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.Physics2DModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065880, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065943, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.Physics2DModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871065980, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871066040, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.PerformanceReportingModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871066093, "dur":21008, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087105, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.LocalizationModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087203, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087302, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.JSONSerializeModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087346, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087411, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087449, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087517, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.InputModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087558, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087621, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.InputModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087659, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087722, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.InputLegacyModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871087760, "dur":22064, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871109828, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GridModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871109900, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871109978, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GridModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110019, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110085, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GIModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110125, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110197, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110237, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110306, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GameCenterModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110345, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110409, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.GameCenterModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110447, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110520, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.DSPGraphModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110560, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110624, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110663, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110725, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110771, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110833, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.DirectorModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871110871, "dur":1272, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112144, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClusterInputModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112214, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112364, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AssetBundleModule.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112438, "dur":118, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112557, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871112626, "dur":23751, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871136380, "dur":77280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871213661, "dur":213, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871213877, "dur":50859, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.SpriteShape.Runtime.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871264737, "dur":38725, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871303466, "dur":55394, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.IK.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871358861, "dur":167, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359030, "dur":242, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Animation.Runtime.pdb" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359273, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359364, "dur":166, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359530, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359607, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Xml.Linq.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871359646, "dur":9619, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369271, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Xml.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369368, "dur":119, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369488, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Transactions.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369554, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369629, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.ServiceModel.Internals.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369669, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369737, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369777, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369849, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Runtime.Serialization.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369885, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369950, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Runtime.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871369987, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370044, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Numerics.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370079, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370136, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Net.Http.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370171, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370226, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.IO.Compression.FileSystem.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871370262, "dur":119618, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871489889, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Configuration.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490054, "dur":137, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490194, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.ComponentModel.Composition.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490253, "dur":148, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490402, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/netstandard.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490462, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490528, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/mscorlib.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490573, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490639, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Mono.Security.dll" }}
-,{ "pid":12345, "tid":2, "ts":1703643871490678, "dur":50124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871540806, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":2, "ts":1703643871541042, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871541063, "dur":42223, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.assets" }}
-,{ "pid":12345, "tid":2, "ts":1703643871583366, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":2, "ts":1703643871583439, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":2, "ts":1703643871583452, "dur":3230, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers" }}
-,{ "pid":12345, "tid":2, "ts":1703643871586781, "dur":4683, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870832138, "dur":787, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870832925, "dur":8094, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870841038, "dur":5211, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
-,{ "pid":12345, "tid":3, "ts":1703643870846249, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870846349, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":3, "ts":1703643870846455, "dur":56403, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870902863, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VirtualTexturingModule.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643870902959, "dur":45445, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870948409, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VFXModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643870948546, "dur":1548, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870950095, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643870950169, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870950298, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643870950370, "dur":19221, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870969593, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIModule.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643870969694, "dur":158, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643870969853, "dur":629, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UI.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643870970482, "dur":33113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871003596, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SubsystemsModule.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871003662, "dur":26872, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871030535, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871030593, "dur":36941, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871067536, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871067659, "dur":21946, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871089609, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871089724, "dur":22052, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871111779, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.DirectorModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871111873, "dur":507, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871112382, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871112460, "dur":21816, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134279, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AIModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134347, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134424, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AccessibilityModule.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134464, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134531, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134570, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134637, "dur":215, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Timeline.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134852, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871134922, "dur":212, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Timeline.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871135134, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871135205, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.TextMeshPro.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871135502, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871135587, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.TextMeshPro.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871136044, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871136123, "dur":52794, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Shaders.pdb" }}
-,{ "pid":12345, "tid":3, "ts":1703643871188919, "dur":432, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871189355, "dur":222990, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871412346, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871412481, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Drawing.dll" }}
-,{ "pid":12345, "tid":3, "ts":1703643871412577, "dur":128223, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871540805, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":3, "ts":1703643871540924, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871541063, "dur":41767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/sharedassets0.resource" }}
-,{ "pid":12345, "tid":3, "ts":1703643871582949, "dur":341, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":3, "ts":1703643871583303, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":3, "ts":1703643871583317, "dur":3581, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers.assets" }}
-,{ "pid":12345, "tid":3, "ts":1703643871586988, "dur":4480, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870832446, "dur":500, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870832946, "dur":8066, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870841037, "dur":284, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
-,{ "pid":12345, "tid":4, "ts":1703643870841322, "dur":18403, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870859727, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
-,{ "pid":12345, "tid":4, "ts":1703643870859869, "dur":43249, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870903120, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643870903210, "dur":45194, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870948408, "dur":135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VFXModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643870948543, "dur":1453, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870949998, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643870950111, "dur":116, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870950228, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643870950297, "dur":112, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870950410, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643870950477, "dur":21787, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643870972267, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TLSModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643870972344, "dur":31420, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871003766, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SubstanceModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643871003836, "dur":27483, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871031321, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ProfilerModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871031415, "dur":37060, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871068477, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.LocalizationModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871068583, "dur":21654, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871090239, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.HotReloadModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871090332, "dur":21731, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112065, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClusterRendererModule.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112136, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112287, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClothModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112358, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112509, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AnimationModule.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643871112590, "dur":23732, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871136324, "dur":132438, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871268763, "dur":160, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871268926, "dur":167741, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.PixelPerfect.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643871436669, "dur":244, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871436917, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.dll" }}
-,{ "pid":12345, "tid":4, "ts":1703643871436989, "dur":55973, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871492965, "dur":300, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Assembly-CSharp.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871493273, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871540803, "dur":41667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Assembly-CSharp.pdb" }}
-,{ "pid":12345, "tid":4, "ts":1703643871582574, "dur":321, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1703643871582921, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":4, "ts":1703643871582933, "dur":8379, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/globalgamemanagers.assets.resS" }}
-,{ "pid":12345, "tid":4, "ts":1703643871591425, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
-,{ "pid":12345, "tid":4, "ts":1703643871591429, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870832586, "dur":401, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870832987, "dur":8030, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870841036, "dur":3102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
-,{ "pid":12345, "tid":5, "ts":1703643870844139, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870844281, "dur":182, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
-,{ "pid":12345, "tid":5, "ts":1703643870844464, "dur":47780, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870892246, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VRModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643870892308, "dur":56122, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870948431, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VehiclesModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643870948572, "dur":1590, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870950163, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643870950244, "dur":121, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870950366, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643870950437, "dur":19276, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643870969718, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIElementsModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643870969815, "dur":33587, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871003404, "dur":250, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TerrainModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871003654, "dur":27608, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871031263, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871031379, "dur":36805, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871068186, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ParticleSystemModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871068334, "dur":21656, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871089992, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.IMGUIModule.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871090071, "dur":21955, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112029, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.CoreModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112138, "dur":170, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112309, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AudioModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112380, "dur":141, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112522, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AndroidJNIModule.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871112604, "dur":23785, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871136390, "dur":45967, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182357, "dur":121, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182480, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.InternalAPIEngineBridge.001.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182633, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182710, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182824, "dur":79, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182904, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Burst.Unsafe.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871182946, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871183007, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Burst.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871183271, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871183335, "dur":369, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Burst.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871183704, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871183775, "dur":261655, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Tilemap.Extras.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871445431, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871445564, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Data.dll" }}
-,{ "pid":12345, "tid":5, "ts":1703643871445608, "dur":95186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871540802, "dur":122, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Plugins/x86_64/lib_burst_generated.pdb" }}
-,{ "pid":12345, "tid":5, "ts":1703643871540925, "dur":138, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871541064, "dur":6451, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/RuntimeInitializeOnLoads.json" }}
-,{ "pid":12345, "tid":5, "ts":1703643871547516, "dur":33662, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871581181, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/level0" }}
-,{ "pid":12345, "tid":5, "ts":1703643871581273, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":5, "ts":1703643871581283, "dur":3598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/level0" }}
-,{ "pid":12345, "tid":5, "ts":1703643871585373, "dur":6112, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870832743, "dur":268, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870833011, "dur":8003, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870841038, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":6, "ts":1703643870841312, "dur":17275, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870858590, "dur":156, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":6, "ts":1703643870858747, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870858830, "dur":172, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/2.0/web.config" }}
-,{ "pid":12345, "tid":6, "ts":1703643870859003, "dur":97, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870859102, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
-,{ "pid":12345, "tid":6, "ts":1703643870859202, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870859268, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
-,{ "pid":12345, "tid":6, "ts":1703643870859373, "dur":10841, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870870216, "dur":126, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/UnityPlayer.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870870343, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870870425, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/UnityCrashHandler64.exe" }}
-,{ "pid":12345, "tid":6, "ts":1703643870870526, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870870578, "dur":1152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors.exe" }}
-,{ "pid":12345, "tid":6, "ts":1703643870871731, "dur":88, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870871821, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.XRModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870871893, "dur":76512, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870948407, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VideoModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870948534, "dur":1486, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870950022, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643870950115, "dur":124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870950240, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870950311, "dur":18706, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969021, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969115, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969208, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UNETModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969256, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969335, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UNETModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969394, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969477, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UmbraModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969552, "dur":132, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969686, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643870969760, "dur":33617, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871003381, "dur":271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871003652, "dur":26834, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871030489, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SharedInternalsModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871030555, "dur":36901, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871067458, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871067559, "dur":22053, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871089614, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.IMGUIModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871089730, "dur":22047, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871111780, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.CrashReportingModule.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871111872, "dur":543, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871112417, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ARModule.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871112503, "dur":23706, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871136210, "dur":513, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Runtime.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871136723, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871136813, "dur":291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.Runtime.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871137104, "dur":19241, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871156349, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871156556, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871156639, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871156797, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871156875, "dur":109551, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Mathematics.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871266427, "dur":137, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871266566, "dur":189943, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.PixelPerfect.pdb" }}
-,{ "pid":12345, "tid":6, "ts":1703643871456510, "dur":131, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871456644, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.Data.DataSetExtensions.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871456690, "dur":36322, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871493013, "dur":235, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871493259, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871540798, "dur":42482, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Assembly-CSharp.dll" }}
-,{ "pid":12345, "tid":6, "ts":1703643871583368, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1703643871583568, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":6, "ts":1703643871583575, "dur":2575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/boot.config" }}
-,{ "pid":12345, "tid":6, "ts":1703643871586260, "dur":5223, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870832694, "dur":305, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870832999, "dur":8016, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870841037, "dur":4509, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.5/web.config" }}
-,{ "pid":12345, "tid":7, "ts":1703643870845546, "dur":47016, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870892563, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VRModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643870892631, "dur":55772, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870948406, "dur":143, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.VideoModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643870948549, "dur":1423, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870949973, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643870950060, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870950178, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643870950248, "dur":120, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870950369, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643870950446, "dur":19285, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643870969732, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIElementsModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643870969818, "dur":33581, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871003401, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.TerrainModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871003674, "dur":27585, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871031262, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ScreenCaptureModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871031369, "dur":36958, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871068329, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.NVIDIAModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871068433, "dur":21627, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871090062, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ImageConversionModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871090182, "dur":21851, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112034, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.CoreModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112118, "dur":93, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112213, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112305, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112446, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AnimationModule.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871112552, "dur":23735, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871136290, "dur":791, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871137081, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871137193, "dur":617, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871137811, "dur":20852, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871158665, "dur":135099, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.Mathematics.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871293765, "dur":186, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871293953, "dur":35233, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.IK.Runtime.pdb" }}
-,{ "pid":12345, "tid":7, "ts":1703643871329188, "dur":319, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871329511, "dur":49349, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Common.Runtime.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871378861, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871378996, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.IO.Compression.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871379040, "dur":161757, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871540803, "dur":125, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Plugins/x86_64/lib_burst_generated.dll" }}
-,{ "pid":12345, "tid":7, "ts":1703643871540928, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871541058, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/ScriptingAssemblies.json" }}
-,{ "pid":12345, "tid":7, "ts":1703643871541287, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871541427, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1703643871541496, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":7, "ts":1703643871541502, "dur":42777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/resources.assets.resS" }}
-,{ "pid":12345, "tid":7, "ts":1703643871584353, "dur":7136, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870832917, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870832917, "dur":8105, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870841038, "dur":276, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
-,{ "pid":12345, "tid":8, "ts":1703643870841315, "dur":232, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870841555, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.0/web.config" }}
-,{ "pid":12345, "tid":8, "ts":1703643870841746, "dur":111, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870841859, "dur":23884, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
-,{ "pid":12345, "tid":8, "ts":1703643870865743, "dur":124, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870865869, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/config" }}
-,{ "pid":12345, "tid":8, "ts":1703643870865980, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870866052, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/MonoBleedingEdge/etc/mono/browscap.ini" }}
-,{ "pid":12345, "tid":8, "ts":1703643870866166, "dur":4501, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870870670, "dur":221, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Resources/unity default resources" }}
-,{ "pid":12345, "tid":8, "ts":1703643870870892, "dur":109, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870871002, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.XRModule.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643870871075, "dur":77460, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870948537, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643870948705, "dur":1632, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870950338, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643870950408, "dur":19238, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643870969647, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.UIElementsNativeModule.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643870969723, "dur":34039, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871003763, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.SubstanceModule.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643871003831, "dur":27433, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871031267, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643871031376, "dur":36989, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871068367, "dur":228, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871068595, "dur":21655, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871090252, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.HotReloadModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871090338, "dur":21790, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112129, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112216, "dur":139, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112357, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AudioModule.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112428, "dur":176, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112606, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/UnityEngine.AIModule.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643871112679, "dur":23739, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871136419, "dur":100117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871236537, "dur":143, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871236682, "dur":44632, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871281315, "dur":24083, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871305402, "dur":97155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/Unity.2D.Common.Runtime.pdb" }}
-,{ "pid":12345, "tid":8, "ts":1703643871402558, "dur":232, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871402794, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Managed/System.EnterpriseServices.dll" }}
-,{ "pid":12345, "tid":8, "ts":1703643871402892, "dur":137903, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871540804, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":8, "ts":1703643871540924, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871541059, "dur":38869, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/Resources/unity_builtin_extra" }}
-,{ "pid":12345, "tid":8, "ts":1703643871579969, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/resources.assets" }}
-,{ "pid":12345, "tid":8, "ts":1703643871580008, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":8, "ts":1703643871580015, "dur":4443, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Gabri/Desktop/code/TowerSurvivors_dev/Tower Survivors_Data/resources.assets" }}
-,{ "pid":12345, "tid":8, "ts":1703643871584527, "dur":6957, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
-,{ "pid":12345, "tid":0, "ts":1703643871601688, "dur":3914, "ph":"X", "name": "ProfilerWriteOutput" }
-,{ "pid": 0, "tid": 1, "ts": 1703643871662874, "dur": 1067, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
-{ "pid": 0, "tid": 1, "ts": 1703643871661956, "dur": 2008, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+,{ "pid":12345, "tid":0, "ts":1704313453285591, "dur":2009, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453287616, "dur":245, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1704313453287918, "dur":33, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1704313453287951, "dur":559, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1704313453288578, "dur":1042, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453289620, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322367, "dur":286, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322653, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322666, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322670, "dur":12, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322682, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322685, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322692, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322694, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322702, "dur":16, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322718, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322724, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322727, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322733, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322736, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322742, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322744, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322753, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322765, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453322819, "dur":3854, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1704313453288986, "dur":646, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453289632, "dur":9287, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453298920, "dur":421, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299341, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299396, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299457, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299514, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299575, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299636, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299711, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299765, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299818, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299874, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299937, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453299992, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300053, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300112, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300174, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300245, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300326, "dur":288, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300615, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300723, "dur":90, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453300813, "dur":238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453301051, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453301118, "dur":539, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453301658, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453301728, "dur":249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.pdb" }}
+,{ "pid":12345, "tid":1, "ts":1704313453301977, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453302058, "dur":168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453302226, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453302291, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453302352, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453302426, "dur":630, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303057, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303120, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303182, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303247, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303325, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303406, "dur":267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303673, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453303744, "dur":1402, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1704313453305147, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453305222, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1704313453305289, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453305293, "dur":2858, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1704313453308216, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1704313453308282, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453308287, "dur":1811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/globalgamemanagers.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1704313453310163, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1704313453310228, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1704313453310233, "dur":1726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1704313453312024, "dur":10336, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453289160, "dur":486, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453289646, "dur":8718, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298378, "dur":116, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298494, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298571, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298646, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298721, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298795, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298853, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1704313453298951, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299020, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299087, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299156, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299234, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299302, "dur":599, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453299901, "dur":264, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300166, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300227, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300281, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300348, "dur":341, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300690, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300772, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453300841, "dur":745, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453301586, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453301657, "dur":1054, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Runtime.pdb" }}
+,{ "pid":12345, "tid":2, "ts":1704313453302711, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453302775, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453302836, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453302892, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453302950, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303008, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303070, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303132, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303192, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303254, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303325, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303396, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303455, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303514, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1704313453303593, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453304558, "dur":3497, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1704313453308140, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1704313453308212, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453308219, "dur":1705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/level0" }}
+,{ "pid":12345, "tid":2, "ts":1704313453309993, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1704313453310069, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1704313453310077, "dur":1745, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1704313453311882, "dur":10504, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453289204, "dur":452, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453289656, "dur":8709, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298377, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298505, "dur":91, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298597, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298671, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298740, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298819, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298876, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":3, "ts":1704313453298942, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299016, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299083, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299147, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299229, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299298, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299365, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299424, "dur":413, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UI.pdb" }}
+,{ "pid":12345, "tid":3, "ts":1704313453299837, "dur":246, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300084, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300173, "dur":452, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300626, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300718, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300780, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300842, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453300912, "dur":1022, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453301935, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453301996, "dur":1396, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.Runtime.pdb" }}
+,{ "pid":12345, "tid":3, "ts":1704313453303393, "dur":96, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453303490, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":3, "ts":1704313453303560, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453303623, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":3, "ts":1704313453303696, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1704313453317065, "dur":2192, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":3, "ts":1704313453319354, "dur":3025, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453289252, "dur":413, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453289666, "dur":8696, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298378, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298505, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298598, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298675, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298732, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298812, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453298872, "dur":1002, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors.exe" }}
+,{ "pid":12345, "tid":4, "ts":1704313453299874, "dur":67, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453299942, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300009, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300072, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300141, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300200, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300262, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300326, "dur":282, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300609, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300699, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300773, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453300839, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.Flow.pdb" }}
+,{ "pid":12345, "tid":4, "ts":1704313453301296, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453301359, "dur":837, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453302197, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453302269, "dur":1348, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":4, "ts":1704313453303617, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453303696, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1704313453303765, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1704313453318694, "dur":2318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1704313453321076, "dur":1281, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453289408, "dur":264, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453289672, "dur":8696, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298377, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298507, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298594, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298687, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298747, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298851, "dur":87, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453298939, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299008, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299060, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299115, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299177, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299233, "dur":270, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299504, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299575, "dur":339, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299914, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453299982, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300046, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300105, "dur":133, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300239, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300323, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300393, "dur":237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300630, "dur":89, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300720, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453300867, "dur":1166, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302035, "dur":719, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302754, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302820, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302881, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302938, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453302995, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303054, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303121, "dur":202, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303323, "dur":324, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303647, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303721, "dur":199, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1704313453303920, "dur":105, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453304025, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1704313453304071, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1704313453319712, "dur":2549, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1704313453322312, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":5, "ts":1704313453322332, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453289514, "dur":227, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453289741, "dur":8626, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298377, "dur":243, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298621, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298690, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298762, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298822, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/WinPixEventRuntime.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453298942, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299018, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299088, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299157, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299229, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299294, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299383, "dur":78, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299462, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299530, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299587, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299666, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299726, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299791, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299853, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299915, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453299974, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300037, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300099, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300179, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300246, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300328, "dur":214, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300543, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300644, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300718, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300798, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453300867, "dur":641, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.Core.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1704313453301508, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453301573, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453301737, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453301806, "dur":174, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1704313453301980, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302052, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302230, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302296, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Burst.pdb" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302753, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302810, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302865, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302916, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453302984, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303045, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303113, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303179, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303250, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303322, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303469, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303528, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":6, "ts":1704313453303604, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453304956, "dur":3093, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":6, "ts":1704313453308133, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/level1" }}
+,{ "pid":12345, "tid":6, "ts":1704313453308218, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453308222, "dur":2007, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/level1" }}
+,{ "pid":12345, "tid":6, "ts":1704313453310290, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/boot.config" }}
+,{ "pid":12345, "tid":6, "ts":1704313453310469, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1704313453310529, "dur":11858, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453289557, "dur":192, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453289749, "dur":8618, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298377, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298477, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298552, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298646, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298716, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298789, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298846, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453298944, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299021, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299085, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299147, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299218, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299277, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299338, "dur":56, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299395, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299463, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299523, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299587, "dur":74, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299662, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299725, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299781, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299843, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299897, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453299965, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300027, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300090, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300154, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300219, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300280, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300350, "dur":272, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300623, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300727, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453300805, "dur":239, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.State.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301044, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301108, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Timeline.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301372, "dur":104, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301477, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Shaders.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301662, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301728, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301901, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453301962, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453302132, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453302196, "dur":752, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.Mathematics.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1704313453302948, "dur":164, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303113, "dur":72, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303185, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303255, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303324, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303398, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Assembly-CSharp.pdb" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303629, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303698, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":7, "ts":1704313453303765, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1704313453317738, "dur":2118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":7, "ts":1704313453319924, "dur":2453, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453289613, "dur":10, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453289623, "dur":8737, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298378, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298383, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298474, "dur":4, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/app.info" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298478, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298541, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298616, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298680, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298757, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298818, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298886, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453298944, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299015, "dur":61, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299077, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299140, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299198, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299254, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299306, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299375, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453299429, "dur":611, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300040, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300103, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300172, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300243, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300324, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300394, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300625, "dur":173, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300798, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300939, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453300999, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453301063, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453301123, "dur":483, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.TextMeshPro.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1704313453301611, "dur":69, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453301681, "dur":1050, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453302731, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453302795, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453302858, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453302917, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303012, "dur":170, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303182, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303251, "dur":160, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303412, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/Plugins/x86_64/lib_burst_generated.pdb" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303480, "dur":68, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303549, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles Builds/Tower Survivors_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1704313453303620, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1704313453316354, "dur":3547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"Builds/Tower Survivors_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1704313453319981, "dur":2378, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1704313453329257, "dur":2695, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1704313453351576, "dur": 615, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1704313453351422, "dur": 788, "ph": "X", "name": "Write chrome-trace events", "args": {} },
