@@ -27,7 +27,9 @@ namespace TowerSurvivors
             if (PlayerPrefs.HasKey("language"))
             {
                 Language.InitialiseLanguage(languagesCSV, PlayerPrefs.GetString("language"));
-            }          
+            }
+
+            GameSettings.LoadSettings();
         }
 
         public void SetLanguage(string language)

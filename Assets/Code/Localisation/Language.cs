@@ -12,6 +12,7 @@ namespace TowerSurvivors.Localisation
 
         public static void InitialiseLanguage(TextAsset csv, string language)
         {
+            currentLanguage.Clear();
             //Gets the rows from the csv, fomated like: KEY, English, Spanish.....
             string[] rows = csv.text.Split(new string[] { "\n" }, System.StringSplitOptions.None);
             int columns = rows[0].Split(new string[] { ",", "\n"}, System.StringSplitOptions.None).Length;

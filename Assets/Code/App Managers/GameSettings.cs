@@ -20,7 +20,7 @@ namespace TowerSurvivors
             SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
 
             SetFPS(PlayerPrefs.GetInt("fps", 60));
-            SetFullScreen(PlayerPrefs.GetInt("fullScreen", 1));
+            SetFullScreen(PlayerPrefs.GetInt("fullScreen", 0));
             SetVsync(PlayerPrefs.GetInt("vSync", 1));
 
             SetResolution(PlayerPrefs.GetInt("resX", Screen.currentResolution.width),
@@ -57,7 +57,8 @@ namespace TowerSurvivors
             QualitySettings.vSyncCount = oneOrZero;
             PlayerPrefs.SetInt("vSync", oneOrZero);
 
-            if (oneOrZero == 0) SetFPS(PlayerPrefs.GetInt("fps", 60));
+            if (oneOrZero == 0) 
+                SetFPS(PlayerPrefs.GetInt("fps", 60));
         }
 
         public static void SetQuality(int i)
@@ -67,17 +68,25 @@ namespace TowerSurvivors
             SetVsync(PlayerPrefs.GetInt("vSync", 1));
         }
 
-        public static void SetFullScreen(bool fullscreen)
+        public static void SetFullScreen(int fullscreen)
         {
-            Screen.fullScreen = fullscreen;
-            Debug.Log((fullscreen ? "F" : "Not f") + "ullscreen!"); //Magia increíble del gabo de 2022
-            PlayerPrefs.SetInt("fullScreen", fullscreen ? 1 : 0);
-        }
+            FullScreenMode mode = 0;
+            switch (fullscreen)
+            {
+                case 0:
+                    mode = FullScreenMode.ExclusiveFullScreen;
+                    break;
+                case 1:
+                    mode = FullScreenMode.FullScreenWindow;
+                    break;
+                case 2: 
+                    mode = FullScreenMode.Windowed;
+                    break;
+            }
 
-        public static void SetFullScreen(int OneOrZero)
-        {
-            Screen.fullScreen = OneOrZero == 1;
-            PlayerPrefs.SetInt("fullScreen", OneOrZero);
+            Screen.fullScreenMode = mode;
+            Debug.Log(mode);
+            PlayerPrefs.SetInt("fullScreen", fullscreen);
         }
 
         public static void SetResolution(int x, int y)
@@ -86,6 +95,7 @@ namespace TowerSurvivors
             Screen.SetResolution(x, y, Screen.fullScreen);
             PlayerPrefs.SetInt("resX", x);
             PlayerPrefs.SetInt("resY", y);
+            Debug.Log("Set resolution: " + x + "x" + y);
         }
 
         /// <summary>
@@ -114,7 +124,6 @@ namespace TowerSurvivors
             if (volume > 1)
             {
                 SFXVolume = 1;
-                return;
             }
             else
             {
