@@ -19,7 +19,7 @@ namespace TowerSurvivors.GUI
         [SerializeField]
         private GameObject AboutPage;
         [SerializeField]
-        private GameObject SettingsMenu;
+        protected GameObject SettingsMenu;
 
         [SerializeField]
         private TMP_Dropdown displayDropdown;
@@ -32,6 +32,10 @@ namespace TowerSurvivors.GUI
         private Slider sfxSlider;
         [SerializeField]
         private Slider musicSlider;
+
+        [SerializeField]
+        private TextMeshProUGUI confirmDeleteText;
+        private bool _deleteConfig = false;
 
         private void Start()
         {
@@ -50,7 +54,7 @@ namespace TowerSurvivors.GUI
             SettingsMenu.SetActive(false);
         }
 
-        private void LoadSettings()
+        protected void LoadSettings()
         {
 
             GameSettings.LoadSettings();
@@ -159,6 +163,20 @@ namespace TowerSurvivors.GUI
         {
             PlayerPrefs.DeleteKey("language");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void RestoreConfiguration()
+        {
+            if (_deleteConfig)
+            {
+                PlayerPrefs.DeleteAll();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else
+            {
+                _deleteConfig = true;
+                confirmDeleteText.text = Language.Get("CONFIRM");
+            }
         }
 
         public void Play()

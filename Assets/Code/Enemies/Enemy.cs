@@ -43,8 +43,6 @@ namespace TowerSurvivors.Enemies
 
         protected SpriteRenderer _sprite;
 
-        public UnityEvent<Enemy> e_Die = new UnityEvent<Enemy>();
-
         void Start()
         {
             TryGetComponent(out _animator);
@@ -178,8 +176,8 @@ namespace TowerSurvivors.Enemies
             isAlive = false;
             GameManager.Instance.AddToKillCOunt(1);
             DropXp();
-            e_Die.Invoke(this);
             DestroyAnim();
+            EnemySpawner.Instance.currentEnemies--;
         }
 
         /// <summary>

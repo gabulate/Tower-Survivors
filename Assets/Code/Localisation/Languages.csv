@@ -1,6 +1,8 @@
 ﻿KEY,EN,ES
 General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat)(Amount); Add combined attributes as needed. Look Below for examples.,Strings can be formatted using {0}; {1}; etc. for when they need a variable name.
 Main Menu Text---,Main Menu Text---,Texto del menú principal---
+YES,Yes,Sí
+NO,No,No
 PLAY,Play,Jugar
 CONFIG,Settings,Configuraciones
 ABOUT,About,Acerca de
@@ -16,6 +18,10 @@ FULLSCREEN,Fullscreen,Pantalla completa
 WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes
 WINDOWED,Window,Ventana
 RESOLUTION,Resolution:,Resolución:
+RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones
+CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
+RESUME,Resume,Resumir
+CONFIRM_EXIT,Are you sure you want to exit the game?,¿Seguro que quieres salir?
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
 LEVELUP,Level Up!,Subiste de nivel!

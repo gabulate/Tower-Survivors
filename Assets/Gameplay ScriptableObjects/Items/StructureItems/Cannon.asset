@@ -29,7 +29,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 0
+    passThroughAmnt: 1
   - neededLevel: 1
     DescriptionKey: UPG_RANGE_SPEED_PASSTH1
     range: 5
@@ -41,7 +41,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 1
+    passThroughAmnt: 2
   - neededLevel: 1
     DescriptionKey: UPG_RANGE_DAMAGE10
     range: 6
@@ -53,7 +53,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 1
+    passThroughAmnt: 2
   - neededLevel: 1
     DescriptionKey: UPG_DAMAGE10_PASSTH1
     range: 6
@@ -65,7 +65,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 2
+    passThroughAmnt: 3
   - neededLevel: 1
     DescriptionKey: UPG_RANGE_SPEED
     range: 7
@@ -77,7 +77,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 2
+    passThroughAmnt: 3
   - neededLevel: 1
     DescriptionKey: UPG_DAMAGE20
     range: 7
@@ -89,4 +89,4 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
-    passThroughAmnt: 2
+    passThroughAmnt: 3

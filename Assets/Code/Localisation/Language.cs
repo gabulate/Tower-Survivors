@@ -82,7 +82,7 @@ namespace TowerSurvivors.Localisation
             }
             catch
             {
-                return "####: "+ key + "MISSING!!!";
+                return "#"+ key;
             }
         }
     }

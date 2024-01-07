@@ -9,7 +9,7 @@ namespace TowerSurvivors.Localisation
     {
         public void Translate()
         {
-            foreach(TextMeshProUGUI t in GetComponentsInChildren<TextMeshProUGUI>())
+            foreach(TextMeshProUGUI t in GetComponentsInChildren<TextMeshProUGUI>(true))
             {
                 t.text = Language.Get(t.text);
             }

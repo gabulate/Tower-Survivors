@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Util;
 using UnityEngine;
@@ -9,6 +10,11 @@ namespace TowerSurvivors.Game
 {
     public class EnemySpawner : MonoBehaviour
     {
+        public int MaxEnemies = 30;
+        public int currentEnemies = 0;
+
+        public static EnemySpawner Instance;
+
         [SerializeReference]
         public List<EnemyWaveSO> waves;
 #if UNITY_EDITOR
@@ -143,6 +149,9 @@ namespace TowerSurvivors.Game
         {
             for (int i = 0; i < currentWave.amountAtATime; i++)
             {
+                if (currentEnemies >= MaxEnemies)
+                    return;
+
                 int random = Random.Range(1, 5);
                 float x = 0;
                 float y = 0;
@@ -170,13 +179,22 @@ namespace TowerSurvivors.Game
                         break;
                 }
 
-                Vector3 position = new(x, y, y);
+                Vector3 position = new(transform.position.x + x, transform.position.y+ y, y);
 
                 //Get Random enemy
                 GameObject randomEnemy = currentWave.enemies[Random.Range(0, currentWave.enemies.Count)];
 
                 Instantiate(randomEnemy, position, Quaternion.identity);
+                currentEnemies++;
             }
+        }
+
+        void Awake()
+        {
+            if (Instance == null)
+                Instance = this;
+            else if (Instance != this)
+                Destroy(gameObject);
         }
 
         private void OnDrawGizmosSelected()
@@ -184,7 +202,7 @@ namespace TowerSurvivors.Game
             Gizmos.color = Color.yellow;
 
             // Calculate the center and size of the box
-            Vector3 center = new Vector3((currentMax.x + currentMin.x) / 2f, (currentMax.y + currentMin.y) / 2f, 0f);
+            Vector3 center = new Vector3(transform.position.x +((currentMax.x + currentMin.x) / 2f), transform.position.y + ((currentMax.y + currentMin.y) / 2f), 0f);
             Vector3 size = new Vector3(currentMax.x - currentMin.x, currentMax.y - currentMin.y, 0f);
 
             // Draw the wireframe box
@@ -193,7 +211,7 @@ namespace TowerSurvivors.Game
             Gizmos.color = Color.red;
 
             // Calculate the center and size of the box
-            Vector3 centerr = new Vector3((targetMax.x + targetMin.x) / 2f, (targetMax.y + targetMin.y) / 2f, 0f);
+            Vector3 centerr = new Vector3(transform.position.x + ((targetMax.x + targetMin.x) / 2f), transform.position.y + ((targetMax.y + targetMin.y) / 2f), 0f);
             Vector3 sizee = new Vector3(targetMax.x - targetMin.x, targetMax.y - targetMin.y, 0f);
 
             // Draw the wireframe box

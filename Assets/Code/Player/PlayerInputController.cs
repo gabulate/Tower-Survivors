@@ -46,7 +46,7 @@ namespace TowerSurvivors.PlayerScripts
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                GameManager.TogglePause();
+                GameManager.Instance.ShowPauseMenu(!GameManager.isPaused);
             }
 
             if (GameManager.isPaused)

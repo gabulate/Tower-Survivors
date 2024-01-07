@@ -12,6 +12,8 @@ namespace TowerSurvivors.Game
         public static GameManager Instance;
 
         public static bool isPaused = false;
+        [SerializeField]
+        private GameObject _pauseMenu;
 
         public static float secondsPassed = 0;
         private static int _enemiesKilled = 0;
@@ -41,8 +43,10 @@ namespace TowerSurvivors.Game
         private void Start()
         {
             AudioPlayer.Instance.PlayMusic(gameMusic);
+            secondsPassed = 0;
             _enemiesKilled = 0;
             GameSettings.LoadSettings();
+            _pauseMenu.SetActive(false);
         }
 
         private void FixedUpdate()
@@ -55,10 +59,17 @@ namespace TowerSurvivors.Game
             LevelUpMenu.Instance.LevelUp();
         }
 
-        public static void PauseGame(bool paused)
+        public void PauseGame(bool paused)
         {
             isPaused = paused;
             Time.timeScale = paused ? 0 : 1;
+        }
+
+        public void ShowPauseMenu(bool show)
+        {
+            isPaused = show;
+            Time.timeScale = show ? 0 : 1;
+            _pauseMenu.SetActive(show);
         }
 
         internal static void TogglePause()

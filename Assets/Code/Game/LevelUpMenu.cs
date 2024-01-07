@@ -145,7 +145,7 @@ namespace TowerSurvivors.Game
             _menu.SetActive(true);
             _animator.SetBool("show", true);
             yield return new WaitForSeconds(0.1f);
-            GameManager.PauseGame(true);
+            GameManager.Instance.PauseGame(true);
             AudioPlayer.Instance.PauseMusic(true);
         }
 
@@ -153,7 +153,7 @@ namespace TowerSurvivors.Game
         {
             if (_menu.activeSelf)
             {
-                GameManager.PauseGame(false);
+                GameManager.Instance.PauseGame(false);
                 _animator.SetBool("show", false);
                 AudioPlayer.Instance.PauseMusic(false);
 

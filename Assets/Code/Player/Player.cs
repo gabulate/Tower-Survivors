@@ -180,8 +180,8 @@ namespace TowerSurvivors.PlayerScripts
 
         private IEnumerator RestartLevel()
         {
-            GameManager.Instance.Restart();
             yield return new WaitForSeconds(5);
+            GameManager.Instance.Restart();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

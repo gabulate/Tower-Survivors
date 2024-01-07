@@ -15,7 +15,7 @@ namespace TowerSurvivors.GUI
         private List<string> _options;
         [SerializeField]
         private string _itemName;
-        private bool _active = true;
+        private bool _active = false;
 
         void Start()
         {
@@ -29,16 +29,13 @@ namespace TowerSurvivors.GUI
             dropdown.AddOptions(_options);
             _itemName = _options[0];
 
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                _active = !_active;
+            _active = false;
 
-                GetComponent<Image>().enabled = _active;
-                for (int i = 0; i < transform.childCount; i++)
-                {
-                    Transform child = transform.GetChild(i);
-                    child.gameObject.SetActive(_active);
-                }
+            GetComponent<Image>().enabled = _active;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform child = transform.GetChild(i);
+                child.gameObject.SetActive(_active);
             }
         }
 
