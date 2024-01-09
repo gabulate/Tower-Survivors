@@ -19,14 +19,26 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.3
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
   - EffectIntensityByLevel: 0.6
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
   - EffectIntensityByLevel: 0.9
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
   - EffectIntensityByLevel: 1.2
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
   - EffectIntensityByLevel: 1.5
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
   - EffectIntensityByLevel: 2
-    DescriptionKey: UPG_MOVESPEED
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 

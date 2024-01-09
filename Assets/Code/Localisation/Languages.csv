@@ -47,32 +47,19 @@ TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
 LUBRICATOR_NAME,Lubricator,Lubricante
 LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los projectiles.
 Upgrades----,Upgrades---,Mejoras---
-UPG_RANGE,Range increased.,Rango aumentado.
-UPG_RANGE_DAMAGE10,Range increased and Damage increased by 10.,Rango aumentado y Daño aumentado en 10. 
-UPG_RANGE_DAMAGE20,Range increased and Damage increased by 20.,Rango aumentado y Daño aumentado en 20. 
-UPG_RANGE_SPEED,Range and projectile speed increased.,Rango y velocidad de projectiles aumentados.
-UPG_RANGE_SPEED_PASSTH1,Range and projectile speed increased. Projectiles pass through 1 more enemy.,Rango y velocidad de projectiles aumentados. Los projectiles pueden atravesar 1 enemigo más.
-UPG_DAMAGE10,Damage increased by 10.,Daño aumentado en 10.
-UPG_DAMAGE20,Damage increased by 20.,Daño aumentado en 20.
-UPG_DAMAGE10_COOLDOWN1,Damage increased by 10. Cooldown reduced by 1 second.,Daño aumentado por 10. Enfriamiento reducido por 1 segundo.
-UPG_DAMAGE20_COOLDOWN1,Damage increased by 20. Cooldown reduced by 1 second.,Daño aumentado por 20. Enfriamiento reducido por 1 segundo.
-UPG_DAMAGE10_PASSTH1,Damage increased by 10. Projectiles pass through 1 more enemy.,Daño aumentado por 10. Los projectiles pueden atravesar un enemigo más.
+UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
+UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
+UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.
 UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
-UPG_COOLDOWNALL10,Cooldown reduced by 10% on all structures.,Enfriamiento reducido 10% en todas las estructuras.
-UPG_COOLDOWNALL20,Cooldown reduction increased to 20% on all structures.,Reducción de enfriamiento aumentado a 20% en todas las estructuras.
-UPG_COOLDOWNALL30,Cooldown reduction increased to 30% on all structures.,Reducción de enfriamiento aumentado a 30% en todas las estructuras.
-UPG_COOLDOWNALL40,Cooldown reduction increased to 40% on all structures.,Reducción de enfriamiento aumentado a 40% en todas las estructuras.
-UPG_COOLDOWNALL50,Cooldown reduction increased to 50% on all structures.,Reducción de enfriamiento aumentado a 50% en todas las estructuras.
-UPG_SIZE,Projectile size increased.,Aumenta el tamaño de los projectiles.
+UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.
+UPG_SIZE,Projectile size increased {0}%.,Aumenta el tamaño de los projectiles un {0}%.
 UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los projectiles.
-UPG_SPEEDALL10,Projectile speed increased by 10%.,Aumenta la velocidad de los projectiles un 10%.
-UPG_SPEEDALL20,Projectile speed increased to 20%.,Velocidad de los projectiles aumentada a un 20%.
-UPG_SPEEDALL30,Projectile speed increased to 30%.,Velocidad de los projectiles aumentada a un 30%.
-UPG_SPEEDALL40,Projectile speed increased to 40%.,Velocidad de los projectiles aumentada a un 40%.
-UPG_SPEEDALL50,Projectile speed increased to 50%.,Velocidad de los projectiles aumentada a un 50%.
-UPG_DURATION,Projectile duration increased.,Aumenta la duración de los projectiles.
-UPG_AMOUNT,Projectile amount increased by 1.,Cantidad de projectiles aumentada en 1.
-UPG_PASSTH,Projectiles can pass through 1 more enemy.,Los projectiles pueden atravesar a 1 enemigo más.
+UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los projectiles un {0}%.
+UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los projectiles {0} segundos.
+UPG_DURATION1,Projectile duration increased by 1 second.,Aumenta la duración de los projectiles 1 segundo.
+UPG_AMOUNT,Projectile amount increased by {0}.,Cantidad de projectiles aumentada en {0}.
+UPG_PASSTH,Projectiles can pass through {0} more enemies.,Los projectiles pueden atravesar a {0} enemigos más.
+UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los projectiles pueden atravesar a 1 enemigo más.
 UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
 UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
 UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.

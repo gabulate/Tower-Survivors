@@ -28,7 +28,7 @@ namespace TowerSurvivors.GUI
             {
                 PassiveItemSO i = item as PassiveItemSO;
                 int currentLevel = PassiveItemManager.Instance.GetCurrentLevel(i);
-                description.text = Language.Get(i.levels[currentLevel].DescriptionKey);
+                description.text = i.GetUpgradeDescription(currentLevel);
             }
 
         }

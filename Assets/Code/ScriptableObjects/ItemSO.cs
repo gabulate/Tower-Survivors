@@ -5,7 +5,7 @@ namespace TowerSurvivors.ScriptableObjects
     /// <summary>
     /// Base class for items, gets extended to PassiveItemSO ans StructureItemSO
     /// </summary>
-    public class ItemSO : ScriptableObject
+    public abstract class ItemSO : ScriptableObject
     {
         public string itemNameKey;
         [TextArea]
@@ -15,5 +15,12 @@ namespace TowerSurvivors.ScriptableObjects
         public GameObject prefab;
 
         public float probability = 5;
+    }
+
+    [System.Serializable]
+    public class DescriptionPair
+    {
+        public string descriptionKey;
+        public string value;
     }
 }

@@ -19,12 +19,22 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 1
-    DescriptionKey: UPG_EXTRASTR1
+    upgradeDescriptions:
+    - descriptionKey: UPG_EXTRASTR1
+      value: '-'
   - EffectIntensityByLevel: 2
-    DescriptionKey: UPG_EXTRASTR1
+    upgradeDescriptions:
+    - descriptionKey: UPG_EXTRASTR1
+      value: '-'
   - EffectIntensityByLevel: 3
-    DescriptionKey: UPG_EXTRASTR1
+    upgradeDescriptions:
+    - descriptionKey: UPG_EXTRASTR1
+      value: '-'
   - EffectIntensityByLevel: 4
-    DescriptionKey: UPG_EXTRASTR1
+    upgradeDescriptions:
+    - descriptionKey: UPG_EXTRASTR1
+      value: '-'
   - EffectIntensityByLevel: 5
-    DescriptionKey: UPG_EXTRASTR1
+    upgradeDescriptions:
+    - descriptionKey: UPG_EXTRASTR1
+      value: '-'

@@ -19,12 +19,22 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.1
-    DescriptionKey: UPG_SPEEDALL10
+    upgradeDescriptions:
+    - descriptionKey: UPG_SPEEDALL
+      value: 10
   - EffectIntensityByLevel: 0.2
-    DescriptionKey: UPG_SPEEDALL20
+    upgradeDescriptions:
+    - descriptionKey: UPG_SPEEDALL
+      value: 20
   - EffectIntensityByLevel: 0.3
-    DescriptionKey: UPG_SPEEDALL30
+    upgradeDescriptions:
+    - descriptionKey: UPG_SPEEDALL
+      value: 30
   - EffectIntensityByLevel: 0.4
-    DescriptionKey: UPG_SPEEDALL40
+    upgradeDescriptions:
+    - descriptionKey: UPG_SPEEDALL
+      value: 40
   - EffectIntensityByLevel: 0.5
-    DescriptionKey: UPG_SPEEDALL50
+    upgradeDescriptions:
+    - descriptionKey: UPG_SPEEDALL
+      value: 50

@@ -19,12 +19,22 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.1
-    DescriptionKey: UPG_COOLDOWNALL10
+    upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWNALL
+      value: 10
   - EffectIntensityByLevel: 0.2
-    DescriptionKey: UPG_COOLDOWNALL20
+    upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWNALL
+      value: 20
   - EffectIntensityByLevel: 0.3
-    DescriptionKey: UPG_COOLDOWNALL30
+    upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWNALL
+      value: 30
   - EffectIntensityByLevel: 0.4
-    DescriptionKey: UPG_COOLDOWNALL40
+    upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWNALL
+      value: 40
   - EffectIntensityByLevel: 0.5
-    DescriptionKey: UPG_COOLDOWNALL50
+    upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWNALL
+      value: 50

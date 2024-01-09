@@ -29,7 +29,7 @@ namespace TowerSurvivors.GUI
             transform.position = structure.transform.position;
             int nextLevel = structure.level + 1;
             Title.text = string.Format(Language.Get("UPGRADETO"), nextLevel);
-            Description.text = Language.Get(structure.item.levels[structure.level].DescriptionKey);
+            Description.text = structure.item.GetUpgradeDescription(structure.level);
             Requirements.text = Language.Get("LEVEL");
 
             icon.gameObject.SetActive(true);

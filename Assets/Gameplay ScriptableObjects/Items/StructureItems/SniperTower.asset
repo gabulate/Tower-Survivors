@@ -19,7 +19,7 @@ MonoBehaviour:
   probability: 5
   levels:
   - neededLevel: 1
-    DescriptionKey: first
+    upgradeDescriptions: []
     range: 8
     damage: 50
     attackCooldown: 5
@@ -31,7 +31,9 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    DescriptionKey: UPG_RANGE
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGE
+      value: 4
     range: 12
     damage: 50
     attackCooldown: 5
@@ -43,7 +45,11 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    DescriptionKey: UPG_DAMAGE10_COOLDOWN1
+    upgradeDescriptions:
+    - descriptionKey: UPG_DAMAGE
+      value: 10
+    - descriptionKey: UPG_COOLDOWN1
+      value: '-'
     range: 12
     damage: 60
     attackCooldown: 4
@@ -55,7 +61,9 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    DescriptionKey: UPG_DAMAGE20
+    upgradeDescriptions:
+    - descriptionKey: UPG_DAMAGE
+      value: 20
     range: 12
     damage: 80
     attackCooldown: 4
@@ -67,7 +75,11 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   - neededLevel: 1
-    DescriptionKey: UPG_RANGE_DAMAGE20
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGE
+      value: 4
+    - descriptionKey: UPG_DAMAGE
+      value: 20
     range: 12
     damage: 80
     attackCooldown: 4

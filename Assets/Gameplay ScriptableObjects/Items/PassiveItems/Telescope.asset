@@ -19,14 +19,26 @@ MonoBehaviour:
   probability: 5
   levels:
   - EffectIntensityByLevel: 0.8
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
   - EffectIntensityByLevel: 1
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
   - EffectIntensityByLevel: 1.6
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
   - EffectIntensityByLevel: 2.4
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
   - EffectIntensityByLevel: 3.2
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
   - EffectIntensityByLevel: 4
-    DescriptionKey: UPG_VISION
+    upgradeDescriptions:
+    - descriptionKey: UPG_VISION
+      value: 
