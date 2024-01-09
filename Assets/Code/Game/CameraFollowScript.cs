@@ -11,7 +11,8 @@ namespace TowerSurvivors.Game
             //Super high level complicated stuff really
             transform.position = new Vector3(
                 Player.Instance.transform.position.x,
-                Player.Instance.transform.position.y,- 10);
+                Player.Instance.transform.position.y,
+                Player.Instance.transform.position.y - 10);
         }
     }
 }

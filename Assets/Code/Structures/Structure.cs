@@ -67,11 +67,17 @@ namespace TowerSurvivors.Structures
             stats.damage = item.levels[level - 1].damage + playerStats.damageIncrease;
 
             stats.attackCooldown = item.levels[level - 1].attackCooldown;
-            //Calculates the percentaje from the current level
+            //Calculates the percentaje from the current level and subtracts it
             stats.attackCooldown -= item.levels[level - 1].attackCooldown * playerStats.coolDownReduction;
 
             stats.areaSize = item.levels[level - 1].areaSize + playerStats.areaSizeIncrease;
-            stats.projectileSpeed = item.levels[level - 1].projectileSpeed + playerStats.projectileSpeedBoost;
+            //Calculates the percentaje from the current level and adds it
+            stats.areaSize += item.levels[level - 1].areaSize * playerStats.areaSizeIncrease;
+
+            stats.projectileSpeed = item.levels[level - 1].projectileSpeed;
+            //Calculates the percentaje from the current level and adds it
+            stats.projectileSpeed += item.levels[level - 1].projectileSpeed * playerStats.projectileSpeedBoost;
+
             stats.duration = item.levels[level - 1].duration + playerStats.durationIncrease;
             stats.projectileAmnt = item.levels[level - 1].projectileAmnt + playerStats.ProjectileAmntIncrease;
             stats.passThroughAmnt = item.levels[level - 1].passThroughAmnt;

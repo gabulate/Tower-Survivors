@@ -44,6 +44,8 @@ RUNNINGSHOES_NAME,Running shoes,Zapatos deportivos
 RUNNINGSHOES_DSC,Sneakers that make you run faster.,Tenis que te hacen correr más rápido.
 TELESCOPE_NAME,Telescope,Telescopio
 TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
+LUBRICATOR_NAME,Lubricator,Lubricante
+LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los projectiles.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased.,Rango aumentado.
 UPG_RANGE_DAMAGE10,Range increased and Damage increased by 10.,Rango aumentado y Daño aumentado en 10. 
@@ -63,6 +65,11 @@ UPG_COOLDOWNALL40,Cooldown reduction increased to 40% on all structures.,Reducci
 UPG_COOLDOWNALL50,Cooldown reduction increased to 50% on all structures.,Reducción de enfriamiento aumentado a 50% en todas las estructuras.
 UPG_SIZE,Projectile size increased.,Aumenta el tamaño de los projectiles.
 UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los projectiles.
+UPG_SPEEDALL10,Projectile speed increased by 10%.,Aumenta la velocidad de los projectiles un 10%.
+UPG_SPEEDALL20,Projectile speed increased to 20%.,Velocidad de los projectiles aumentada a un 20%.
+UPG_SPEEDALL30,Projectile speed increased to 30%.,Velocidad de los projectiles aumentada a un 30%.
+UPG_SPEEDALL40,Projectile speed increased to 40%.,Velocidad de los projectiles aumentada a un 40%.
+UPG_SPEEDALL50,Projectile speed increased to 50%.,Velocidad de los projectiles aumentada a un 50%.
 UPG_DURATION,Projectile duration increased.,Aumenta la duración de los projectiles.
 UPG_AMOUNT,Projectile amount increased by 1.,Cantidad de projectiles aumentada en 1.
 UPG_PASSTH,Projectiles can pass through 1 more enemy.,Los projectiles pueden atravesar a 1 enemigo más.

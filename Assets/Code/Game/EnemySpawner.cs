@@ -197,6 +197,15 @@ namespace TowerSurvivors.Game
                 Destroy(gameObject);
         }
 
+        void LateUpdate()
+        {
+            //Follows the player
+            //Super high level complicated stuff really
+            transform.position = new Vector3(
+                Player.Instance.transform.position.x,
+                Player.Instance.transform.position.y,
+                Player.Instance.transform.position.y - 10);
+        }
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
