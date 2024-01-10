@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/San Lucas.unity
     guid: 10075f6969cd0134fb49ef407235b0fc
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: ea3586f9c2c812047a4a1f5805cbf968
   m_configObjects: {}

@@ -35,8 +35,9 @@ namespace TowerSurvivors.GUI
 
         public void ReturnToMenu()
         {
-            GameManager.Instance.PauseGame(false);
-            SceneManager.LoadScene(0);
+            GameManager.Instance.LoadStats();
+            GameManager.Instance.ShowPauseMenu(false);
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

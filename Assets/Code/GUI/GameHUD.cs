@@ -27,7 +27,7 @@ namespace TowerSurvivors.GUI
             GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             timerText.text = FormatTime(GameManager.secondsPassed);
         }

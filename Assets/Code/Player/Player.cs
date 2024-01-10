@@ -175,14 +175,7 @@ namespace TowerSurvivors.PlayerScripts
         /// </summary>
         public void Die()
         {
-            StartCoroutine(RestartLevel());
-        }
-
-        private IEnumerator RestartLevel()
-        {
-            yield return new WaitForSeconds(5);
-            GameManager.Instance.Restart();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManager.Instance.GameOver();
         }
     }
 

@@ -48,6 +48,10 @@ namespace TowerSurvivors.Game
             return null;
         }
 
+        /// <summary>
+        /// Returns an array of every PassiveItem currently on the inventory.
+        /// </summary>
+        /// <returns>PassiveItem[]</returns>
         public PassiveItem[] GetPassives()
         {
             return GetComponentsInChildren<PassiveItem>();

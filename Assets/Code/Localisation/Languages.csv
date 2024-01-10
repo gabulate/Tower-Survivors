@@ -7,6 +7,7 @@ PLAY,Play,Jugar
 CONFIG,Settings,Configuraciones
 ABOUT,About,Acerca de
 EXIT,Exit,Salir
+RETURN_TO_MAIN_MENU,Return to main menu,Regresar al menú principal
 LANGUAGE,English,Español
 DISPLAY_SETTINGS,Display settings,Visualización
 SOUND_SETTINGS,Volume settings,Sonido
@@ -21,7 +22,7 @@ RESOLUTION,Resolution:,Resolución:
 RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones
 CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
 RESUME,Resume,Resumir
-CONFIRM_EXIT,Are you sure you want to exit the game?,¿Seguro que quieres salir?
+CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
 LEVELUP,Level Up!,Subiste de nivel!
@@ -29,7 +30,15 @@ LEVEL,Needed:,Se necesita:
 MAXLEVEL,Max level: {0}.,{0} a máximo nivel.
 MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
 STRUCTURE,Structure,Estructura
+STRUCTURES,Structures,Estructuras
+GAME_OVER,Game over,¡Haz muerto!
+CONTINUE_TO_MENU,Continue to menu,Continuar al menú
+TIME_SURVIVED,Time survived:,Tiempo sobrevivido:
+ENEMIES_KILLED,Enemies killed:,Enemigos eliminados:
+LEVEL_REACHED,Level reached:,Nivel alcanzado:
+STRUCTURE_UPGRADES,Structure upgrades:,Estructuras mejoradas:
 ITEM,Item,Ítem
+ITEMS,Items,Ítems
 NOTHINGITEM_NAME,Nothing.,Nada.
 NOTHINGITEM_DSC,Does nothing.,No hace nada.
 CANNON_NAME,Cannon,Cañón

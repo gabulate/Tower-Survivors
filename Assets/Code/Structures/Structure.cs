@@ -12,7 +12,7 @@ namespace TowerSurvivors.Structures
     /// Basic structure script that contains basic stats and methods.
     /// Can be extended.
     /// </summary>
-    public class Structure : MonoBehaviour
+    public abstract class Structure : MonoBehaviour
     {
         protected static readonly LayerMask _enemyLayer = 1 << 6;
         protected static readonly LayerMask _structureLayer = 1 << 7;
@@ -174,6 +174,7 @@ namespace TowerSurvivors.Structures
                     if (level == item.levels.Count)
                         isMaxed = true;
 
+                    GameManager.structuresUpgraded++;
                     return true;
                 }
             }
