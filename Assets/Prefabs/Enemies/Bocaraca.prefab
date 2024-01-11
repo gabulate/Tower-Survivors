@@ -256,9 +256,6 @@ MonoBehaviour:
   damage: 10
   attackCooldown: 1
   currentCooldown: 0
-  e_Die:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8061092949138535652
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 4562701758455395350}
   - component: {fileID: 483590979060671613}
   - component: {fileID: 561325716}
+  - component: {fileID: 7927954853689890682}
   m_Layer: 5
   m_Name: LevelUpOption
   m_TagString: Untagged
@@ -201,15 +202,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.747953, g: 0.8301887, b: 0.803165, a: 1}
+  m_Color: {r: 0.6714578, g: 0.71958935, b: 0.745283, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
-  m_Type: 2
+  m_Sprite: {fileID: 21300000, guid: 6203ea9d3f3f79b4ebd0754baf2f42e6, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -237,7 +238,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -290,6 +291,26 @@ MonoBehaviour:
   icon: {fileID: 2959812002693108701}
   itemName: {fileID: 1997064204440105529}
   description: {fileID: 921747903}
+--- !u!95 &7927954853689890682
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562701758455395348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1487d257879a2747950dfefd56a7dcf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4756084760551944620
 GameObject:
   m_ObjectHideFlags: 0

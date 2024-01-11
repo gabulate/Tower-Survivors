@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -123.70001, y: 450.4}
-  m_SizeDelta: {x: 102.83, y: 50}
+  m_AnchoredPosition: {x: -160.68, y: 450.4}
+  m_SizeDelta: {x: 176.79, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1994299850857597921
 CanvasRenderer:
@@ -532,7 +532,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.6, y: -0.000025749}
+  m_AnchoredPosition: {x: 126.9, y: 2.0555e-10}
   m_SizeDelta: {x: 56.36, y: 56.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8260353886150788140
@@ -685,8 +685,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -123.70001, y: 388}
-  m_SizeDelta: {x: 102.83, y: 50}
+  m_AnchoredPosition: {x: -160.68005, y: 388}
+  m_SizeDelta: {x: 176.79, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8260353886187989169
 CanvasRenderer:
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2830189, g: 0.23707207, b: 0.17755431, a: 1}
+  m_Color: {r: 0.1137255, g: 0.121568635, b: 0.1254902, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.41438237, g: 0.6835757, b: 0.9056604, a: 1}
+  m_Color: {r: 0.27450982, g: 0.3254902, b: 0.54509807, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1715,7 +1715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.6, y: 26.5}
+  m_AnchoredPosition: {x: 122.9, y: 20.955}
   m_SizeDelta: {x: 91.91, y: 91.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &468602474681219979

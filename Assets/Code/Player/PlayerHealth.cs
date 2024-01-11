@@ -72,15 +72,7 @@ namespace TowerSurvivors.PlayerScripts
         /// </summary>
         public void Die()
         {
-            Debug.Log("te has morido :(");
-
             _isInvincible = true;
-            Player.PlayerInput.EnableMovement(false);
-            GetComponent<Rigidbody2D>().simulated = false;
-            GetComponent<BoxCollider2D>().enabled = false;
-            Player.Sprite.material.SetFloat("_Fade", 1);
-
-            Player.Sprite.material.SetColor("_HurtColor", Color.black);
             Player.Instance.Die();
         }
 

@@ -44,18 +44,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42e8acaffad7f40b51574ae2601130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxEnemies: 150
+  currentEnemies: 0
   waves:
-  - {fileID: 11400000, guid: bc648e412533f9649957b1f206bf3532, type: 2}
+  - {fileID: 11400000, guid: 4834fc40bc2370a4ca8255629f8f7ad3, type: 2}
   - {fileID: 11400000, guid: c89b30226ba894d4dbbc05d5659d955c, type: 2}
   - {fileID: 11400000, guid: caa16bd6016224a4280af50993dd0f85, type: 2}
   - {fileID: 11400000, guid: 5d11b93e52646e048b54edab6e227de8, type: 2}
+  - {fileID: 11400000, guid: bc648e412533f9649957b1f206bf3532, type: 2}
   - {fileID: 11400000, guid: 705d708c87b21b147ac76b9f012abd5d, type: 2}
-  totalDuration: 1020
+  totalDuration: 1080.1
   currentWave: {fileID: 0}
   currentWaveIndex: 0
   currentCooldown: 0
   timeTilNextWave: 0
-  currentMin: {x: -20, y: -20}
-  currentMax: {x: 20, y: 20}
-  targetMin: {x: -120, y: -80}
-  targetMax: {x: 150, y: 120}
+  currentMin: {x: -13, y: -13}
+  currentMax: {x: 13, y: 13}
+  targetMin: {x: -50, y: -50}
+  targetMax: {x: 50, y: 50}

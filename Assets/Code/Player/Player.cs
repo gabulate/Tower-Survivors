@@ -175,6 +175,12 @@ namespace TowerSurvivors.PlayerScripts
         /// </summary>
         public void Die()
         {
+            Debug.Log("te has morido :(");
+
+            PlayerInput.EnableMovement(false);
+            GetComponent<Rigidbody2D>().simulated = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            PlayerAnimator.SetTrigger("die");
             GameManager.Instance.GameOver();
         }
     }
