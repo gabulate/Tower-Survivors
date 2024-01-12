@@ -15,6 +15,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
   - {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
+  - {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
   amountAtATime: 100
   cooldown: 5
   duration: 500

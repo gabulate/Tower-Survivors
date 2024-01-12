@@ -62,6 +62,7 @@ namespace TowerSurvivors.Audio
             source.clip = musicTrack.clip;
             source.volume = musicTrack.volume * GameSettings.MusicVolume;
             source.loop = true;
+            VaryPitch();
 
             source.Play();
         }

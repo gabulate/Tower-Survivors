@@ -35,7 +35,7 @@ MonoBehaviour:
     - descriptionKey: UPG_RANGE
       value: 4
     range: 12
-    damage: 50
+    damage: 30
     attackCooldown: 5
     currentCooldown: 0
     areaSize: 1
@@ -51,7 +51,7 @@ MonoBehaviour:
     - descriptionKey: UPG_COOLDOWN1
       value: '-'
     range: 12
-    damage: 60
+    damage: 40
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1
@@ -65,7 +65,7 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 20
     range: 12
-    damage: 80
+    damage: 60
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1

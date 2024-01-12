@@ -63,6 +63,7 @@ namespace TowerSurvivors.PlayerScripts
                 Player.Sprite.material.SetFloat("_Fade", 1 - (elapsedTime / seconds));
                 yield return null;
             }
+            Player.Sprite.material.SetFloat("_Fade", 0);
 
             _isInvincible = false;
         }
