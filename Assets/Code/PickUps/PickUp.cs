@@ -8,6 +8,8 @@ namespace TowerSurvivors.PickUps
         protected static readonly LayerMask _playerLayer = 1 << 3;
         [SerializeField]
         protected SoundClip pickUpSound;
+        [SerializeField]
+        protected SpriteRenderer _sprite;
 
         protected void OnTriggerEnter2D(Collider2D collider)
         {

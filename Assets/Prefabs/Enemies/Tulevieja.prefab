@@ -238,6 +238,7 @@ MonoBehaviour:
   _animator: {fileID: 1135192527931764108}
   _rb: {fileID: 1135192527931764098}
   _collider: {fileID: 1135192527344405502}
+  _sprite: {fileID: 1135192527931764096}
   hurtSound:
     clip: {fileID: 8300000, guid: f56dbf16773f1fe478fbca556836b0cb, type: 3}
     volume: 1

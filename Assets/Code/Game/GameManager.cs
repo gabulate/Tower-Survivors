@@ -18,26 +18,29 @@ namespace TowerSurvivors.Game
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
-
-        public static bool isPaused = false;
-        public static bool isSuperPaused = false; //When super paused, the player can't unpause. eg: when the level up menu shows
+        [Header("Must Have References")]
         [SerializeField]
         private GameObject _pauseMenu;
-        
         [SerializeField]
         private GameObject _gameOverScreen;
+        public SoundClip gameMusic;
 
+        [Header("Game config")]
+        [SerializeField]
+        private bool _randomizeSpawn = true;
+
+        [Header("Game state")]
+        public static bool isPaused = false;
+        public static bool isSuperPaused = false; //When super paused, the player can't unpause. eg: when the level up menu shows
+
+        [Header("Game Stats")]
         public static float secondsPassed = 0;
         private static int _enemiesKilled = 0;
         public static int structuresUpgraded = 0;
 
-        public SoundClip gameMusic;
-
         public UnityEvent<bool> e_Paused;
         public UnityEvent<int> e_KillCountUpdated;
 
-        [Header("Object Pools")]
-        public ObjectPool XpPool;
 
         void Awake()
         {
@@ -65,6 +68,27 @@ namespace TowerSurvivors.Game
             Time.timeScale = 1;
             Player.PlayerInput.EnableMovement(true);
             SuperPauseGame(false);
+
+            if (_randomizeSpawn)
+            {
+                MovePlayerToRandomPosition();
+            }
+        }
+
+        private void MovePlayerToRandomPosition()
+        {
+            while (true)
+            {
+                float x = Random.Range(-104, 127);
+                float y = Random.Range(-45, 93);
+
+                Collider2D[] hits = Physics2D.OverlapCircleAll(new Vector2(x, y), 1);
+                if (hits.Length == 0)
+                {
+                    Player.Instance.transform.position = new Vector3(x, y, y);
+                    break;
+                }
+            }
         }
 
         private void FixedUpdate()

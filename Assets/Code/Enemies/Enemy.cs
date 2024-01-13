@@ -25,30 +25,36 @@ namespace TowerSurvivors.Enemies
         [SerializeField]
         protected Collider2D _collider;
         [SerializeField]
+        protected SpriteRenderer _sprite;
+        [SerializeField]
         protected SoundClip hurtSound = new SoundClip(1, 1.5f);
 
+        [Header("MetaAttributes")]
+        public bool isAlive = true;
+        public bool scaleXp = true;
         [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
         public int Xp = 1;
 
-        public bool isAlive = true;
+        [Header("Health")]
         public float HP = 100f;
         public float invulnerableTime = 0.2f;
         public bool isInvincible = false;
 
+        [Header("Attack")]
         public float speed = 1f;
         public float damage = 10f;
         public float attackCooldown = 1f;
         public float currentCooldown = 0f;
 
-        protected SpriteRenderer _sprite;
-
         void Start()
         {
-            TryGetComponent(out _animator);
-            TryGetComponent(out _rb);
-            TryGetComponent(out _sprite);
+            if (scaleXp && Player.Instance.Level >= 10)
+            {
+                HP += HP * (Player.Instance.Level / 100f); //Adds % of health according to the Player level
+            }
         }
+
         private void FixedUpdate()
         {
             //currentCooldown is always counting down to 0, when it reaches 0, the enemy is allowed to attack
@@ -176,8 +182,8 @@ namespace TowerSurvivors.Enemies
             isAlive = false;
             GameManager.Instance.AddToKillCount(1);
             DropXp();
-            DestroyAnim();
             EnemySpawner.Instance.currentEnemies--;
+            DestroyAnim();
         }
 
         /// <summary>
@@ -186,16 +192,10 @@ namespace TowerSurvivors.Enemies
         /// </summary>
         protected void DropXp()
         {
-            GameObject xp = GameManager.Instance.XpPool.GetPooledObject();
-            if (xp != null)
+            float randomValue = Random.Range(0f, 1f);
+            if (randomValue <= ChanceToDropXp)
             {
-                float randomValue = Random.Range(0f, 1f);
-                if (randomValue > ChanceToDropXp)
-                    return;
-
-                xp.GetComponent<XpPickUp>().Xp = Xp;
-                xp.transform.position = transform.position;
-                xp.SetActive(true);
+                XpObjectPool.Instance.SpawnXp(Xp, transform.position);
             }
         }
 
