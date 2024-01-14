@@ -63,7 +63,7 @@ namespace TowerSurvivors.Audio
             source.volume = musicTrack.volume * GameSettings.MusicVolume;
             source.loop = true;
             VaryPitch();
-
+            GameManager.Instance.e_Paused.AddListener(OnPause);
             source.Play();
         }
 
@@ -138,21 +138,24 @@ namespace TowerSurvivors.Audio
 
         private void OnPause(bool paused)
         {
-            if (!paused)
+            Debug.Log("Called");
+
+            if (paused) Pause();
+            else UnPause();
+
+            if (musicMode)
             {
-                if (musicMode)
-                {
-                    source.volume = source.volume = clip.volume * GameSettings.MusicVolume;
-                }
-                else
-                {
-                    source.volume = source.volume = clip.volume * GameSettings.SFXVolume;
-                }
+                source.volume = source.volume = clip.volume * GameSettings.MusicVolume;
+            }
+            else
+            {
+                source.volume = source.volume = clip.volume * GameSettings.SFXVolume;
             }
         }
 
         private void OnEnable()
         {
+
             if (GameManager.Instance)
                 GameManager.Instance.e_Paused.AddListener(OnPause);
         }

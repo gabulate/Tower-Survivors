@@ -107,13 +107,16 @@ namespace TowerSurvivors.Game
             isSuperPaused = paused;
             isPaused = paused;
             Time.timeScale = paused ? 0 : 1;
+            AudioPlayer.Instance.PauseMusic(paused);
         }
 
         public void ShowPauseMenu(bool show)
         {
             if (isSuperPaused)
                 return;
+
             isPaused = show;
+            e_Paused.Invoke(show);
             Time.timeScale = show ? 0 : 1;
             _pauseMenu.SetActive(show);
         }

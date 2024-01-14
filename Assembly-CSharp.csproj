@@ -86,6 +86,7 @@
     <Compile Include="Assets\Code\PassiveItems\Lubricator.cs" />
     <Compile Include="Assets\Code\Structures\Structure.cs" />
     <Compile Include="Assets\Code\Projectiles\BasicProjectile.cs" />
+    <Compile Include="Assets\Code\Game\XpObjectPool.cs" />
     <Compile Include="Assets\Code\GUI\PauseMenu.cs" />
     <Compile Include="Assets\Code\PassiveItems\Hammer.cs" />
     <Compile Include="Assets\Code\PassiveItems\RunningShoes.cs" />
@@ -111,7 +112,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Game\XpObjectPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

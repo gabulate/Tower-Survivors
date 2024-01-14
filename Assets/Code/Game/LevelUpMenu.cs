@@ -25,6 +25,9 @@ namespace TowerSurvivors.Game
         private Animator _animator;
 
         [SerializeField]
+        private SoundClip _levelUpSound;
+
+        [SerializeField]
         private TextMeshProUGUI _levelUpText; 
 
         [SerializeField]
@@ -144,6 +147,7 @@ namespace TowerSurvivors.Game
         {
             _menu.SetActive(true);
             _animator.SetBool("show", true);
+            AudioPlayer.Instance.PlaySFX(_levelUpSound);
             yield return new WaitForSeconds(0.1f);
             GameManager.Instance.SuperPauseGame(true);
             AudioPlayer.Instance.PauseMusic(true);
