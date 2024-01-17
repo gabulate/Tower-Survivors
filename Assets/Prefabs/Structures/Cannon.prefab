@@ -398,8 +398,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3104818242787931351}
-  - component: {fileID: 3104818242787931350}
   - component: {fileID: 3104818242787931349}
+  - component: {fileID: 380531988485403422}
   m_Layer: 7
   m_Name: Cannon
   m_TagString: Untagged
@@ -427,22 +427,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &3104818242787931350
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3104818242787931347}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.2, y: 0.1}
-  m_Size: {x: 0.7, y: 0.2}
-  m_Direction: 1
 --- !u!114 &3104818242787931349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +474,22 @@ MonoBehaviour:
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
   _cannon: {fileID: 3104818241496701928}
+--- !u!70 &380531988485403422
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104818242787931347}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.1}
+  m_Size: {x: 0.6, y: 0.2}
+  m_Direction: 1
 --- !u!1 &7709932291148084797
 GameObject:
   m_ObjectHideFlags: 0

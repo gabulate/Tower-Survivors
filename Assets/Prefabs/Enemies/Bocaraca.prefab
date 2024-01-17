@@ -258,6 +258,8 @@ MonoBehaviour:
   damage: 10
   attackCooldown: 1
   currentCooldown: 0
+  obstacleAvoidanceDistance: 3
+  obstacleAvoidanceWeight: {x: -1, y: -1}
 --- !u!114 &8061092949138535652
 MonoBehaviour:
   m_ObjectHideFlags: 0

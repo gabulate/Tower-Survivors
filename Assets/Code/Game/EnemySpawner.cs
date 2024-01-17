@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Util;
@@ -27,7 +28,10 @@ namespace TowerSurvivors.Game
                 totalDuration = 0;
                 for (int i = 0; i < waves.Count; i++)
                 {
-                    totalDuration += waves[i].duration;
+                    for (int j = 0; j < waves[i].enemies.Count; j++)
+                    {
+                        totalDuration += waves[i].enemies[j].amount * waves[i].cooldown / waves[i].amountAtATime;
+                    }
                 }
 
                 // Update the previousWaves
@@ -64,11 +68,13 @@ namespace TowerSurvivors.Game
         [SerializeField]
         private EnemyWaveSO currentWave;
         [SerializeField]
+        private List<WavePair> currentWavePairs;
+        [SerializeField]
         private int currentWaveIndex = 0;
         [SerializeField]
         private float currentCooldown;
-        [SerializeField]
-        private float timeTilNextWave = 0;
+        //[SerializeField]
+        //private float timeTilNextWave = 0;
         public Vector2 currentMin;
         public Vector2 currentMax;
         public Vector2 targetMin;
@@ -80,13 +86,48 @@ namespace TowerSurvivors.Game
             currentWaveIndex = 0;
             currentWave = waves[currentWaveIndex];
             currentCooldown = 0;
-            timeTilNextWave = currentWave.duration;
+            currentWavePairs = ClonePairs(currentWave);
+        }
+
+        private List<WavePair> ClonePairs(EnemyWaveSO wave)
+        {
+            List<WavePair> list = new List<WavePair>();
+            for (int i = 0; i < wave.enemies.Count; i++)
+            {
+                WavePair wp = new WavePair()
+                {
+                    prefab = wave.enemies[i].prefab,
+                    amount = wave.enemies[i].amount,
+                };
+
+                list.Add(wp);
+            }
+            return list;
         }
 
         private void Update()
         {
             currentCooldown -= Time.deltaTime;
-            timeTilNextWave -= Time.deltaTime;
+
+            //Check if the queue ran out of enemies, go to the next wave
+            if (currentWavePairs.Count == 0)
+            {
+                currentWaveIndex++;
+                //If it reaches the end of the waves
+                if (currentWaveIndex == waves.Count)
+                {
+                    Debug.Log("The enemy spawner wave queue has reached its end, will restart from the first one");
+                    currentWaveIndex = 0;
+                    currentWave = waves[currentWaveIndex];
+                    currentCooldown = currentWave.cooldown;
+                    currentWavePairs = currentWavePairs = ClonePairs(currentWave);
+                    return;
+                }
+                //If it just reaches the end of the current wave
+                currentWave = waves[currentWaveIndex];
+                currentCooldown = currentWave.cooldown;
+                currentWavePairs = currentWavePairs = ClonePairs(currentWave);
+            }
 
             if (currentCooldown <= 0)
             {
@@ -94,22 +135,7 @@ namespace TowerSurvivors.Game
                 UpdateBoundaries();
                 currentCooldown = currentWave.cooldown;
             }
-            if (timeTilNextWave <= 0)
-            {
-                currentWaveIndex++;
-                if (currentWaveIndex == waves.Count)
-                {
-                    Debug.Log("The enemy spawner wave queue has reached its end, will restart from the first one");
-                    currentWaveIndex = 0;
-                    currentWave = waves[currentWaveIndex];
-                    currentCooldown = currentWave.cooldown;
-                    timeTilNextWave = currentWave.duration;
-                    return;
-                }
-                currentWave = waves[currentWaveIndex];
-                currentCooldown = currentWave.cooldown;
-                timeTilNextWave = currentWave.duration;
-            }
+            
         }
 
         private void UpdateBoundaries()
@@ -152,41 +178,55 @@ namespace TowerSurvivors.Game
                 if (currentEnemies >= MaxEnemies)
                     return;
 
-                int random = Random.Range(1, 5);
-                float x = 0;
-                float y = 0;
-                switch (random)
-                {
-                    case 1:
-                        //Bottom
-                        x = Random.Range(currentMin.x, currentMax.x);
-                        y = currentMin.y;
-                        break;
-                    case 2:
-                        //Top
-                        x = Random.Range(currentMin.x, currentMax.x);
-                        y = currentMax.y;
-                        break;
-                    case 3:
-                        //Left
-                        x = currentMin.x;
-                        y = Random.Range(currentMin.y, currentMax.y);
-                        break;
-                    case 4:
-                        //Right
-                        x = currentMax.x;
-                        y = Random.Range(currentMin.y, currentMax.y);
-                        break;
-                }
+                Vector3 position = GetRandomPosition();
 
-                Vector3 position = new(transform.position.x + x, transform.position.y+ y, y);
+                int random = Random.Range(0, currentWavePairs.Count);
 
                 //Get Random enemy
-                GameObject randomEnemy = currentWave.enemies[Random.Range(0, currentWave.enemies.Count)];
-
+                GameObject randomEnemy = currentWavePairs[random].prefab;
                 Instantiate(randomEnemy, position, Quaternion.identity);
                 currentEnemies++;
+
+                //Subtract one from the enemy queue and check if the amount of enemies of that kind has reached 0.
+                //If it has, it removes it from the current pool
+                currentWavePairs[random].amount--;
+                if(currentWavePairs[random].amount <= 0)
+                {
+                    currentWavePairs.Remove(currentWavePairs[random]);
+                }
             }
+        }
+
+        private Vector3 GetRandomPosition()
+        {
+            int random = Random.Range(1, 5);
+            float x = 0;
+            float y = 0;
+            switch (random)
+            {
+                case 1:
+                    //Bottom
+                    x = Random.Range(currentMin.x, currentMax.x);
+                    y = currentMin.y;
+                    break;
+                case 2:
+                    //Top
+                    x = Random.Range(currentMin.x, currentMax.x);
+                    y = currentMax.y;
+                    break;
+                case 3:
+                    //Left
+                    x = currentMin.x;
+                    y = Random.Range(currentMin.y, currentMax.y);
+                    break;
+                case 4:
+                    //Right
+                    x = currentMax.x;
+                    y = Random.Range(currentMin.y, currentMax.y);
+                    break;
+            }
+
+            return new(transform.position.x + x, transform.position.y + y, y);
         }
 
         void Awake()

@@ -145,12 +145,21 @@ namespace TowerSurvivors.Audio
 
             if (musicMode)
             {
-                source.volume = source.volume = clip.volume * GameSettings.MusicVolume;
+                source.volume = clip.volume * GameSettings.MusicVolume;
             }
             else
             {
-                source.volume = source.volume = clip.volume * GameSettings.SFXVolume;
+                source.volume = clip.volume * GameSettings.SFXVolume;
             }
+        }
+
+        /// <summary>
+        /// Changes the volume of the sound object by a percentaje of the volume set in the settings.
+        /// </summary>
+        /// <param name="percentaje">0 for completely silent and 1 for the volume set by the user.</param>
+        public void SetMusicVolume(float percentaje)
+        {
+            source.volume = clip.volume * percentaje * GameSettings.MusicVolume;
         }
 
         private void OnEnable()

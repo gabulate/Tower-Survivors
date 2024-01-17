@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53833e83cdd0464c879a966cb35e7fe, type: 3}
   m_Name: Starting Wave
   m_EditorClassIdentifier: 
-  enemies:
-  - {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
+  enemies: []
   amountAtATime: 5
   cooldown: 1
-  duration: 0.1
   distribution: 0

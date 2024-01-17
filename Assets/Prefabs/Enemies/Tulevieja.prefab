@@ -247,9 +247,10 @@ MonoBehaviour:
     minPitch: 0.5
     maxPitch: 1
     loop: 0
+  isAlive: 1
+  scaleXp: 1
   ChanceToDropXp: 0.4
   Xp: 10
-  isAlive: 1
   HP: 50
   invulnerableTime: 0.2
   isInvincible: 0
@@ -257,6 +258,8 @@ MonoBehaviour:
   damage: 15
   attackCooldown: 1
   currentCooldown: 0
+  obstacleAvoidanceDistance: 3
+  obstacleAvoidanceWeight: {x: -1, y: -1}
 --- !u!95 &1135192527931764108
 Animator:
   serializedVersion: 5

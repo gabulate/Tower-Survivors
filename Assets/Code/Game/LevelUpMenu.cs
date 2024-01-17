@@ -150,7 +150,7 @@ namespace TowerSurvivors.Game
             AudioPlayer.Instance.PlaySFX(_levelUpSound);
             yield return new WaitForSeconds(0.1f);
             GameManager.Instance.SuperPauseGame(true);
-            AudioPlayer.Instance.PauseMusic(true);
+            AudioPlayer.Instance.LowerVolume(true);
         }
 
         private IEnumerator HideMenu()
@@ -159,7 +159,7 @@ namespace TowerSurvivors.Game
             {
                 GameManager.Instance.SuperPauseGame(false);
                 _animator.SetBool("show", false);
-                AudioPlayer.Instance.PauseMusic(false);
+                AudioPlayer.Instance.LowerVolume(false);
 
                 yield return new WaitForSeconds(0.1f);
                 foreach (LevelUpOption op in _options)

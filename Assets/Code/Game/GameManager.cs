@@ -107,7 +107,6 @@ namespace TowerSurvivors.Game
             isSuperPaused = paused;
             isPaused = paused;
             Time.timeScale = paused ? 0 : 1;
-            AudioPlayer.Instance.PauseMusic(paused);
         }
 
         public void ShowPauseMenu(bool show)
@@ -135,7 +134,10 @@ namespace TowerSurvivors.Game
 
         internal void GameOver()
         {
+            //TODO: Play game over sound
             StartCoroutine(ShowGameOverScreen());
+            AudioPlayer.Instance.LowerVolume(true);
+
             LoadStats();
         }
 

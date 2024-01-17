@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Bichillos 1
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
-  - {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
+  - prefab: {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
+    amount: 15
+  - prefab: {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
+    amount: 5
   amountAtATime: 1
-  cooldown: 3
-  duration: 60
+  cooldown: 1
   distribution: 0

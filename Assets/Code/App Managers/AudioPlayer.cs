@@ -52,6 +52,14 @@ namespace TowerSurvivors.Audio
                 musicObject.UnPause();
         }
 
+        public void LowerVolume(bool pause)
+        {
+            if (pause)
+                musicObject.SetMusicVolume(0.25f);
+            else
+                musicObject.SetMusicVolume(1);
+        }
+
         public void PlaySFX(SoundClip soundClip)
         {
             SoundObject so = GetPooledSound();
