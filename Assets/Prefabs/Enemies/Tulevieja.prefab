@@ -258,8 +258,6 @@ MonoBehaviour:
   damage: 15
   attackCooldown: 1
   currentCooldown: 0
-  obstacleAvoidanceDistance: 3
-  obstacleAvoidanceWeight: {x: -1, y: -1}
 --- !u!95 &1135192527931764108
 Animator:
   serializedVersion: 5

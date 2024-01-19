@@ -16,6 +16,7 @@ namespace TowerSurvivors.Structures
     {
         protected static readonly LayerMask _enemyLayer = 1 << 6;
         protected static readonly LayerMask _structureLayer = 1 << 7;
+        protected static readonly LayerMask _boundsLayer = 1 << 10;
 
         [Header("Must Have References")]
         public StructureItemSO item;
@@ -89,6 +90,7 @@ namespace TowerSurvivors.Structures
             canAttack = enabled;
             GetComponent<Collider2D>().enabled = enabled;
             _shadow.enabled = enabled;
+            
             if (!enabled)
             {
                 _outline.transform.localScale = Vector3.one * _margin;
@@ -104,7 +106,7 @@ namespace TowerSurvivors.Structures
                 return false;
             }
 
-            Collider2D[] hits = Physics2D.OverlapBoxAll(_outline.transform.position, Vector2.one * _margin, 0, _structureLayer);
+            Collider2D[] hits = Physics2D.OverlapBoxAll(_outline.transform.position, Vector2.one * _margin, 0, _structureLayer | _boundsLayer);
 
             bool placeable = hits.Length <= 0;
 

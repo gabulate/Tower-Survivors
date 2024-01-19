@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpSound:
     clip: {fileID: 8300000, guid: f518f4bd07eb9d94ab25d3d747ce7ff8, type: 3}
-    volume: 0.75
+    volume: 1
     pitch: 1
     varyPitch: 1
     minPitch: 1

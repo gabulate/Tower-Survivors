@@ -157,7 +157,7 @@ MonoBehaviour:
   _sprite: {fileID: 2481510418343764499}
   hurtSound:
     clip: {fileID: 8300000, guid: f56dbf16773f1fe478fbca556836b0cb, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     varyPitch: 1
     minPitch: 1
@@ -174,8 +174,6 @@ MonoBehaviour:
   damage: 10
   attackCooldown: 1
   currentCooldown: 0
-  obstacleAvoidanceDistance: 3
-  obstacleAvoidanceWeight: {x: -1, y: -1}
 --- !u!114 &2481510418343764495
 MonoBehaviour:
   m_ObjectHideFlags: 0

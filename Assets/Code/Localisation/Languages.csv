@@ -55,6 +55,8 @@ TELESCOPE_NAME,Telescope,Telescopio
 TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
 LUBRICATOR_NAME,Lubricator,Lubricante
 LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los projectiles.
+DUPLICATOR_NAME,Duplication chamber,Cámara de duplicación
+DUPLICATOR_DSC,Duplicates preojectiles,Duplica projectiles.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
 UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
@@ -72,3 +74,4 @@ UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los projectiles pueden at
 UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
 UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
 UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
+UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 projectil más.

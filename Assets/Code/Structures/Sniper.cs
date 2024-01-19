@@ -1,5 +1,6 @@
 using System.Collections;
 using TowerSurvivors.Audio;
+using TowerSurvivors.Enemies;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
 
@@ -26,7 +27,7 @@ namespace TowerSurvivors.Structures
 
         protected override void Attack()
         {
-            if (targetObject == null)
+            if (targetEnemy == null || !targetEnemy.isAlive)
             {
                 if (!GetRandomTarget())
                 {
@@ -35,7 +36,7 @@ namespace TowerSurvivors.Structures
             }
 
             //Store the position in a different variable to avoid null references
-            _targetPos = targetObject.position;
+            _targetPos = targetEnemy.transform.position;
 
             //if target has left the range, forget it
             if (Vector2.Distance(transform.position, _targetPos) > stats.range)
@@ -58,6 +59,13 @@ namespace TowerSurvivors.Structures
         protected override IEnumerator SpawnProjectile(float delay)
         {
             yield return new WaitForSeconds(delay);
+
+            if (targetEnemy == null || !targetEnemy.isAlive)
+            {
+                if(GetRandomTarget())
+                    _targetPos = targetEnemy.transform.position;
+            }
+
             //Instantiates the projectile////////////////////////////////////////////////
             GameObject e = Instantiate(prefab, _firePoint.position, _firePoint.rotation);
 
@@ -88,7 +96,7 @@ namespace TowerSurvivors.Structures
 
             Transform targetTransform = hits[rand].transform;
 
-            targetObject = targetTransform;
+            targetEnemy = targetTransform.GetComponent<Enemy>();
 
             return true;
         }
