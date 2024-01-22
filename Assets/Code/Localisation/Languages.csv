@@ -45,6 +45,8 @@ CANNON_NAME,Cannon,Cañón
 CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
 SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador
 SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por my compa Franco; él nunca falla!
+ROUNDABOUT_NAME,Roundabout,Rotonda
+ROUNDABOUT_DSC,Spins and fires!,¡Da vueltas y dispara!
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo

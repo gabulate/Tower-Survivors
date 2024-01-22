@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Roundabout
+  m_Controller: {fileID: 9100000, guid: 4e52db3a7c5622f4185d6f36efbd514c, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 3abc0b3749d251042bb69ba94e421584, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5bc66136089ac8045b0043f42808250b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 90cb41e68248e6642a8d59d69fd46847, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a7ec31b48cba7444ab3718493a1beb65, type: 2}
