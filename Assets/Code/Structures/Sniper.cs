@@ -110,7 +110,7 @@ namespace TowerSurvivors.Structures
                 return;
 
             //Flip the sprite based on the target's position
-            if ((_mark.transform.position.x - targetObject.position.x) > 0)
+            if ((_mark.transform.position.x - targetEnemy.transform.position.x) > 0)
             {
                 _mark.transform.localScale = new Vector3(-1, 1, 1);
             }

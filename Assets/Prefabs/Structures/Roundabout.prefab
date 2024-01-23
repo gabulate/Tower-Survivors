@@ -549,7 +549,7 @@ MonoBehaviour:
   firingSound:
     clip: {fileID: 8300000, guid: e9df5fb769568b1409681e220a8801d9, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 1.5
     varyPitch: 0
     minPitch: -1
     maxPitch: 2
