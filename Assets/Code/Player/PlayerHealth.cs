@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,22 +13,49 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private bool _isInvincible = false;
         //private LayerMask _enemyLayer = 1 << 6;
+        public bool isAlive = true;
 
         public float health = 100f;
         public float maxHealth = 100f;
         public float invulnerableTime = 0.2f;
+
+        private float _counter = 1;
 
         public UnityEvent<float, float> e_healthChanged;
 
         private void Start()
         {
             health = maxHealth;
+            isAlive = true;
             e_healthChanged.Invoke(health, maxHealth);
+        }
+
+        private void FixedUpdate()
+        {
+            if (Player.Instance.stats.healthRegen > 0)
+            {
+                _counter -= Time.fixedDeltaTime;
+                if(_counter <= 0)
+                {
+                    Heal(Player.Instance.stats.healthRegen);
+                    _counter = 1;
+                }
+            }
+        }
+
+        private void Heal(float amount)
+        {
+            health += amount;
+            if (health > maxHealth)
+                health = maxHealth;
+
+            e_healthChanged.Invoke(health, maxHealth);
+
         }
 
         public void TakeDamage(float damage)
         {
-            if (_isInvincible)
+            if (_isInvincible || !isAlive)
             {
                 return;
             }
@@ -74,9 +102,9 @@ namespace TowerSurvivors.PlayerScripts
         public void Die()
         {
             _isInvincible = true;
+            isAlive = false;
             Player.Instance.Die();
         }
-
 
     }
 }

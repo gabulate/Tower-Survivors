@@ -82,6 +82,7 @@ namespace TowerSurvivors.PlayerScripts
             stats.speedBoost = 0f;
             stats.visionBoost = 5f;
             stats.extraStructures = 0;
+            stats.healthRegen = 0f;
 
             Structure[] structures = StructureManager.Instance.GetStructures();
             PassiveItem[] passives = PassiveItemManager.Instance.GetPassives();
@@ -99,6 +100,7 @@ namespace TowerSurvivors.PlayerScripts
             PlayerInput.Speed = PlayerInput.initialSpeed + stats.speedBoost;
             Camera.main.orthographicSize = stats.visionBoost;
             StructureManager.Instance.IncreaseStructureLimit(stats.extraStructures);
+
         }
 
         internal void RemoveAllBuffs()
@@ -198,5 +200,6 @@ namespace TowerSurvivors.PlayerScripts
         public float speedBoost = 0f;
         public float visionBoost = 0f;
         public int extraStructures = 0;
+        public float healthRegen = 0f;
     }
 }

@@ -61,8 +61,8 @@
     <Compile Include="Assets\Editor\FindMissingScriptEditor.cs" />
     <Compile Include="Assets\Editor\PlayerPrefsEditorWindow.cs" />
     <Compile Include="Assets\Editor\ShowOnlyDrawer.cs" />
-    <Compile Include="Assets\Editor\TranslateWindow.cs" />
     <Compile Include="Assets\Editor\HiddenObjectExplorer.cs" />
+    <Compile Include="Assets\Editor\TranslateWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
