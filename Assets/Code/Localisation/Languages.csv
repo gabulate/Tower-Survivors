@@ -59,6 +59,8 @@ LUBRICATOR_NAME,Lubricator,Lubricante
 LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los projectiles.
 DUPLICATOR_NAME,Duplication chamber,Cámara de duplicación
 DUPLICATOR_DSC,Duplicates preojectiles,Duplica projectiles.
+FROGSTAIL_NAME,Frog's tail,Colita de rana
+FROGSTAIL_DSC,Gives health regeneration.,Da regeneración de vida.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
 UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
@@ -77,3 +79,4 @@ UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
 UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
 UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
 UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 projectil más.
+UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.

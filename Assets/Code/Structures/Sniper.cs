@@ -106,7 +106,7 @@ namespace TowerSurvivors.Structures
         /// </summary>
         protected void RotateMark()
         {
-            if (targetObject == null)
+            if (targetEnemy == null)
                 return;
 
             //Flip the sprite based on the target's position
