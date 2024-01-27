@@ -37,6 +37,9 @@ namespace TowerSurvivors.Projectiles
             //Deals damage to all enemies hit, no matter its passthrough
             foreach (RaycastHit2D hit in hits)
             {
+                if (!hit)
+                    continue;
+
                 if (_enemyLayer == (_enemyLayer | (1 << hit.collider.gameObject.layer)))
                 {
                     hit.collider.gameObject.GetComponent<Enemy>().TakeDamage(damage);

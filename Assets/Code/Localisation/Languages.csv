@@ -1,5 +1,5 @@
 ﻿KEY,EN,ES
-General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat)(Amount); Add combined attributes as needed. Look Below for examples.,Strings can be formatted using {0}; {1}; etc. for when they need a variable name.
+General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat); Some are for singular forms and have a 1 at the end,Strings can be formatted using {0}; {1}; etc. for when they need a variable value.
 Main Menu Text---,Main Menu Text---,Texto del menú principal---
 YES,Yes,Sí
 NO,No,No
@@ -47,6 +47,8 @@ SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador
 SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por my compa Franco; él nunca falla!
 ROUNDABOUT_NAME,Roundabout,Rotonda
 ROUNDABOUT_DSC,Spins and fires!,¡Da vueltas y dispara!
+BARBEDWIRE_NAME,Barbed Wire,Alambre de púas
+BARBEDWIRE_DSC,Damages enemies that touch it.,Hace daño a los enemigos que lo toquen.
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo
@@ -67,7 +69,8 @@ UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
 UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.
 UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
 UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.
-UPG_SIZE,Projectile size increased {0}%.,Aumenta el tamaño de los projectiles un {0}%.
+UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los projectiles un {0}%.
+UPG_SIZEOWN,Size increased by {0}%.,Tamaño aumentado un {0}%.
 UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los projectiles.
 UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los projectiles un {0}%.
 UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los projectiles {0} segundos.

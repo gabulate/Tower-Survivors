@@ -9,6 +9,7 @@ using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 using TMPro;
 using TowerSurvivors.Localisation;
+using TowerSurvivors.Structures;
 
 namespace TowerSurvivors.Game
 {
@@ -61,10 +62,21 @@ namespace TowerSurvivors.Game
             {
                 if (availableItems[i].GetType() == typeof(StructureItemSO))
                 {
-                    //TODO: Maybe add a maximum of allowed structures.
+                    //If there are no available item slots
                     if (!Player.Inventory.AvailableStrucutreSlot())
                     {
                         availableItems.RemoveAt(i);
+                    } 
+                    else if (!StructureManager.Instance.CanPlace()) //If the player has reached maximum allowed structures
+                    {
+                        Structure[] sts = StructureManager.Instance.GetStructures();
+                        Structure structure = sts.Where(x => x.item.itemNameKey == availableItems[i].itemNameKey).FirstOrDefault();
+                        
+                        //Removes the available item if there are not structures of its kind placed
+                        if (!structure)
+                        {
+                            availableItems.RemoveAt(i);
+                        }
                     }
                 }
                 else
@@ -92,6 +104,7 @@ namespace TowerSurvivors.Game
                 return resultList;
             }
 
+            //Gets random elements from the list and removes them after to avoid duplicate options
             for (int i = 0; i < 3; i++)
             {
                 ItemSO item = GetRandomFromList(availableItems);
@@ -109,6 +122,7 @@ namespace TowerSurvivors.Game
             return resultList;
         }
 
+        //Gets a random element taking into consideration the item's probability attribute
         public ItemSO GetRandomFromList(List<ItemSO> list)
         {
             if (list.Count == 0)
@@ -116,7 +130,6 @@ namespace TowerSurvivors.Game
                 return null;
             }
 
-            List<ItemSO> newList = new List<ItemSO>();
 
             float totalRange = 0;
             for (int i = 0; i < list.Count; i++)

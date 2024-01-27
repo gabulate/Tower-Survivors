@@ -71,6 +71,7 @@
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
+    <Compile Include="Assets\Code\PassiveItems\FrogsTail.cs" />
     <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
     <Compile Include="Assets\Code\Localisation\AutoTranslateChildren.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
@@ -114,7 +115,7 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\PassiveItems\FrogsTail.cs" />
+    <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

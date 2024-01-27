@@ -194,6 +194,12 @@ namespace TowerSurvivors.Game
                 {
                     currentWavePairs.Remove(currentWavePairs[random]);
                 }
+
+                //If there are no more wave pairs, return to start the next wave
+                if (currentWavePairs.Count == 0)
+                {
+                    return;
+                }
             }
         }
 

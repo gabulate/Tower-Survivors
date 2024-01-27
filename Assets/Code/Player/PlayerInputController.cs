@@ -207,8 +207,18 @@ namespace TowerSurvivors.PlayerScripts
                 if (distance > _placingRange)
                     return;
                 //Assign the hovered structure
-                _hoveredStructure = hit.GetComponent<Structure>();
+                Structure hitStructure = hit.GetComponent<Structure>();
+
+                //checks if the player hovered a different structure
+                if (_hoveredStructure)
+                {
+                    if(_hoveredStructure != hitStructure)
+                        _hoveredStructure.OutLine(false);
+                }
+
+                _hoveredStructure = hitStructure;
                 _hoveredStructure.OutLine(true);
+
             }
             //If the mouse is not over a structure
             else

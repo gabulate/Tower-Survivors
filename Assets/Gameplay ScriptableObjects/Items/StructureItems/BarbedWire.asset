@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35eca5ebc2bc2354097fae25a0d95c2b, type: 3}
+  m_Name: BarbedWire
+  m_EditorClassIdentifier: 
+  itemNameKey: BARBEDWIRE_NAME
+  descriptionKey: BARBEDWIRE_DSC
+  icon: {fileID: 21300000, guid: ee64e0b922f4953468136112cfaa3b7b, type: 3}
+  prefab: {fileID: 604028874436790860, guid: 499b1bb5c9347fe43aabe06e185d23df, type: 3}
+  probability: 5
+  levels:
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: '-'
+      value: '-'
+    range: 0
+    damage: 3
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_SIZEOWN
+      value: 20
+    range: 0
+    damage: 3
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1.2
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_SIZEOWN
+      value: 20
+    - descriptionKey: UPG_DAMAGE
+      value: 1
+    range: 0
+    damage: 4
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1.4
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_SIZEOWN
+      value: 20
+    - descriptionKey: UPG_DAMAGE
+      value: 1
+    range: 0
+    damage: 5
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1.6
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_SIZEOWN
+      value: 20
+    - descriptionKey: UPG_DAMAGE
+      value: 1
+    range: 0
+    damage: 6
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1.8
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_SIZEOWN
+      value: 20
+    - descriptionKey: UPG_DAMAGE
+      value: 1
+    range: 0
+    damage: 7
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 2
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0

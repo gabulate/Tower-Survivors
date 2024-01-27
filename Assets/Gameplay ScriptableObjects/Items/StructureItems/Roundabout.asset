@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: ROUNDABOUT_DSC
   icon: {fileID: 21300000, guid: 9dc558fae934c5146b9c28a7f36c2168, type: 3}
   prefab: {fileID: 6336250975010453120, guid: f36fb3c36a4e766459630ee1a4e2cdbf, type: 3}
-  probability: 1000
+  probability: 5
   levels:
   - neededLevel: 1
     upgradeDescriptions:
@@ -30,7 +30,7 @@ MonoBehaviour:
     projectileSpeed: 7
     duration: 0.7
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.05
+    timeBetweenMultipleShots: 0.07
     passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
@@ -46,7 +46,7 @@ MonoBehaviour:
     projectileSpeed: 7
     duration: 0.7
     projectileAmnt: 2
-    timeBetweenMultipleShots: 0.05
+    timeBetweenMultipleShots: 0.07
     passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
@@ -60,7 +60,7 @@ MonoBehaviour:
     projectileSpeed: 7
     duration: 0.7
     projectileAmnt: 3
-    timeBetweenMultipleShots: 0.05
+    timeBetweenMultipleShots: 0.07
     passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
@@ -74,5 +74,5 @@ MonoBehaviour:
     projectileSpeed: 7
     duration: 0.7
     projectileAmnt: 3
-    timeBetweenMultipleShots: 0.05
+    timeBetweenMultipleShots: 0.07
     passThroughAmnt: 1

@@ -62,7 +62,7 @@ namespace TowerSurvivors.Structures
             _rangeOutline.color = _normalRangeColor;
         }
 
-        public void ApplyBuffs(PlayerStats playerStats)
+        public virtual void ApplyBuffs(PlayerStats playerStats)
         {
             stats.range = item.levels[level - 1].range + playerStats.rangeIncrease;
             stats.damage = item.levels[level - 1].damage + playerStats.damageIncrease;
@@ -85,7 +85,7 @@ namespace TowerSurvivors.Structures
             stats.timeBetweenMultipleShots = item.levels[level - 1].timeBetweenMultipleShots;
         }
 
-        public void EnableStructure(bool enabled)
+        public virtual void EnableStructure(bool enabled)
         {
             canAttack = enabled;
             GetComponent<Collider2D>().enabled = enabled;
@@ -214,12 +214,12 @@ namespace TowerSurvivors.Structures
             switch (_orientation)
             {
                 case Orientation.UP:
-                    _orientation = Orientation.DOWN;
-                    break;
-                case Orientation.DOWN:
                     _orientation = Orientation.LEFT;
                     break;
                 case Orientation.LEFT:
+                    _orientation = Orientation.DOWN;
+                    break;
+                case Orientation.DOWN:
                     _orientation = Orientation.RIGHT;
                     break;
                 case Orientation.RIGHT:
@@ -230,7 +230,7 @@ namespace TowerSurvivors.Structures
             UpdateOrientation();
         }
 
-        public void UpdateOrientation()
+        public virtual void UpdateOrientation()
         {
             Debug.LogWarning("Orientation: " + _orientation + ". Changing orientation not implemented yet.");
         }

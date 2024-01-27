@@ -74,6 +74,7 @@ namespace TowerSurvivors.Game
 
             int totalXp = randomXP.Xp;
             randomXP.gameObject.SetActive(false);
+            enabledXpObjects--;
 
             for (int i = 0; i < hits.Length; i++)
             {

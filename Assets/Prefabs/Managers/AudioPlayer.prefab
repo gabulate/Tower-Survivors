@@ -47,13 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolLenght: 3
   Expandable: 1
-  maximumSounds: 10
+  maximumSounds: 35
   _prefab: {fileID: 931445181226852452, guid: 5619c844c65530a4a8c5c8cfde15c403, type: 3}
   musicObject: {fileID: 3052519660510885056}
   musicTrack:
-    clip: {fileID: 8300000, guid: bb4ca6b053810cc41ba13aeaf8577a02, type: 3}
-    volume: 1
-    pitch: 0
+    clip: {fileID: 8300000, guid: 660898935d0c0ef45bebca23d3e52287, type: 3}
+    volume: 0.75
+    pitch: 1
     varyPitch: 0
     minPitch: 0
     maxPitch: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
     minPitch: 0
     maxPitch: 0
     loop: 0
-  musicMode: 0
+  musicMode: 1
 --- !u!82 &9214703546474613341
 AudioSource:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
