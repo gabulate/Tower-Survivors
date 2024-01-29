@@ -45,8 +45,6 @@ namespace TowerSurvivors.Structures
                 return;
             }
 
-            RotateMark();
-
             //Spawns the amount of projectiles given by calling the Coroutine multiple times each other with some delay.
             for (int i = 0; i < stats.projectileAmnt; i++)
             {
@@ -65,6 +63,8 @@ namespace TowerSurvivors.Structures
                 if(GetRandomTarget())
                     _targetPos = targetEnemy.transform.position;
             }
+
+            RotateMark();
 
             //Instantiates the projectile////////////////////////////////////////////////
             GameObject e = Instantiate(prefab, _firePoint.position, _firePoint.rotation);

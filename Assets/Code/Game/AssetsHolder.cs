@@ -1,5 +1,6 @@
 using TowerSurvivors.GUI;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.VFX;
 using UnityEngine;
 
 namespace TowerSurvivors.Game
@@ -9,6 +10,9 @@ namespace TowerSurvivors.Game
         public static AssetsHolder Instance;
         public ItemListSO itemList;
         public GameHUD HUD;
+
+        [Header("VFX Prefabs")]
+        public GameObject structureLevelUpVFX;
 
         private void Awake()
         {

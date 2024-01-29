@@ -70,12 +70,11 @@ namespace TowerSurvivors.Game
                 randomXP = activeXpPickUps[randomIndex];
             }
 
-            Collider2D[] hits = Physics2D.OverlapCircleAll(randomXP.transform.position, groupRange, _xpLayer);
-
             int totalXp = randomXP.Xp;
             randomXP.gameObject.SetActive(false);
             enabledXpObjects--;
 
+            Collider2D[] hits = Physics2D.OverlapCircleAll(randomXP.transform.position, groupRange, _xpLayer);
             for (int i = 0; i < hits.Length; i++)
             {
                 totalXp += hits[i].GetComponent<XpPickUp>().Xp;

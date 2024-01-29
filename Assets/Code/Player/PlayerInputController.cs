@@ -1,3 +1,4 @@
+using TowerSurvivors.Audio;
 using TowerSurvivors.Game;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -104,7 +105,7 @@ namespace TowerSurvivors.PlayerScripts
                 //If it can't be upgraded, return.
                 if (!_hoveredStructure.Upgrade(_structureSelected))
                 {
-                    //TODO: Play can't place sound
+                    AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
                     return;
                 }
                 //If upgraded succesfully
@@ -116,14 +117,13 @@ namespace TowerSurvivors.PlayerScripts
             //Return if the structure is not on a valid place
             else if (!_structureSelected.CheckIfPlaceable())
             {
-                //TODO: Play can't place sound
+                AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
                 return;
             }
             //If there is no hovered structure and the selected structure can be placed
             else
             {
                 StructureManager.Instance.PlaceStructure(_structureSelected);
-                //TODO: Play structure placed sound
             }
 
             //Remove the item from the inventory
@@ -253,7 +253,7 @@ namespace TowerSurvivors.PlayerScripts
         {
             if (_structureSelected && !StructureManager.Instance.CanPlace())
             {
-                //TODO: Play can't place sound
+                AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
                 return;
             }
 

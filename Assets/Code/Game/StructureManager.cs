@@ -11,6 +11,8 @@ namespace TowerSurvivors.Game
     {
         public static StructureManager Instance;
         public SoundClip placeSound;
+        public SoundClip cantPlaceSound;
+        public SoundClip structureUpgradeSound;
 
         public int initialMaximumStructures = 5;
         public int MaximumStructures = 5;

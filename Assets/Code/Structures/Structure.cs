@@ -4,6 +4,7 @@ using TowerSurvivors.Enemies;
 using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
+using TowerSurvivors.VFX;
 using UnityEngine;
 
 namespace TowerSurvivors.Structures
@@ -133,27 +134,38 @@ namespace TowerSurvivors.Structures
 
             if (selectedStructure.GetType() == GetType())
             {
-                if (selectedStructure.level == item.levels[level].neededLevel)
+                //if (selectedStructure.level == item.levels[level].neededLevel)
+                //{
+
+                int highestLevel = 0;
+                //chooses the the structure with the highest level
+                if (this.level >= selectedStructure.level)
                 {
                     AssetsHolder.Instance.HUD.HoverStructure(this, true);
+                    highestLevel = this.level;
+                }
+                else
+                {
+                    AssetsHolder.Instance.HUD.HoverStructure(selectedStructure, true);
+                    highestLevel = selectedStructure.level;
+                }
 
-                    //Shows the range that the structure will have next level, and changes its color if the next level has a range increase
-                    if (item.levels[level].range > item.levels[level - 1].range)
+                //Shows the range that the structure will have next level, and changes its color if the next level has a range increase
+                if (item.levels[highestLevel].range > item.levels[level - 1].range)
                     {
                         //Gets the range the structure would be the next level, taking into consideration current buffs
-                        float nextRange = stats.range + (item.levels[level].range - item.levels[level - 1].range);
+                        float nextRange = item.levels[highestLevel].range + Player.Instance.stats.rangeIncrease;
                         _rangeOutline.transform.localScale = Vector3.one * nextRange;
                         _rangeOutline.color = _increasedRangeColor;
-                    }
-                    else
-                    {
-                        _rangeOutline.transform.localScale = Vector3.one * stats.range;
-                        _rangeOutline.color = _normalRangeColor;
-                    }
-
-                    return;
                 }
-                AssetsHolder.Instance.HUD.HoverStructure(this, false);
+                else
+                {
+                    _rangeOutline.transform.localScale = Vector3.one * stats.range;
+                    _rangeOutline.color = _normalRangeColor;
+                }
+
+                return;
+                //}
             }
         }
 
@@ -169,18 +181,38 @@ namespace TowerSurvivors.Structures
 
             if (selectedStructure.GetType() == GetType())
             {
-                if (selectedStructure.level == item.levels[level - 1].neededLevel)
+                //Used to check for a specific level, now the same structure at any level can be used
+                //if (selectedStructure.level == item.levels[level - 1].neededLevel)
+                //{
+                int highestLevel = 0;
+                //chooses the the structure with the highest level
+                if (this.level >= selectedStructure.level)
                 {
-                    level++;
-                    Debug.Log("UPGRADED to level: " + level);
+                    highestLevel = this.level;
+                }
+                else
+                {
+                    highestLevel = selectedStructure.level;
+                }
+
+                level = highestLevel + 1;
+
+                GameObject vfx = AssetsHolder.Instance.structureLevelUpVFX;
+                vfx = Instantiate(vfx, new(transform.position.x, transform.position.y - 0.5f, transform.position.y -1), Quaternion.identity);
+                vfx.transform.localScale = Vector3.one * _margin / 2;
+                vfx.GetComponent<VisualFX>().PlayEffect();
+
+                Debug.Log("UPGRADED to level: " + level);
+
                     if (level == item.levels.Count)
                         isMaxed = true;
 
+                AudioPlayer.Instance.PlaySFX(StructureManager.Instance.structureUpgradeSound);
                     GameManager.structuresUpgraded++;
                     return true;
-                }
+                //}
             }
-            //TODO: PLAY can't place audio
+            
             Debug.Log("Already at max level: " + level + "!");
             return false;
         }

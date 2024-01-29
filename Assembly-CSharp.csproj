@@ -112,10 +112,11 @@
     <Compile Include="Assets\Code\Game\GameStats.cs" />
     <Compile Include="Assets\Code\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
+    <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
+    <Compile Include="Assets\Code\VFX\VisualFX.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

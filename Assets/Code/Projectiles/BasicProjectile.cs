@@ -56,8 +56,11 @@ namespace TowerSurvivors.Projectiles
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
             if (_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
             {
+                Enemy e = collision.gameObject.GetComponent<Enemy>();
+                if (!e.isAlive)
+                    return;
 
-                collision.gameObject.GetComponent<Enemy>().TakeDamage(damage);
+                e.TakeDamage(damage);
                 passThrough--;
                 //If it can't pass through anymore enemies, destroys itself.
                 if (passThrough <= -1)
