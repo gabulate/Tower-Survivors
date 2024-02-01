@@ -12,9 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
   m_Name: Scope
   m_EditorClassIdentifier: 
-  itemNameKey: 
-  descriptionKey: 
-  icon: {fileID: 0}
-  prefab: {fileID: 0}
+  itemNameKey: SCOPE_NAME
+  descriptionKey: SCOPE_DSC
+  icon: {fileID: 21300000, guid: c05cb7f5e86f5b043b1afc3002b4497f, type: 3}
+  prefab: {fileID: 4006511037633329594, guid: 3f6fdd9645d0e9f43b9f0ef3b9d180b5, type: 3}
   probability: 5
-  levels: []
+  levels:
+  - EffectIntensityByLevel: 0.1
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGEALL
+      value: 10
+  - EffectIntensityByLevel: 0.2
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGEALL
+      value: 20
+  - EffectIntensityByLevel: 0.3
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGEALL
+      value: 30

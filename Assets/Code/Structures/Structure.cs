@@ -63,9 +63,15 @@ namespace TowerSurvivors.Structures
             _rangeOutline.color = _normalRangeColor;
         }
 
+        /// <summary>
+        /// Takes in the player stats and Updates the structure's stats, depending on its level and player buffs.
+        /// </summary>
         public virtual void ApplyBuffs(PlayerStats playerStats)
         {
-            stats.range = item.levels[level - 1].range + playerStats.rangeIncrease;
+            stats.range = item.levels[level - 1].range;
+            //Calculates the percentaje from the current level and adds it
+            stats.range += item.levels[level - 1].range * playerStats.rangeIncrease;
+
             stats.damage = item.levels[level - 1].damage + playerStats.damageIncrease;
 
             stats.attackCooldown = item.levels[level - 1].attackCooldown;
@@ -155,7 +161,9 @@ namespace TowerSurvivors.Structures
                     {
                         //Gets the range the structure would be the next level, taking into consideration current buffs
                         float nextRange = item.levels[highestLevel].range + Player.Instance.stats.rangeIncrease;
-                        _rangeOutline.transform.localScale = Vector3.one * nextRange;
+                        nextRange += item.levels[highestLevel].range * Player.Instance.stats.rangeIncrease;
+
+                    _rangeOutline.transform.localScale = Vector3.one * nextRange;
                         _rangeOutline.color = _increasedRangeColor;
                 }
                 else
