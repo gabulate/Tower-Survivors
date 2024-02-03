@@ -107,6 +107,7 @@
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Code\Localisation\Language.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
+    <Compile Include="Assets\Code\PassiveItems\Scope.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
     <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
@@ -117,7 +118,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\PassiveItems\Scope.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

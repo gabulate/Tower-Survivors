@@ -39,6 +39,25 @@ namespace TowerSurvivors.Audio
             PlayFX();
         }
 
+        public void FadeIn(float seconds)
+        {
+            StartCoroutine(FadeInCoroutine(seconds));
+        }
+
+        private IEnumerator FadeInCoroutine(float seconds)
+        {
+            SetMusicVolume(0);
+            float elapsedTime = 0f;
+
+            while (elapsedTime < seconds)
+            {
+                elapsedTime += Time.deltaTime;
+                SetMusicVolume((elapsedTime / seconds));
+                yield return null;
+            }
+            SetMusicVolume(1);
+        }
+
         private void PlayFX()
         {
             source.clip = clip.clip;

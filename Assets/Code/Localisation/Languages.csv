@@ -23,7 +23,19 @@ RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraci
 CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
 RESUME,Resume,Resumir
 CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?
+BUFFS,Buffs:,Mejoras:
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
+STAT_RANGE,Range,Rango
+STAT_DAMAGE,Damage,Daño
+STAT_COOLDOWN,Cooldown,Enfriamiento
+STAT_SIZE,Size,Tamaño
+STAT_PRJSPEED,Projectile Speed,Velocidad en Projectiles
+STAT_PRJDURATION,Projectile Duration,Duración de Projectiles
+STAT_PRJAMNT,Projectile Amount,Cantidad de Projectiles
+STAT_SPEED,Movement Speed,Velocidad de Movimiento
+STAT_VISION,Vision,Visión
+STAT_STRUCTURELIMIT,Structure Limit,Límite de Estructuras
+STAT_HEALTHREGEN,Health Regeneration,Regeneración de Vida
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
 LEVELUP,Level Up!,Subiste de nivel!
 LEVEL,Needed:,Se necesita:

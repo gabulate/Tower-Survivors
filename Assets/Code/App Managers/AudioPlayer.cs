@@ -37,6 +37,7 @@ namespace TowerSurvivors.Audio
             StopMusic();
             this.musicTrack = musicTrack;
             musicObject.PlayMusic(musicTrack);
+            musicObject.FadeIn(7);
         }
 
         public void StopMusic()

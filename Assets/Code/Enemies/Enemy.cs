@@ -32,6 +32,8 @@ namespace TowerSurvivors.Enemies
         [Header("MetaAttributes")]
         public bool isAlive = true;
         public bool scaleXp = true;
+        [SerializeField]
+        private float _timeAlive = 0;
         [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
         public int Xp = 1;
@@ -59,6 +61,14 @@ namespace TowerSurvivors.Enemies
         {
             //currentCooldown is always counting down to 0, when it reaches 0, the enemy is allowed to attack
             currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
+
+            //If the enemy has been alive for a long time, it starts gaining speed
+            //This is to avoid the having the player just run around the map
+            _timeAlive += Time.fixedDeltaTime;
+            if(_timeAlive > 100)
+            {
+                speed += 10 * Time.fixedDeltaTime;
+            }
             Move();
         }
 

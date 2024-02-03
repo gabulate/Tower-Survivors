@@ -164,6 +164,7 @@ namespace TowerSurvivors.Structures
                         nextRange += item.levels[highestLevel].range * Player.Instance.stats.rangeIncrease;
 
                     _rangeOutline.transform.localScale = Vector3.one * nextRange;
+
                         _rangeOutline.color = _increasedRangeColor;
                 }
                 else

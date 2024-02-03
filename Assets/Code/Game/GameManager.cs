@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Audio;
+using TowerSurvivors.GUI;
 using TowerSurvivors.Localisation;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.PlayerScripts;
@@ -118,6 +119,7 @@ namespace TowerSurvivors.Game
             e_Paused.Invoke(show);
             Time.timeScale = show ? 0 : 1;
             _pauseMenu.SetActive(show);
+            _pauseMenu.GetComponent<PauseMenu>().UpdateStats();
         }
 
         internal static void TogglePause()
