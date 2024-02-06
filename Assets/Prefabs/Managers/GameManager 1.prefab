@@ -47,15 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 0}
   _gameOverScreen: {fileID: 0}
-  gameMusic:
-    clip: {fileID: 8300000, guid: 69562df94dc247b4e8594426f8eef516, type: 3}
-    volume: 0.5
-    pitch: 1
-    varyPitch: 0
-    minPitch: 1
-    maxPitch: 1
-    loop: 0
-  _randomizeSpawn: 0
+  gameMusic: {fileID: 11400000, guid: f0ca25eecf349f24fa1da6cb3a6c1afe, type: 2}
+  _randomizeSpawn: 1
   e_Paused:
     m_PersistentCalls:
       m_Calls: []
@@ -80,14 +73,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _animator: {fileID: 0}
-  _levelUpSound:
-    clip: {fileID: 8300000, guid: b947be8ee0c919a46b86da54ec98b9e3, type: 3}
-    volume: 1
-    pitch: 1
-    varyPitch: 1
-    minPitch: 1
-    maxPitch: 1.5
-    loop: 0
+  _levelUpSound: {fileID: 0}
   _levelUpText: {fileID: 0}
   selectedItems:
   - {fileID: 0}

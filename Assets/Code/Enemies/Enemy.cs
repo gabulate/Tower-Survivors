@@ -27,7 +27,7 @@ namespace TowerSurvivors.Enemies
         [SerializeField]
         protected SpriteRenderer _sprite;
         [SerializeField]
-        protected SoundClip hurtSound = new SoundClip(1, 1.5f);
+        protected SoundClip hurtSound;
 
         [Header("MetaAttributes")]
         public bool isAlive = true;

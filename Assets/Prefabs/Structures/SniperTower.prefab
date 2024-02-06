@@ -583,14 +583,7 @@ MonoBehaviour:
   _outline: {fileID: 5225501809430433368}
   _rangeOutline: {fileID: 5225501809840478594}
   prefab: {fileID: 9045920206707928100, guid: 7a9139997bafc704da7abf19a7bf1d1d, type: 3}
-  firingSound:
-    clip: {fileID: 8300000, guid: 43d969dec84b2304fbd2ac704dbfc4c0, type: 3}
-    volume: 1
-    pitch: 1
-    varyPitch: 1
-    minPitch: 1
-    maxPitch: 1.5
-    loop: 0
+  firingSound: {fileID: 11400000, guid: 5931e4c07864ee149a8ebdef5d23d537, type: 2}
   canAttack: 0
   targetObject: {fileID: 0}
   targetEnemy: {fileID: 0}

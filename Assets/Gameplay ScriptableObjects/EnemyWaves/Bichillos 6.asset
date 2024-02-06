@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Bichillos 6
   m_EditorClassIdentifier: 
   enemies:
+  - prefab: {fileID: 4839404506047974078, guid: b2a01808543f7ef4084f57e9369bd3a8, type: 3}
+    amount: 400
   - prefab: {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
     amount: 300
   - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
     amount: 200
   - prefab: {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
-    amount: 150
+    amount: 100
   amountAtATime: 4
   cooldown: 1
   distribution: 0

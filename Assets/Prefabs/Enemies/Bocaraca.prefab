@@ -239,16 +239,10 @@ MonoBehaviour:
   _rb: {fileID: 8061092949138535199}
   _collider: {fileID: 8061092949138535648}
   _sprite: {fileID: 8061092949138535650}
-  hurtSound:
-    clip: {fileID: 8300000, guid: f56dbf16773f1fe478fbca556836b0cb, type: 3}
-    volume: 1
-    pitch: 1
-    varyPitch: 1
-    minPitch: 1
-    maxPitch: 1.5
-    loop: 0
+  hurtSound: {fileID: 11400000, guid: 7e7af2ebffcde14449d9ef3036e9c668, type: 2}
   isAlive: 1
   scaleXp: 1
+  _timeAlive: 0
   ChanceToDropXp: 0.8
   Xp: 1
   HP: 7

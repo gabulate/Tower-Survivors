@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace TowerSurvivors.Audio
 {
-    [System.Serializable]
-    public class SoundClip
+    [CreateAssetMenu(fileName = "AudioClip", menuName = "SoundClip")]
+    public class SoundClip : ScriptableObject
     {
         public AudioClip clip;
         [Range(0, 1)]
@@ -25,11 +25,11 @@ namespace TowerSurvivors.Audio
             varyPitch = false;
         }
 
-        public SoundClip(float minPitch, float maxPitch)
-        {
-            varyPitch = true;
-            this.minPitch = minPitch;
-            this.maxPitch = maxPitch;
-        }
+        //public SoundClip(float minPitch, float maxPitch)
+        //{
+        //    varyPitch = true;
+        //    this.minPitch = minPitch;
+        //    this.maxPitch = maxPitch;
+        //}
     }
 }
