@@ -61,6 +61,8 @@ ROUNDABOUT_NAME,Roundabout,Rotonda
 ROUNDABOUT_DSC,Spins and fires!,¡Da vueltas y dispara!
 BARBEDWIRE_NAME,Barbed Wire,Alambre de púas
 BARBEDWIRE_DSC,Damages enemies that touch it.,Hace daño a los enemigos que lo toquen.
+ROCKETLAUNCHER_NAME,Rocket launcher,Lanza cohetes
+ROCKETLAUNCHER_DSC,Rockets explode upon impact!,¡Lanza cohetes que explotan al impactar!
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo

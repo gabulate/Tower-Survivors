@@ -63,9 +63,9 @@ namespace TowerSurvivors.Enemies
             currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
 
             //If the enemy has been alive for a long time, it starts gaining speed
-            //This is to avoid the having the player just run around the map
+            //This is to avoid having the player just run around the map
             _timeAlive += Time.fixedDeltaTime;
-            if(_timeAlive > 100)
+            if(_timeAlive > 200)
             {
                 speed += 10 * Time.fixedDeltaTime;
             }

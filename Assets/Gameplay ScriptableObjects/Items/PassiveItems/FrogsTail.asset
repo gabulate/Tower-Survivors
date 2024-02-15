@@ -18,23 +18,23 @@ MonoBehaviour:
   prefab: {fileID: 600608124420109113, guid: 2278fef005ed692488923476aa36d96c, type: 3}
   probability: 5
   levels:
-  - EffectIntensityByLevel: 0.1
+  - EffectIntensityByLevel: 0.15
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.1
-  - EffectIntensityByLevel: 0.2
-    upgradeDescriptions:
-    - descriptionKey: UPG_HEALTHREGEN
-      value: 0.2
+      value: 0.15
   - EffectIntensityByLevel: 0.3
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
       value: 0.3
-  - EffectIntensityByLevel: 0.4
+  - EffectIntensityByLevel: 0.45
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.4
-  - EffectIntensityByLevel: 0.5
+      value: 0.45
+  - EffectIntensityByLevel: 0.6
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.5
+      value: 0.6
+  - EffectIntensityByLevel: 0.75
+    upgradeDescriptions:
+    - descriptionKey: UPG_HEALTHREGEN
+      value: 0.75

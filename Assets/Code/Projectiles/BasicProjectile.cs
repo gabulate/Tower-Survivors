@@ -46,6 +46,10 @@ namespace TowerSurvivors.Projectiles
             this.duration = stats.duration;
             _timeLeft = stats.duration;
             transform.localScale = new Vector3(stats.areaSize, stats.areaSize, stats.areaSize);
+
+            float angleInRadians = Mathf.Atan2(direction.y, direction.x);
+            float angleInDegrees = angleInRadians * Mathf.Rad2Deg;
+            _rb.rotation = angleInDegrees;
         }
 
         protected virtual void OnCollisionEnter2D(Collision2D collision)

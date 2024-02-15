@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 4839404506047974049}
   _rb: {fileID: 4839404506047974051}
-  _collider: {fileID: 4839404505918708528}
+  _collider: {fileID: 4839404506047974048}
   _sprite: {fileID: 4839404506047974052}
   hurtSound: {fileID: 11400000, guid: 2ef9c87d65e0d14479b916d67c508271, type: 2}
   isAlive: 1

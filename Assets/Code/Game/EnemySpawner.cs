@@ -23,17 +23,20 @@ namespace TowerSurvivors.Game
 
         private void OnValidate()
         {
-            if (previousWaves == null || !ListEquals(previousWaves, waves))
+            if (waves != null /*|| !ListEquals(previousWaves, waves)*/)
             {
-                totalDuration = 0;
+                float totalDurationF = 0;
+                totalEnemies = 0;
                 for (int i = 0; i < waves.Count; i++)
                 {
                     for (int j = 0; j < waves[i].enemies.Count; j++)
                     {
-                        totalDuration += waves[i].enemies[j].amount * waves[i].cooldown / waves[i].amountAtATime;
+                        totalDurationF += waves[i].enemies[j].amount * waves[i].cooldown / waves[i].amountAtATime;
+                        totalEnemies += waves[i].enemies[j].amount;
                     }
                 }
 
+                totalDuration = FormatTime(totalDurationF);
                 // Update the previousWaves
                 previousWaves = new List<EnemyWaveSO>(waves);
             }
@@ -64,7 +67,9 @@ namespace TowerSurvivors.Game
 #endif
 
         [SerializeField, ShowOnly]
-        private float totalDuration = 0;
+        private string totalDuration = "";
+        [SerializeField, ShowOnly]
+        private int totalEnemies = 0;
         [SerializeField]
         private EnemyWaveSO currentWave;
         [SerializeField]
@@ -271,6 +276,14 @@ namespace TowerSurvivors.Game
 
             // Draw the wireframe box
             Gizmos.DrawWireCube(centerr, sizee);
+        }
+
+        public static string FormatTime(float timeInSeconds)
+        {
+            int minutes = (int)(timeInSeconds / 60);
+            int seconds = (int)(timeInSeconds % 60);
+
+            return $"{minutes:D2}:{seconds:D2}";
         }
     }
 }
