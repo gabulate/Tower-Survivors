@@ -75,6 +75,7 @@
     <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
     <Compile Include="Assets\Code\Localisation\AutoTranslateChildren.cs" />
     <Compile Include="Assets\Code\Game\GameManager.cs" />
+    <Compile Include="Assets\Code\Structures\RocketLauncher.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\EnemyWaveSO.cs" />
     <Compile Include="Assets\Code\Structures\Sniper.cs" />
     <Compile Include="Assets\Code\PassiveItems\Telescope.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\Code\PassiveItems\Lubricator.cs" />
     <Compile Include="Assets\Code\Structures\Structure.cs" />
     <Compile Include="Assets\Code\Projectiles\BasicProjectile.cs" />
+    <Compile Include="Assets\Code\Projectiles\Rocket.cs" />
     <Compile Include="Assets\Code\Game\XpObjectPool.cs" />
     <Compile Include="Assets\Code\GUI\PauseMenu.cs" />
     <Compile Include="Assets\Code\VFX\VisualFX.cs" />
@@ -118,8 +120,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Structures\RocketLauncher.cs" />
-    <Compile Include="Assets\Code\Projectiles\Rocket.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

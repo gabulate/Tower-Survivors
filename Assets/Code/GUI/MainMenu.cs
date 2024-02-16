@@ -7,11 +7,15 @@ using TowerSurvivors.Localisation;
 using System;
 using System.Linq;
 using UnityEngine.UI;
+using TowerSurvivors.Audio;
 
 namespace TowerSurvivors.GUI
 {
     public class MainMenu : MonoBehaviour
     {
+        [SerializeField]
+        private SoundClip _clickSound;
+
         [SerializeField]
         private GameObject _MainMenu;
         [SerializeField]
@@ -52,6 +56,23 @@ namespace TowerSurvivors.GUI
             LoadSettings();
             AboutPage.SetActive(false);
             SettingsMenu.SetActive(false);
+
+            AddButtonSounds();
+        }
+
+        protected void AddButtonSounds()
+        {
+            Button[] buttons = GetComponentsInChildren<Button>(true);
+
+            foreach(Button b in buttons)
+            {
+                b.onClick.AddListener(ClickSound);
+            }
+        }
+
+        public void ClickSound()
+        {
+            AudioPlayer.Instance.PlaySFX(_clickSound);
         }
 
         protected void LoadSettings()
@@ -65,8 +86,8 @@ namespace TowerSurvivors.GUI
 
         private void LoadVolumeSettings()
         {
-            sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
-            musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.5f);
+            sfxSlider.value = GameSettings.SFXVolume;
+            musicSlider.value = GameSettings.MusicVolume;
         }
 
         public void ChangeSFXVolume(float volume)
@@ -108,19 +129,10 @@ namespace TowerSurvivors.GUI
             displayOptions.Add(Language.Get("WINDOWED_FULLSCREEN"));
             displayOptions.Add(Language.Get("WINDOWED"));
 
-            int displayIndex = 0;
-            switch (Screen.fullScreenMode)
-            {
-                case FullScreenMode.ExclusiveFullScreen:
-                    displayIndex = 0;
-                    break;
-                case FullScreenMode.FullScreenWindow:
-                    displayIndex = 1;
-                    break;
-                case FullScreenMode.Windowed:
-                    displayIndex = 2;
-                    break;
-            }
+            GameSettings.SetFullScreen(PlayerPrefs.GetInt("fullScreen", 0));
+
+            int displayIndex = PlayerPrefs.GetInt("fullScreen", 0);
+            
 
             displayDropdown.ClearOptions();
             displayDropdown.AddOptions(displayOptions.Distinct().ToList());

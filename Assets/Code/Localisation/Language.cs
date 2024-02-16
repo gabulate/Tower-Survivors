@@ -82,7 +82,15 @@ namespace TowerSurvivors.Localisation
             }
             catch
             {
-                return "#"+ key;
+                //A '-' is used in text that should not be translated.
+                if(key[0] == '-')
+                {
+                    return key.Remove(0,1);
+                }
+                else
+                {
+                    return "#" + key;
+                }
             }
         }
     }

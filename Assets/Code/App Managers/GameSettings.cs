@@ -16,8 +16,8 @@ namespace TowerSurvivors
 
         public static void LoadSettings()
         {
-            MusicVolume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
-            SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
+            MusicVolume = PlayerPrefs.GetFloat("musicVolume", 0.3f);
+            SFXVolume = PlayerPrefs.GetFloat("SFXVolume", 0.7f);
 
             SetFPS(PlayerPrefs.GetInt("fps", 60));
             SetFullScreen(PlayerPrefs.GetInt("fullScreen", 0));

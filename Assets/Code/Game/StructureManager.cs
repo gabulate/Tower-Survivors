@@ -9,6 +9,11 @@ namespace TowerSurvivors.Game
 {
     public class StructureManager : MonoBehaviour
     {
+        [SerializeField]
+        private Color _outlineColor;
+        [SerializeField]
+        private Color _highlightColor;
+
         public static StructureManager Instance;
         public SoundClip placeSound;
         public SoundClip cantPlaceSound;
@@ -47,6 +52,37 @@ namespace TowerSurvivors.Game
                 return structures;
             }
             return structures;
+        }
+
+        public void HighLigthTypeOf(Structure structure)
+        {
+            foreach(Structure s in GetStructures())
+            {
+                if(s.GetType() == structure.GetType() && !s.isMaxed)
+                {
+                    SpriteRenderer[] sprites = s.GetComponentsInChildren<SpriteRenderer>();
+
+                    foreach (SpriteRenderer sprite in sprites)
+                    {
+                        sprite.material.SetColor("_OutlineColor", _highlightColor);
+                    }
+                }
+            }
+        }
+
+
+        public void UnhighlightAll()
+        {
+            //Yes, this is highly unefficient
+            foreach(Structure s in GetStructures())
+            {
+                SpriteRenderer[] sprites = s.GetComponentsInChildren<SpriteRenderer>();
+
+                foreach(SpriteRenderer sprite in sprites)
+                {
+                    sprite.material.SetColor("_OutlineColor", _outlineColor);
+                }
+            }
         }
 
         public GameObject AddToInventory(StructureItemSO item, int index)

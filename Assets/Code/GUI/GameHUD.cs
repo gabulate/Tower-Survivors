@@ -25,6 +25,7 @@ namespace TowerSurvivors.GUI
             Player.Health.e_healthChanged.AddListener(UpdateHealth);
             StructureManager.Instance.e_StAmntChanged.AddListener(UpdateStructureQty);
             GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
+            UpdateStructureQty(0, StructureManager.Instance.initialMaximumStructures);
         }
 
         private void LateUpdate()

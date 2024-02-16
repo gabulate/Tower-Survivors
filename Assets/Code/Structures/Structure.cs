@@ -124,7 +124,7 @@ namespace TowerSurvivors.Structures
 
         public virtual void ShowLevelUpStats(Structure selectedStructure)
         {
-            if (isMaxed)
+            if (isMaxed || selectedStructure && selectedStructure.isMaxed)
             {
                 AssetsHolder.Instance.HUD.HoverStructureMax(this);
                 return;
@@ -188,12 +188,15 @@ namespace TowerSurvivors.Structures
             if (isMaxed)
                 return false;
 
+            if (selectedStructure.isMaxed)
+                return false;
+
             if (selectedStructure.GetType() == GetType())
             {
                 //Used to check for a specific level, now the same structure at any level can be used
                 //if (selectedStructure.level == item.levels[level - 1].neededLevel)
                 //{
-                int highestLevel = 0;
+                int highestLevel;
                 //chooses the the structure with the highest level
                 if (this.level >= selectedStructure.level)
                 {

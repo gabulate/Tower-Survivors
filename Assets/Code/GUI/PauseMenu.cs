@@ -26,6 +26,7 @@ namespace TowerSurvivors.GUI
 
             LoadSettings();
             SettingsMenu.SetActive(false);
+            AddButtonSounds();
         }
 
 

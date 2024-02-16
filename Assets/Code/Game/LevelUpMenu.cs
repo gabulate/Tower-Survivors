@@ -67,17 +67,17 @@ namespace TowerSurvivors.Game
                     {
                         availableItems.RemoveAt(i);
                     } 
-                    else if (!StructureManager.Instance.CanPlace()) //If the player has reached maximum allowed structures
-                    {
-                        Structure[] sts = StructureManager.Instance.GetStructures();
-                        Structure structure = sts.Where(x => x.item.itemNameKey == availableItems[i].itemNameKey).FirstOrDefault();
+                    //else if (!StructureManager.Instance.CanPlace()) //If the player has reached maximum allowed structures
+                    //{
+                    //    Structure[] sts = StructureManager.Instance.GetStructures();
+                    //    Structure structure = sts.Where(x => x.item.itemNameKey == availableItems[i].itemNameKey).FirstOrDefault();
                         
-                        //Removes the available item if there are not structures of its kind placed
-                        if (!structure)
-                        {
-                            availableItems.RemoveAt(i);
-                        }
-                    }
+                    //    //Removes the available item if there are not structures of its kind placed
+                    //    if (!structure)
+                    //    {
+                    //        availableItems.RemoveAt(i);
+                    //    }
+                    //}
                 }
                 else
                 {

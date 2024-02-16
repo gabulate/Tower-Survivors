@@ -109,8 +109,9 @@ namespace TowerSurvivors.PlayerScripts
                     return;
                 }
                 //If upgraded succesfully
-                //TODO: Play structure upgrade sound
+                
                 _hoveredStructure.OutLine(false);
+                StructureManager.Instance.UnhighlightAll();
                 AssetsHolder.Instance.HUD.HideUpBox();
                 Destroy(_selectedItemGO);
             }
@@ -124,6 +125,7 @@ namespace TowerSurvivors.PlayerScripts
             else
             {
                 StructureManager.Instance.PlaceStructure(_structureSelected);
+                StructureManager.Instance.UnhighlightAll();
             }
 
             //Remove the item from the inventory
@@ -218,6 +220,7 @@ namespace TowerSurvivors.PlayerScripts
 
                 _hoveredStructure = hitStructure;
                 _hoveredStructure.OutLine(true);
+                
 
             }
             //If the mouse is not over a structure

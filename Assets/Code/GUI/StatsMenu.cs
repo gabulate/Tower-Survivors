@@ -7,11 +7,15 @@ using TowerSurvivors.Game;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TowerSurvivors.Audio;
 
 namespace TowerSurvivors.GUI
 {
     public class StatsMenu : MonoBehaviour
     {
+        [SerializeField]
+        private SoundClip _clickSound;
+
         [SerializeField]
         private GameObject canvas;
         [SerializeField]
@@ -62,6 +66,7 @@ namespace TowerSurvivors.GUI
         public void ReturnToMenu()
         {
             SceneManager.LoadScene(0);
+            AudioPlayer.Instance.PlaySFX(_clickSound);
         }
     }
 }

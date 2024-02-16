@@ -45,10 +45,15 @@ namespace TowerSurvivors.PlayerScripts
             StructureSlots[slot].GetComponent<InventorySlot>().HighLight();
             InventoryItem item = StructureSlots[slot].GetComponentInChildren<InventoryItem>();
             if (item == null)
+            {
+                StructureManager.Instance.UnhighlightAll();
                 return;
+            }
+                
 
             item.HighLight();
             selectedItem = item;
+            StructureManager.Instance.HighLigthTypeOf(selectedItem.itemInstance.GetComponent<Structure>());
         }
 
         /// <summary>
