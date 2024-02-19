@@ -31,9 +31,12 @@ namespace TowerSurvivors.Structures
         protected SpriteRenderer _outline;
         [SerializeField]
         protected SpriteRenderer _rangeOutline;
-        public GameObject prefab;
         [SerializeField]
-        public SoundClip firingSound;
+        protected GameObject prefab;
+        [SerializeField]
+        protected SoundClip firingSound;
+        [SerializeField]
+        protected Collider2D _collider;
 
         [Header("Meta Atributtes")]
         public bool canAttack = false;
@@ -95,7 +98,7 @@ namespace TowerSurvivors.Structures
         public virtual void EnableStructure(bool enabled)
         {
             canAttack = enabled;
-            GetComponent<Collider2D>().enabled = enabled;
+            _collider.enabled = enabled;
             _shadow.enabled = enabled;
             
             if (!enabled)

@@ -12,7 +12,8 @@ namespace TowerSurvivors.Structures
         private List<Enemy> _enemiesInRange = new List<Enemy>();
         [SerializeField]
         private GameObject _wire;
-        
+        [SerializeField]
+        private Vector2 _initialSize;
 
         protected override void FixedUpdate()
         {
@@ -77,9 +78,9 @@ namespace TowerSurvivors.Structures
         {
             base.ApplyBuffs(playerStats);
 
-            transform.localScale = new(stats.areaSize, stats.areaSize, stats.areaSize);
-            _margin = 6-level *0.5f;
-            _outline.transform.localScale = Vector3.one * _margin;
+            _wire.transform.localScale = new(stats.areaSize, stats.areaSize, stats.areaSize);
+            BoxCollider2D b = _collider as BoxCollider2D;
+            b.size = _initialSize * stats.areaSize;
         }
 
 

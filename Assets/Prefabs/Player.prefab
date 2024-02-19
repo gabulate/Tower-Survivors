@@ -157,6 +157,7 @@ MonoBehaviour:
     speedBoost: 0
     visionBoost: 0
     extraStructures: 0
+    healthRegen: 0
 --- !u!114 &6018600358319625442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,8 +268,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d640b9882c6d5489afdb7b88444779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hurtSound: {fileID: 11400000, guid: 43104e2b5e7a76e4da7e94e26658d3b6, type: 2}
   _isInvincible: 0
-  health: 100
+  isAlive: 1
+  health: 11
   maxHealth: 100
   invulnerableTime: 0.2
   e_healthChanged:
@@ -340,7 +343,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b48bcefa3a5add449d0801eb322a239, type: 2}
+  - {fileID: 2100000, guid: fc3bb547cd5f8db48898588cebb0428c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

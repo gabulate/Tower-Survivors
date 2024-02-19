@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using TowerSurvivors.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,8 @@ namespace TowerSurvivors.PlayerScripts
     /// </summary>
     public class PlayerHealth : MonoBehaviour
     {
+        [SerializeField]
+        private SoundClip _hurtSound;
         [SerializeField]
         private bool _isInvincible = false;
         //private LayerMask _enemyLayer = 1 << 6;
@@ -62,6 +65,8 @@ namespace TowerSurvivors.PlayerScripts
 
             health -= damage;
             e_healthChanged.Invoke(health, maxHealth);
+
+            AudioPlayer.Instance.PlaySFX(_hurtSound);
 
             Debug.Log("Current health: " + health);
             if (health <= 0)
