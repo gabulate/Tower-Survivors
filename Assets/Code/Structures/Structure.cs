@@ -71,22 +71,24 @@ namespace TowerSurvivors.Structures
         /// </summary>
         public virtual void ApplyBuffs(PlayerStats playerStats)
         {
-            stats.range = item.levels[level - 1].range;
             //Calculates the percentaje from the current level and adds it
+            stats.range = item.levels[level - 1].range;
             stats.range += item.levels[level - 1].range * playerStats.rangeIncrease;
 
-            stats.damage = item.levels[level - 1].damage + playerStats.damageIncrease;
+            //Calculates the percentaje
+            stats.damage = item.levels[level - 1].damage;
+            stats.damage += item.levels[level - 1].damage * playerStats.damageIncrease;
 
-            stats.attackCooldown = item.levels[level - 1].attackCooldown;
             //Calculates the percentaje from the current level and subtracts it
+            stats.attackCooldown = item.levels[level - 1].attackCooldown;
             stats.attackCooldown -= item.levels[level - 1].attackCooldown * playerStats.coolDownReduction;
 
-            stats.areaSize = item.levels[level - 1].areaSize + playerStats.areaSizeIncrease;
             //Calculates the percentaje from the current level and adds it
+            stats.areaSize = item.levels[level - 1].areaSize + playerStats.areaSizeIncrease;
             stats.areaSize += item.levels[level - 1].areaSize * playerStats.areaSizeIncrease;
 
-            stats.projectileSpeed = item.levels[level - 1].projectileSpeed;
             //Calculates the percentaje from the current level and adds it
+            stats.projectileSpeed = item.levels[level - 1].projectileSpeed;
             stats.projectileSpeed += item.levels[level - 1].projectileSpeed * playerStats.projectileSpeedBoost;
 
             stats.duration = item.levels[level - 1].duration + playerStats.durationIncrease;

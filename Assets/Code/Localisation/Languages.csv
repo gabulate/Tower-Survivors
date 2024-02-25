@@ -79,10 +79,13 @@ FROGSTAIL_NAME,Frog's tail,Colita de rana
 FROGSTAIL_DSC,Gives health regeneration.,Da regeneración de vida.
 SCOPE_NAME,Scope,Mira
 SCOPE_DSC,Gives extra range to ranged structures.,Da rango extra a estructuras.
+GUNPOWDER_NAME,Premium gunpowder,Pólvora premium
+GUNPOWDER_DSC,Increases structure damage.,Aumenta el daño de las estructuras.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
 UPG_RANGEALL,Structures gain a {0}% range increase.,Aumenta el rango de las estructuras un {0}%.
 UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
+UPG_DAMAGEALL,Damage of all structures increased by {0}%.,Aumenta el daño de todas las estructuras un {0}%.
 UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.
 UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
 UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.

@@ -175,7 +175,7 @@ MonoBehaviour:
   _canMove: 1
   _input: {x: 0, y: 0}
   _rb: {fileID: 6018600358319625441}
-  _placingRange: 4
+  _placingRange: 6.5
   _selectedItemIndex: 0
   _selectedItemGO: {fileID: 0}
   _structureSelected: {fileID: 0}
