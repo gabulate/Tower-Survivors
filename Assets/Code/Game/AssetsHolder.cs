@@ -14,6 +14,11 @@ namespace TowerSurvivors.Game
         [Header("VFX Prefabs")]
         public GameObject structureLevelUpVFX;
 
+        [Header("PickUp Prefabs")]
+        public GameObject cookiePrefab;
+        [Range(0,1)]
+        public float cookieChance = 0.01f;
+
         private void Awake()
         {
             if (Instance == null)

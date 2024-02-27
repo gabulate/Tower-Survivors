@@ -13,6 +13,7 @@ namespace TowerSurvivors.PlayerScripts
     {
         [SerializeField]
         private SoundClip _hurtSound;
+
         [SerializeField]
         private bool _isInvincible = false;
         //private LayerMask _enemyLayer = 1 << 6;
@@ -46,14 +47,13 @@ namespace TowerSurvivors.PlayerScripts
             }
         }
 
-        private void Heal(float amount)
+        public void Heal(float amount)
         {
             health += amount;
             if (health > maxHealth)
                 health = maxHealth;
 
             e_healthChanged.Invoke(health, maxHealth);
-
         }
 
         public void TakeDamage(float damage)

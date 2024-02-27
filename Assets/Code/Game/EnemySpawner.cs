@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TowerSurvivors.Enemies;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Util;
@@ -11,6 +13,9 @@ namespace TowerSurvivors.Game
 {
     public class EnemySpawner : MonoBehaviour
     {
+        protected static readonly LayerMask _enemyLayer = 1 << 6;
+
+        public bool activeSpawning = true;
         public int MaxEnemies = 30;
         public int currentEnemies = 0;
 
@@ -42,28 +47,6 @@ namespace TowerSurvivors.Game
             }
         }
 
-        private bool ListEquals(List<EnemyWaveSO> list1, List<EnemyWaveSO> list2)
-        {
-            if (list1 == null || list2 == null)
-            {
-                return list1 == list2;
-            }
-
-            if (list1.Count != list2.Count)
-            {
-                return false;
-            }
-
-            for (int i = 0; i < list1.Count; i++)
-            {
-                if (list1[i] != list2[i])
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
 #endif
 
         [SerializeField, ShowOnly]
@@ -112,6 +95,9 @@ namespace TowerSurvivors.Game
 
         private void Update()
         {
+            if(!activeSpawning)
+                return;
+
             currentCooldown -= Time.deltaTime;
 
             //Check if the queue ran out of enemies, go to the next wave
@@ -204,6 +190,31 @@ namespace TowerSurvivors.Game
                 if (currentWavePairs.Count == 0)
                 {
                     return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Kills every enemy on screen and stops spawning enemies
+        /// </summary>
+        public void KillAllEnemies()
+        {
+            activeSpawning = false;
+            StartCoroutine(KillEnemies());
+        }
+
+        private IEnumerator KillEnemies()
+        {
+            Collider2D[] hits = Physics2D.OverlapCircleAll(new Vector3(0,0,0), 150, _enemyLayer);
+
+            for (int i = hits.Length - 1; i >= 0; i--)
+            {
+                Enemy e = hits[i].GetComponent<Enemy>();
+                if(e && e.isAlive)
+                {
+                    e.ChanceToDropXp = 0;
+                    e.TakeDamage(99999);
+                    yield return new WaitForSeconds(0.01f);
                 }
             }
         }

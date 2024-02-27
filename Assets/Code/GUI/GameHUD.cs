@@ -30,7 +30,7 @@ namespace TowerSurvivors.GUI
 
         private void LateUpdate()
         {
-            timerText.text = FormatTime(GameManager.secondsPassed);
+            timerText.text = FormatTime(GameManager.Instance.secondsPassed);
         }
 
         public static string FormatTime(float timeInSeconds)

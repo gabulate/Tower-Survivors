@@ -203,10 +203,15 @@ namespace TowerSurvivors.Enemies
         protected void DropXp()
         {
             float randomValue = Random.Range(0f, 1f);
-            if (randomValue <= ChanceToDropXp)
+            if (randomValue <= AssetsHolder.Instance.cookieChance)
             {
-                XpObjectPool.Instance.SpawnXp(Xp, transform.position);
+                Instantiate(AssetsHolder.Instance.cookiePrefab, transform.position, Quaternion.identity);
             }
+            else if (randomValue <= ChanceToDropXp)
+            {
+                //Spawn cookie
+                XpObjectPool.Instance.SpawnXp(Xp, transform.position);
+            } 
         }
 
         private void DestroyAnim()

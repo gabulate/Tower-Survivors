@@ -63,6 +63,9 @@ namespace TowerSurvivors.Audio
 
         public void PlaySFX(SoundClip soundClip)
         {
+            if (!soundClip)
+                return;
+
             SoundObject so = GetPooledSound();
             if (!so)
                 return;
@@ -73,6 +76,9 @@ namespace TowerSurvivors.Audio
 
         public void PlaySFX(SoundClip soundClip, Vector3 position)
         {
+            if (!soundClip)
+                return;
+
             SoundObject so = GetPooledSound();
             if (!so)
                 return;

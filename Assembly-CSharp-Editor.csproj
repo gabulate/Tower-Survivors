@@ -63,6 +63,7 @@
     <Compile Include="Assets\Editor\ShowOnlyDrawer.cs" />
     <Compile Include="Assets\Editor\HiddenObjectExplorer.cs" />
     <Compile Include="Assets\Editor\TranslateWindow.cs" />
+    <Compile Include="Assets\Editor\KillAllEnemiesButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

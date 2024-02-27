@@ -225,7 +225,7 @@ namespace TowerSurvivors.Structures
                         isMaxed = true;
 
                 AudioPlayer.Instance.PlaySFX(StructureManager.Instance.structureUpgradeSound);
-                    GameManager.structuresUpgraded++;
+                    GameManager.Instance.structuresUpgraded++;
                     return true;
                 //}
             }

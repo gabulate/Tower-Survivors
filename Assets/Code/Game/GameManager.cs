@@ -33,15 +33,15 @@ namespace TowerSurvivors.Game
         [Header("Game state")]
         public static bool isPaused = false;
         public static bool isSuperPaused = false; //When super paused, the player can't unpause. eg: when the level up menu shows
+        public static bool gameEnding = false;
 
         [Header("Game Stats")]
-        public static float secondsPassed = 0;
-        private static int _enemiesKilled = 0;
-        public static int structuresUpgraded = 0;
+        public float secondsPassed = 0;
+        private int _enemiesKilled = 0;
+        public int structuresUpgraded = 0;
 
         public UnityEvent<bool> e_Paused;
         public UnityEvent<int> e_KillCountUpdated;
-
 
         void Awake()
         {
@@ -95,6 +95,15 @@ namespace TowerSurvivors.Game
         private void FixedUpdate()
         {
             secondsPassed += Time.fixedDeltaTime;
+
+            if (!gameEnding)
+            {
+                //If 30 minutes have passed
+                if(secondsPassed > 1800)
+                {
+                    EnemySpawner.Instance.KillAllEnemies();
+                }
+            }
         }
 
         public void LevelUp()
