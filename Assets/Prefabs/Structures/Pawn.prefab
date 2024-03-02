@@ -162,7 +162,7 @@ MonoBehaviour:
   _outline: {fileID: 5221503820904514334}
   _rangeOutline: {fileID: 5221503820318319145}
   prefab: {fileID: 8601420130348372944, guid: 6c976ff079ed7464f97fa55b7a2ef0dc, type: 3}
-  firingSound: {fileID: 11400000, guid: f5da249cd23bf62409a44c9269ee0f72, type: 2}
+  firingSound: {fileID: 11400000, guid: c3b08a113fbd2fb4ab3e026b6eb129e2, type: 2}
   _collider: {fileID: 5221503819465962218}
   canAttack: 0
   targetObject: {fileID: 0}

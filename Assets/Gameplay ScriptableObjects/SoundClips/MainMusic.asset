@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MainMusic
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 69562df94dc247b4e8594426f8eef516, type: 3}
-  volume: 1
+  volume: 0.75
   pitch: 1
   varyPitch: 0
   minPitch: -1
