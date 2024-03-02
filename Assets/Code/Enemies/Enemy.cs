@@ -44,6 +44,7 @@ namespace TowerSurvivors.Enemies
         public bool isInvincible = false;
 
         [Header("Attack")]
+        Vector2 targetPosition = new Vector2();
         public float speed = 1f;
         public float damage = 10f;
         public float attackCooldown = 1f;
@@ -110,10 +111,11 @@ namespace TowerSurvivors.Enemies
             }
 
 
-            Vector3 targetPosition = Player.Instance.transform.position;
+            targetPosition.x = Player.Instance.transform.position.x;
+            targetPosition.y = Player.Instance.transform.position.y;
 
             //Calculate the direction to move towards
-            Vector2 moveDirection = (targetPosition - transform.position).normalized;
+            Vector2 moveDirection = (targetPosition - new Vector2(transform.position.x, transform.position.y)).normalized;
 
             //Apply force to the Rigidbody
             _rb.velocity = new Vector2(moveDirection.x * speed * Time.fixedDeltaTime, moveDirection.y * speed * Time.fixedDeltaTime);

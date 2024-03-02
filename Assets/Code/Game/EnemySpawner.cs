@@ -63,11 +63,9 @@ namespace TowerSurvivors.Game
         private float currentCooldown;
         //[SerializeField]
         //private float timeTilNextWave = 0;
-        public Vector2 currentMin;
-        public Vector2 currentMax;
-        public Vector2 targetMin;
-        public Vector2 targetMax;
 
+        public float currentRadius;
+        public float targetRadius;
 
         private void Start()
         {
@@ -77,6 +75,7 @@ namespace TowerSurvivors.Game
             currentWavePairs = ClonePairs(currentWave);
         }
 
+        //Copies the wave pairs by value, not reference
         private List<WavePair> ClonePairs(EnemyWaveSO wave)
         {
             List<WavePair> list = new List<WavePair>();
@@ -117,7 +116,7 @@ namespace TowerSurvivors.Game
                 //If it just reaches the end of the current wave
                 currentWave = waves[currentWaveIndex];
                 currentCooldown = currentWave.cooldown;
-                currentWavePairs = currentWavePairs = ClonePairs(currentWave);
+                currentWavePairs = ClonePairs(currentWave);
             }
 
             if (currentCooldown <= 0)
@@ -131,17 +130,8 @@ namespace TowerSurvivors.Game
 
         private void UpdateBoundaries()
         {
-            if (targetMin.x <= currentMin.x)
-                currentMin.x--;
-
-            if (targetMin.y <= currentMin.y)
-                currentMin.y--;
-
-            if (targetMax.x > currentMax.x)
-                currentMax.x++;
-
-            if (targetMax.y > currentMax.y)
-                currentMax.y++;
+            if (currentRadius < targetRadius)
+                currentRadius++;
         }
 
         private void SpawnEnemies()
@@ -219,34 +209,15 @@ namespace TowerSurvivors.Game
             }
         }
 
+        //Gets a random position along the circumference of the spawning range
         private Vector3 GetRandomPosition()
         {
-            int random = Random.Range(1, 5);
-            float x = 0;
-            float y = 0;
-            switch (random)
-            {
-                case 1:
-                    //Bottom
-                    x = Random.Range(currentMin.x, currentMax.x);
-                    y = currentMin.y;
-                    break;
-                case 2:
-                    //Top
-                    x = Random.Range(currentMin.x, currentMax.x);
-                    y = currentMax.y;
-                    break;
-                case 3:
-                    //Left
-                    x = currentMin.x;
-                    y = Random.Range(currentMin.y, currentMax.y);
-                    break;
-                case 4:
-                    //Right
-                    x = currentMax.x;
-                    y = Random.Range(currentMin.y, currentMax.y);
-                    break;
-            }
+            //Generate a random angle in radians
+            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
+
+            //Calculate the x and y coordinates using trigonometry
+            float x = currentRadius * Mathf.Cos(randomAngle);
+            float y = currentRadius * Mathf.Sin(randomAngle);
 
             return new(transform.position.x + x, transform.position.y + y, y);
         }
@@ -270,23 +241,13 @@ namespace TowerSurvivors.Game
         }
         private void OnDrawGizmosSelected()
         {
+            //Draws the current radius
             Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, currentRadius);
 
-            // Calculate the center and size of the box
-            Vector3 center = new Vector3(transform.position.x +((currentMax.x + currentMin.x) / 2f), transform.position.y + ((currentMax.y + currentMin.y) / 2f), 0f);
-            Vector3 size = new Vector3(currentMax.x - currentMin.x, currentMax.y - currentMin.y, 0f);
-
-            // Draw the wireframe box
-            Gizmos.DrawWireCube(center, size);
-
+            //Draws target radius
             Gizmos.color = Color.red;
-
-            // Calculate the center and size of the box
-            Vector3 centerr = new Vector3(transform.position.x + ((targetMax.x + targetMin.x) / 2f), transform.position.y + ((targetMax.y + targetMin.y) / 2f), 0f);
-            Vector3 sizee = new Vector3(targetMax.x - targetMin.x, targetMax.y - targetMin.y, 0f);
-
-            // Draw the wireframe box
-            Gizmos.DrawWireCube(centerr, sizee);
+            Gizmos.DrawWireSphere(transform.position, targetRadius);
         }
 
         public static string FormatTime(float timeInSeconds)
