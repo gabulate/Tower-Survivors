@@ -79,7 +79,7 @@ namespace TowerSurvivors.Game
                     //    }
                     //}
                 }
-                else
+                else //If item is Passive
                 {
                     PassiveItem pi = PassiveItemManager.Instance.GetFromInventory(availableItems[i] as PassiveItemSO);
                     //If the passive item is already maxed, remove it from the available items
@@ -87,9 +87,16 @@ namespace TowerSurvivors.Game
                     {
                         availableItems.RemoveAt(i);
                     }
-                    else if (!Player.Inventory.AvailablePassiveItemSlot())
+                    else if (!Player.Inventory.AvailablePassiveItemSlot()) //If there are no more available item slots
                     {
-                        availableItems.RemoveAt(i);
+                        PassiveItem[] pis = PassiveItemManager.Instance.GetPassives();
+                        PassiveItem item = pis.Where(x => x.item.itemNameKey == availableItems[i].itemNameKey).FirstOrDefault();
+
+                        //Removes the available item if the player doesn't have it
+                        if (!item)
+                        {
+                            availableItems.RemoveAt(i);
+                        }
                     }
                 }
             }

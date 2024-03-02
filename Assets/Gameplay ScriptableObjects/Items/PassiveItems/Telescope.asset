@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: TELESCOPE_DSC
   icon: {fileID: 21300000, guid: 56c571e1b00495a428d1995f1c7f44c3, type: 3}
   prefab: {fileID: 7857037618160338902, guid: 9eeb67d7aa307304b8e02bec4a046817, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - EffectIntensityByLevel: 0.8
     upgradeDescriptions:

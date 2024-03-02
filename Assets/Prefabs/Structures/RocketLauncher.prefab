@@ -225,7 +225,7 @@ Transform:
   m_GameObject: {fileID: 7503279578009294301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.05}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7503279579113215042}
@@ -361,7 +361,7 @@ MonoBehaviour:
   canAttack: 0
   targetObject: {fileID: 0}
   targetEnemy: {fileID: 0}
-  _margin: 1.2
+  _margin: 2
   uniqueOrientation: 1
   _orientation: 0
   level: 1

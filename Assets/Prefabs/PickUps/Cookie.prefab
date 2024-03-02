@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa841a863d94434eaf0f940c5dc2b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpSound: {fileID: 11400000, guid: f7345e9d4050d8f43a57dc50fcbcf6bd, type: 2}
+  pickUpSound: {fileID: 11400000, guid: 7855349bce3bb484788ffd8524009bd4, type: 2}
   _sprite: {fileID: 4938628435361284171}
   _healAmount: 40
 --- !u!58 &4938628435361284169

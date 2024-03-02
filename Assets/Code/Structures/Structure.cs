@@ -263,15 +263,15 @@ namespace TowerSurvivors.Structures
             switch (_orientation)
             {
                 case Orientation.UP:
-                    _orientation = Orientation.LEFT;
-                    break;
-                case Orientation.LEFT:
-                    _orientation = Orientation.DOWN;
-                    break;
-                case Orientation.DOWN:
                     _orientation = Orientation.RIGHT;
                     break;
                 case Orientation.RIGHT:
+                    _orientation = Orientation.DOWN;
+                    break;
+                case Orientation.DOWN:
+                    _orientation = Orientation.LEFT;
+                    break;
+                case Orientation.LEFT:
                     _orientation = Orientation.UP;
                     break;
             }

@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: LUBRICATOR_DSC
   icon: {fileID: 21300000, guid: 633f95426d5470647b77e155bf94bfa7, type: 3}
   prefab: {fileID: 4563857001597381553, guid: cc58f8bb09206964cb06857ce5e038b9, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - EffectIntensityByLevel: 0.1
     upgradeDescriptions:

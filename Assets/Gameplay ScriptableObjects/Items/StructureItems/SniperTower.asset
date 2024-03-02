@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: SNIPER_DSC
   icon: {fileID: 21300000, guid: 7b2c84307a8f4da4087c74f28eca77a2, type: 3}
   prefab: {fileID: 5225501810248713695, guid: 2beeb3ad9a6993e45974173eabb3e216, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - neededLevel: 1
     upgradeDescriptions: []
@@ -34,7 +34,7 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_RANGE
       value: 4
-    range: 12
+    range: 10
     damage: 30
     attackCooldown: 5
     currentCooldown: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
       value: 10
     - descriptionKey: UPG_COOLDOWN1
       value: '-'
-    range: 12
+    range: 10
     damage: 40
     attackCooldown: 4
     currentCooldown: 0
@@ -63,9 +63,9 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
-      value: 20
-    range: 12
-    damage: 60
+      value: 10
+    range: 10
+    damage: 50
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1
@@ -79,9 +79,9 @@ MonoBehaviour:
     - descriptionKey: UPG_RANGE
       value: 4
     - descriptionKey: UPG_DAMAGE
-      value: 20
+      value: 10
     range: 12
-    damage: 80
+    damage: 60
     attackCooldown: 4
     currentCooldown: 0
     areaSize: 1

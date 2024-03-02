@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: OVERCLOCKER_DSC
   icon: {fileID: 21300000, guid: d825578c298728b41be15841a0a0bdf7, type: 3}
   prefab: {fileID: 8527654739395879988, guid: 8e26d2d2435f92d479fb0958d007a1b5, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - EffectIntensityByLevel: 0.1
     upgradeDescriptions:

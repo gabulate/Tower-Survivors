@@ -16,9 +16,13 @@ MonoBehaviour:
   descriptionKey: RUNNINGSHOES_DSC
   icon: {fileID: 21300000, guid: e21aceb6564eb7d43857ee863d33de73, type: 3}
   prefab: {fileID: 7525519681447280785, guid: b59115dc815458840b2e776ec9d802bb, type: 3}
-  probability: 5
+  probability: 10
   levels:
-  - EffectIntensityByLevel: 0.3
+  - EffectIntensityByLevel: 0.2
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
+  - EffectIntensityByLevel: 0.4
     upgradeDescriptions:
     - descriptionKey: UPG_MOVESPEED
       value: 
@@ -26,7 +30,11 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_MOVESPEED
       value: 
-  - EffectIntensityByLevel: 0.9
+  - EffectIntensityByLevel: 0.8
+    upgradeDescriptions:
+    - descriptionKey: UPG_MOVESPEED
+      value: 
+  - EffectIntensityByLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_MOVESPEED
       value: 
@@ -35,10 +43,6 @@ MonoBehaviour:
     - descriptionKey: UPG_MOVESPEED
       value: 
   - EffectIntensityByLevel: 1.5
-    upgradeDescriptions:
-    - descriptionKey: UPG_MOVESPEED
-      value: 
-  - EffectIntensityByLevel: 2
     upgradeDescriptions:
     - descriptionKey: UPG_MOVESPEED
       value: 

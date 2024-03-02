@@ -16,14 +16,14 @@ MonoBehaviour:
   descriptionKey: BARBEDWIRE_DSC
   icon: {fileID: 21300000, guid: ee64e0b922f4953468136112cfaa3b7b, type: 3}
   prefab: {fileID: 604028874436790860, guid: 499b1bb5c9347fe43aabe06e185d23df, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: '-'
       value: '-'
     range: 0
-    damage: 3
+    damage: 4
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1
@@ -37,7 +37,7 @@ MonoBehaviour:
     - descriptionKey: UPG_SIZEOWN
       value: 20
     range: 0
-    damage: 3
+    damage: 4
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1.2
@@ -53,7 +53,7 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 1
     range: 0
-    damage: 4
+    damage: 5
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1.4
@@ -69,7 +69,7 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 1
     range: 0
-    damage: 5
+    damage: 6
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1.6
@@ -85,7 +85,7 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 1
     range: 0
-    damage: 6
+    damage: 7
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1.8
@@ -101,7 +101,21 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 1
     range: 0
-    damage: 7
+    damage: 8
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 2
+    projectileSpeed: 0
+    duration: 0
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_DAMAGE
+      value: 2
+    range: 0
+    damage: 10
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 2

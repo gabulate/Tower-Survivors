@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: GUNPOWDER_DSC
   icon: {fileID: 21300000, guid: af41af7fd8274a44186238e5bfc63eba, type: 3}
   prefab: {fileID: 9217034621762588562, guid: b448abf706486844c851bd8cd8629e5c, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - EffectIntensityByLevel: 0.1
     upgradeDescriptions:

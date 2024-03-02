@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: SCOPE_DSC
   icon: {fileID: 21300000, guid: c05cb7f5e86f5b043b1afc3002b4497f, type: 3}
   prefab: {fileID: 4006511037633329594, guid: 3f6fdd9645d0e9f43b9f0ef3b9d180b5, type: 3}
-  probability: 5
+  probability: 10
   levels:
   - EffectIntensityByLevel: 0.1
     upgradeDescriptions:

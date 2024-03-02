@@ -245,7 +245,7 @@ MonoBehaviour:
   _timeAlive: 0
   ChanceToDropXp: 0.4
   Xp: 10
-  HP: 80
+  HP: 51
   invulnerableTime: 0.2
   isInvincible: 0
   speed: 50

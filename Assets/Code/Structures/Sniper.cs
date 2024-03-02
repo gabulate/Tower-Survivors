@@ -1,6 +1,7 @@
 using System.Collections;
 using TowerSurvivors.Audio;
 using TowerSurvivors.Enemies;
+using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Projectiles;
 using UnityEngine;
 
@@ -29,7 +30,7 @@ namespace TowerSurvivors.Structures
         {
             if (targetEnemy == null || !targetEnemy.isAlive)
             {
-                if (!GetRandomTarget())
+                if (!GetClosestTargetToPlayer())
                 {
                     return;
                 }
@@ -60,7 +61,7 @@ namespace TowerSurvivors.Structures
 
             if (targetEnemy == null || !targetEnemy.isAlive)
             {
-                if(GetRandomTarget())
+                if(GetClosestTargetToPlayer())
                     _targetPos = targetEnemy.transform.position;
             }
 
@@ -98,6 +99,35 @@ namespace TowerSurvivors.Structures
 
             targetEnemy = targetTransform.GetComponent<Enemy>();
 
+            return true;
+        }
+
+        protected bool GetClosestTargetToPlayer()
+        {
+            //GET THE CLOSEST TARGET WITHIN RANGE/////////////////////////
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, stats.range, _enemyLayer);
+
+            //If didn't find any targets, return
+            if (hits.Length == 0)
+                return false;
+
+
+            float closestDistance = float.MaxValue;
+
+            foreach (Collider2D col in hits)
+            {
+                Transform targetTransform = col.transform;
+
+                //Calculate the distance between the current target and the current position.
+                float distanceToTarget = Vector2.Distance(Player.Instance.transform.position, targetTransform.position);
+
+                //Check if the current target is closer than the previous closest target.
+                if (distanceToTarget < closestDistance)
+                {
+                    targetEnemy = targetTransform.GetComponent<Enemy>();
+                    closestDistance = distanceToTarget;
+                }
+            }
             return true;
         }
 

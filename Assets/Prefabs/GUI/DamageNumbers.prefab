@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolLenght: 1
   Expandable: 1
-  maximumNumbers: 20
+  maximumNumbers: 30
   _prefab: {fileID: 4807225389175444579, guid: 64fe3b7046d4a974d9b533bff795b5d0, type: 3}
-  _pooledSounds: []
+  _pooledNumbers: []

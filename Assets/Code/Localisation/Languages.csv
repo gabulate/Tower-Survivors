@@ -63,6 +63,8 @@ BARBEDWIRE_NAME,Barbed Wire,Alambre de púas
 BARBEDWIRE_DSC,Damages enemies that touch it.,Hace daño a los enemigos que lo toquen.
 ROCKETLAUNCHER_NAME,Rocket launcher,Lanza cohetes
 ROCKETLAUNCHER_DSC,Rockets explode upon impact!,¡Lanza cohetes que explotan al impactar!
+PAWN_NAME,Pawn,Peón
+PAWN_DSC,Fires in a straight line. Right click to rotate.,Dispara en línea recta. Click derecho para girar.
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo
@@ -103,3 +105,4 @@ UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos
 UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
 UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 projectil más.
 UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.
+UPG_QUEEN,Pawn converts into a Queen.,El peón se convierte en Reina.
