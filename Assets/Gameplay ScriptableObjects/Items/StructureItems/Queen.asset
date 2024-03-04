@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNameKey: QUEEN_NAME
   descriptionKey: QUEEN_DSC
-  icon: {fileID: 480662484, guid: c84ecedb2b1453542b539a146a1649c5, type: 3}
-  prefab: {fileID: 0}
-  probability: 5
+  icon: {fileID: 21300000, guid: db7d303134a2f034cb151750cdafeaa9, type: 3}
+  prefab: {fileID: 58273163441926454, guid: 7424e7995363f5c49a3e4b07bc0150fd, type: 3}
+  probability: 0.0001
   levels:
   - neededLevel: 1
     upgradeDescriptions:
@@ -29,6 +29,6 @@ MonoBehaviour:
     areaSize: 1
     projectileSpeed: 6
     duration: 1
-    projectileAmnt: 2
+    projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 2

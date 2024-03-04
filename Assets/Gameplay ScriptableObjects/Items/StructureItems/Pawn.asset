@@ -91,7 +91,7 @@ MonoBehaviour:
     areaSize: 1
     projectileSpeed: 6
     duration: 1
-    projectileAmnt: 2
+    projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 2
   - neededLevel: 1
@@ -105,6 +105,6 @@ MonoBehaviour:
     areaSize: 1
     projectileSpeed: 6
     duration: 1
-    projectileAmnt: 2
+    projectileAmnt: 1
     timeBetweenMultipleShots: 0.1
     passThroughAmnt: 2
