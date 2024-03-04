@@ -181,7 +181,7 @@ MonoBehaviour:
   _structureSelected: {fileID: 0}
   _hoveredStructure: {fileID: 0}
   mousePosition: {x: 0, y: 0, z: 0}
-  _mouseHoverRange: 0.1
+  _mouseHoverRange: 0.15
 --- !u!50 &6018600358319625441
 Rigidbody2D:
   serializedVersion: 4

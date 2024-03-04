@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35eca5ebc2bc2354097fae25a0d95c2b, type: 3}
+  m_Name: Queen
+  m_EditorClassIdentifier: 
+  itemNameKey: QUEEN_NAME
+  descriptionKey: QUEEN_DSC
+  icon: {fileID: 480662484, guid: c84ecedb2b1453542b539a146a1649c5, type: 3}
+  prefab: {fileID: 0}
+  probability: 5
+  levels:
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: First
+      value: 1
+    range: 1
+    damage: 20
+    attackCooldown: 1
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 6
+    duration: 1
+    projectileAmnt: 2
+    timeBetweenMultipleShots: 0.1
+    passThroughAmnt: 2

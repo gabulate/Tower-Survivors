@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Audio;
+using TowerSurvivors.Game;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Projectiles;
+using TowerSurvivors.VFX;
 using UnityEngine;
 
 namespace TowerSurvivors.Structures
 {
     public class Pawn : Structure
     {
+        [SerializeField]
+        private GameObject _queenPrefab;
         [SerializeField]
         private Vector2 _direction = Vector2.right;
         [SerializeField]
@@ -50,11 +54,24 @@ namespace TowerSurvivors.Structures
             //Sets the corresponding attributes to the projectile
             e.GetComponent<BasicProjectile>().SetAttributes(stats, _direction);
 
-            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
-
             //Play firing animation and firing sound
             _animator.SetTrigger("fire");
             AudioPlayer.Instance.PlaySFX(firingSound, transform.position);
+        }
+
+        public override bool Upgrade(Structure selectedStructure)
+        {
+            bool ret = base.Upgrade(selectedStructure);
+
+            //If it reached the maximum level, transform into a queen
+            if (isMaxed)
+            {
+                Structure queen = Instantiate(_queenPrefab, transform.position, Quaternion.identity).GetComponent<Structure>();
+
+                StructureManager.Instance.ReplaceStructure(this, queen);
+                return true;
+            }
+           return ret;
         }
 
         public override void UpdateOrientation()

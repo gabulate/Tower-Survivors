@@ -65,6 +65,8 @@ ROCKETLAUNCHER_NAME,Rocket launcher,Lanza cohetes
 ROCKETLAUNCHER_DSC,Rockets explode upon impact!,¡Lanza cohetes que explotan al impactar!
 PAWN_NAME,Pawn,Peón
 PAWN_DSC,Fires in a straight line. Right click to rotate.,Dispara en línea recta. Click derecho para girar.
+QUEEN_NAME,Queen,Reina
+QUEEN_DSC,Fires in all directions.,Dispara en todas las direcciones.
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo

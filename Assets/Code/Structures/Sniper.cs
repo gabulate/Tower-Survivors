@@ -75,8 +75,6 @@ namespace TowerSurvivors.Structures
             //Sets the corresponding attributes to the projectile
             e.GetComponent<SniperBullet>().SetAttributes(stats, direction);
 
-            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
-
             //Play firing animation and firing sound
             _animator.ResetTrigger("fire");
             _animator.SetTrigger("fire");

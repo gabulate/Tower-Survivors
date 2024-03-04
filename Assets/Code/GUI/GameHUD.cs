@@ -49,7 +49,6 @@ namespace TowerSurvivors.GUI
         public void UpdateStructureQty(int current, int max)
         {
             structureQtyText.text = current + "/" + max;
-
             if (current == max)
                 structureQtyText.color = Color.red;
             else

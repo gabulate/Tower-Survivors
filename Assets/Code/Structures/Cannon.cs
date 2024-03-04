@@ -68,8 +68,6 @@ namespace TowerSurvivors.Structures
             //Sets the corresponding attributes to the projectile
             e.GetComponent<BasicProjectile>().SetAttributes(stats, direction);
 
-            e.transform.localScale = new Vector3(stats.areaSize, stats.areaSize, 1);
-
             //Play firing animation and firing sound
             _animator.SetTrigger("fire");
             AudioPlayer.Instance.PlaySFX(firingSound, transform.position);

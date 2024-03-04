@@ -42,7 +42,7 @@ namespace TowerSurvivors.Projectiles
             this.damage = stats.damage;
             this.passThrough = stats.passThroughAmnt;
             this.speed = stats.projectileSpeed;
-            this.direction = direction;
+            this.direction = direction.normalized;
             this.duration = stats.duration;
             _timeLeft = stats.duration;
             transform.localScale = new Vector3(stats.areaSize, stats.areaSize, stats.areaSize);

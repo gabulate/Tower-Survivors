@@ -183,6 +183,7 @@ MonoBehaviour:
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 0
+  _queenPrefab: {fileID: 58273163441926454, guid: 7424e7995363f5c49a3e4b07bc0150fd, type: 3}
   _direction: {x: 1, y: 0}
   _arrow: {fileID: 5221503819964132308}
   _mouseUI: {fileID: 5221503819926529381}

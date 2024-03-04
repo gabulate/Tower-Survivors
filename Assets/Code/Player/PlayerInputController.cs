@@ -132,7 +132,6 @@ namespace TowerSurvivors.PlayerScripts
             Player.Inventory.UseItem();
             _selectedItemGO = null;
             _structureSelected = null;
-            Player.Instance.ApplyBuffs();
         }
 
         /// <summary>

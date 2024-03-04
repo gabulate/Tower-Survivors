@@ -36,12 +36,29 @@ namespace TowerSurvivors.Game
 
             structure.transform.parent = placedStructres;
             structure.transform.position = new Vector3(structure.transform.position.x, structure.transform.position.y, structure.transform.position.y);
+            structure.ApplyBuffs(Player.Instance.stats);
             structure.EnableStructure(true);
             structure.OutLine(false);
 
             AudioPlayer.Instance.PlaySFX(placeSound, structure.transform.position);
 
             e_StAmntChanged.Invoke(structures.Length + 1, MaximumStructures);
+        }
+
+        public void ReplaceStructure(Structure original, Structure replacement)
+        {
+            replacement.transform.parent = placedStructres;
+            replacement.transform.position = original.transform.position;
+            replacement.EnableStructure(true);
+
+            original.transform.parent = hiddenStructures;
+            original.EnableStructure(false);
+            original.gameObject.SetActive(false);
+            Destroy(original, 1);
+
+            e_StAmntChanged.Invoke(structures.Length, MaximumStructures);
+            replacement.ApplyBuffs(Player.Instance.stats);
+            structures = placedStructres.GetComponentsInChildren<Structure>();
         }
 
         public Structure[] GetStructures()
