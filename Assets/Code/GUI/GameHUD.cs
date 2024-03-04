@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using TowerSurvivors.Game;
+using TowerSurvivors.Localisation;
 using TowerSurvivors.PlayerScripts;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -26,6 +27,7 @@ namespace TowerSurvivors.GUI
             StructureManager.Instance.e_StAmntChanged.AddListener(UpdateStructureQty);
             GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
             UpdateStructureQty(0, StructureManager.Instance.initialMaximumStructures);
+            UpdateLevel(1);
         }
 
         private void LateUpdate()
@@ -83,7 +85,7 @@ namespace TowerSurvivors.GUI
 
         public void UpdateLevel(int level)
         {
-            levelText.text = "Level " + level;
+            levelText.text = Language.Get("CURRENTLEVEL") +" " + level;
         }
 
         public void UpdateHealth(float current, float max)

@@ -111,6 +111,7 @@ namespace TowerSurvivors.PlayerScripts
                 //If upgraded succesfully
                 
                 _hoveredStructure.OutLine(false);
+                _hoveredStructure.ApplyBuffs(Player.Instance.stats);
                 StructureManager.Instance.UnhighlightAll();
                 AssetsHolder.Instance.HUD.HideUpBox();
                 Destroy(_selectedItemGO);

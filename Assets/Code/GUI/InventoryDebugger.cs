@@ -12,7 +12,7 @@ namespace TowerSurvivors.GUI
     {
         public TMP_Dropdown dropdown;
         public ItemListSO items;
-        private List<string> _options;
+        private List<TMP_Dropdown.OptionData> _options;
         [SerializeField]
         private string _itemName;
         private bool _active = false;
@@ -20,14 +20,19 @@ namespace TowerSurvivors.GUI
         void Start()
         {
             items = AssetsHolder.Instance.itemList;
-            _options = new List<string>();
+            _options = new List<TMP_Dropdown.OptionData>();
             for (int i = 0; i < items.itemList.Count; i++)
             {
-                _options.Add(items.itemList[i].itemNameKey);
+                TMP_Dropdown.OptionData option = new (
+                items.itemList[i].itemNameKey,
+                items.itemList[i].icon
+                );
+
+                _options.Add(option);
             }
 
             dropdown.AddOptions(_options);
-            _itemName = _options[0];
+            _itemName = _options[0].text;
 
             _active = false;
 

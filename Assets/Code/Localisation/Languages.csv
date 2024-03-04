@@ -13,7 +13,7 @@ DISPLAY_SETTINGS,Display settings,Visualización
 SOUND_SETTINGS,Volume settings,Sonido
 SFX,Sound effects,Efectos de sonido
 MUSIC,Music,Música
-SELECT_LANGUAGE,Change language (Requires restart):,Cambiar Idioma (Requiere reiniciar):
+SELECT_LANGUAGE,Change language (Requires restart):,Cambiar idioma (Requiere reiniciar):
 DISPLAY_TYPE,Display:,Mostrar como:
 FULLSCREEN,Fullscreen,Pantalla completa
 WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes
@@ -38,6 +38,7 @@ STAT_STRUCTURELIMIT,Structure Limit,Límite de Estructuras
 STAT_HEALTHREGEN,Health Regeneration,Regeneración de Vida
 UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
 LEVELUP,Level Up!,Subiste de nivel!
+CURRENTLEVEL,Level,Nivel
 LEVEL,Needed:,Se necesita:
 MAXLEVEL,Max level: {0}.,{0} a máximo nivel.
 MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
