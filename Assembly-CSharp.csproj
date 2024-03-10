@@ -86,6 +86,7 @@
     <Compile Include="Assets\Code\ScriptableObjects\StructureItemSO.cs" />
     <Compile Include="Assets\Code\PickUps\PickUp.cs" />
     <Compile Include="Assets\Code\Structures\Pawn.cs" />
+    <Compile Include="Assets\Code\Structures\Queen.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumber.cs" />
     <Compile Include="Assets\Code\Game\EnemySpawner.cs" />
     <Compile Include="Assets\Code\PassiveItems\Lubricator.cs" />
@@ -123,7 +124,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Structures\Queen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

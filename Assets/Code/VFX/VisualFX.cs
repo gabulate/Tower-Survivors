@@ -8,11 +8,17 @@ namespace TowerSurvivors.VFX
     {
         [SerializeField]
         private Animator _animator;
-
+        [SerializeField]
+        private SpriteRenderer _sprite;
         public void PlayEffect()
         {
             _animator.SetTrigger("play");
             Destroy(gameObject, 2);
+        }
+
+        public void ChangeColor(Color color)
+        {
+            _sprite.color = color;
         }
     }
 }

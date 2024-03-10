@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TowerSurvivors.PickUps;
 using TowerSurvivors.PlayerScripts;
+using TowerSurvivors.VFX;
 using UnityEngine;
 
 namespace TowerSurvivors.Game
@@ -66,15 +67,27 @@ namespace TowerSurvivors.Game
 
             if (activeXpPickUps.Count > 0)
             {
+                //get a random active xp object to use its position
                 int randomIndex = UnityEngine.Random.Range(0, activeXpPickUps.Count);
                 randomXP = activeXpPickUps[randomIndex];
             }
 
             int totalXp = randomXP.Xp;
+            //Disable the random xp to avoid hitting it and duplicating xp
             randomXP.gameObject.SetActive(false);
             enabledXpObjects--;
 
             Collider2D[] hits = Physics2D.OverlapCircleAll(randomXP.transform.position, groupRange, _xpLayer);
+            //If didnt get any other xp in range, just return
+            if(hits.Length == 0)
+            {
+                randomXP.gameObject.SetActive(true);
+                enabledXpObjects++;
+                return;
+            }
+
+            //If there are xp objects in range
+            //Sum the total xp from all the objects hit and disable them
             for (int i = 0; i < hits.Length; i++)
             {
                 totalXp += hits[i].GetComponent<XpPickUp>().Xp;
@@ -82,6 +95,14 @@ namespace TowerSurvivors.Game
                 enabledXpObjects--;
             }
 
+            //Play visual effect
+            GameObject vfxObject = AssetsHolder.Instance.xpGroupVFX;
+            vfxObject = Instantiate(vfxObject, new(randomXP.transform.position.x, randomXP.transform.position.y, randomXP.transform.position.y - 1), Quaternion.identity);
+            VisualFX vfx = vfxObject.GetComponent<VisualFX>();
+            vfx.ChangeColor(getXpColor(totalXp));
+            vfx.PlayEffect();
+
+            //Spawn a new xp object with the total xp
             SpawnXp(totalXp, randomXP.transform.position);
         }
 
@@ -106,6 +127,22 @@ namespace TowerSurvivors.Game
             }
 
             return null;
+        }
+
+        private Color getXpColor(float xp)
+        {
+            if (xp == 1)
+                return new Color(1.0f, 0.12156862745098039f, 0.20392156862745098f); // Red
+            else if (xp <= 4)
+                return new Color(0.2549019607843137f, 0.6941176470588235f, 0.984313725490196f); // Blue
+            else if (xp <= 9)
+                return new Color(1.0f, 0.807843137254902f, 0.0f); // Yellow
+            else if (xp <= 19)
+                return new Color(0.24705882352941178f, 0.9137254901960784f, 0.5529411764705883f); // BlueGreenish
+            else if (xp <= 49)
+                return new Color(1.0f, 0.596078431372549f, 0.0f); // Orange
+            else
+                return new Color(0.6705882352941176f, 0.0f, 1.0f); // Purple
         }
     }
 }

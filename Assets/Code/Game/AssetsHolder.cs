@@ -13,6 +13,7 @@ namespace TowerSurvivors.Game
 
         [Header("VFX Prefabs")]
         public GameObject structureLevelUpVFX;
+        public GameObject xpGroupVFX;
 
         [Header("PickUp Prefabs")]
         public GameObject cookiePrefab;
