@@ -8,4 +8,6 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: XpGroupVFX
   m_Controller: {fileID: 9100000, guid: 87994aadedccd844aa7b8877b3a26178, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0857fc72250e222459427033bc4ba8e0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 25566b8b6fed2d144880ea9eddbbd71c, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: PAWN_DSC
   icon: {fileID: 21300000, guid: ae6f1f487e4a3b44f8dea5184beab18f, type: 3}
   prefab: {fileID: 5221503819465962213, guid: 09c283feb3a6f92429b3175ccaea603d, type: 3}
-  probability: 12
+  probability: 15
   levels:
   - neededLevel: 1
     upgradeDescriptions:
@@ -30,7 +30,7 @@ MonoBehaviour:
     projectileSpeed: 4
     duration: 1
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -44,7 +44,7 @@ MonoBehaviour:
     projectileSpeed: 4
     duration: 0.7
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -60,7 +60,7 @@ MonoBehaviour:
     projectileSpeed: 6
     duration: 0.7
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -76,7 +76,7 @@ MonoBehaviour:
     projectileSpeed: 6
     duration: 1
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
@@ -92,7 +92,7 @@ MonoBehaviour:
     projectileSpeed: 6
     duration: 1
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 2
   - neededLevel: 1
     upgradeDescriptions:
@@ -106,5 +106,5 @@ MonoBehaviour:
     projectileSpeed: 6
     duration: 1
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 2

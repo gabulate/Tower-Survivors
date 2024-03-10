@@ -16,14 +16,14 @@ MonoBehaviour:
   descriptionKey: QUEEN_DSC
   icon: {fileID: 21300000, guid: db7d303134a2f034cb151750cdafeaa9, type: 3}
   prefab: {fileID: 58273163441926454, guid: 7424e7995363f5c49a3e4b07bc0150fd, type: 3}
-  probability: 0.0001
+  probability: 0.001
   levels:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: First
       value: 1
     range: 1
-    damage: 20
+    damage: 25
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1
