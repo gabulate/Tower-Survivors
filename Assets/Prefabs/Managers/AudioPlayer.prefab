@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PoolLenght: 3
   Expandable: 1
-  maximumSounds: 50
+  maximumSounds: 100
   _prefab: {fileID: 931445181226852452, guid: 5619c844c65530a4a8c5c8cfde15c403, type: 3}
   musicObject: {fileID: 3052519660510885056}
   musicTrack: {fileID: 0}

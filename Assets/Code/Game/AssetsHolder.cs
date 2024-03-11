@@ -8,7 +8,7 @@ namespace TowerSurvivors.Game
     public class AssetsHolder : MonoBehaviour
     {
         public static AssetsHolder Instance;
-        public ItemListSO itemList;
+        public ItemListSO itemListSO;
         public GameHUD HUD;
 
         [Header("VFX Prefabs")]

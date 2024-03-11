@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PawnFire
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 004f691945570a6419f22f9d1bc42913, type: 3}
-  volume: 1
+  volume: 0.7
   pitch: 1
   varyPitch: 1
   minPitch: 1.3

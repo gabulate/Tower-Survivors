@@ -27,7 +27,7 @@ MonoBehaviour:
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 6
+    projectileSpeed: 7
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.2

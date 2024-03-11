@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: DUPLICATOR_DSC
   icon: {fileID: 21300000, guid: cb75d0e658720e84f929fb21a03be2fe, type: 3}
   prefab: {fileID: 6521769578782296816, guid: 27698f68dd375b249a89832638d2df15, type: 3}
-  probability: 5
+  probability: 3
   levels:
   - EffectIntensityByLevel: 1
     upgradeDescriptions:

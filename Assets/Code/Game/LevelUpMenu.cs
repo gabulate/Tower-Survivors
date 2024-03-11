@@ -39,7 +39,7 @@ namespace TowerSurvivors.Game
 
         public void LevelUp()
         {
-            ItemListSO items = AssetsHolder.Instance.itemList;
+            ItemListSO items = AssetsHolder.Instance.itemListSO;
 
             selectedItems = GetRandomItems(items.itemList);
 

@@ -18,10 +18,6 @@ MonoBehaviour:
   prefab: {fileID: 7857037618160338902, guid: 9eeb67d7aa307304b8e02bec4a046817, type: 3}
   probability: 10
   levels:
-  - EffectIntensityByLevel: 0.8
-    upgradeDescriptions:
-    - descriptionKey: UPG_VISION
-      value: 
   - EffectIntensityByLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_VISION

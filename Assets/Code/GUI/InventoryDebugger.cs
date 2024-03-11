@@ -19,7 +19,7 @@ namespace TowerSurvivors.GUI
 
         void Start()
         {
-            items = AssetsHolder.Instance.itemList;
+            items = AssetsHolder.Instance.itemListSO;
             _options = new List<TMP_Dropdown.OptionData>();
             for (int i = 0; i < items.itemList.Count; i++)
             {

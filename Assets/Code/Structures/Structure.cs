@@ -95,6 +95,8 @@ namespace TowerSurvivors.Structures
             stats.projectileAmnt = item.levels[level - 1].projectileAmnt + playerStats.ProjectileAmntIncrease;
             stats.passThroughAmnt = item.levels[level - 1].passThroughAmnt;
             stats.timeBetweenMultipleShots = item.levels[level - 1].timeBetweenMultipleShots;
+            _rangeOutline.transform.localScale = Vector3.one * stats.range;
+            _rangeOutline.color = _normalRangeColor;
         }
 
         public virtual void EnableStructure(bool enabled)

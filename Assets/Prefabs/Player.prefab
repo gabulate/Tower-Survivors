@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fddeed37992a7f1479fb15447405e927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomizeItem: 1
   startingItem: {fileID: 11400000, guid: 59c2ce8d05cff134d9dd99fd701c878a, type: 2}
   _level: 1
   _xp: 0
@@ -273,7 +274,7 @@ MonoBehaviour:
   isAlive: 1
   health: 11
   maxHealth: 100
-  invulnerableTime: 0.2
+  invulnerableTime: 0.3
   e_healthChanged:
     m_PersistentCalls:
       m_Calls: []

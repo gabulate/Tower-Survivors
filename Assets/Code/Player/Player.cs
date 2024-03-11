@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using TowerSurvivors.Game;
 using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
@@ -25,6 +27,7 @@ namespace TowerSurvivors.PlayerScripts
 
         #region Player Properties
         [Header("Player Level Properties")]
+        public bool randomizeItem;
         public ItemSO startingItem;
 
         [SerializeField]
@@ -66,7 +69,20 @@ namespace TowerSurvivors.PlayerScripts
 
         private void Start()
         {
-            Inventory.AddItem(startingItem);
+            if (randomizeItem)
+            {
+                //Gets a random structure item
+                List<ItemSO> stItems = AssetsHolder.Instance
+                    .itemListSO.itemList
+                    .Where(x => x.GetType() == typeof(StructureItemSO))
+                    .Where(x => x.itemNameKey != "QUEEN_NAME")
+                    .ToList();
+
+                int randomIndex = Random.Range(0, stItems.Count);
+                Inventory.AddItem(stItems[randomIndex]);
+            } 
+            else
+                Inventory.AddItem(startingItem);
         }
 
         public void ApplyBuffs()
@@ -141,7 +157,11 @@ namespace TowerSurvivors.PlayerScripts
 
             _xp -= XpForNextLevel;
 
-            if (Level < 20)
+            if (Level < 10)
+            {
+                XpForNextLevel += 3;
+            }
+            else if(Level < 20)
             {
                 XpForNextLevel += 5;
             }

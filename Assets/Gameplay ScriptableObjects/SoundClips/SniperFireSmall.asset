@@ -16,6 +16,6 @@ MonoBehaviour:
   volume: 1
   pitch: 1
   varyPitch: 1
-  minPitch: 1
-  maxPitch: 1.5
+  minPitch: 1.5
+  maxPitch: 1.7
   loop: 0
