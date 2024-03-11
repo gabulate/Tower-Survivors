@@ -124,6 +124,8 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
+    <Compile Include="Assets\Code\Structures\DartMonkey.cs" />
+    <Compile Include="Assets\Code\Projectiles\Dart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

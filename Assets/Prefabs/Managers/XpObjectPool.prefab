@@ -48,6 +48,6 @@ MonoBehaviour:
   Expandable: 1
   maximumLenght: 300
   enabledXpObjects: 0
-  groupAfter: 75
+  groupAfter: 125
   groupRange: 1
   _prefab: {fileID: 4408514262936657963, guid: 08935fc5b2a7d5b4891256cb529afcc5, type: 3}

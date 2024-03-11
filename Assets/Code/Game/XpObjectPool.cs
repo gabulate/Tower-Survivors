@@ -99,7 +99,7 @@ namespace TowerSurvivors.Game
             GameObject vfxObject = AssetsHolder.Instance.xpGroupVFX;
             vfxObject = Instantiate(vfxObject, new(randomXP.transform.position.x, randomXP.transform.position.y, randomXP.transform.position.y - 1), Quaternion.identity);
             VisualFX vfx = vfxObject.GetComponent<VisualFX>();
-            vfx.ChangeColor(getXpColor(totalXp));
+            vfx.ChangeColor(GetXpColor(totalXp));
             vfx.PlayEffect();
 
             //Spawn a new xp object with the total xp
@@ -129,7 +129,7 @@ namespace TowerSurvivors.Game
             return null;
         }
 
-        private Color getXpColor(float xp)
+        private Color GetXpColor(float xp)
         {
             if (xp == 1)
                 return new Color(1.0f, 0.12156862745098039f, 0.20392156862745098f); // Red

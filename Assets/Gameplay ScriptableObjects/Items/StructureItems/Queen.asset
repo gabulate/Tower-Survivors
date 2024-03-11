@@ -30,5 +30,5 @@ MonoBehaviour:
     projectileSpeed: 6
     duration: 1
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.1
+    timeBetweenMultipleShots: 0.2
     passThroughAmnt: 2

@@ -18,6 +18,7 @@ namespace TowerSurvivors.Projectiles
         protected Rigidbody2D _rb;
         [SerializeField]
         protected Collider2D _collider;
+        [SerializeField]
         protected bool _enough = false;
 
         protected float _timeLeft;
