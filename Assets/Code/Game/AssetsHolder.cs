@@ -11,6 +11,9 @@ namespace TowerSurvivors.Game
         public ItemListSO itemListSO;
         public GameHUD HUD;
 
+        [Header("Debugging Objects")]
+        public InventoryDebugger inventoryDebugger;
+
         [Header("VFX Prefabs")]
         public GameObject structureLevelUpVFX;
         public GameObject xpGroupVFX;

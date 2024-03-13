@@ -104,6 +104,7 @@
     <Compile Include="Assets\Code\PassiveItems\PassiveItem.cs" />
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
+    <Compile Include="Assets\Code\Projectiles\Dart.cs" />
     <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
     <Compile Include="Assets\Code\PassiveItems\Scope.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
+    <Compile Include="Assets\Code\Structures\DartMonkey.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
     <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
     <Compile Include="Assets\Code\Game\GameStats.cs" />
@@ -124,8 +126,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Structures\DartMonkey.cs" />
-    <Compile Include="Assets\Code\Projectiles\Dart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

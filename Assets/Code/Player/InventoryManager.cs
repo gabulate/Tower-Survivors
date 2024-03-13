@@ -53,6 +53,7 @@ namespace TowerSurvivors.PlayerScripts
 
             item.HighLight();
             selectedItem = item;
+            StructureManager.Instance.UnhighlightAll();
             StructureManager.Instance.HighLigthTypeOf(selectedItem.itemInstance.GetComponent<Structure>());
         }
 

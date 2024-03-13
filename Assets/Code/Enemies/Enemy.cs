@@ -138,7 +138,9 @@ namespace TowerSurvivors.Enemies
         /// Checks if its invincible and subtracts the amount of damage given or ignores it correspondigly.
         /// </summary>
         /// <param name="damage">Amount of damage to be taken by the enemy</param>
-        public void TakeDamage(float damage)
+        /// <param name="countIfKilled">If the enemy is killed, its added to the kill count. 
+        /// True by default, only false in special cases.</param>
+        public void TakeDamage(float damage, bool countIfKilled = true)
         {
             if (isInvincible)
             {
@@ -159,7 +161,7 @@ namespace TowerSurvivors.Enemies
 
             if (HP <= 0)
             {
-                Die();
+                Die(countIfKilled);
             }
         }
 
@@ -189,15 +191,19 @@ namespace TowerSurvivors.Enemies
         /// <summary>
         /// Dies! :(
         /// </summary>
-        public void Die()
+        public void Die(bool addToKillCount)
         {
             isAlive = false;
-            GameManager.Instance.AddToKillCount(1);
+
+            if(addToKillCount)
+                GameManager.Instance.AddToKillCount(1);
+
             DropXp();
             EnemySpawner.Instance.currentEnemies--;
             DestroyAnim();
         }
 
+        //Kills the enemy without adding it to the kill count
         /// <summary>
         /// Decides to drop xp or not based on RNG.
         /// Gets the xp Object from a pool.

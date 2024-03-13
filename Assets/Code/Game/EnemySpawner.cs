@@ -203,7 +203,7 @@ namespace TowerSurvivors.Game
                 if(e && e.isAlive)
                 {
                     e.ChanceToDropXp = 0;
-                    e.TakeDamage(99999);
+                    e.TakeDamage(99999, false);
                     yield return new WaitForSeconds(0.01f);
                 }
             }

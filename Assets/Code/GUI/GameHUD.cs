@@ -128,10 +128,20 @@ namespace TowerSurvivors.GUI
             Player.Inventory.SelectItem(index);
         }
 
+        public void OnEnable()
+        {
+            Player.Instance.e_xpChanged.AddListener(UpdateXpBar);
+            Player.Instance.e_leveledUp.AddListener(UpdateLevel);
+            Player.Health.e_healthChanged.AddListener(UpdateHealth);
+            StructureManager.Instance.e_StAmntChanged.AddListener(UpdateStructureQty);
+        }
+
         public void OnDisable()
         {
             Player.Instance.e_xpChanged.RemoveListener(UpdateXpBar);
             Player.Health.e_healthChanged.RemoveListener(UpdateHealth);
+            Player.Health.e_healthChanged.RemoveListener(UpdateHealth);
+            StructureManager.Instance.e_StAmntChanged.RemoveListener(UpdateStructureQty);
         }
     }
 }

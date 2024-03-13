@@ -29,6 +29,8 @@ namespace TowerSurvivors.Game
         [Header("Game config")]
         [SerializeField]
         private bool _randomizeSpawn = true;
+        [SerializeField]
+        private bool _developerMode = false;
 
         [Header("Game state")]
         public static bool isPaused = false;
@@ -49,6 +51,30 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+        }
+
+        private void Update()
+        {
+            if (!_developerMode)
+                return;
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                AssetsHolder.Instance.inventoryDebugger.Toggle();
+            }
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                AssetsHolder.Instance.HUD.gameObject.SetActive(
+                    !AssetsHolder.Instance.HUD.gameObject.activeSelf);
+            }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                EnemySpawner.Instance.KillAllEnemies();
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                EnemySpawner.Instance.activeSpawning = true;
+            }
         }
 
         public void AddToKillCount(int amount)

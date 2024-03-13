@@ -44,18 +44,15 @@ namespace TowerSurvivors.GUI
             }
         }
 
-        private void Update()
+        public void Toggle()
         {
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                _active = !_active;
+            _active = !_active;
 
-                GetComponent<Image>().enabled = _active;
-                for (int i = 0; i < transform.childCount; i++)
-                {
-                    Transform child = transform.GetChild(i);
-                    child.gameObject.SetActive(_active);
-                }
+            GetComponent<Image>().enabled = _active;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                Transform child = transform.GetChild(i);
+                child.gameObject.SetActive(_active);
             }
         }
 
