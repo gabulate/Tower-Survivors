@@ -67,6 +67,7 @@
     <Compile Include="Assets\Code\GUI\GameHUD.cs" />
     <Compile Include="Assets\Code\GUI\LevelUpOption.cs" />
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
+    <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
     <Compile Include="Assets\Code\PassiveItems\Duplicator.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Code\Projectiles\BasicProjectile.cs" />
     <Compile Include="Assets\Code\Projectiles\Rocket.cs" />
     <Compile Include="Assets\Code\Game\XpObjectPool.cs" />
+    <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
     <Compile Include="Assets\Code\GUI\PauseMenu.cs" />
     <Compile Include="Assets\Code\VFX\VisualFX.cs" />
     <Compile Include="Assets\Code\PassiveItems\Hammer.cs" />
@@ -126,8 +128,6 @@
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
-    <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
