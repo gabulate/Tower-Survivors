@@ -29,9 +29,9 @@ STAT_RANGE,Range,Rango
 STAT_DAMAGE,Damage,Daño
 STAT_COOLDOWN,Cooldown,Enfriamiento
 STAT_SIZE,Size,Tamaño
-STAT_PRJSPEED,Projectile Speed,Velocidad en Projectiles
-STAT_PRJDURATION,Projectile Duration,Duración de Projectiles
-STAT_PRJAMNT,Projectile Amount,Cantidad de Projectiles
+STAT_PRJSPEED,Projectile Speed,Velocidad en Proyectiles
+STAT_PRJDURATION,Projectile Duration,Duración de Proyectiles
+STAT_PRJAMNT,Projectile Amount,Cantidad de Proyectiles
 STAT_SPEED,Movement Speed,Velocidad de Movimiento
 STAT_VISION,Vision,Visión
 STAT_STRUCTURELIMIT,Structure Limit,Límite de Estructuras
@@ -79,15 +79,17 @@ RUNNINGSHOES_DSC,Sneakers that make you run faster.,Tenis que te hacen correr m�
 TELESCOPE_NAME,Telescope,Telescopio
 TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
 LUBRICATOR_NAME,Lubricator,Lubricante
-LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los projectiles.
+LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los proyectiles.
 DUPLICATOR_NAME,Duplication chamber,Cámara de duplicación
-DUPLICATOR_DSC,Duplicates preojectiles,Duplica projectiles.
+DUPLICATOR_DSC,Duplicates projectiles,Duplica proyectiles.
 FROGSTAIL_NAME,Frog's tail,Colita de rana
 FROGSTAIL_DSC,Gives health regeneration.,Da regeneración de vida.
 SCOPE_NAME,Scope,Mira
 SCOPE_DSC,Gives extra range to ranged structures.,Da rango extra a estructuras.
 GUNPOWDER_NAME,Premium gunpowder,Pólvora premium
 GUNPOWDER_DSC,Increases structure damage.,Aumenta el daño de las estructuras.
+MUSHROOM_NAME,Suspicious mushroom,Hongo sospechoso
+MUSHROOM_DSC,Increases projectile size.,Aumenta el tamaño de los proyectiles.
 Upgrades----,Upgrades---,Mejoras---
 UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
 UPG_RANGEALL,Structures gain a {0}% range increase.,Aumenta el rango de las estructuras un {0}%.
@@ -96,18 +98,19 @@ UPG_DAMAGEALL,Damage of all structures increased by {0}%.,Aumenta el daño de to
 UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.
 UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
 UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.
-UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los projectiles un {0}%.
+UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los proyectiles un {0}%.
+UPG_SIZEALL,Projectile size of all projectiles increased by {0}%.,Aumenta el tamaño de todos los proyectiles un {0}%.
 UPG_SIZEOWN,Size increased by {0}%.,Tamaño aumentado un {0}%.
-UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los projectiles.
-UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los projectiles un {0}%.
-UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los projectiles {0} segundos.
-UPG_DURATION1,Projectile duration increased by 1 second.,Aumenta la duración de los projectiles 1 segundo.
-UPG_AMOUNT,Projectile amount increased by {0}.,Cantidad de projectiles aumentada en {0}.
-UPG_PASSTH,Projectiles can pass through {0} more enemies.,Los projectiles pueden atravesar a {0} enemigos más.
-UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los projectiles pueden atravesar a 1 enemigo más.
+UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los proyectiles.
+UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los proyectiles un {0}%.
+UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los proyectiles {0} segundos.
+UPG_DURATION1,Projectile duration increased by 1 second.,Aumenta la duración de los proyectiles 1 segundo.
+UPG_AMOUNT,Projectile amount increased by {0}.,Cantidad de proyectiles aumentada en {0}.
+UPG_PASSTH,Projectiles can pass through {0} more enemies.,Los proyectiles pueden atravesar a {0} enemigos más.
+UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los proyectiles pueden atravesar a 1 enemigo más.
 UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
 UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
 UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
-UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 projectil más.
+UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 proyectil más.
 UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.
 UPG_QUEEN,Pawn converts into a Queen.,El peón se convierte en Reina.

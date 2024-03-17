@@ -2152,8 +2152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -161, y: -58}
-  m_SizeDelta: {x: 293.4771, y: 77.483}
+  m_AnchoredPosition: {x: -245.32202, y: -58}
+  m_SizeDelta: {x: 462.121, y: 77.483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597877843
 MonoBehaviour:
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -Alpha 1
+  m_text: -Alpha 24.3.14
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5787,8 +5787,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "-'Tower Survivors' Alpha 1.\n\nMade by: Gabriel Ulate.\n\nDonations accepted
-    via Sinpe M\xF3vil: 89434554."
+  m_text: "-'Tower Survivors' -Alpha 24.3.14.\n\nMade by: Gabriel Ulate.\n\nDonations
+    accepted via Sinpe M\xF3vil: 89434554."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

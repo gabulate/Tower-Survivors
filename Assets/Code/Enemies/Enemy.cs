@@ -80,8 +80,8 @@ namespace TowerSurvivors.Enemies
         /// <param name="collision"></param>
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if (currentCooldown <= 0 && isAlive)
-                if (_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
+            if (_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
+                if (currentCooldown <= 0 && isAlive)
                     AttackPlayer();
         }
 
