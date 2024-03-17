@@ -14,8 +14,7 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private SoundClip _hurtSound;
 
-        [SerializeField]
-        private bool _isInvincible = false;
+        public bool isInvincible = false;
         //private LayerMask _enemyLayer = 1 << 6;
         public bool isAlive = true;
 
@@ -58,7 +57,7 @@ namespace TowerSurvivors.PlayerScripts
 
         public void TakeDamage(float damage)
         {
-            if (_isInvincible || !isAlive)
+            if (isInvincible || !isAlive)
             {
                 return;
             }
@@ -86,7 +85,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <returns></returns>
         IEnumerator Invincivility(float seconds)
         {
-            _isInvincible = true;
+            isInvincible = true;
 
             float elapsedTime = 0f;
 
@@ -98,7 +97,7 @@ namespace TowerSurvivors.PlayerScripts
             }
             Player.Sprite.material.SetFloat("_Fade", 0);
 
-            _isInvincible = false;
+            isInvincible = false;
         }
 
         /// <summary>
@@ -106,7 +105,7 @@ namespace TowerSurvivors.PlayerScripts
         /// </summary>
         public void Die()
         {
-            _isInvincible = true;
+            isInvincible = true;
             isAlive = false;
             Player.Instance.Die();
         }

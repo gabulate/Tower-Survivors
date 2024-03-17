@@ -75,6 +75,14 @@ namespace TowerSurvivors.Game
             {
                 EnemySpawner.Instance.activeSpawning = true;
             }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                Player.Health.isInvincible = !Player.Health.isInvincible;
+                if (Player.Health.isInvincible)
+                    Player.Sprite.material.SetFloat("_ShowOutline_ON", 0.0f);
+                else
+                    Player.Sprite.material.SetFloat("_ShowOutline_ON", 1.0f);
+            }
         }
 
         public void AddToKillCount(int amount)

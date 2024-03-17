@@ -52,7 +52,7 @@ namespace TowerSurvivors.Structures
                 StartCoroutine(SpawnProjectile(i * stats.timeBetweenMultipleShots));
             }
             //Reset cooldown
-            stats.currentCooldown = stats.attackCooldown;
+            stats.currentCooldown = stats.attackCooldown + stats.projectileAmnt * stats.timeBetweenMultipleShots;
         }
 
         protected override IEnumerator SpawnProjectile(float delay)
