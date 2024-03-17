@@ -127,6 +127,7 @@
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
     <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
+    <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

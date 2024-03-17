@@ -34,11 +34,11 @@ MonoBehaviour:
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
-    - descriptionKey: UPG_RANGE
-      value: 1
-    range: 4
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.1
+    range: 3
     damage: 5
-    attackCooldown: 0.5
+    attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 10
@@ -50,9 +50,9 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
       value: 5
-    range: 4
+    range: 3
     damage: 10
-    attackCooldown: 0.5
+    attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 10
@@ -64,9 +64,9 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_RANGE
       value: 1
-    range: 5
+    range: 4
     damage: 10
-    attackCooldown: 0.5
+    attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 10
@@ -78,11 +78,9 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_SPEED
       value: 3
-    - descriptionKey: UPG_DAMAGE
-      value: 5
-    range: 5
-    damage: 15
-    attackCooldown: 0.5
+    range: 4
+    damage: 10
+    attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 13
@@ -93,10 +91,12 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_SPEED
-      value: 4
-    range: 5
-    damage: 15
-    attackCooldown: 0.5
+      value: 3
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.1
+    range: 4
+    damage: 10
+    attackCooldown: 0.3
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 16

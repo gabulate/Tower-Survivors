@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TowerSurvivors.Util;
 using UnityEngine;
 
 namespace TowerSurvivors.ScriptableObjects
@@ -15,8 +16,41 @@ namespace TowerSurvivors.ScriptableObjects
         
         [Tooltip("The type of distribution for the wave.")]
         public DistributionType distribution;
+
+        [SerializeField, ShowOnly]
+        private string totalDuration = "";
+        [SerializeField, ShowOnly]
+        private int totalEnemies = 0;
+
+#if UNITY_EDITOR
+
+        private void OnValidate()
+        {
+            if (enemies != null /*|| !ListEquals(previousWaves, waves)*/)
+            {
+                float totalDurationF = 0;
+                totalEnemies = 0;
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    totalDurationF += enemies[i].amount * cooldown / amountAtATime;
+                    totalEnemies += enemies[i].amount;
+                }
+
+                totalDuration = FormatTime(totalDurationF);
+                // Update the previousWaves
+            }
+        }
+
+        public static string FormatTime(float timeInSeconds)
+        {
+            int minutes = (int)(timeInSeconds / 60);
+            int seconds = (int)(timeInSeconds % 60);
+
+            return $"{minutes:D2}:{seconds:D2}";
+        }
+#endif
     }
-    
+
     [System.Serializable]
     public class WavePair
     {

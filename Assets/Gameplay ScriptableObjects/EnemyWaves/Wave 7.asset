@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b53833e83cdd0464c879a966cb35e7fe, type: 3}
+  m_Name: Wave 7
+  m_EditorClassIdentifier: 
+  enemies:
+  - prefab: {fileID: 4839404506047974078, guid: b2a01808543f7ef4084f57e9369bd3a8, type: 3}
+    amount: 80
+  - prefab: {fileID: 27272731154654329, guid: 8f5c58668e1d8774b8bbf880f27a6b98, type: 3}
+    amount: 35
+  - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
+    amount: 20
+  - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
+    amount: 1
+  amountAtATime: 1
+  cooldown: 1
+  distribution: 0
+  totalDuration: 02:16
+  totalEnemies: 136

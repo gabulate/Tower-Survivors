@@ -24,7 +24,7 @@ MonoBehaviour:
       value: '-'
     range: 8
     damage: 30
-    attackCooldown: 5
+    attackCooldown: 4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
       value: 10
     range: 8
     damage: 40
-    attackCooldown: 5
+    attackCooldown: 4
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
       value: 0.5
     range: 8
     damage: 50
-    attackCooldown: 4.5
+    attackCooldown: 3.5
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
       value: 0.5
     range: 8
     damage: 50
-    attackCooldown: 4
+    attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 0

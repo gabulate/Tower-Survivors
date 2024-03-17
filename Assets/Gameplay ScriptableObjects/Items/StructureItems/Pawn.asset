@@ -31,7 +31,7 @@ MonoBehaviour:
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.2
-    passThroughAmnt: 0
+    passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
@@ -45,7 +45,7 @@ MonoBehaviour:
     duration: 0.7
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.2
-    passThroughAmnt: 0
+    passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
@@ -61,16 +61,16 @@ MonoBehaviour:
     duration: 0.7
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.2
-    passThroughAmnt: 0
+    passThroughAmnt: 1
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DURATION
       value: 0.3
-    - descriptionKey: UPG_PASSTH1
-      value: 0.3
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.2
     range: 1
     damage: 20
-    attackCooldown: 1
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -86,7 +86,7 @@ MonoBehaviour:
       value: 1
     range: 1
     damage: 25
-    attackCooldown: 1
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -100,7 +100,7 @@ MonoBehaviour:
       value: 1
     range: 1
     damage: 25
-    attackCooldown: 1
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7

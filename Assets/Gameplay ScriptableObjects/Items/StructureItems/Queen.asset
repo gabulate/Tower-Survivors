@@ -24,7 +24,7 @@ MonoBehaviour:
       value: 1
     range: 1
     damage: 25
-    attackCooldown: 1
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
