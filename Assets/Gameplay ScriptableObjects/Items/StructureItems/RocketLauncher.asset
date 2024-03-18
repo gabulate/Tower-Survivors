@@ -131,11 +131,11 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
-      value: 20
+      value: 10
     - descriptionKey: UPG_SPEED
       value: 3
     range: 5
-    damage: 50
+    damage: 40
     attackCooldown: 2.5
     currentCooldown: 0
     areaSize: 1.5

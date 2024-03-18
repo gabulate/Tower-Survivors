@@ -248,7 +248,7 @@ MonoBehaviour:
   HP: 7
   invulnerableTime: 0.15
   isInvincible: 0
-  speed: 70
+  speed: 60
   damage: 10
   attackCooldown: 1
   currentCooldown: 0

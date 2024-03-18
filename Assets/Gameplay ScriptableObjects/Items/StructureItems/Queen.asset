@@ -23,7 +23,7 @@ MonoBehaviour:
     - descriptionKey: First
       value: 1
     range: 1
-    damage: 25
+    damage: 30
     attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
