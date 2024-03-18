@@ -243,8 +243,8 @@ MonoBehaviour:
   isAlive: 1
   scaleXp: 1
   _timeAlive: 0
-  ChanceToDropXp: 0.4
-  Xp: 10
+  ChanceToDropXp: 0.7
+  Xp: 5
   HP: 51
   invulnerableTime: 0.2
   isInvincible: 0
