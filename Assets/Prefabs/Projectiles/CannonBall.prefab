@@ -99,7 +99,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   _animator: {fileID: 968542639993858825}
   _rb: {fileID: 3666265593167655975}
   _collider: {fileID: 3666265593167655972}
+  _enough: 0
   damage: 1
   speed: 0
   duration: 5

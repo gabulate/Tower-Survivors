@@ -22,7 +22,7 @@ namespace TowerSurvivors.GUI
             DamageNumber dn = GetPooledNumber();
             if (!dn)
                 return;
-            dn.transform.position = new Vector3(position.x, position.y, position.z - 2);
+            dn.transform.position = new Vector3(position.x, position.y, position.z - 4);
             dn.gameObject.SetActive(true);
             dn.Display(number);
         }

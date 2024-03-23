@@ -62,7 +62,7 @@ namespace TowerSurvivors.Projectiles
         protected override void FixedUpdate()
         {
         }
-        protected override void OnCollisionEnter2D(Collision2D collision)
+        protected override void OnTriggerEnter2D(Collider2D collision)
         {
         }
 

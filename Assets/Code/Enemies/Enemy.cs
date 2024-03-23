@@ -33,7 +33,7 @@ namespace TowerSurvivors.Enemies
         public bool isAlive = true;
         public bool scaleXp = true;
         [SerializeField]
-        private float _timeAlive = 0;
+        protected float _timeAlive = 0;
         [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
         public int Xp = 1;
@@ -42,15 +42,17 @@ namespace TowerSurvivors.Enemies
         public float HP = 100f;
         public float invulnerableTime = 0.2f;
         public bool isInvincible = false;
+        public float stunTime = 0.1f;
+        public bool isStunned = false;
 
         [Header("Attack")]
-        Vector2 targetPosition = new Vector2();
+        protected Vector2 targetPosition = new Vector2();
         public float speed = 1f;
         public float damage = 10f;
         public float attackCooldown = 1f;
         public float currentCooldown = 0f;
 
-        void Start()
+        protected void Start()
         {
             if (scaleXp && Player.Instance.Level >= 10)
             {
@@ -58,7 +60,7 @@ namespace TowerSurvivors.Enemies
             }
         }
 
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             //currentCooldown is always counting down to 0, when it reaches 0, the enemy is allowed to attack
             currentCooldown = currentCooldown <= 0 ? 0 : currentCooldown - Time.fixedDeltaTime;
@@ -78,7 +80,7 @@ namespace TowerSurvivors.Enemies
         /// Checks if is touching the player and attacks if not on cooldown
         /// </summary>
         /// <param name="collision"></param>
-        private void OnTriggerStay2D(Collider2D collision)
+        protected void OnTriggerStay2D(Collider2D collision)
         {
             if (_playerLayer == (_playerLayer | (1 << collision.gameObject.layer)))
                 if (currentCooldown <= 0 && isAlive)
@@ -88,7 +90,7 @@ namespace TowerSurvivors.Enemies
         /// <summary>
         /// Gets the player health component and does damage accordingly
         /// </summary>
-        protected void AttackPlayer()
+        protected virtual void AttackPlayer()
         {
             Player.Health.TakeDamage(damage);
 
@@ -102,9 +104,9 @@ namespace TowerSurvivors.Enemies
         /// <summary>
         /// Moves Towards the target position at a uniform speed.
         /// </summary>
-        private void Move()
+        protected virtual void Move()
         {
-            if (!isAlive)
+            if (!isAlive || isStunned)
             {
                 _rb.velocity = Vector2.zero;
                 return;
@@ -162,7 +164,8 @@ namespace TowerSurvivors.Enemies
             if (HP <= 0)
             {
                 Die(countIfKilled);
-            }
+            } else
+                StartCoroutine(Stun(stunTime));
         }
 
         /// <summary>
@@ -177,6 +180,8 @@ namespace TowerSurvivors.Enemies
             float elapsedTime = 0f;
             _sprite.material.SetFloat("_Fade", 1);
 
+
+
             while (elapsedTime < seconds)
             {
                 elapsedTime += Time.deltaTime;
@@ -186,6 +191,21 @@ namespace TowerSurvivors.Enemies
             _sprite.material.SetFloat("_Fade", 0);
 
             isInvincible = false;
+        }
+
+        protected IEnumerator Stun(float seconds)
+        {
+            isStunned = true;
+
+            float elapsedTime = 0f;
+
+            while (elapsedTime < seconds)
+            {
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            isStunned = false;
         }
 
         /// <summary>
@@ -222,7 +242,7 @@ namespace TowerSurvivors.Enemies
             } 
         }
 
-        private void DestroyAnim()
+        protected void DestroyAnim()
         {
             _collider.enabled = false;
             if (_animator != null)

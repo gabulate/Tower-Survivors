@@ -53,15 +53,15 @@ namespace TowerSurvivors.Projectiles
             _rb.rotation = angleInDegrees;
         }
 
-        protected virtual void OnCollisionEnter2D(Collision2D collision)
+        protected virtual void OnTriggerEnter2D(Collider2D other)
         {
             if (_enough)
                 return;
 
             //When hitting an enemy, deals damage and subtract the passThrough property by 1.
-            if (_enemyLayer == (_enemyLayer | (1 << collision.gameObject.layer)))
+            if (_enemyLayer == (_enemyLayer | (1 << other.gameObject.layer)))
             {
-                Enemy e = collision.gameObject.GetComponent<Enemy>();
+                Enemy e = other.gameObject.GetComponent<Enemy>();
                 if (!e.isAlive)
                     return;
 
