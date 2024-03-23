@@ -211,7 +211,7 @@ namespace TowerSurvivors.Enemies
         /// <summary>
         /// Dies! :(
         /// </summary>
-        public void Die(bool addToKillCount)
+        public virtual void Die(bool addToKillCount)
         {
             isAlive = false;
 

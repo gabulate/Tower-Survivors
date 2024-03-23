@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace TowerSurvivors.Audio
 {
+    /// <summary>
+    /// Custom Homemade Audio Reference
+    /// </summary>
     [CreateAssetMenu(fileName = "AudioClip", menuName = "SoundClip")]
     public class SoundClip : ScriptableObject
     {

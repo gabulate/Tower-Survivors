@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Audio;
 using TowerSurvivors.PlayerScripts;
 using UnityEngine;
 
@@ -18,6 +19,10 @@ namespace TowerSurvivors.Enemies
         private float _currentTpCooldown = 10f;
         [SerializeField]
         private float subtractTpC = 0;
+        [SerializeField]
+        private SoundClip _tpSound;
+        [SerializeField]
+        private SoundClip _deathSound;
 
         [SerializeField]
         private SpriteRenderer _shadow;
@@ -89,7 +94,7 @@ namespace TowerSurvivors.Enemies
             _shadow.enabled = false;
             _animator.SetTrigger("tpInit");
 
-            //Play sound
+            AudioPlayer.Instance.PlaySFX(_tpSound, transform.position);
 
             yield return new WaitForSeconds(duration);
             transform.position = position;
@@ -108,9 +113,16 @@ namespace TowerSurvivors.Enemies
 
 
             Player.Health.TakeDamage(damage);
+            _currentTpCooldown += 1;
 
             //Resets the cooldown
             currentCooldown = attackCooldown;
+        }
+
+        public override void Die(bool addToKillCount)
+        {
+            base.Die(addToKillCount);
+            AudioPlayer.Instance.PlaySFX(_deathSound, transform.position);
         }
     }
 }
