@@ -70,6 +70,8 @@ QUEEN_NAME,Queen,Reina
 QUEEN_DSC,Fires in all directions.,Dispara en todas las direcciones.
 MONKEY_NAME,Dart monkey,Monardo
 MONKEY_DSC,Shoots darts really fast!,¡Lanza dardos rapidísimo!
+HDD_NAME,Hard drive,Disco duro
+HDD_DSC,Launches bouncy disks.,Lanza discos que rebotan.
 OVERCLOCKER_NAME,Overclocker,Super cargador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
 HAMMER_NAME,Hammer,Martillo
