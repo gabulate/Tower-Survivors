@@ -69,6 +69,7 @@
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
     <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
     <Compile Include="Assets\Code\PassiveItems\Duplicator.cs" />
+    <Compile Include="Assets\Code\Structures\VendingMachine.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
     <Compile Include="Assets\Code\Enemies\Llorona.cs" />
     <Compile Include="Assets\Code\GUI\PauseMenu.cs" />
+    <Compile Include="Assets\Code\Projectiles\FireCan.cs" />
     <Compile Include="Assets\Code\VFX\VisualFX.cs" />
     <Compile Include="Assets\Code\PassiveItems\Hammer.cs" />
     <Compile Include="Assets\Code\PassiveItems\RunningShoes.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Code\Localisation\Language.cs" />
+    <Compile Include="Assets\Code\Projectiles\AreaDamage.cs" />
     <Compile Include="Assets\Code\PassiveItems\GunPowder.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
     <Compile Include="Assets\Code\PassiveItems\Scope.cs" />

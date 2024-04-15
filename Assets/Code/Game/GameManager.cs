@@ -66,6 +66,7 @@ namespace TowerSurvivors.Game
             {
                 AssetsHolder.Instance.HUD.gameObject.SetActive(
                     !AssetsHolder.Instance.HUD.gameObject.activeSelf);
+                Cursor.visible = AssetsHolder.Instance.HUD.gameObject.activeSelf;
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
