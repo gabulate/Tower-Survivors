@@ -30,7 +30,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -44,7 +44,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -58,7 +58,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -72,7 +72,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -86,7 +86,7 @@ MonoBehaviour:
     projectileSpeed: 13
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -102,7 +102,7 @@ MonoBehaviour:
     projectileSpeed: 16
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -116,5 +116,5 @@ MonoBehaviour:
     projectileSpeed: 16
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.07
+    timeBetweenMultipleShots: 0.11
     passThroughAmnt: 0

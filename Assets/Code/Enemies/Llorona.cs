@@ -82,7 +82,7 @@ namespace TowerSurvivors.Enemies
             Vector3 tpPosition = new Vector3(
                 transform.position.x + direction.x * _tpDistance,
                 transform.position.y + direction.y * _tpDistance,
-                transform.position.y + direction.y * _tpDistance);
+                0);
 
             StartCoroutine(TPCoroutine(_tpDuration, tpPosition));
         }

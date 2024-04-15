@@ -124,13 +124,13 @@
     <Compile Include="Assets\Code\Game\GameStats.cs" />
     <Compile Include="Assets\Code\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Code\PickUps\CookiePickUp.cs" />
+    <Compile Include="Assets\Code\Projectiles\Disk.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
-    <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
-    <Compile Include="Assets\Code\Projectiles\Disk.cs" />
+    <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
