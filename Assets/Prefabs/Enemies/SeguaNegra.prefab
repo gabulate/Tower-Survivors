@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092903340969105693}
   - component: {fileID: 9092903340969105692}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,6 +164,8 @@ MonoBehaviour:
   HP: 80
   invulnerableTime: 0.2
   isInvincible: 0
+  stunTime: 0.1
+  isStunned: 0
   speed: 45
   damage: 15
   attackCooldown: 1

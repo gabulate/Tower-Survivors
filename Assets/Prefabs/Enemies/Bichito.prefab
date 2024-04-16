@@ -200,6 +200,8 @@ MonoBehaviour:
   HP: 5
   invulnerableTime: 0.15
   isInvincible: 0
+  stunTime: 0.1
+  isStunned: 0
   speed: 60
   damage: 5
   attackCooldown: 1
@@ -283,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036972994027121197}
   - component: {fileID: 1933976312863317499}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AttackTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

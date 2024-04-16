@@ -27,7 +27,7 @@ MonoBehaviour:
     attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 6
+    projectileSpeed: 7
     duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
@@ -62,7 +62,7 @@ MonoBehaviour:
     passThroughAmnt: 4
   - neededLevel: 1
     upgradeDescriptions:
-    - descriptionKey: "UPG_COOLDOWN1\xBF"
+    - descriptionKey: UPG_COOLDOWN1
       value: 0.5
     range: 6.5
     damage: 15
