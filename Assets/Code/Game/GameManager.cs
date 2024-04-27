@@ -25,6 +25,7 @@ namespace TowerSurvivors.Game
         [SerializeField]
         private GameObject _gameOverScreen;
         public SoundClip gameMusic;
+        public SoundClip gameOverSound;
 
         [Header("Game config")]
         [SerializeField]
@@ -180,10 +181,8 @@ namespace TowerSurvivors.Game
 
         internal void GameOver()
         {
-            //TODO: Play game over sound
             StartCoroutine(ShowGameOverScreen());
             AudioPlayer.Instance.LowerVolume(true);
-
             LoadStats();
         }
 
@@ -213,7 +212,9 @@ namespace TowerSurvivors.Game
 
         private IEnumerator ShowGameOverScreen()
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
+            AudioPlayer.Instance.StopMusic();
+            AudioPlayer.Instance.PlaySFX(gameOverSound);
             _gameOverScreen.SetActive(true);
             int rand = Random.Range(1, 5);
             _gameOverScreen.GetComponent<Animator>().SetTrigger("over" +rand);
