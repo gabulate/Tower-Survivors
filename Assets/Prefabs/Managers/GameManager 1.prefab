@@ -48,7 +48,11 @@ MonoBehaviour:
   _pauseMenu: {fileID: 0}
   _gameOverScreen: {fileID: 0}
   gameMusic: {fileID: 11400000, guid: f0ca25eecf349f24fa1da6cb3a6c1afe, type: 2}
-  _randomizeSpawn: 1
+  gameOverSound: {fileID: 11400000, guid: fde83431818337d4eb80c7224abc61b8, type: 2}
+  _randomizeSpawn: 0
+  _developerMode: 1
+  secondsPassed: 0
+  structuresUpgraded: 0
   e_Paused:
     m_PersistentCalls:
       m_Calls: []
@@ -73,7 +77,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _animator: {fileID: 0}
-  _levelUpSound: {fileID: 0}
+  _levelUpSound: {fileID: 11400000, guid: f7345e9d4050d8f43a57dc50fcbcf6bd, type: 2}
   _levelUpText: {fileID: 0}
   selectedItems:
   - {fileID: 0}
