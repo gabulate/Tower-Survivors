@@ -54,6 +54,15 @@ namespace TowerSurvivors.GUI
                 GameObject icon = Instantiate(iconPrefab, structureGrid.transform);
                 icon.GetComponent<Image>().sprite = item.icon;
             }
+
+            SaveSystem.csd.timesDied++;
+            SaveSystem.csd.totalEnemiesKilled += GameStats.enemiesKilled;
+            SaveSystem.csd.totalSecondsSurvived += GameStats.secondsSurvived;
+            if (GameStats.levelReached > SaveSystem.csd.maxLevelReached)
+                SaveSystem.csd.maxLevelReached = GameStats.levelReached;
+
+
+            SaveSystem.Save();
         }
         public static string FormatTime(float timeInSeconds)
         {

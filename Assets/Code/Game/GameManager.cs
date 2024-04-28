@@ -26,6 +26,7 @@ namespace TowerSurvivors.Game
         private GameObject _gameOverScreen;
         public SoundClip gameMusic;
         public SoundClip gameOverSound;
+        public CharacterSO defaultCharacter;
 
         [Header("Game config")]
         [SerializeField]
@@ -52,6 +53,11 @@ namespace TowerSurvivors.Game
                 Instance = this;
             else if (Instance != this)
                 Destroy(gameObject);
+
+            if (CharacterSelector.selected)
+                Instantiate(CharacterSelector.selected.prefab, Vector3.zero, Quaternion.identity);
+            else
+                Instantiate(defaultCharacter.prefab, Vector3.zero, Quaternion.identity);
         }
 
         private void Update()
@@ -95,6 +101,7 @@ namespace TowerSurvivors.Game
 
         private void Start()
         {
+
             AudioPlayer.Instance.PlayMusic(gameMusic);
             secondsPassed = 0;
             _enemiesKilled = 0;
@@ -103,8 +110,16 @@ namespace TowerSurvivors.Game
             _pauseMenu.SetActive(false);
             _gameOverScreen.SetActive(false);
             Time.timeScale = 1;
-            Player.PlayerInput.EnableMovement(true);
             SuperPauseGame(false);
+
+
+            Player.PlayerInput.EnableMovement(true);
+
+
+            if (CharacterSelector.selected)
+                Player.Inventory.AddItem(CharacterSelector.selected.startingItem);
+            else
+                Player.Inventory.AddItem(defaultCharacter.startingItem);
 
             if (_randomizeSpawn)
             {

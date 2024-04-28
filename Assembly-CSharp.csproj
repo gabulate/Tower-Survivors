@@ -134,6 +134,12 @@
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
+    <Compile Include="Assets\Code\App Managers\SaveSystem.cs" />
+    <Compile Include="Assets\Code\App Managers\SaveData.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\CharacterSO.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterOption.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterSelector.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

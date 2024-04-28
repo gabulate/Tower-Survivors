@@ -28,7 +28,6 @@ namespace TowerSurvivors.PlayerScripts
         #region Player Properties
         [Header("Player Level Properties")]
         public bool randomizeItem;
-        public ItemSO startingItem;
 
         [SerializeField]
         private int _level = 1;
@@ -65,24 +64,6 @@ namespace TowerSurvivors.PlayerScripts
             Sprite = GetComponentInChildren<SpriteRenderer>();
             PlayerAnimator = GetComponentInChildren<Animator>();
             Inventory = GetComponent<InventoryManager>();
-        }
-
-        private void Start()
-        {
-            if (randomizeItem)
-            {
-                //Gets a random structure item
-                List<ItemSO> stItems = AssetsHolder.Instance
-                    .itemListSO.itemList
-                    .Where(x => x.GetType() == typeof(StructureItemSO))
-                    .Where(x => x.itemNameKey != "QUEEN_NAME")
-                    .ToList();
-
-                int randomIndex = Random.Range(0, stItems.Count);
-                Inventory.AddItem(stItems[randomIndex]);
-            } 
-            else
-                Inventory.AddItem(startingItem);
         }
 
         public void ApplyBuffs()

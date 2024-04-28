@@ -23,6 +23,7 @@ RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraci
 CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
 RESUME,Resume,Resumir
 CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?
+STARTING_ITEM,Starting item:,Ítem inicial:
 BUFFS,Buffs:,Mejoras:
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 STAT_RANGE,Range,Rango
@@ -42,6 +43,12 @@ CURRENTLEVEL,Level,Nivel
 LEVEL,Needed:,Se necesita:
 MAXLEVEL,Max level: {0}.,{0} a máximo nivel.
 MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
+Characters---,Characters---,Personajes---
+ENGINEER_NAME,Engineer,Ingeniero
+ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.
+PRISONER_NAME,Prisoner,Reo
+PRISONER_DSC,Condemned to life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.
+Structures---,Structures---,Estructuras---
 STRUCTURE,Structure,Estructura
 STRUCTURES,Structures,Estructuras
 GAME_OVER,Game over,¡Haz muerto!

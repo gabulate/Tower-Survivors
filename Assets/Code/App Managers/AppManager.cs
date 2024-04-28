@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Localisation;
@@ -30,6 +31,16 @@ namespace TowerSurvivors
             }
 
             GameSettings.LoadSettings();
+
+            InitialiseSaveData();
+        }
+
+        private void InitialiseSaveData()
+        {
+            if (!SaveSystem.LoadSaveFromDisk())
+            {
+                SaveSystem.CreateNewSave();
+            }  
         }
 
         public void SetLanguage(string language)

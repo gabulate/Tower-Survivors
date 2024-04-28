@@ -8,6 +8,7 @@ using System;
 using System.Linq;
 using UnityEngine.UI;
 using TowerSurvivors.Audio;
+using TowerSurvivors.ScriptableObjects;
 
 namespace TowerSurvivors.GUI
 {
@@ -24,6 +25,8 @@ namespace TowerSurvivors.GUI
         private GameObject AboutPage;
         [SerializeField]
         protected GameObject SettingsMenu;
+        [SerializeField]
+        private GameObject CharacterSelection;
 
         [SerializeField]
         private TMP_Dropdown displayDropdown;
@@ -41,6 +44,9 @@ namespace TowerSurvivors.GUI
         private TextMeshProUGUI confirmDeleteText;
         private bool _deleteConfig = false;
 
+        [SerializeField]
+        private CharacterSO _defaultCharacter;
+
         private void Start()
         {
             if (PlayerPrefs.HasKey("language"))
@@ -56,6 +62,7 @@ namespace TowerSurvivors.GUI
             LoadSettings();
             AboutPage.SetActive(false);
             SettingsMenu.SetActive(false);
+            CharacterSelection.SetActive(false);
 
             AddButtonSounds();
         }
@@ -171,6 +178,12 @@ namespace TowerSurvivors.GUI
             SettingsMenu.SetActive(show);
         }
 
+        public void ShowCharacters(bool show)
+        {
+            _MainMenu.SetActive(!show);
+            CharacterSelection.SetActive(show);
+        }
+
         public void ShowLanguageMenu()
         {
             PlayerPrefs.DeleteKey("language");
@@ -191,9 +204,26 @@ namespace TowerSurvivors.GUI
             }
         }
 
+        public void ShowCharacters()
+        {
+            if (SaveSystem.csd.firstBoot)
+            {
+                CharacterSelector.SelectCharacter(_defaultCharacter);
+                SceneManager.LoadScene(1);
+                SaveSystem.csd.firstBoot = false;
+            }
+            else
+            {
+                ShowCharacters(true);
+            }
+        }
+
         public void Play()
         {
-            SceneManager.LoadScene(1);
+            if (CharacterSelector.IsUnlocked(CharacterSelector.selected))
+            {
+                SceneManager.LoadScene(1);
+            }
         }
 
         public void Quit()

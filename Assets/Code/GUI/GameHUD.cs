@@ -19,6 +19,9 @@ namespace TowerSurvivors.GUI
         public TextMeshProUGUI timerText;
         public TextMeshProUGUI enemiesKilledText;
 
+        public InventorySlot[] StructureSlots;
+        public InventorySlot[] PassiveItemSlots;
+
         private void Start()
         {
             Player.Instance.e_xpChanged.AddListener(UpdateXpBar);
@@ -28,6 +31,8 @@ namespace TowerSurvivors.GUI
             GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
             UpdateStructureQty(0, StructureManager.Instance.initialMaximumStructures);
             UpdateLevel(1);
+            Player.Inventory.StructureSlots = StructureSlots;
+            Player.Inventory.PassiveItemSlots = PassiveItemSlots;
         }
 
         private void LateUpdate()
