@@ -1,18 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 namespace TowerSurvivors.Localisation
 {
     public class Language
     {
+        private static TextAsset csv;
         private static Dictionary<string, string> currentLanguage = new Dictionary<string, string>();
         private static int languageCol = 1;
 
         public static void InitialiseLanguage(TextAsset csv, string language)
         {
             currentLanguage.Clear();
+            Language.csv = csv;
+
             //Gets the rows from the csv, fomated like: KEY, English, Spanish.....
             string[] rows = csv.text.Split(new string[] { "\n" }, System.StringSplitOptions.None);
             int columns = rows[0].Split(new string[] { ",", "\n"}, System.StringSplitOptions.None).Length;
@@ -30,67 +35,95 @@ namespace TowerSurvivors.Localisation
                 }
             }
 
+            #region oldWay
+
+            //this used to load all of the keys and language phrases on memory at all times, bad!
+
             //Creates a matrix containing every cell ex:
             //KEY, English, Spanish
             //PLAY, Play, Jugar
-            string[,] languageData = new string[rows.Length, columns];
+            //string[,] languageData = new string[rows.Length, columns];
 
-            for (int i = 0; i < rows.Length; i++)
-            {
-                string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
-                for (int j = 0; j < row.Length; j++)
-                {
-                    try
-                    {
-                        if (row[j] != "")
-                            languageData[i, j] = row[j].Trim().Replace(';', ',');
-                    }
-                    catch
-                    {
-                        Debug.LogWarning("Couldn't load Row: " + i + " Col: " + j);
-                    }
-                }
-            }
+            //for (int i = 0; i < rows.Length; i++)
+            //{
+            //    string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
+            //    for (int j = 0; j < row.Length; j++)
+            //    {
+            //        try
+            //        {
+            //            if (row[j] != "")
+            //                languageData[i, j] = row[j].Trim().Replace(';', ',');
+            //        }
+            //        catch
+            //        {
+            //            Debug.LogWarning("Couldn't load Row: " + i + " Col: " + j);
+            //        }
+            //    }
+            //}
 
-            //Fills the currentLanguage Dictionary with the keys from the first column, and the value
-            //according to the selected language index
-            for (int i = 0; i < languageData.Length; i++)
-            {
-                try
-                {
-                    string key = languageData[i, 0];
-                    if (key == "" || key == null)
-                    {
-                        break;
-                    }
-                    string value = languageData[i, languageCol];
-                    currentLanguage.Add(key, value);
-                }
-                catch(Exception e)
-                {
-                    Debug.LogError(e.Message);
-                    Debug.LogError("Couldn't load Row: " + i + " Col: " + languageCol);
-                }
-            }
+            ////Fills the currentLanguage Dictionary with the keys from the first column, and the value
+            ////according to the selected language index
+            //for (int i = 0; i < languageData.Length; i++)
+            //{
+            //    try
+            //    {
+            //        string key = languageData[i, 0];
+            //        if (key == "" || key == null)
+            //        {
+            //            break;
+            //        }
+            //        string value = languageData[i, languageCol];
+            //        currentLanguage.Add(key, value);
+            //    }
+            //    catch(Exception e)
+            //    {
+            //        Debug.LogError(e.Message);
+            //        Debug.LogError("Couldn't load Row: " + i + " Col: " + languageCol);
+            //    }
+            //}
+            #endregion
         }
 
         public static string Get(string key)
         {
+            //A '-' is used in text that should not be translated.
+            if (key[0] == '-')
+            {
+                return key.Remove(0, 1);
+            }
+
+            key = key.ToUpper().Trim();
+
             try
             {
-                return currentLanguage[key.ToUpper().Trim()];
+                //if the key is already on the dictionary
+                if (currentLanguage.ContainsKey(key))
+                {
+                    return currentLanguage[key];
+                }
+                else //look for the key in the csv
+                {
+                    string[] rows = csv.text.Split(new string[] { "\n" }, System.StringSplitOptions.None);
+
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
+                        if(row[0] == key)
+                        {
+                            currentLanguage.Add(key, row[languageCol]);
+                            //Debug.Log("Language rows: " + currentLanguage.Count);
+                            return row[languageCol];
+                        }
+                    }
+
+                    //if the key wasn't found either in the dictionary or the csv
+                    return "#" + key;
+                }
             }
             catch
             {
-                //A '-' is used in text that should not be translated.
-                if(key[0] == '-')
-                {
-                    return key.Remove(0,1);
-                }
-                else
-                {
-                    return "#" + key;
-                }
+                //if there was an error reading the csv
+                return "#" + key;
             }
         }
     }
