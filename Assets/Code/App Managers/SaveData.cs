@@ -12,10 +12,10 @@ namespace TowerSurvivors
         public int coins = 0;
 
         //Stats
-        public int timesDied = 0;
-        public int totalEnemiesKilled = 0;
+        public uint timesDied = 0;
+        public uint totalEnemiesKilled = 0;
         public float totalSecondsSurvived = 0;
-        public int maxLevelReached = 0;
+        public uint maxLevelReached = 0;
 
         //Characters
         public bool unEngineer = true;

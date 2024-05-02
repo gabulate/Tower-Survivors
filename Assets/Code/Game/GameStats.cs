@@ -8,9 +8,9 @@ namespace TowerSurvivors.Game
     public static class GameStats
     {
         public static float secondsSurvived;
-        public static int levelReached;
-        public static int enemiesKilled;
-        public static int structuresUpgraded;
+        public static uint levelReached;
+        public static uint enemiesKilled;
+        public static uint structuresUpgraded;
 
         public static List<PassiveItemSO> passiveItems;
         public static List<StructureItemSO> structures;

@@ -41,11 +41,11 @@ namespace TowerSurvivors.Game
 
         [Header("Game Stats")]
         public float secondsPassed = 0;
-        private int _enemiesKilled = 0;
-        public int structuresUpgraded = 0;
+        private uint _enemiesKilled = 0;
+        public uint structuresUpgraded = 0;
 
         public UnityEvent<bool> e_Paused;
-        public UnityEvent<int> e_KillCountUpdated;
+        public UnityEvent<uint> e_KillCountUpdated;
 
         void Awake()
         {
@@ -93,7 +93,7 @@ namespace TowerSurvivors.Game
             }
         }
 
-        public void AddToKillCount(int amount)
+        public void AddToKillCount(uint amount)
         {
             _enemiesKilled += amount;
             e_KillCountUpdated.Invoke(_enemiesKilled);

@@ -36,7 +36,7 @@ namespace TowerSurvivors.Enemies
         protected float _timeAlive = 0;
         [Range(0, 1)]
         public float ChanceToDropXp = 0.4f;
-        public int Xp = 1;
+        public uint Xp = 1;
 
         [Header("Health")]
         public float HP = 100f;

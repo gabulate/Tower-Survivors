@@ -30,25 +30,25 @@ namespace TowerSurvivors.PlayerScripts
         public bool randomizeItem;
 
         [SerializeField]
-        private int _level = 1;
-        public int Level
+        private uint _level = 1;
+        public uint Level
         {
             get => _level;
             private set => _level = value;
         }
 
         [SerializeField]
-        private int _xp = 0;
+        private uint _xp = 0;
         [SerializeField]
-        private int _XpForNextLevel = 5;
-        public int XpForNextLevel
+        private uint _XpForNextLevel = 5;
+        public uint XpForNextLevel
         {
             get => _XpForNextLevel;
             private set => _XpForNextLevel = value;
         }
-        public int TotalXpCollected = 0;
-        public UnityEvent<int, int> e_xpChanged;
-        public UnityEvent<int> e_leveledUp;
+        public uint TotalXpCollected = 0;
+        public UnityEvent<uint, uint> e_xpChanged;
+        public UnityEvent<uint> e_leveledUp;
         #endregion
 
         #region Player Stats & Buffs
@@ -120,7 +120,7 @@ namespace TowerSurvivors.PlayerScripts
         /// Adds xp to the player and levels up when necessary.
         /// </summary>
         /// <param name="xp">Amount of xp to be added.</param>
-        public void AddXp(int xp)
+        public void AddXp(uint xp)
         {
             _xp += xp;
             TotalXpCollected += xp;

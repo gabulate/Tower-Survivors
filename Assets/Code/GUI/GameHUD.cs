@@ -48,7 +48,7 @@ namespace TowerSurvivors.GUI
             return $"{minutes:D2}:{seconds:D2}";
         }
 
-        public void UpdateKillCount(int count)
+        public void UpdateKillCount(uint count)
         {
             enemiesKilledText.text = count.ToString();
         }
@@ -83,12 +83,12 @@ namespace TowerSurvivors.GUI
             upBox.gameObject.SetActive(false);
         }
 
-        public void UpdateXpBar(int current, int max)
+        public void UpdateXpBar(uint current, uint max)
         {
             StartCoroutine(SmoothChangeXp(0.2f, current, max));
         }
 
-        public void UpdateLevel(int level)
+        public void UpdateLevel(uint level)
         {
             levelText.text = Language.Get("CURRENTLEVEL") +" " + level;
         }

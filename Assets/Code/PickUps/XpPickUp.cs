@@ -6,7 +6,7 @@ namespace TowerSurvivors.PickUps
 {
     public class XpPickUp : PickUp
     {
-        public int Xp = 1;
+        public uint Xp = 1;
 
         private void OnEnable()
         {

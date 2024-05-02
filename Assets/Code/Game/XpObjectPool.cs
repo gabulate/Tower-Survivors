@@ -44,7 +44,7 @@ namespace TowerSurvivors.Game
             }
         }
 
-        public void SpawnXp(int xp, Vector3 position)
+        public void SpawnXp(uint xp, Vector3 position)
         {
             if(enabledXpObjects > groupAfter)
             {
@@ -72,7 +72,7 @@ namespace TowerSurvivors.Game
                 randomXP = activeXpPickUps[randomIndex];
             }
 
-            int totalXp = randomXP.Xp;
+            uint totalXp = randomXP.Xp;
             //Disable the random xp to avoid hitting it and duplicating xp
             randomXP.gameObject.SetActive(false);
             enabledXpObjects--;

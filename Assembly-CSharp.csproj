@@ -72,6 +72,7 @@
     <Compile Include="Assets\Code\Structures\VendingMachine.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterOption.cs" />
     <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
     <Compile Include="Assets\Code\PassiveItems\FrogsTail.cs" />
     <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Code\PassiveItems\Telescope.cs" />
     <Compile Include="Assets\Code\Game\AssetsHolder.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemListSO.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\CharacterSO.cs" />
     <Compile Include="Assets\Code\Game\PassiveItemManager.cs" />
     <Compile Include="Assets\Code\App Managers\AudioPlayer.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\StructureItemSO.cs" />
@@ -108,19 +110,23 @@
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Code\PassiveItems\PassiveItem.cs" />
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
+    <Compile Include="Assets\Code\App Managers\SaveSystem.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
     <Compile Include="Assets\Code\Projectiles\Dart.cs" />
     <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
+    <Compile Include="Assets\Code\App Managers\SaveData.cs" />
     <Compile Include="Assets\Code\PassiveItems\OverClocker.cs" />
     <Compile Include="Assets\Code\Localisation\Language.cs" />
     <Compile Include="Assets\Code\Projectiles\AreaDamage.cs" />
     <Compile Include="Assets\Code\PassiveItems\GunPowder.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterScreen.cs" />
     <Compile Include="Assets\Code\PassiveItems\Scope.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
+    <Compile Include="Assets\Code\GUI\CharacterSelector.cs" />
     <Compile Include="Assets\Code\Structures\DartMonkey.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
     <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
@@ -134,12 +140,6 @@
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\App Managers\SaveSystem.cs" />
-    <Compile Include="Assets\Code\App Managers\SaveData.cs" />
-    <Compile Include="Assets\Code\ScriptableObjects\CharacterSO.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterOption.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterSelector.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
