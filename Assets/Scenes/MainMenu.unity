@@ -829,6 +829,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4869845984762219945, guid: c174a5d91bccac34ba30f77ff4045979, type: 3}
+      propertyPath: musicTrack
+      value: 
+      objectReference: {fileID: 11400000, guid: 8021907c172b9214589b46434701a4df, type: 2}
+    - target: {fileID: 4869845984762219945, guid: c174a5d91bccac34ba30f77ff4045979, type: 3}
       propertyPath: maximumSounds
       value: 5
       objectReference: {fileID: 0}
@@ -2704,8 +2708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.429077, y: -4.371704}
-  m_SizeDelta: {x: 3400.517, y: 1546.9009}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.509927, y: 0.5}
 --- !u!114 &583254968
 MonoBehaviour:
@@ -2720,7 +2724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5324848, g: 0.5849056, b: 0.5708953, a: 1}
+  m_Color: {r: 0.31764707, g: 0.3372549, b: 0.38823533, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2736,7 +2740,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!222 &583254969
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3659,7 +3663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3668,7 +3672,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!222 &646082480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3899,7 +3903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3908,7 +3912,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!222 &718776211
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4206,7 +4210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4215,7 +4219,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!222 &759608437
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6698,7 +6702,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1820, y: -980}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1215358440
 GameObject:
@@ -7710,7 +7714,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 791.0674}
+  m_SizeDelta: {x: -400, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1339125749
 MonoBehaviour:
@@ -9864,7 +9868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9873,7 +9877,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!222 &1774272892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11976,10 +11980,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1173533358}
     m_Modifications:
-    - target: {fileID: 372594759462470655, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 11400000, guid: c2faf611b13ee32428a3962ba668ede9, type: 2}
     - target: {fileID: 996880473612506245, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!1 &6603732266664935674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6603732267633490799}
   m_Direction: 2
   m_Value: -0.00000077412085
-  m_Size: 0.83679974
+  m_Size: 0.8364411
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2782,7 +2782,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!1 &6603732266975140885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2858,7 +2858,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!1 &6603732267014446641
 GameObject:
   m_ObjectHideFlags: 0
@@ -3177,7 +3177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 157.68909}
+  m_AnchoredPosition: {x: 0, y: 157.6891}
   m_SizeDelta: {x: 0, y: 966.23}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &6603732267071675402
@@ -3594,7 +3594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6603732267196481478
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3704,15 +3704,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881dcb5f314b8da408e592f4383428e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickSound: {fileID: 11400000, guid: 40806f8f467dd9e49b35a7c48329300f, type: 2}
   _MainMenu: {fileID: 6603732268049021701}
   LanguagesMenu: {fileID: 0}
   AboutPage: {fileID: 0}
   SettingsMenu: {fileID: 6603732266529037370}
+  CharacterSelection: {fileID: 0}
   displayDropdown: {fileID: 6603732267886908663}
   ResolutionsDropdown: {fileID: 6603732267014446645}
   sfxSlider: {fileID: 6603732267838230932}
   musicSlider: {fileID: 6603732266889653659}
   confirmDeleteText: {fileID: 0}
+  _defaultCharacter: {fileID: 0}
   _confirmMenu: {fileID: 6603732267096050929}
   _statsText: {fileID: 6603732267552246618}
 --- !u!1 &6603732267258457043
@@ -4907,7 +4910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eceabe24a41b814449e0d96536a86453, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5ea481ea3aa31ab4982bdc9a00380cfd, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4916,7 +4919,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.4
 --- !u!1 &6603732267613162933
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,7 +5185,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.83679974}
+  m_AnchorMax: {x: 1, y: 0.8364411}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

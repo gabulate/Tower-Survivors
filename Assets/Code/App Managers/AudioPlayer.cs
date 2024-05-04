@@ -27,9 +27,9 @@ namespace TowerSurvivors.Audio
                 Destroy(gameObject);
         }
 
-        public void PlayMusic()
+        public void PlayMusic(bool loop = true)
         {
-            musicObject.PlayMusic(musicTrack);
+            musicObject.PlayMusic(musicTrack, loop);
         }
 
         public void PlayMusic(SoundClip musicTrack)
@@ -37,7 +37,6 @@ namespace TowerSurvivors.Audio
             StopMusic();
             this.musicTrack = musicTrack;
             musicObject.PlayMusic(musicTrack);
-            musicObject.FadeIn(7);
         }
 
         public void StopMusic()
@@ -130,6 +129,11 @@ namespace TowerSurvivors.Audio
                 GameObject obj = Instantiate(_prefab);
                 obj.SetActive(false);
                 _pooledSounds.Add(obj.GetComponent<SoundObject>());
+            }
+
+            if (musicTrack)
+            {
+                PlayMusic(false);
             }
         }
 
