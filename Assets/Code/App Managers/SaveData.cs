@@ -21,6 +21,10 @@ namespace TowerSurvivors
         public bool unEngineer = true;
         public bool unPrisoner = false;
 
+        //Structures
         public bool unRocket = false;
+
+        //Items
+        public bool unDuplicator = false;
     }
 }

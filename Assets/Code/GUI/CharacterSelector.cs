@@ -16,7 +16,7 @@ namespace TowerSurvivors.GUI
 
         public static bool IsUnlocked(CharacterSO character)
         {
-            return character.name.ToLower() switch
+            return character.idName.ToLower() switch
             {
                 "engineer" => SaveSystem.csd.unEngineer,
                 "prisoner" => SaveSystem.csd.unPrisoner,

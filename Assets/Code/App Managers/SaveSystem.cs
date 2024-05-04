@@ -9,6 +9,7 @@ namespace TowerSurvivors
     {
         public static SaveData csd;
         private static readonly string path = Application.persistentDataPath + "/saveFile.json";
+        //C:/Users/Gabri/AppData/LocalLow/Gabol2/Tower Survivors/
 
         public static bool LoadSaveFromDisk()
         {
@@ -51,6 +52,12 @@ namespace TowerSurvivors
                 Debug.LogError(e);
                 return false;
             }
+        }
+
+        public static void DeleteSave()
+        {
+            File.Delete(path);
+            Debug.Log("Save data has been deleted!");
         }
     }
 }

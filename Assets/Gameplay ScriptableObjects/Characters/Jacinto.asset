@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47081d0dd2bf3549bb8be7a86827a0a, type: 3}
-  m_Name: Prisoner
+  m_Name: Jacinto
   m_EditorClassIdentifier: 
-  Icon: {fileID: 916094120, guid: a1c21c482d94b4d499c3c2a5a11bf4cd, type: 3}
+  Icon: {fileID: 120663222, guid: 27834faa25e288c44ae651ed4ec09709, type: 3}
   idName: prisoner
   NameKey: PRISONER_NAME
   DescriptionKey: PRISONER_DSC
   startingItem: {fileID: 11400000, guid: 5896176c1c10c2245bf34d8fb780826a, type: 2}
-  prefab: {fileID: 6018600358319625447, guid: ed43062ab65f7e64d94875cd28d8af52, type: 3}
+  prefab: {fileID: 8475980893589646059, guid: 69206e37d87ff6644b4b8172738f5222, type: 3}
