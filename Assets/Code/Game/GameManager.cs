@@ -62,7 +62,7 @@ namespace TowerSurvivors.Game
 
         private void Update()
         {
-            if (!_developerMode)
+            if (!_developerMode && !SaveSystem.csd.developerMode)
                 return;
 
             if (Input.GetKeyDown(KeyCode.G))

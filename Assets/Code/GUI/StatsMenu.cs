@@ -8,6 +8,7 @@ using TowerSurvivors.ScriptableObjects;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TowerSurvivors.Audio;
+using System;
 
 namespace TowerSurvivors.GUI
 {
@@ -37,13 +38,20 @@ namespace TowerSurvivors.GUI
 
         void Start()
         {
+            LoadMatchStats();
+
+            SaveMatchData();
+        }
+
+        private void LoadMatchStats()
+        {
             canvas.GetComponent<AutoTranslateChildren>().Translate();
             timeSurivedText.text = FormatTime(GameStats.secondsSurvived);
             levelReachedText.text = GameStats.levelReached.ToString();
             enemiesKilledText.text = GameStats.enemiesKilled.ToString();
             structureUpgradesText.text = GameStats.structuresUpgraded.ToString();
-            
-            foreach(ItemSO item in GameStats.passiveItems)
+
+            foreach (ItemSO item in GameStats.passiveItems)
             {
                 GameObject icon = Instantiate(iconPrefab, passiveGrid.transform);
                 icon.GetComponent<Image>().sprite = item.icon;
@@ -54,16 +62,22 @@ namespace TowerSurvivors.GUI
                 GameObject icon = Instantiate(iconPrefab, structureGrid.transform);
                 icon.GetComponent<Image>().sprite = item.icon;
             }
+        }
 
+        private void SaveMatchData()
+        {
             SaveSystem.csd.timesDied++;
             SaveSystem.csd.totalEnemiesKilled += GameStats.enemiesKilled;
             SaveSystem.csd.totalSecondsSurvived += GameStats.secondsSurvived;
+            SaveSystem.csd.coins += GameStats.coinsCollected;
             if (GameStats.levelReached > SaveSystem.csd.maxLevelReached)
                 SaveSystem.csd.maxLevelReached = GameStats.levelReached;
 
+            GameStats.Reset();
 
             SaveSystem.Save();
         }
+
         public static string FormatTime(float timeInSeconds)
         {
             int minutes = (int)(timeInSeconds / 60);

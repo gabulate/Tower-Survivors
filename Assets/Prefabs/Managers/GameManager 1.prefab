@@ -50,8 +50,8 @@ MonoBehaviour:
   gameMusic: {fileID: 11400000, guid: f0ca25eecf349f24fa1da6cb3a6c1afe, type: 2}
   gameOverSound: {fileID: 11400000, guid: fde83431818337d4eb80c7224abc61b8, type: 2}
   defaultCharacter: {fileID: 11400000, guid: c2faf611b13ee32428a3962ba668ede9, type: 2}
-  _randomizeSpawn: 0
-  _developerMode: 1
+  _randomizeSpawn: 1
+  _developerMode: 0
   secondsPassed: 0
   structuresUpgraded: 0
   e_Paused:

@@ -7,9 +7,10 @@ namespace TowerSurvivors
     public class SaveData
     {
         public string cheatAllYouWant = "Thanks for playing.";
+        public bool developerMode = false;
         public bool firstBoot = false;
 
-        public int coins = 0;
+        public uint coins = 0;
 
         //Stats
         public uint timesDied = 0;

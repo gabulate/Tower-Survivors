@@ -18,7 +18,7 @@ namespace TowerSurvivors.ScriptableObjects
                 s += string.Format(Language.Get(dp[i].descriptionKey), dp[i].value);
                 if(i < dp.Count - 1)
                 {
-                    s += " ";
+                    s += "\n";
                 }
             }
 
