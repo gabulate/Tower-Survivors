@@ -141,6 +141,9 @@
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
     <Compile Include="Assets\Code\PickUps\CoinPickUp.cs" />
+    <Compile Include="Assets\Code\Game\Items.cs" />
+    <Compile Include="Assets\Code\GUI\ItemsPage.cs" />
+    <Compile Include="Assets\Code\GUI\ItemOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

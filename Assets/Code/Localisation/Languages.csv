@@ -25,6 +25,7 @@ RESUME,Resume,Resumir
 CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?
 STARTING_ITEM,Starting item:,Ítem inicial:
 BUFFS,Buffs:,Mejoras:
+UNLOCKED,Already unlocked.,Ya desbloqueado.
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
 STAT_RANGE,Range,Rango
 STAT_DAMAGE,Damage,Daño

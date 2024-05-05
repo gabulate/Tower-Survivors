@@ -15,6 +15,7 @@ namespace TowerSurvivors.ScriptableObjects
         public GameObject prefab;
 
         public float probability = 5;
+        public uint price = 100;
     }
 
     [System.Serializable]

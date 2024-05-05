@@ -69,6 +69,12 @@ namespace TowerSurvivors.Structures
                 Structure queen = Instantiate(_queenPrefab, transform.position, Quaternion.identity).GetComponent<Structure>();
 
                 StructureManager.Instance.ReplaceStructure(this, queen);
+
+                if (!SaveSystem.csd.unQueen)
+                {
+                    SaveSystem.csd.unQueen = true;
+                    SaveSystem.Save();
+                }
                 return true;
             }
            return ret;

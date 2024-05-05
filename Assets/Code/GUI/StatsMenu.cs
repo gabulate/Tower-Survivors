@@ -50,8 +50,8 @@ namespace TowerSurvivors.GUI
         private void CalculateCoins()
         {
             totalCoins = GameStats.coinsCollected;
-            totalCoins += Convert.ToUInt32(GameStats.secondsSurvived * 0.15f);
-            totalCoins += Convert.ToUInt32(GameStats.enemiesKilled * 0.25f);
+            totalCoins += Convert.ToUInt32(GameStats.secondsSurvived * 0.25f);
+            totalCoins += Convert.ToUInt32(GameStats.enemiesKilled * 0.35f);
             StartCoroutine(ShowCoins(totalCoins));
         }
 

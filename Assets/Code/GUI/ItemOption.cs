@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TowerSurvivors.Game;
 using TowerSurvivors.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,21 +8,20 @@ using UnityEngine.UI;
 
 namespace TowerSurvivors.GUI
 {
-    public class CharacterOption : MonoBehaviour
+    public class ItemOption : MonoBehaviour
     {
-        public CharacterSO character;
-        public Image backgorund; 
+        public ItemSO item;
+        public Image backgorund;
         public Image sprite;
-        public Image structureSprite;
 
         public static UnityEvent Unselect = new UnityEvent();
-        public static UnityEvent<CharacterSO> OnSelected = new UnityEvent<CharacterSO>();
-        public void SelectThisCharacter()
+        public static UnityEvent<ItemSO> OnSelected = new UnityEvent<ItemSO>();
+        public void SelectThisItem()
         {
             Unselect.Invoke();
-            CharacterSelector.SelectCharacter(character);
+            ItemsPage.SelectItem(item);
             backgorund.color = new Color(0.255f, 0.153f, 0.243f);
-            OnSelected.Invoke(character);
+            OnSelected.Invoke(item);
         }
 
         private void ChangeColorBackToNormal()
@@ -31,42 +31,38 @@ namespace TowerSurvivors.GUI
 
         private void CheckUnlocked()
         {
-            if (CharacterSelector.IsUnlocked(character))
+            if (Items.IsUnlocked(item))
             {
                 sprite.color = Color.white;
-                structureSprite.color = Color.white;
             }
             else
             {
                 sprite.color = Color.black;
-                structureSprite.color = Color.black;
             }
         }
 
         private void OnEnable()
         {
-            if (CharacterSelector.selected.idName == character.idName)
+            if (ItemsPage.selected.itemNameKey == item.itemNameKey)
             {
                 backgorund.color = new Color(0.255f, 0.153f, 0.243f);
             }
 
-            sprite.sprite = character.Icon;
-            structureSprite.sprite = character.startingItem.icon;
+            sprite.sprite = item.icon;
 
-            if (!CharacterSelector.IsUnlocked(character))
+            if (!Items.IsUnlocked(item))
             {
                 sprite.color = Color.black;
-                structureSprite.color = Color.black;
             }
 
             Unselect.AddListener(this.ChangeColorBackToNormal);
-            CharacterScreen.e_UnlockedCharacter.AddListener(CheckUnlocked);
+            ItemsPage.e_UnlockedItem.AddListener(CheckUnlocked);
         }
 
         private void OnDisable()
         {
             Unselect.RemoveListener(this.ChangeColorBackToNormal);
-            CharacterScreen.e_UnlockedCharacter.RemoveListener(CheckUnlocked);
+            ItemsPage.e_UnlockedItem.RemoveListener(CheckUnlocked);
         }
     }
 }

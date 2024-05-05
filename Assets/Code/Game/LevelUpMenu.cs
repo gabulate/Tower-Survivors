@@ -16,7 +16,8 @@ namespace TowerSurvivors.Game
     public class LevelUpMenu : MonoBehaviour
     {
         public static LevelUpMenu Instance;
-
+        [SerializeField]
+        private List<ItemSO> _currentItemPool;
         [SerializeField]
         private GameObject _menu;
         [SerializeField]
@@ -37,11 +38,20 @@ namespace TowerSurvivors.Game
         [SerializeField]
         private PassiveItemSO _nothingItem;
 
+        private void LoadCurrentItemPool()
+        {
+            foreach (ItemSO item in AssetsHolder.Instance.itemListSO.itemList)
+            {
+                if (Items.IsUnlocked(item))
+                {
+                    _currentItemPool.Add(item);
+                }
+            }
+        }
+
         public void LevelUp()
         {
-            ItemListSO items = AssetsHolder.Instance.itemListSO;
-
-            selectedItems = GetRandomItems(items.itemList);
+            selectedItems = GetRandomItems(_currentItemPool);
 
             for (int i = 0; i < selectedItems.Count; i++)
             {
@@ -202,7 +212,10 @@ namespace TowerSurvivors.Game
         private void Start()
         {
             StartCoroutine(HideMenu());
+            LoadCurrentItemPool();
             _levelUpText.text = Language.Get("LEVELUP");
         }
+
+        
     }
 }

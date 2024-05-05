@@ -27,6 +27,8 @@ namespace TowerSurvivors.GUI
         protected GameObject SettingsMenu;
         [SerializeField]
         private GameObject CharacterSelection;
+        [SerializeField]
+        private GameObject ItemsPage;
 
         [SerializeField]
         private TMP_Dropdown displayDropdown;
@@ -59,10 +61,13 @@ namespace TowerSurvivors.GUI
                 LanguagesMenu.SetActive(true);
             }
 
+            CharacterSelector.SelectCharacter(_defaultCharacter);
+
             LoadSettings();
             AboutPage.SetActive(false);
             SettingsMenu.SetActive(false);
             CharacterSelection.SetActive(false);
+            ItemsPage.SetActive(false);
 
             AddButtonSounds();
         }
@@ -182,6 +187,12 @@ namespace TowerSurvivors.GUI
         {
             _MainMenu.SetActive(!show);
             CharacterSelection.SetActive(show);
+        }
+
+        public void ShowItems(bool show)
+        {
+            _MainMenu.SetActive(!show);
+            ItemsPage.SetActive(show);
         }
 
         public void ShowLanguageMenu()

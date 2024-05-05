@@ -47,7 +47,6 @@ namespace TowerSurvivors.GUI
                     playText.color = Color.red;
                 else
                     playText.color = Color.white;
-
             }
         }
 
