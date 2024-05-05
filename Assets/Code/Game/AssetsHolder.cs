@@ -22,6 +22,9 @@ namespace TowerSurvivors.Game
         public GameObject cookiePrefab;
         [Range(0,1)]
         public float cookieChance = 0.01f;
+        public GameObject coinPrefab;
+        [Range(0, 1)]
+        public float coinChance = 0.02f;
 
         private void Awake()
         {

@@ -46,8 +46,8 @@ MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
 Characters---,Characters---,Personajes---
 ENGINEER_NAME,Engineer,Ingeniero
 ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.
-PRISONER_NAME,Prisoner,Reo
-PRISONER_DSC,Condemned to life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.
+PRISONER_NAME,Jacinto,Jacinto
+PRISONER_DSC,Condemned for life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.
 Structures---,Structures---,Estructuras---
 STRUCTURE,Structure,Estructura
 STRUCTURES,Structures,Estructuras
@@ -57,6 +57,7 @@ TIME_SURVIVED,Time survived:,Tiempo sobrevivido:
 ENEMIES_KILLED,Enemies killed:,Enemigos eliminados:
 LEVEL_REACHED,Level reached:,Nivel alcanzado:
 STRUCTURE_UPGRADES,Structure upgrades:,Estructuras mejoradas:
+COINS_EARNED,Earned coins:,Monedas obtenidas:
 ITEM,Item,Ítem
 ITEMS,Items,Ítems
 NOTHINGITEM_NAME,Nothing.,Nada.

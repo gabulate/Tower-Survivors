@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Audio;
+using TowerSurvivors.Game;
+using TowerSurvivors.PickUps;
 using TowerSurvivors.PlayerScripts;
 using UnityEngine;
 
@@ -123,6 +125,10 @@ namespace TowerSurvivors.Enemies
         {
             base.Die(addToKillCount);
             AudioPlayer.Instance.PlaySFX(_deathSound, transform.position);
+
+            CoinPickUp coin = Instantiate(AssetsHolder.Instance.coinPrefab, transform.position, Quaternion.identity)
+                .GetComponent<CoinPickUp>();
+            coin.coins = 50;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace TowerSurvivors.GUI
         public TextMeshProUGUI structureQtyText;
         public TextMeshProUGUI timerText;
         public TextMeshProUGUI enemiesKilledText;
+        public TextMeshProUGUI coinsCollectedText;
 
         public InventorySlot[] StructureSlots;
         public InventorySlot[] PassiveItemSlots;
@@ -29,6 +30,7 @@ namespace TowerSurvivors.GUI
             Player.Health.e_healthChanged.AddListener(UpdateHealth);
             StructureManager.Instance.e_StAmntChanged.AddListener(UpdateStructureQty);
             GameManager.Instance.e_KillCountUpdated.AddListener(UpdateKillCount);
+            GameManager.Instance.e_CoinCountUpdated.AddListener(UpdateCoinCount);
             UpdateStructureQty(0, StructureManager.Instance.initialMaximumStructures);
             UpdateLevel(1);
             Player.Inventory.StructureSlots = StructureSlots;
@@ -51,6 +53,11 @@ namespace TowerSurvivors.GUI
         public void UpdateKillCount(uint count)
         {
             enemiesKilledText.text = count.ToString();
+        }
+
+        public void UpdateCoinCount(uint count)
+        {
+            coinsCollectedText.text = count.ToString();
         }
 
         public void UpdateStructureQty(int current, int max)

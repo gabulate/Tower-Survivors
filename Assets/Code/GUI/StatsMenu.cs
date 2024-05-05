@@ -27,6 +27,8 @@ namespace TowerSurvivors.GUI
         private TextMeshProUGUI enemiesKilledText;
         [SerializeField]
         private TextMeshProUGUI structureUpgradesText;
+        [SerializeField]
+        private TextMeshProUGUI coinsText;
 
         [SerializeField]
         private GameObject iconPrefab;
@@ -36,11 +38,21 @@ namespace TowerSurvivors.GUI
         [SerializeField]
         private GameObject structureGrid;
 
+        public uint totalCoins = 0;
+
         void Start()
         {
             LoadMatchStats();
-
+            CalculateCoins();
             SaveMatchData();
+        }
+
+        private void CalculateCoins()
+        {
+            totalCoins = GameStats.coinsCollected;
+            totalCoins += Convert.ToUInt32(GameStats.secondsSurvived * 0.15f);
+            totalCoins += Convert.ToUInt32(GameStats.enemiesKilled * 0.25f);
+            StartCoroutine(ShowCoins(totalCoins));
         }
 
         private void LoadMatchStats()
@@ -69,13 +81,37 @@ namespace TowerSurvivors.GUI
             SaveSystem.csd.timesDied++;
             SaveSystem.csd.totalEnemiesKilled += GameStats.enemiesKilled;
             SaveSystem.csd.totalSecondsSurvived += GameStats.secondsSurvived;
-            SaveSystem.csd.coins += GameStats.coinsCollected;
+            SaveSystem.csd.coins += totalCoins;
             if (GameStats.levelReached > SaveSystem.csd.maxLevelReached)
                 SaveSystem.csd.maxLevelReached = GameStats.levelReached;
 
             GameStats.Reset();
 
             SaveSystem.Save();
+        }
+
+        private IEnumerator ShowCoins(uint coins)
+        {
+            uint current = 0;
+
+            float soundTimer = 0.2f;
+            while(current <= coins)
+            {
+                current += (uint)(Time.deltaTime * 127);
+
+                coinsText.text = current.ToString();
+
+                soundTimer -= Time.deltaTime;
+                if(soundTimer <= 0)
+                {
+                    AudioPlayer.Instance.PlaySFX(_clickSound);
+                    soundTimer = 0.06f;
+                }
+
+                yield return new WaitForEndOfFrame();
+            }
+
+            coinsText.text = coins.ToString();
         }
 
         public static string FormatTime(float timeInSeconds)

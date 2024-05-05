@@ -42,10 +42,12 @@ namespace TowerSurvivors.Game
         [Header("Game Stats")]
         public float secondsPassed = 0;
         private uint _enemiesKilled = 0;
+        private uint _coinsCollected = 0;
         public uint structuresUpgraded = 0;
 
         public UnityEvent<bool> e_Paused;
         public UnityEvent<uint> e_KillCountUpdated;
+        public UnityEvent<uint> e_CoinCountUpdated;
 
         void Awake()
         {
@@ -97,6 +99,12 @@ namespace TowerSurvivors.Game
         {
             _enemiesKilled += amount;
             e_KillCountUpdated.Invoke(_enemiesKilled);
+        }
+
+        public void AddCoins(uint amount)
+        {
+            _coinsCollected += amount;
+            e_CoinCountUpdated.Invoke(_coinsCollected);
         }
 
         private void Start()
@@ -204,6 +212,7 @@ namespace TowerSurvivors.Game
         public void LoadStats()
         {
             GameStats.enemiesKilled = _enemiesKilled;
+            GameStats.coinsCollected = _coinsCollected;
             GameStats.secondsSurvived = secondsPassed;
             GameStats.levelReached = Player.Instance.Level;
             GameStats.structuresUpgraded = structuresUpgraded;

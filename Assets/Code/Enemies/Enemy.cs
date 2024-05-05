@@ -239,7 +239,12 @@ namespace TowerSurvivors.Enemies
             {
                 //Spawn cookie
                 XpObjectPool.Instance.SpawnXp(Xp, transform.position);
-            } 
+            }
+
+            randomValue = Random.Range(0f, 1f);
+            if(randomValue <= AssetsHolder.Instance.coinChance)
+                Instantiate(AssetsHolder.Instance.coinPrefab, transform.position, Quaternion.identity);
+
         }
 
         protected void DestroyAnim()
