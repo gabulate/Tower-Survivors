@@ -46,14 +46,30 @@ namespace TowerSurvivors.GUI
             backgorund.color = new Color(0.427f, 0.455f, 0.518f);
         }
 
+        private void CheckUnlocked()
+        {
+            if (CharacterSelector.IsUnlocked(character))
+            {
+                sprite.color = Color.white;
+                structureSprite.color = Color.white;
+            }
+            else
+            {
+                sprite.color = Color.black;
+                structureSprite.color = Color.black;
+            }
+        }
+
         private void OnEnable()
         {
             Unselect.AddListener(this.ChangeColorBackToNormal);
+            CharacterScreen.e_UnlockedCharacter.AddListener(CheckUnlocked);
         }
 
         private void OnDisable()
         {
             Unselect.RemoveListener(this.ChangeColorBackToNormal);
+            CharacterScreen.e_UnlockedCharacter.RemoveListener(CheckUnlocked);
         }
     }
 }

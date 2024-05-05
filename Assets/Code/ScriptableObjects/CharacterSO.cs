@@ -13,5 +13,6 @@ namespace TowerSurvivors.ScriptableObjects
         public string DescriptionKey = "";
         public StructureItemSO startingItem;
         public GameObject prefab;
+        public uint price = 100;
     }
 }

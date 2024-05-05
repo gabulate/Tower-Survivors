@@ -18,3 +18,4 @@ MonoBehaviour:
   DescriptionKey: PRISONER_DSC
   startingItem: {fileID: 11400000, guid: 5896176c1c10c2245bf34d8fb780826a, type: 2}
   prefab: {fileID: 8475980893589646059, guid: 69206e37d87ff6644b4b8172738f5222, type: 3}
+  price: 150

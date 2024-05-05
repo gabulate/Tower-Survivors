@@ -159,8 +159,6 @@ namespace TowerSurvivors.Audio
 
         private void OnPause(bool paused)
         {
-            Debug.Log("Called");
-
             if (paused) Pause();
             else UnPause();
 
