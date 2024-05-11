@@ -36,6 +36,8 @@ namespace TowerSurvivors.Game
                     return SaveSystem.csd.unRoundabout;
                 case "VENDMACH_NAME":
                     return SaveSystem.csd.unVendingMachine;
+                case "GUNSTICK_NAME":
+                    return SaveSystem.csd.unGunStick;
                 //Passive items
                 case "DUPLICATOR_NAME":
                     return SaveSystem.csd.unDuplicator;
@@ -57,6 +59,7 @@ namespace TowerSurvivors.Game
                     return SaveSystem.csd.unScope;
                 case "TELESCOPE_NAME":
                     return SaveSystem.csd.unTelescope;
+                
             }
         }
 
@@ -101,6 +104,9 @@ namespace TowerSurvivors.Game
                     break;
                 case "VENDMACH_NAME":
                     SaveSystem.csd.unVendingMachine = true;
+                    break;
+                case "GUNSTICK_NAME":
+                    SaveSystem.csd.unGunStick = true;
                     break;
                 // Passive items
                 case "DUPLICATOR_NAME":

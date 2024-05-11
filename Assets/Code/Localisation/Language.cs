@@ -110,9 +110,9 @@ namespace TowerSurvivors.Localisation
                         string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
                         if(row[0] == key)
                         {
-                            currentLanguage.Add(key, row[languageCol]);
+                            currentLanguage.Add(key, row[languageCol].Trim().Replace(';', ','));
                             //Debug.Log("Language rows: " + currentLanguage.Count);
-                            return row[languageCol];
+                            return currentLanguage[key];
                         }
                     }
 

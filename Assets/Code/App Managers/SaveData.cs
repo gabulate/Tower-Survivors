@@ -34,6 +34,7 @@ namespace TowerSurvivors
         public bool unDartMonkey = false;
         public bool unHardDrive = false;
         public bool unVendingMachine = false;
+        public bool unGunStick = false;
 
         //Items
         public bool unOverClocker = true;

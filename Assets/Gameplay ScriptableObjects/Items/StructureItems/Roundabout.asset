@@ -17,6 +17,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 9dc558fae934c5146b9c28a7f36c2168, type: 3}
   prefab: {fileID: 6336250975010453120, guid: f36fb3c36a4e766459630ee1a4e2cdbf, type: 3}
   probability: 7
+  price: 100
   levels:
   - neededLevel: 1
     upgradeDescriptions:
@@ -40,7 +41,7 @@ MonoBehaviour:
       value: 1
     range: 0
     damage: 15
-    attackCooldown: 0.5
+    attackCooldown: 1
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -52,9 +53,11 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
       value: 5
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.2
     range: 0
     damage: 20
-    attackCooldown: 0.5
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -68,7 +71,7 @@ MonoBehaviour:
       value: 5
     range: 0
     damage: 25
-    attackCooldown: 0.5
+    attackCooldown: 0.8
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -80,9 +83,11 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_AMOUNT
       value: 1
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.2
     range: 0
     damage: 25
-    attackCooldown: 0.5
+    attackCooldown: 0.6
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -96,7 +101,7 @@ MonoBehaviour:
       value: 5
     range: 0
     damage: 25
-    attackCooldown: 0.5
+    attackCooldown: 0.6
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
@@ -110,7 +115,7 @@ MonoBehaviour:
       value: 5
     range: 0
     damage: 30
-    attackCooldown: 0.5
+    attackCooldown: 0.6
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
