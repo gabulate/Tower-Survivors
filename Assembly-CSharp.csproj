@@ -140,11 +140,11 @@
     <Compile Include="Assets\Code\Projectiles\Disk.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
+    <Compile Include="Assets\Code\Structures\GunStick.cs" />
     <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
     <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Structures\GunStick.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
