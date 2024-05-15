@@ -59,7 +59,7 @@ namespace TowerSurvivors.GUI
             s += string.Format("{0}: +{1}%\n", Language.Get("STAT_PRJSPEED"), stats.projectileSpeedBoost * 100);
             s += string.Format("{0}: +{1}%\n", Language.Get("STAT_PRJDURATION"), stats.durationIncrease * 100);
             s += string.Format("{0}: +{1}\n", Language.Get("STAT_PRJAMNT"), stats.ProjectileAmntIncrease);
-            s += string.Format("{0}: +{1}%\n", Language.Get("STAT_SPEED"), stats.speedBoost * 100);
+            s += string.Format("{0}: +{1}%\n", Language.Get("STAT_SPEED"), stats.speedBoost * 100 / 2);
             s += string.Format("{0}: +{1}\n", Language.Get("STAT_VISION"), stats.visionBoost);
             s += string.Format("{0}: {1}\n", Language.Get("STAT_STRUCTURELIMIT"), StructureManager.Instance.MaximumStructures);
             s += string.Format("{0}: {1}p/s", Language.Get("STAT_HEALTHREGEN"), stats.healthRegen);

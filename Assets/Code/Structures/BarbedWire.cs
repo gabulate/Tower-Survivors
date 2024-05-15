@@ -14,6 +14,8 @@ namespace TowerSurvivors.Structures
         private GameObject _wire;
         [SerializeField]
         private Vector2 _initialSize;
+        [SerializeField]
+        private SpriteRenderer _mouseUI;
 
         protected override void FixedUpdate()
         {
@@ -91,13 +93,23 @@ namespace TowerSurvivors.Structures
                 case Orientation.UP:
                 case Orientation.DOWN:
                     transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-
+                    _mouseUI.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                    _mouseUI.transform.localPosition = new(0.7f, 0.7f, 0);
                     break;
                 case Orientation.LEFT:
                 case Orientation.RIGHT:
                     transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+                    _mouseUI.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                    _mouseUI.transform.localPosition = new(0.7f, -0.7f, 0);
                     break;
             }
+        }
+
+        //Modified method for toggling UI elements
+        public override void EnableStructure(bool enabled)
+        {
+            base.EnableStructure(enabled);
+            _mouseUI.enabled = !enabled;
         }
     }
 }

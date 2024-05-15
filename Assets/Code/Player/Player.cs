@@ -69,17 +69,7 @@ namespace TowerSurvivors.PlayerScripts
         public void ApplyBuffs()
         {
             //Set every buff to 0 to not apply buffs on top of eachother
-            stats.rangeIncrease = 0f;
-            stats.damageIncrease = 0f;
-            stats.coolDownReduction = 0f;
-            stats.areaSizeIncrease = 0f;
-            stats.projectileSpeedBoost = 0f;
-            stats.durationIncrease = 0f;
-            stats.ProjectileAmntIncrease = 0;
-            stats.speedBoost = 0f;
-            stats.visionBoost = 5f;
-            stats.extraStructures = 0;
-            stats.healthRegen = 0f;
+            RemoveAllBuffs();
 
             Structure[] structures = StructureManager.Instance.GetStructures();
             PassiveItem[] passives = PassiveItemManager.Instance.GetPassives();
@@ -93,16 +83,17 @@ namespace TowerSurvivors.PlayerScripts
             {
                 s.ApplyBuffs(stats);
             }
+
             //Buffs not related to structures
             PlayerInput.Speed = PlayerInput.initialSpeed + stats.speedBoost;
             Camera.main.orthographicSize = stats.visionBoost;
             StructureManager.Instance.IncreaseStructureLimit(stats.extraStructures);
 
+            PlayerAnimator.speed = 1 + (stats.speedBoost / 2);
         }
 
         internal void RemoveAllBuffs()
         {
-            //Set every buff to 0 to not apply buffs on top of eachother
             stats.rangeIncrease = 0f;
             stats.damageIncrease = 0f;
             stats.coolDownReduction = 0f;
@@ -111,7 +102,9 @@ namespace TowerSurvivors.PlayerScripts
             stats.durationIncrease = 0f;
             stats.ProjectileAmntIncrease = 0;
             stats.speedBoost = 0f;
-            stats.visionBoost = 0f;
+            stats.visionBoost = 5f;
+            stats.extraStructures = 0;
+            stats.healthRegen = 0f;
         }
 
         #region Level and Xp
@@ -158,7 +151,6 @@ namespace TowerSurvivors.PlayerScripts
             e_xpChanged.Invoke(_xp, XpForNextLevel);
             e_leveledUp.Invoke(Level);
 
-            //TODO: Display LevelUp Menu
             GameManager.Instance.LevelUp();
 
         }
