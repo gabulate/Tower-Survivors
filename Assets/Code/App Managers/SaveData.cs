@@ -21,6 +21,7 @@ namespace TowerSurvivors
         //Characters
         public bool unEngineer = true;
         public bool unPrisoner = false;
+        public bool unSpaceCowboy = false;
 
         //Structures
         public bool unCannon = true;

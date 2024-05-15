@@ -49,6 +49,8 @@ ENGINEER_NAME,Engineer,Ingeniero
 ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.
 PRISONER_NAME,Jacinto,Jacinto
 PRISONER_DSC,Condemned for life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.
+SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio
+SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket launcher.,Un tipo ágil; aferrado a su pasado… Tiene un lanza misiles a cachete.
 Structures---,Structures---,Estructuras---
 STRUCTURE,Structure,Estructura
 STRUCTURES,Structures,Estructuras

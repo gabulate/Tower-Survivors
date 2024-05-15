@@ -17,10 +17,11 @@ namespace TowerSurvivors.GUI
 
         public static bool IsUnlocked(CharacterSO character)
         {
-            return character.idName.ToLower() switch
+            return character.idName switch
             {
                 "engineer" => SaveSystem.csd.unEngineer,
                 "prisoner" => SaveSystem.csd.unPrisoner,
+                "spaceCowboy" => SaveSystem.csd.unSpaceCowboy,
                 _ => false,
             };
         }
@@ -31,14 +32,19 @@ namespace TowerSurvivors.GUI
             if (character.price > SaveSystem.csd.coins)
                 return false;
 
-            switch (character.idName.ToLower())
+            switch (character.idName)
             {
-                default: return false;
+                default:
+                    Debug.LogError("You typed it wrong! What the hell is a " + character.idName);
+                    return false;
                 case "engineer":
                     SaveSystem.csd.unEngineer = true;
                     break;
                 case "prisoner":
                     SaveSystem.csd.unPrisoner = true;
+                    break;
+                case "spaceCowboy":
+                    SaveSystem.csd.unSpaceCowboy = true;
                     break;
             }
 

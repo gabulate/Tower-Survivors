@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47081d0dd2bf3549bb8be7a86827a0a, type: 3}
+  m_Name: SpaceCowboy
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 856212640, guid: 1edcb3335bca38c489f80ee92bab46e3, type: 3}
+  idName: spaceCowboy
+  NameKey: SPACECOWBOY_NAME
+  DescriptionKey: SPACECOWBOY_DSC
+  startingItem: {fileID: 11400000, guid: 19270c8b433d8904e8e8d389b5d00e6c, type: 2}
+  prefab: {fileID: 753270132509385180, guid: 11885bfde19af38478f6ebbd32d71b28, type: 3}
+  price: 300
