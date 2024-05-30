@@ -30,19 +30,19 @@ namespace TowerSurvivors
         public bool unBarbedWire = true;
         public bool unRocketLauncher = true;
 
-        public bool unPawn = false;
+        public bool unPawn = true;
         public bool unQueen = false;
-        public bool unDartMonkey = false;
-        public bool unHardDrive = false;
-        public bool unVendingMachine = false;
-        public bool unGunStick = false;
+        public bool unDartMonkey = true;
+        public bool unHardDrive = true;
+        public bool unVendingMachine = true;
+        public bool unGunStick = true;
 
         //Items
-        public bool unOverClocker = true;
-        public bool unHammer = true;
-        public bool unRunningShoes = true;
-        public bool unTelescope = true;
-        public bool unLubricator = true;
+        public bool unOverClocker = false;
+        public bool unHammer = false;
+        public bool unRunningShoes = false;
+        public bool unTelescope = false;
+        public bool unLubricator = false;
 
         public bool unDuplicator = false;
         public bool unFrogsTail = false;
