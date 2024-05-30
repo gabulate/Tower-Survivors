@@ -20,6 +20,7 @@ WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes
 WINDOWED,Window,Ventana
 RESOLUTION,Resolution:,Resolución:
 RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones
+DELETE_SAVE,Delete save data,Eliminar datos de guardado
 CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
 RESUME,Resume,Resumir
 CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?

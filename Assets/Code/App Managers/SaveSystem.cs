@@ -57,6 +57,7 @@ namespace TowerSurvivors
         public static void DeleteSave()
         {
             File.Delete(path);
+            CreateNewSave();
             Debug.Log("Save data has been deleted!");
         }
     }

@@ -47,6 +47,10 @@ namespace TowerSurvivors.GUI
         private bool _deleteConfig = false;
 
         [SerializeField]
+        private TextMeshProUGUI confirmDeleteSaveText;
+        private bool _deleteSave = false;
+
+        [SerializeField]
         private CharacterSO _defaultCharacter;
 
         private void Start()
@@ -212,6 +216,20 @@ namespace TowerSurvivors.GUI
             {
                 _deleteConfig = true;
                 confirmDeleteText.text = Language.Get("CONFIRM");
+            }
+        }
+
+        public void DeleteSaveData()
+        {
+            if (_deleteSave)
+            {
+                SaveSystem.DeleteSave();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else
+            {
+                _deleteSave = true;
+                confirmDeleteSaveText.text = Language.Get("CONFIRM");
             }
         }
 
