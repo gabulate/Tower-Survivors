@@ -142,7 +142,7 @@ namespace TowerSurvivors.Enemies
         /// <param name="damage">Amount of damage to be taken by the enemy</param>
         /// <param name="countIfKilled">If the enemy is killed, its added to the kill count. 
         /// True by default, only false in special cases.</param>
-        public void TakeDamage(float damage, bool countIfKilled = true)
+        public virtual void TakeDamage(float damage, bool countIfKilled = true)
         {
             if (isInvincible)
             {
@@ -173,7 +173,7 @@ namespace TowerSurvivors.Enemies
         /// </summary>
         /// <param name="seconds">Number of seconds that the enemy will be invulnerable.</param>
         /// <returns></returns>
-        IEnumerator Invincivility(float seconds)
+        protected virtual IEnumerator Invincivility(float seconds)
         {
             isInvincible = true;
 
@@ -247,7 +247,7 @@ namespace TowerSurvivors.Enemies
 
         }
 
-        protected void DestroyAnim()
+        protected virtual void DestroyAnim()
         {
             _collider.enabled = false;
             if (_animator != null)

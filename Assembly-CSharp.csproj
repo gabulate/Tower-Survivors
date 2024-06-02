@@ -60,21 +60,21 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Structures\Roundabout.cs" />
     <Compile Include="Assets\Code\App Managers\SoundClip.cs" />
-    <Compile Include="Assets\Code\GUI\MainMenu.cs" />
-    <Compile Include="Assets\Code\GUI\InventoryDebugger.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\MainMenu.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\InventoryDebugger.cs" />
     <Compile Include="Assets\Code\Projectiles\AutoDestroy.cs" />
     <Compile Include="Assets\Code\Player\InventoryManager.cs" />
     <Compile Include="Assets\Code\Game\Items.cs" />
-    <Compile Include="Assets\Code\GUI\GameHUD.cs" />
-    <Compile Include="Assets\Code\GUI\LevelUpOption.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\GameHUD.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\LevelUpOption.cs" />
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
     <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
     <Compile Include="Assets\Code\PassiveItems\Duplicator.cs" />
     <Compile Include="Assets\Code\Structures\VendingMachine.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
     <Compile Include="Assets\Code\Player\PlayerHealth.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterOption.cs" />
-    <Compile Include="Assets\Code\GUI\StructureUpgradeBox.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\CharacterOption.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\StructureUpgradeBox.cs" />
     <Compile Include="Assets\Code\PassiveItems\FrogsTail.cs" />
     <Compile Include="Assets\Code\App Managers\GameSettings.cs" />
     <Compile Include="Assets\Code\Localisation\AutoTranslateChildren.cs" />
@@ -92,7 +92,7 @@
     <Compile Include="Assets\Code\PickUps\PickUp.cs" />
     <Compile Include="Assets\Code\Structures\Pawn.cs" />
     <Compile Include="Assets\Code\Structures\Queen.cs" />
-    <Compile Include="Assets\Code\GUI\DamageNumber.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\DamageNumber.cs" />
     <Compile Include="Assets\Code\Game\EnemySpawner.cs" />
     <Compile Include="Assets\Code\PassiveItems\Lubricator.cs" />
     <Compile Include="Assets\Code\Structures\Structure.cs" />
@@ -101,13 +101,13 @@
     <Compile Include="Assets\Code\Game\XpObjectPool.cs" />
     <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
     <Compile Include="Assets\Code\Enemies\Llorona.cs" />
-    <Compile Include="Assets\Code\GUI\PauseMenu.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Code\Projectiles\FireCan.cs" />
-    <Compile Include="Assets\Code\GUI\ItemsPage.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\ItemsPage.cs" />
     <Compile Include="Assets\Code\VFX\VisualFX.cs" />
     <Compile Include="Assets\Code\PassiveItems\Hammer.cs" />
     <Compile Include="Assets\Code\PassiveItems\RunningShoes.cs" />
-    <Compile Include="Assets\Code\GUI\StatsMenu.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\StatsMenu.cs" />
     <Compile Include="Assets\Code\App Managers\AppManager.cs" />
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Code\PassiveItems\PassiveItem.cs" />
@@ -126,11 +126,11 @@
     <Compile Include="Assets\Code\Projectiles\AreaDamage.cs" />
     <Compile Include="Assets\Code\PassiveItems\GunPowder.cs" />
     <Compile Include="Assets\Code\Util\SpriteSortingOrder.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterScreen.cs" />
-    <Compile Include="Assets\Code\GUI\ItemOption.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\CharacterScreen.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\ItemOption.cs" />
     <Compile Include="Assets\Code\PassiveItems\Scope.cs" />
     <Compile Include="Assets\Code\Player\Player.cs" />
-    <Compile Include="Assets\Code\GUI\CharacterSelector.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\CharacterSelector.cs" />
     <Compile Include="Assets\Code\Structures\DartMonkey.cs" />
     <Compile Include="Assets\Code\PickUps\XpPickUp.cs" />
     <Compile Include="Assets\Code\Util\ShowOnlyAttribute.cs" />
@@ -141,10 +141,12 @@
     <Compile Include="Assets\Code\ScriptableObjects\PassiveItemSO.cs" />
     <Compile Include="Assets\Code\Structures\BarbedWire.cs" />
     <Compile Include="Assets\Code\Structures\GunStick.cs" />
-    <Compile Include="Assets\Code\GUI\InventorySlot.cs" />
-    <Compile Include="Assets\Code\GUI\InventoryItem.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\InventorySlot.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
-    <Compile Include="Assets\Code\GUI\DamageNumberController.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\DamageNumberController.cs" />
+    <Compile Include="Assets\Code\Enemies\Boss.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\EndGameCredits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

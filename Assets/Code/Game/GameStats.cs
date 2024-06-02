@@ -8,6 +8,7 @@ namespace TowerSurvivors.Game
 {
     public static class GameStats
     {
+        public static bool gameWon = false;
         public static float secondsSurvived;
         public static uint levelReached;
         public static uint enemiesKilled;
@@ -19,6 +20,7 @@ namespace TowerSurvivors.Game
 
         internal static void Reset()
         {
+            gameWon = false;
             secondsSurvived = 0;
             levelReached = 0;
             enemiesKilled = 0;

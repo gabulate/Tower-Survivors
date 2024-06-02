@@ -693,6 +693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _clickSound: {fileID: 11400000, guid: 40806f8f467dd9e49b35a7c48329300f, type: 2}
+  gameOverText: {fileID: 1616702227}
   canvas: {fileID: 1745303196}
   timeSurivedText: {fileID: 162838415}
   levelReachedText: {fileID: 949647610}

@@ -14,6 +14,7 @@ namespace TowerSurvivors.Game
     public class EnemySpawner : MonoBehaviour
     {
         protected static readonly LayerMask _enemyLayer = 1 << 6;
+        public GameObject bossPrefab;
 
         public bool activeSpawning = true;
         public int MaxEnemies = 30;
@@ -191,6 +192,20 @@ namespace TowerSurvivors.Game
         {
             activeSpawning = false;
             StartCoroutine(KillEnemies());
+        }
+
+        public void SpawnBoss()
+        {
+            //TODO: Make the boss spawn closer to the player
+            Vector3 position = GetRandomPosition();
+            position = (position - Player.Instance.transform.position).normalized;
+            position = Player.Instance.transform.position - position * 10;
+
+            GameObject bp = Instantiate(bossPrefab, position, Quaternion.identity);
+            currentEnemies++;
+
+            Boss e = bp.GetComponent<Boss>();
+            e.e_die.AddListener(GameManager.Instance.GameWon);
         }
 
         private IEnumerator KillEnemies()

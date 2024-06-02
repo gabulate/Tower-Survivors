@@ -26,6 +26,7 @@ namespace TowerSurvivors.Game
         private GameObject _gameOverScreen;
         public SoundClip gameMusic;
         public SoundClip gameOverSound;
+        public SoundClip gameWonSound;
         public CharacterSO defaultCharacter;
 
         [Header("Game config")]
@@ -84,6 +85,10 @@ namespace TowerSurvivors.Game
             if (Input.GetKeyDown(KeyCode.J))
             {
                 EnemySpawner.Instance.activeSpawning = true;
+            }
+            if (Input.GetKeyDown(KeyCode.H))
+            {
+                EnemySpawner.Instance.SpawnBoss();
             }
             if (Input.GetKeyDown(KeyCode.I))
             {
@@ -161,6 +166,8 @@ namespace TowerSurvivors.Game
                 if(secondsPassed > 1800)
                 {
                     EnemySpawner.Instance.KillAllEnemies();
+                    EnemySpawner.Instance.SpawnBoss();
+                    gameEnding = true;
                 }
             }
         }
@@ -202,8 +209,19 @@ namespace TowerSurvivors.Game
             SceneManager.LoadScene("GameOver");
         }
 
+        public void GameWon()
+        {
+            GameStats.gameWon = true;
+            Player.PlayerInput.EnableMovement(false);
+            AssetsHolder.Instance.HUD.gameObject.SetActive(false);
+            StartCoroutine(ShowGameWonScreen());
+            AudioPlayer.Instance.LowerVolume(true);
+            LoadStats();
+        }
+
         internal void GameOver()
         {
+            Player.PlayerInput.EnableMovement(false);
             StartCoroutine(ShowGameOverScreen());
             AudioPlayer.Instance.LowerVolume(true);
             LoadStats();
@@ -243,6 +261,18 @@ namespace TowerSurvivors.Game
             int rand = Random.Range(1, 5);
             _gameOverScreen.GetComponent<Animator>().SetTrigger("over" +rand);
             SuperPauseGame(true);
+        }
+
+        private IEnumerator ShowGameWonScreen()
+        {
+            yield return new WaitForSeconds(5);
+            AudioPlayer.Instance.StopMusic();
+            AudioPlayer.Instance.PlaySFX(gameWonSound);
+            _gameOverScreen.SetActive(true);
+            _gameOverScreen.GetComponent<Animator>().SetTrigger("won");
+            yield return new WaitForSeconds(1.5f);
+            SuperPauseGame(true);
+            LoadGameFinishedScreen();
         }
     }
 }

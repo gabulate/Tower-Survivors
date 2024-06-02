@@ -55,6 +55,7 @@ SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket la
 Structures---,Structures---,Estructuras---
 STRUCTURE,Structure,Estructura
 STRUCTURES,Structures,Estructuras
+GAME_WON,Victory!,¡Victoria!
 GAME_OVER,Game over,¡Haz muerto!
 CONTINUE_TO_MENU,Continue to menu,Continuar al menú
 TIME_SURVIVED,Time survived:,Tiempo sobrevivido:
@@ -132,3 +133,7 @@ UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura
 UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 proyectil más.
 UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.
 UPG_QUEEN,Pawn converts into a Queen.,El peón se convierte en Reina.
+Credits--,Credits--,Créditos
+STRUCTURED_DEFENDERS,Structured Defenders,Structured Defenders
+A_GAME_BY,A game by:,Un juego de:
+THANKS_FOR_PLAYING,Thanks for playing!,¡Gracias por jugar!

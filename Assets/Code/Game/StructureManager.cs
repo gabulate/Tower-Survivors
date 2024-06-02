@@ -102,6 +102,14 @@ namespace TowerSurvivors.Game
             }
         }
 
+        public void DisableAllStructures()
+        {
+            foreach(Structure s in GetStructures())
+            {
+                s.canAttack = false;
+            }
+        }
+
         public GameObject AddToInventory(StructureItemSO item, int index)
         {
             //Instantiates the structure into the scene
