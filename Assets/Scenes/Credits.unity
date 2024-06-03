@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &156983641
 RectTransform:
   m_ObjectHideFlags: 0
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -118.92}
-  m_SizeDelta: {x: -142.1857, y: -591.63}
+  m_AnchoredPosition: {x: 0, y: -200.31519}
+  m_SizeDelta: {x: -142.1857, y: -754.4204}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &156983642
 MonoBehaviour:
@@ -271,8 +271,10 @@ GameObject:
   - component: {fileID: 265677569}
   - component: {fileID: 265677568}
   - component: {fileID: 265677567}
+  - component: {fileID: 265677573}
+  - component: {fileID: 265677572}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EndGameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -377,6 +379,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &265677572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265677566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc41e6c413811041a41453e20e7a99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &265677573
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265677566}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 867703266ee14d94fb38186c5520bff2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &286068052
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   languagesCSV: {fileID: 4900000, guid: ea3b13ca6599acf4b9851874f1101155, type: 3}
-  language: es
+  language: ES
 --- !u!4 &286068054
 Transform:
   m_ObjectHideFlags: 0
@@ -769,7 +803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1758563944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -787,7 +821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 244.18555}
+  m_AnchoredPosition: {x: 0, y: 81.39404}
   m_SizeDelta: {x: -142.1857, y: -842.1611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1758563945
@@ -910,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1989006094
 RectTransform:
   m_ObjectHideFlags: 0

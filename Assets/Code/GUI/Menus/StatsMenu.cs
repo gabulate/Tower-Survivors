@@ -43,6 +43,8 @@ namespace TowerSurvivors.GUI
 
         public uint totalCoins = 0;
 
+        private bool _showCredits = false;
+
         void Start()
         {
             LoadMatchStats();
@@ -65,6 +67,7 @@ namespace TowerSurvivors.GUI
             {
                 gameOverText.text = Language.Get("GAME_WON");
                 gameOverText.color = Color.green;
+                _showCredits = true;
             }
 
 
@@ -134,9 +137,10 @@ namespace TowerSurvivors.GUI
 
         public void ReturnToMenu()
         {
-            if (GameStats.gameWon)
+            if (_showCredits)
             {
                 SceneManager.LoadScene("Credits");
+                return;
             }
             SceneManager.LoadScene(0);
             AudioPlayer.Instance.PlaySFX(_clickSound);
