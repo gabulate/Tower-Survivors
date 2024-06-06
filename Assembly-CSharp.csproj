@@ -111,11 +111,13 @@
     <Compile Include="Assets\Code\App Managers\AppManager.cs" />
     <Compile Include="Assets\Code\Enemies\Enemy.cs" />
     <Compile Include="Assets\Code\PassiveItems\PassiveItem.cs" />
+    <Compile Include="Assets\Code\Enemies\Boss.cs" />
     <Compile Include="Assets\Code\PickUps\CoinPickUp.cs" />
     <Compile Include="Assets\Code\Structures\Cannon.cs" />
     <Compile Include="Assets\Code\App Managers\SaveSystem.cs" />
     <Compile Include="Assets\Code\Game\CameraFollowScript.cs" />
     <Compile Include="Assets\Code\Projectiles\Dart.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\EndGameCredits.cs" />
     <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
@@ -145,8 +147,6 @@
     <Compile Include="Assets\Code\GUI\Game HUD\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\Game HUD\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\Enemies\Boss.cs" />
-    <Compile Include="Assets\Code\GUI\Menus\EndGameCredits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

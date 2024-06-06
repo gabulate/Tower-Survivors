@@ -67,7 +67,7 @@ namespace TowerSurvivors.PlayerScripts
 
             AudioPlayer.Instance.PlaySFX(_hurtSound);
 
-            Debug.Log("Current health: " + health);
+            //Debug.Log("Current health: " + health);
             if (health <= 0)
             {
                 Die();
