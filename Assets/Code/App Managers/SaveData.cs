@@ -22,6 +22,7 @@ namespace TowerSurvivors
         public bool unEngineer = true;
         public bool unPrisoner = false;
         public bool unSpaceCowboy = false;
+        public bool unMima = false;
 
         //Structures
         public bool unCannon = true;
@@ -41,7 +42,7 @@ namespace TowerSurvivors
         public bool unOverClocker = false;
         public bool unHammer = false;
         public bool unRunningShoes = false;
-        public bool unTelescope = false;
+        public bool unTelescope = true;
         public bool unLubricator = false;
 
         public bool unDuplicator = false;

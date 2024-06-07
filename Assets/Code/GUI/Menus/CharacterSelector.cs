@@ -22,6 +22,7 @@ namespace TowerSurvivors.GUI
                 "engineer" => SaveSystem.csd.unEngineer,
                 "prisoner" => SaveSystem.csd.unPrisoner,
                 "spaceCowboy" => SaveSystem.csd.unSpaceCowboy,
+                "mima" => SaveSystem.csd.unMima,
                 _ => false,
             };
         }
@@ -45,6 +46,9 @@ namespace TowerSurvivors.GUI
                     break;
                 case "spaceCowboy":
                     SaveSystem.csd.unSpaceCowboy = true;
+                    break;
+                case "mima":
+                    SaveSystem.csd.unMima = true;
                     break;
             }
 

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c47081d0dd2bf3549bb8be7a86827a0a, type: 3}
-  m_Name: SpaceCowboy
+  m_Name: Mima
   m_EditorClassIdentifier: 
-  Icon: {fileID: 856212640, guid: 1edcb3335bca38c489f80ee92bab46e3, type: 3}
-  idName: spaceCowboy
-  NameKey: SPACECOWBOY_NAME
-  DescriptionKey: SPACECOWBOY_DSC
-  startingItem: {fileID: 11400000, guid: 19270c8b433d8904e8e8d389b5d00e6c, type: 2}
-  prefab: {fileID: 753270132509385180, guid: 11885bfde19af38478f6ebbd32d71b28, type: 3}
+  Icon: {fileID: -1652154255, guid: 827fd2a73a61d5d458a703d999ef20cd, type: 3}
+  idName: mima
+  NameKey: MIMA_NAME
+  DescriptionKey: MIMA_DSC
+  startingItem: {fileID: 11400000, guid: 23e693e8e0b24c848839e540a4833832, type: 2}
+  prefab: {fileID: 9196993661042202410, guid: 14be244fa1f4ff04b91df6c0403f9140, type: 3}
   price: 200
