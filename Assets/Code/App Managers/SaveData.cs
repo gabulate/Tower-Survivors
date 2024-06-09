@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 namespace TowerSurvivors
 {
     public class SaveData
     {
+        //Meta
         public string cheatAllYouWant = "Thanks for playing.";
         public bool developerMode = false;
         public bool firstBoot = false;
@@ -19,10 +21,10 @@ namespace TowerSurvivors
         public uint maxLevelReached = 0;
 
         //Characters
-        public bool unEngineer = true;
-        public bool unPrisoner = false;
-        public bool unSpaceCowboy = false;
-        public bool unMima = false;
+        public bool chEngineer = true;
+        public bool chPrisoner = false;
+        public bool chSpaceCowboy = false;
+        public bool chMima = false;
 
         //Structures
         public bool unCannon = true;
@@ -50,5 +52,20 @@ namespace TowerSurvivors
         public bool unScope = false;
         public bool unPremiumGunpowder = false;
         public bool unMushroom = false;
+
+        public bool HasEveryItem()
+        {
+            foreach (FieldInfo field in this.GetType().GetFields(BindingFlags.Public | BindingFlags.Instance))
+            {
+                if (field.Name.StartsWith("un") && field.Name != "unQueen")
+                {
+                    if (field.FieldType == typeof(bool) && !(bool)field.GetValue(this))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
     }
 }

@@ -32,6 +32,8 @@ namespace TowerSurvivors.GUI
         private TextMeshProUGUI structureUpgradesText;
         [SerializeField]
         private TextMeshProUGUI coinsText;
+        [SerializeField]
+        private TextMeshProUGUI tipText;
 
         [SerializeField]
         private GameObject iconPrefab;
@@ -86,6 +88,14 @@ namespace TowerSurvivors.GUI
             {
                 GameObject icon = Instantiate(iconPrefab, structureGrid.transform);
                 icon.GetComponent<Image>().sprite = item.icon;
+            }
+
+            if (SaveSystem.csd.HasEveryItem())
+            {
+                if (!GameStats.gameWon)
+                    tipText.text = Language.Get("GET_GUD");
+                else
+                    tipText.enabled = false;
             }
         }
 

@@ -162,22 +162,47 @@ namespace TowerSurvivors.Game
 
                 Vector3 position = GetRandomPosition();
 
-                int random = Random.Range(0, currentWavePairs.Count);
+                // Calculate the total amount of enemies left
+                int totalAmount = 0;
+                foreach (var wavePair in currentWavePairs)
+                {
+                    totalAmount += wavePair.amount;
+                }
 
-                //Get Random enemy
-                GameObject randomEnemy = currentWavePairs[random].prefab;
+                // If no enemies left, return
+                if (totalAmount == 0)
+                    return;
+
+                // Determine the winner
+                int winner = Random.Range(0, totalAmount);
+                int threshold = 0;
+                int selectedIndex = 0;
+
+                // Find the selected enemy based on the winner value
+                for (int j = 0; j < currentWavePairs.Count; j++)
+                {
+                    threshold += currentWavePairs[j].amount;
+                    if (threshold > winner)
+                    {
+                        selectedIndex = j;
+                        break;
+                    }
+                }
+
+                // Get the selected enemy
+                GameObject randomEnemy = currentWavePairs[selectedIndex].prefab;
                 Instantiate(randomEnemy, position, Quaternion.identity);
                 currentEnemies++;
 
-                //Subtract one from the enemy queue and check if the amount of enemies of that kind has reached 0.
-                //If it has, it removes it from the current pool
-                currentWavePairs[random].amount--;
-                if(currentWavePairs[random].amount <= 0)
+                // Subtract one from the enemy queue and check if the amount of enemies of that kind has reached 0.
+                // If it has, it removes it from the current pool
+                currentWavePairs[selectedIndex].amount--;
+                if (currentWavePairs[selectedIndex].amount <= 0)
                 {
-                    currentWavePairs.Remove(currentWavePairs[random]);
+                    currentWavePairs.RemoveAt(selectedIndex);
                 }
 
-                //If there are no more wave pairs, return to start the next wave
+                // If there are no more wave pairs, return to start the next wave
                 if (currentWavePairs.Count == 0)
                 {
                     return;

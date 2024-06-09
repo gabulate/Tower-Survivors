@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave 8
   m_EditorClassIdentifier: 
   enemies:
-  - prefab: {fileID: 1443172133896340540, guid: b88f9747ab374ab4bb348d256dfe1e22, type: 3}
+  - prefab: {fileID: 196085565168078665, guid: 4c4ae7be1c0c6e74bb1a3ae2c0b13147, type: 3}
     amount: 20
   - prefab: {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
     amount: 15

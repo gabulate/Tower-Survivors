@@ -19,10 +19,10 @@ namespace TowerSurvivors.GUI
         {
             return character.idName switch
             {
-                "engineer" => SaveSystem.csd.unEngineer,
-                "prisoner" => SaveSystem.csd.unPrisoner,
-                "spaceCowboy" => SaveSystem.csd.unSpaceCowboy,
-                "mima" => SaveSystem.csd.unMima,
+                "engineer" => SaveSystem.csd.chEngineer,
+                "prisoner" => SaveSystem.csd.chPrisoner,
+                "spaceCowboy" => SaveSystem.csd.chSpaceCowboy,
+                "mima" => SaveSystem.csd.chMima,
                 _ => false,
             };
         }
@@ -39,16 +39,16 @@ namespace TowerSurvivors.GUI
                     Debug.LogError("You typed it wrong! What the hell is a " + character.idName);
                     return false;
                 case "engineer":
-                    SaveSystem.csd.unEngineer = true;
+                    SaveSystem.csd.chEngineer = true;
                     break;
                 case "prisoner":
-                    SaveSystem.csd.unPrisoner = true;
+                    SaveSystem.csd.chPrisoner = true;
                     break;
                 case "spaceCowboy":
-                    SaveSystem.csd.unSpaceCowboy = true;
+                    SaveSystem.csd.chSpaceCowboy = true;
                     break;
                 case "mima":
-                    SaveSystem.csd.unMima = true;
+                    SaveSystem.csd.chMima = true;
                     break;
             }
 
