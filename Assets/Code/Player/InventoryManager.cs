@@ -1,5 +1,7 @@
+using System;
 using TowerSurvivors.Game;
 using TowerSurvivors.GUI;
+using TowerSurvivors.PassiveItems;
 using TowerSurvivors.ScriptableObjects;
 using TowerSurvivors.Structures;
 using UnityEngine;
@@ -13,6 +15,12 @@ namespace TowerSurvivors.PlayerScripts
     public class InventoryManager : MonoBehaviour
     {
         public InventorySlot[] StructureSlots;
+
+        internal void RemoveItem(PassiveItemSO item)
+        {
+            throw new NotImplementedException();
+        }
+
         public InventorySlot[] PassiveItemSlots;
 
         public InventoryItem selectedItem;
@@ -71,6 +79,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <param name="item"></param>
         public void AddItem(ItemSO item)
         {
+
             if (item.GetType() == typeof(StructureItemSO))
             {
                 for (int i = 0; i < StructureSlots.Length; i++)
@@ -89,6 +98,15 @@ namespace TowerSurvivors.PlayerScripts
             }
             else //Passive Item
             {
+                PassiveItemSO pi = item as PassiveItemSO;
+                if (!pi.physical) //If the item is non phyisical, it is not added to the inventory, but its method is called once
+                {
+                    PassiveItem p = Instantiate(pi.prefab).GetComponent<PassiveItem>();
+                    p.NonPhysical();
+                    Destroy(p.gameObject);
+                    return;
+                }
+
                 //If the item is not already in the inventory, spawn it
                 if (!PassiveItemManager.Instance.InInventory(item as PassiveItemSO))
                 {

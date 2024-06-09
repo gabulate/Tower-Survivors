@@ -85,7 +85,7 @@ namespace TowerSurvivors.Projectiles
             // Calculate the reflected direction vector
             direction = Vector2.Reflect(direction, surfaceNormal);
 
-            _timeLeft += 0.2f;
+            _timeLeft += 0.5f;
 
             AudioPlayer.Instance.PlaySFX(_bounceSound, transform.position);
         }

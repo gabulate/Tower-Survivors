@@ -17,6 +17,10 @@ namespace TowerSurvivors.PassiveItems
             Destroy(gameObject, 1f);
         }
 
+        public virtual void NonPhysical()
+        {
+        }
+
         public virtual void RemoveEffect()
         {
         }

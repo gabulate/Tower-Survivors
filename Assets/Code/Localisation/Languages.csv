@@ -71,6 +71,8 @@ UNLOCK_MORE,Unlock more items from the main menu!,¡Desbloquea más ítems desde
 GET_GUD,Better luck next time!,¡La que sigue es la buena!
 NOTHINGITEM_NAME,Nothing.,Nada.
 NOTHINGITEM_DSC,Does nothing.,No hace nada.
+COIN_NAME,Coins,Monedas
+COIN_DSC,Get 10 coins.,Obtienes 10 monedas.
 CANNON_NAME,Cannon,Cañón
 CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
 SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador

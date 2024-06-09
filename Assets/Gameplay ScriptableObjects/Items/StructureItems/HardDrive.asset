@@ -17,7 +17,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 48275fb388dce0048836a1857d4d8d58, type: 3}
   prefab: {fileID: 7677176101026273141, guid: c3ba1b2713d992d49a0e72ced31257b7, type: 3}
   probability: 10
-  price: 200
+  price: 300
   levels:
   - neededLevel: 1
     upgradeDescriptions:

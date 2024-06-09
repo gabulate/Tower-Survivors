@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9e5ed409c5a7c489b1c66802eec138, type: 3}
+  m_Name: THE NOTHING ITEM 1
+  m_EditorClassIdentifier: 
+  itemNameKey: NOTHINGITEM_NAME
+  descriptionKey: NOTHINGITEM_DSC
+  icon: {fileID: 21300000, guid: 3cf82b0b9f0c07a42ac77c51bf673461, type: 3}
+  prefab: {fileID: 8289305869320662313, guid: ff4c7facc67d0fe47bbef58a6ebf6e58, type: 3}
+  probability: 0
+  price: 100
+  levels:
+  - EffectIntensityByLevel: 0
+    upgradeDescriptions: []

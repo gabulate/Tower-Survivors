@@ -8,6 +8,7 @@ namespace TowerSurvivors.ScriptableObjects
     public class PassiveItemSO : ItemSO
     {
         public List<PassiveItemLevels> levels;
+        public bool physical = true; //Determines if its an item to be added to the inventory
 
         public string GetUpgradeDescription(int level)
         {

@@ -17,7 +17,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 9c2adbe0a98d51945af6bca24076d1f6, type: 3}
   prefab: {fileID: 2637129900881017132, guid: f4a5eab363d3f2549bdf6bc968ee920a, type: 3}
   probability: 10
-  price: 200
+  price: 300
   levels:
   - neededLevel: 1
     upgradeDescriptions:
@@ -37,8 +37,10 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_COOLDOWN
       value: 0.1
+    - descriptionKey: UPG_DAMAGE
+      value: 2.5
     range: 3
-    damage: 5
+    damage: 7.5
     attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
@@ -50,13 +52,15 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
-      value: 5
+      value: 2.5
+    - descriptionKey: UPG_SPEED
+      value: 2.5
     range: 3
     damage: 10
     attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 10
+    projectileSpeed: 13
     duration: 0.5
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.11
@@ -65,20 +69,8 @@ MonoBehaviour:
     upgradeDescriptions:
     - descriptionKey: UPG_RANGE
       value: 1
-    range: 4
-    damage: 10
-    attackCooldown: 0.4
-    currentCooldown: 0
-    areaSize: 1
-    projectileSpeed: 10
-    duration: 0.5
-    projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
-    passThroughAmnt: 0
-  - neededLevel: 1
-    upgradeDescriptions:
-    - descriptionKey: UPG_SPEED
-      value: 3
+    - descriptionKey: UPG_DAMAGE
+      value: 2.5
     range: 4
     damage: 10
     attackCooldown: 0.4
@@ -108,7 +100,7 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
-      value: 5
+      value: 2.5
     range: 4
     damage: 15
     attackCooldown: 0.3

@@ -28,28 +28,28 @@ namespace TowerSurvivors
 
         //Structures
         public bool unCannon = true;
-        public bool unSniper = true;
         public bool unRoundabout = true;
         public bool unBarbedWire = true;
         public bool unRocketLauncher = true;
-
-        public bool unPawn = true;
-        public bool unQueen = false;
-        public bool unDartMonkey = true;
-        public bool unHardDrive = true;
-        public bool unVendingMachine = true;
         public bool unGunStick = true;
+        public bool unVendingMachine = true;
+
+        public bool unSniper = false;
+        public bool unPawn = false;
+        public bool unQueen = false;
+        public bool unDartMonkey = false;
+        public bool unHardDrive = false;
 
         //Items
-        public bool unOverClocker = false;
-        public bool unHammer = false;
-        public bool unRunningShoes = false;
+        public bool unFrogsTail = true;
+        public bool unLubricator = true;
+        public bool unRunningShoes = true;
         public bool unTelescope = true;
-        public bool unLubricator = false;
 
-        public bool unDuplicator = false;
-        public bool unFrogsTail = false;
+        public bool unHammer = false;
+        public bool unOverClocker = false;
         public bool unScope = false;
+        public bool unDuplicator = false;
         public bool unPremiumGunpowder = false;
         public bool unMushroom = false;
 
