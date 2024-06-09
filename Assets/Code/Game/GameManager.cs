@@ -68,7 +68,7 @@ namespace TowerSurvivors.Game
             if (!_developerMode && !SaveSystem.csd.developerMode)
                 return;
 
-            if (Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G)) //Inventory debugger
             {
                 AssetsHolder.Instance.inventoryDebugger.Toggle();
             }
@@ -78,25 +78,32 @@ namespace TowerSurvivors.Game
                     !AssetsHolder.Instance.HUD.gameObject.activeSelf);
                 Cursor.visible = AssetsHolder.Instance.HUD.gameObject.activeSelf;
             }
-            if (Input.GetKeyDown(KeyCode.K))
+            if (Input.GetKeyDown(KeyCode.K)) //Kill all enemies
             {
                 EnemySpawner.Instance.KillAllEnemies();
             }
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.J)) //Enable spawning
             {
                 EnemySpawner.Instance.activeSpawning = true;
             }
-            if (Input.GetKeyDown(KeyCode.H))
+            if (Input.GetKeyDown(KeyCode.H)) //Spawn boss
             {
                 EnemySpawner.Instance.SpawnBoss();
             }
-            if (Input.GetKeyDown(KeyCode.I))
+            if (Input.GetKeyDown(KeyCode.I)) //Toggle invincibility
             {
                 Player.Health.isInvincible = !Player.Health.isInvincible;
                 if (Player.Health.isInvincible)
                     Player.Sprite.material.SetFloat("_ShowOutline_ON", 0.0f);
                 else
                     Player.Sprite.material.SetFloat("_ShowOutline_ON", 1.0f);
+            }
+            if (Input.GetKeyDown(KeyCode.L)) //Level Up
+            {
+                if (!isSuperPaused)
+                {
+                    Player.Instance.AddXp(Player.Instance.XpForNextLevel);
+                }
             }
         }
 
@@ -174,7 +181,6 @@ namespace TowerSurvivors.Game
 
         public void LevelUp()
         {
-            isSuperPaused = true;
             LevelUpMenu.Instance.LevelUp();
         }
 

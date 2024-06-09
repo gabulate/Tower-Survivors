@@ -167,7 +167,7 @@ MonoBehaviour:
   stunTime: 0.1
   isStunned: 0
   speed: 45
-  damage: 15
+  damage: 25
   attackCooldown: 1
   currentCooldown: 0
 --- !u!95 &9092903341455540078

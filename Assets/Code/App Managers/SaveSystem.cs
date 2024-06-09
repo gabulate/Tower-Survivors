@@ -9,7 +9,7 @@ namespace TowerSurvivors
     {
         public static SaveData csd;
         private static readonly string path = Application.persistentDataPath + "/saveFile.json";
-        //C:/Users/Gabri/AppData/LocalLow/Gabol2/Tower Survivors/
+        //C:\Users\Gabri\AppData\LocalLow\Gabulate\Structured Defenders
 
         public static bool LoadSaveFromDisk()
         {

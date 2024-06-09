@@ -148,8 +148,8 @@ namespace TowerSurvivors.PlayerScripts
                 XpForNextLevel += 15;
             }
 
-            e_xpChanged.Invoke(_xp, XpForNextLevel);
             e_leveledUp.Invoke(Level);
+            e_xpChanged.Invoke(_xp, XpForNextLevel);
 
             GameManager.Instance.LevelUp();
 

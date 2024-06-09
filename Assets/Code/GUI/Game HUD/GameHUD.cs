@@ -118,6 +118,7 @@ namespace TowerSurvivors.GUI
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+            xpBar.value = targetValue;
         }
 
         IEnumerator SmoothChangeHealth(float seconds, float current, float max)

@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Gabol2
-  productName: Tower Survivors
+  companyName: Gabulate
+  productName: Structured Defenders
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.1981132, g: 0.023362402, b: 0.0670501, a: 1}
@@ -136,7 +136,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: dev
+  bundleVersion: Alpha 24.06.07
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -275,7 +275,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ffa96806ecab890448e5e5cab4c3039e, type: 3}
+      m_Icon: {fileID: 2800000, guid: 53d12c346a868e149aa519bfe8199074, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
