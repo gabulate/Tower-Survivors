@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
-    amount: 500
-  amountAtATime: 10
+    amount: 100
+  amountAtATime: 100
   cooldown: 0.5
   distribution: 0
+  totalDuration: 00:00
+  totalEnemies: 100

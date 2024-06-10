@@ -197,12 +197,12 @@ MonoBehaviour:
   _timeAlive: 0
   ChanceToDropXp: 0
   Xp: 2
-  HP: 1500
+  HP: 2000
   invulnerableTime: 0.2
   isInvincible: 0
   stunTime: 0.2
   isStunned: 0
-  speed: 50
+  speed: 20
   damage: 40
   attackCooldown: 1
   currentCooldown: 0

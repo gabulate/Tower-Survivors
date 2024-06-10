@@ -37,10 +37,18 @@ namespace TowerSurvivors
 
         private void InitialiseSaveData()
         {
-            if (!SaveSystem.LoadSaveFromDisk())
+            try
+            {
+                if (!SaveSystem.LoadSaveFromDisk())
+                {
+                    SaveSystem.CreateNewSave();
+                }
+            }
+            catch (Exception)
             {
                 SaveSystem.CreateNewSave();
-            }  
+                throw;
+            }
         }
 
         public void SetLanguage(string language)

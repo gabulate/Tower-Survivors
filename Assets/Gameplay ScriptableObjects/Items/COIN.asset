@@ -20,4 +20,7 @@ MonoBehaviour:
   price: 100
   levels:
   - EffectIntensityByLevel: 0
-    upgradeDescriptions: []
+    upgradeDescriptions:
+    - descriptionKey: COIN_DSC
+      value: 0
+  physical: 0

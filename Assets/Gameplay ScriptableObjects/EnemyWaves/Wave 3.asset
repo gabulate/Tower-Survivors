@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - prefab: {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
-    amount: 60
+    amount: 30
   - prefab: {fileID: 8061092949138535654, guid: 62872d3d3aa9c4e4d86f08338300e4b3, type: 3}
     amount: 20
   - prefab: {fileID: 4839404506047974078, guid: b2a01808543f7ef4084f57e9369bd3a8, type: 3}
-    amount: 30
+    amount: 60
   - prefab: {fileID: 6036972993288477118, guid: 1723143892717c147953b42cfe399fa2, type: 3}
     amount: 10
   amountAtATime: 1

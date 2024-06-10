@@ -44,8 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab42e8acaffad7f40b51574ae2601130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 7045164159405668869, guid: 0a199b284b5a24449a925ba9596e135b, type: 3}
   activeSpawning: 1
-  MaxEnemies: 150
+  MaxEnemies: 200
   currentEnemies: 0
   waves:
   - {fileID: 11400000, guid: c89b30226ba894d4dbbc05d5659d955c, type: 2}
@@ -56,18 +57,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 35da624166e77bf4d904ae387b5a7697, type: 2}
   - {fileID: 11400000, guid: b3c2a5e511e16fc4491068c8b57aed7f, type: 2}
   - {fileID: 11400000, guid: 705d708c87b21b147ac76b9f012abd5d, type: 2}
-  - {fileID: 11400000, guid: 21c3c8edd019e2f49bba47c1541127bc, type: 2}
   - {fileID: 11400000, guid: 5d78236b85d21fe408974b7e4aa3d1e2, type: 2}
+  - {fileID: 11400000, guid: 21c3c8edd019e2f49bba47c1541127bc, type: 2}
   - {fileID: 11400000, guid: b6554b49cb3572f499692943d0040215, type: 2}
   - {fileID: 11400000, guid: d770e6f7f364e6b4792d908d2672c052, type: 2}
   - {fileID: 11400000, guid: 6ab91b8a462b5fa4f923f724834c48ee, type: 2}
   - {fileID: 11400000, guid: 8ec56c6421d09cf4ab814675bbff498e, type: 2}
   - {fileID: 11400000, guid: 212b815fcf97fda4eae53e85fba20ebc, type: 2}
+  - {fileID: 11400000, guid: 7ecb6237b82f42848a9f86f8120e680e, type: 2}
   - {fileID: 11400000, guid: b885c4f4f00f1734ab2bf3085cb5d987, type: 2}
   - {fileID: 11400000, guid: 1c083489294c5a44f94cc43c1fe42095, type: 2}
+  - {fileID: 11400000, guid: 0a9d5030d4c7aff49bf7b26ad3b79bef, type: 2}
+  - {fileID: 11400000, guid: eadea08c7615d3249a1920acc84b8f6c, type: 2}
+  - {fileID: 11400000, guid: 79f927ca335e49644b1b5914738b30ab, type: 2}
+  - {fileID: 11400000, guid: 44f0d5bc0c3ec584dbfd2c5bf90052f4, type: 2}
+  - {fileID: 11400000, guid: d2c31b1291ba918448a595d242c3ac78, type: 2}
   - {fileID: 11400000, guid: 442238b04140e634c9c5d08f34d9665c, type: 2}
-  totalDuration: 18:35
-  totalEnemies: 2397
+  - {fileID: 11400000, guid: 386794ffe3e37514693ac5ae8a14fce8, type: 2}
+  totalDuration: 37:10
+  totalEnemies: 5000
   currentWave: {fileID: 0}
   currentWavePairs: []
   currentWaveIndex: 0

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Wave 9
   m_EditorClassIdentifier: 
   enemies:
-  - prefab: {fileID: 1443172133896340540, guid: b88f9747ab374ab4bb348d256dfe1e22, type: 3}
+  - prefab: {fileID: 4839404506047974078, guid: b2a01808543f7ef4084f57e9369bd3a8, type: 3}
     amount: 20
+  - prefab: {fileID: 27272731154654329, guid: 8f5c58668e1d8774b8bbf880f27a6b98, type: 3}
+    amount: 30
   - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
-    amount: 50
+    amount: 60
   - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
     amount: 1
-  - prefab: {fileID: 196085565168078665, guid: 4c4ae7be1c0c6e74bb1a3ae2c0b13147, type: 3}
-    amount: 60
-  amountAtATime: 1
-  cooldown: 1
+  amountAtATime: 2
+  cooldown: 1.5
   distribution: 0
-  totalDuration: 02:11
-  totalEnemies: 131
+  totalDuration: 01:23
+  totalEnemies: 111

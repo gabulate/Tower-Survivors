@@ -17,12 +17,14 @@ MonoBehaviour:
     amount: 50
   - prefab: {fileID: 27272731154654329, guid: 8f5c58668e1d8774b8bbf880f27a6b98, type: 3}
     amount: 35
-  - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
-    amount: 1
   - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
     amount: 20
-  amountAtATime: 1
-  cooldown: 1
+  - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
+    amount: 1
+  - prefab: {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
+    amount: 10
+  amountAtATime: 2
+  cooldown: 1.5
   distribution: 0
-  totalDuration: 01:46
-  totalEnemies: 106
+  totalDuration: 01:27
+  totalEnemies: 116

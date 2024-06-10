@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: Wave 13
   m_EditorClassIdentifier: 
   enemies:
-  - prefab: {fileID: 1443172133896340540, guid: b88f9747ab374ab4bb348d256dfe1e22, type: 3}
-    amount: 40
+  - prefab: {fileID: 2481510418343764498, guid: a56edabe4d08b6a439c053af4b1478aa, type: 3}
+    amount: 10
+  - prefab: {fileID: 6036972993288477118, guid: 1723143892717c147953b42cfe399fa2, type: 3}
+    amount: 200
   - prefab: {fileID: 196085565168078665, guid: 4c4ae7be1c0c6e74bb1a3ae2c0b13147, type: 3}
-    amount: 40
-  - prefab: {fileID: 1135192527931764103, guid: bbe0f7401e0df5b4d8fe6c1795460901, type: 3}
-    amount: 40
-  amountAtATime: 1
+    amount: 50
+  - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
+    amount: 5
+  amountAtATime: 3
   cooldown: 1
   distribution: 0
-  totalDuration: 02:00
-  totalEnemies: 120
+  totalDuration: 01:28
+  totalEnemies: 265

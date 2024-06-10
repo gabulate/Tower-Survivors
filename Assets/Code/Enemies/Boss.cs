@@ -36,7 +36,7 @@ namespace TowerSurvivors.Enemies
         {
             base.FixedUpdate();
             //The boss constantly gets more speed but it is reduced when taking damage
-            speed += 15 * Time.fixedDeltaTime;
+            speed += 5 * Time.fixedDeltaTime;
         }
 
         protected override void Move()
@@ -87,9 +87,9 @@ namespace TowerSurvivors.Enemies
 
             HP -= damage;
             
-            if(speed > 50)
+            if(speed > 40)
             {
-                speed -= 4;
+                speed -= damage * 0.1f;
             }
 
             try

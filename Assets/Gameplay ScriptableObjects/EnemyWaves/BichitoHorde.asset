@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - prefab: {fileID: 6036972993288477118, guid: 1723143892717c147953b42cfe399fa2, type: 3}
-    amount: 200
-  amountAtATime: 200
+    amount: 300
+  - prefab: {fileID: 3176541383802398027, guid: fdcfecb2c2126b247803b731e1414fde, type: 3}
+    amount: 10
+  amountAtATime: 300
   cooldown: 1
   distribution: 0
   totalDuration: 00:01
-  totalEnemies: 200
+  totalEnemies: 310
