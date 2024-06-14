@@ -1,145 +1,145 @@
-﻿KEY,EN,ES
-General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat); Some are for singular forms and have a 1 at the end,Strings can be formatted using {0}; {1}; etc. for when they need a variable value.
-Main Menu Text---,Main Menu Text---,Texto del menú principal---
-YES,Yes,Sí
-NO,No,No
-PLAY,Play,Jugar
-CONFIG,Settings,Configuraciones
-ABOUT,About,Acerca de
-EXIT,Exit,Salir
-RETURN_TO_MAIN_MENU,Return to main menu,Regresar al menú principal
-LANGUAGE,English,Español
-DISPLAY_SETTINGS,Display settings,Visualización
-SOUND_SETTINGS,Volume settings,Sonido
-SFX,Sound effects,Efectos de sonido
-MUSIC,Music,Música
-SELECT_LANGUAGE,Change language (Requires restart):,Cambiar idioma (Requiere reiniciar):
-DISPLAY_TYPE,Display:,Mostrar como:
-FULLSCREEN,Fullscreen,Pantalla completa
-WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes
-WINDOWED,Window,Ventana
-RESOLUTION,Resolution:,Resolución:
-RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones
-DELETE_SAVE,Delete save data,Eliminar datos de guardado
-CONFIRM,Click again to confirm,Haz click de nuevo para confirmar
-RESUME,Resume,Resumir
-CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?
-STARTING_ITEM,Starting item:,Ítem inicial:
-BUFFS,Buffs:,Mejoras:
-UNLOCKED,Already unlocked.,Ya desbloqueado.
-Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---
-STAT_RANGE,Range,Rango
-STAT_DAMAGE,Damage,Daño
-STAT_COOLDOWN,Cooldown,Enfriamiento
-STAT_SIZE,Size,Tamaño
-STAT_PRJSPEED,Projectile Speed,Velocidad en Proyectiles
-STAT_PRJDURATION,Projectile Duration,Duración de Proyectiles
-STAT_PRJAMNT,Projectile Amount,Cantidad de Proyectiles
-STAT_SPEED,Movement Speed,Velocidad de Movimiento
-STAT_VISION,Vision,Visión
-STAT_STRUCTURELIMIT,Structure Limit,Límite de Estructuras
-STAT_HEALTHREGEN,Health Regeneration,Regeneración de Vida
-UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0}
-LEVELUP,Level Up!,¡Subiste de nivel!
-CURRENTLEVEL,Level,Nivel
-LEVEL,Needed:,Se necesita:
-MAXLEVEL,Max level: {0}.,{0} a máximo nivel.
-MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!
-Characters---,Characters---,Personajes---
-ENGINEER_NAME,Engineer,Ingeniero
-ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.
-PRISONER_NAME,Jacinto,Jacinto
-PRISONER_DSC,Condemned for life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.
-SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio
-SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket launcher.,Un tipo ágil; aferrado a su pasado… Tiene un lanza misiles a cachete.
-MIMA_NAME,Mima,Mima
-MIMA_DSC,Is she the real Mima?,¿Es ella la Mima real?
-Structures---,Structures---,Estructuras---
-STRUCTURE,Structure,Estructura
-STRUCTURES,Structures,Estructuras
-GAME_WON,Victory!,¡Victoria!
-GAME_OVER,Game over,¡Haz muerto!
-CONTINUE_TO_MENU,Continue to menu,Continuar al menú
-TIME_SURVIVED,Time survived:,Tiempo sobrevivido:
-ENEMIES_KILLED,Enemies killed:,Enemigos eliminados:
-LEVEL_REACHED,Level reached:,Nivel alcanzado:
-STRUCTURE_UPGRADES,Structure upgrades:,Estructuras mejoradas:
-COINS_EARNED,Earned coins:,Monedas obtenidas:
-ITEM,Item,Ítem
-ITEMS,Items,Ítems
-UNLOCK_MORE,Unlock more items from the main menu!,¡Desbloquea más ítems desde el menú principal!
-GET_GUD,Better luck next time!,¡La que sigue es la buena!
-NOTHINGITEM_NAME,Nothing.,Nada.
-NOTHINGITEM_DSC,Does nothing.,No hace nada.
-COIN_NAME,Coins,Monedas
-COIN_DSC,Get 10 coins.,Obtienes 10 monedas.
-CANNON_NAME,Cannon,Cañón
-CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.
-SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador
-SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por mi compa Franco; ¡él nunca falla!
-ROUNDABOUT_NAME,Roundabout,Rotonda
-ROUNDABOUT_DSC,Spins and fires!,¡Da vueltas y dispara!
-BARBEDWIRE_NAME,Barbed Wire,Alambre de púas
-BARBEDWIRE_DSC,Damages enemies that touch it.,Hace daño a los enemigos que lo toquen.
-ROCKETLAUNCHER_NAME,Rocket launcher,Lanza cohetes
-ROCKETLAUNCHER_DSC,Rockets explode upon impact!,¡Lanza cohetes que explotan al impactar!
-PAWN_NAME,Pawn,Peón
-PAWN_DSC,Fires in a straight line. Right click to rotate.,Dispara en línea recta. Click derecho para girar.
-QUEEN_NAME,Queen,Reina
-QUEEN_DSC,Fires in all directions.,Dispara en todas las direcciones.
-MONKEY_NAME,Dart monkey,Monardo
-MONKEY_DSC,Shoots darts really fast!,¡Lanza dardos rapidísimo!
-HDD_NAME,Hard drive,Disco duro
-HDD_DSC,Launches bouncy disks.,Lanza discos que rebotan.
-VENDMACH_NAME,Vending Machine,Máquina dispensadora
-VENDMACH_DSC,Launches fire cans that deal damage in an area.,Lanza latas de fuego que hacen daño en área.
-GUNSTICK_NAME,Gun on a stick,Pistola en un palo
-GUNSTICK_DSC,Rotates randomly after each shot!,¡Gira aleatoriamente después de cada disparo!
-OVERCLOCKER_NAME,Overclocker,Super cargador
-OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.
-HAMMER_NAME,Hammer,Martillo
-HAMMER_DSC,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
-RUNNINGSHOES_NAME,Running shoes,Zapatos deportivos
-RUNNINGSHOES_DSC,Sneakers that make you run faster.,Tenis que te hacen correr más rápido.
-TELESCOPE_NAME,Telescope,Telescopio
-TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.
-LUBRICATOR_NAME,Lubricator,Lubricante
-LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los proyectiles.
-DUPLICATOR_NAME,Duplication chamber,Cámara de duplicación
-DUPLICATOR_DSC,Duplicates projectiles,Duplica proyectiles.
-FROGSTAIL_NAME,Frog's tail,Colita de rana
-FROGSTAIL_DSC,Gives health regeneration.,Da regeneración de vida.
-SCOPE_NAME,Scope,Mira
-SCOPE_DSC,Gives extra range to ranged structures.,Da rango extra a estructuras.
-GUNPOWDER_NAME,Premium gunpowder,Pólvora premium
-GUNPOWDER_DSC,Increases structure damage.,Aumenta el daño de las estructuras.
-MUSHROOM_NAME,Suspicious mushroom,Hongo sospechoso
-MUSHROOM_DSC,Increases projectile size.,Aumenta el tamaño de los proyectiles.
-Upgrades----,Upgrades---,Mejoras---
-UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.
-UPG_RANGEALL,Structures gain a {0}% range increase.,Aumenta el rango de las estructuras un {0}%.
-UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.
-UPG_DAMAGEALL,Damage of all structures increased by {0}%.,Aumenta el daño de todas las estructuras un {0}%.
-UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.
-UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.
-UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.
-UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los proyectiles un {0}%.
-UPG_SIZEALL,Projectile size of all projectiles increased by {0}%.,Aumenta el tamaño de todos los proyectiles un {0}%.
-UPG_SIZEOWN,Size increased by {0}%.,Tamaño aumentado un {0}%.
-UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los proyectiles.
-UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los proyectiles un {0}%.
-UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los proyectiles {0} segundos.
-UPG_DURATION1,Projectile duration increased by 1 second.,Aumenta la duración de los proyectiles 1 segundo.
-UPG_AMOUNT,Projectile amount increased by {0}.,Cantidad de proyectiles aumentada en {0}.
-UPG_PASSTH,Projectiles can pass through {0} more enemies.,Los proyectiles pueden atravesar a {0} enemigos más.
-UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los proyectiles pueden atravesar a 1 enemigo más.
-UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.
-UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.
-UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.
-UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 proyectil más.
-UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.
-UPG_QUEEN,Pawn converts into a Queen.,El peón se convierte en Reina.
-Credits--,Credits--,Créditos
-STRUCTURED_DEFENDERS,Structured Defenders,Structured Defenders
-A_GAME_BY,A game by:,Un juego de:
-THANKS_FOR_PLAYING,Thanks for playing!,¡Gracias por jugar!
+﻿KEY,English,Español,Português
+General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat); Some are for singular forms and have a 1 at the end,Strings can be formatted using {0}; {1}; etc. for when they need a variable value.,
+Main Menu Text---,Main Menu Text---,Texto del menú principal---,
+YES,Yes,Sí,
+NO,No,No,
+PLAY,Play,Jugar,
+CONFIG,Settings,Configuraciones,
+ABOUT,About,Acerca de,
+EXIT,Exit,Salir,
+RETURN_TO_MAIN_MENU,Return to main menu,Regresar al menú principal,
+LANGUAGE,English,Español,
+DISPLAY_SETTINGS,Display settings,Visualización,
+SOUND_SETTINGS,Volume settings,Sonido,
+SFX,Sound effects,Efectos de sonido,
+MUSIC,Music,Música,
+SELECT_LANGUAGE,Change language (Requires restart):,Cambiar idioma (Requiere reiniciar):,
+DISPLAY_TYPE,Display:,Mostrar como:,
+FULLSCREEN,Fullscreen,Pantalla completa,
+WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes,
+WINDOWED,Window,Ventana,
+RESOLUTION,Resolution:,Resolución:,
+RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones,
+DELETE_SAVE,Delete save data,Eliminar datos de guardado,
+CONFIRM,Click again to confirm,Haz click de nuevo para confirmar,
+RESUME,Resume,Resumir,
+CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?,
+STARTING_ITEM,Starting item:,Ítem inicial:,
+BUFFS,Buffs:,Mejoras:,
+UNLOCKED,Already unlocked.,Ya desbloqueado.,
+Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---,
+STAT_RANGE,Range,Rango,
+STAT_DAMAGE,Damage,Daño,
+STAT_COOLDOWN,Cooldown,Enfriamiento,
+STAT_SIZE,Size,Tamaño,
+STAT_PRJSPEED,Projectile Speed,Velocidad en Proyectiles,
+STAT_PRJDURATION,Projectile Duration,Duración de Proyectiles,
+STAT_PRJAMNT,Projectile Amount,Cantidad de Proyectiles,
+STAT_SPEED,Movement Speed,Velocidad de Movimiento,
+STAT_VISION,Vision,Visión,
+STAT_STRUCTURELIMIT,Structure Limit,Límite de Estructuras,
+STAT_HEALTHREGEN,Health Regeneration,Regeneración de Vida,
+UPGRADETO,Upgrade to level: {0},Mejorar a nivel: {0},
+LEVELUP,Level Up!,¡Subiste de nivel!,
+CURRENTLEVEL,Level,Nivel,
+LEVEL,Needed:,Se necesita:,
+MAXLEVEL,Max level: {0}.,{0} a máximo nivel.,
+MAXLEVELREACHED,Max level reached!,Se ha alcanzado el máximo nivel!,
+Characters---,Characters---,Personajes---,
+ENGINEER_NAME,Engineer,Ingeniero,
+ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.,
+PRISONER_NAME,Jacinto,Jacinto,
+PRISONER_DSC,Condemned for life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.,
+SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio,
+SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket launcher.,Un tipo ágil; aferrado a su pasado… Tiene un lanza misiles a cachete.,
+MIMA_NAME,Mima,Mima,
+MIMA_DSC,Is she the real Mima?,¿Es ella la Mima real?,
+Structures---,Structures---,Estructuras---,
+STRUCTURE,Structure,Estructura,
+STRUCTURES,Structures,Estructuras,
+GAME_WON,Victory!,¡Victoria!,
+GAME_OVER,Game over,¡Haz muerto!,
+CONTINUE_TO_MENU,Continue to menu,Continuar al menú,
+TIME_SURVIVED,Time survived:,Tiempo sobrevivido:,
+ENEMIES_KILLED,Enemies killed:,Enemigos eliminados:,
+LEVEL_REACHED,Level reached:,Nivel alcanzado:,
+STRUCTURE_UPGRADES,Structure upgrades:,Estructuras mejoradas:,
+COINS_EARNED,Earned coins:,Monedas obtenidas:,
+ITEM,Item,Ítem,
+ITEMS,Items,Ítems,
+UNLOCK_MORE,Unlock more items from the main menu!,¡Desbloquea más ítems desde el menú principal!,
+GET_GUD,Better luck next time!,¡La que sigue es la buena!,
+NOTHINGITEM_NAME,Nothing.,Nada.,
+NOTHINGITEM_DSC,Does nothing.,No hace nada.,
+COIN_NAME,Coins,Monedas,
+COIN_DSC,Get 10 coins.,Obtienes 10 monedas.,
+CANNON_NAME,Cannon,Cañón,
+CANNON_DSC,Cannon that shoots towards its nearest enemy. Can be placed on top of another cannon to upgrade it.,Cañón que dispara hacia el enemigo más cercano. Puede colocarse sobre otro cañón para mejorarlo.,
+SNIPER_NAME,Mark's Man-Tower,Torre Franco-Tirador,
+SNIPER_DSC,Big damage and big range. Operated by my buddy Mark; He doesn't miss!,Gran daño y gran rango. Operada por mi compa Franco; ¡él nunca falla!,
+ROUNDABOUT_NAME,Roundabout,Rotonda,
+ROUNDABOUT_DSC,Spins and fires!,¡Da vueltas y dispara!,
+BARBEDWIRE_NAME,Barbed Wire,Alambre de púas,
+BARBEDWIRE_DSC,Damages enemies that touch it.,Hace daño a los enemigos que lo toquen.,
+ROCKETLAUNCHER_NAME,Rocket launcher,Lanza cohetes,
+ROCKETLAUNCHER_DSC,Rockets explode upon impact!,¡Lanza cohetes que explotan al impactar!,
+PAWN_NAME,Pawn,Peón,
+PAWN_DSC,Fires in a straight line. Right click to rotate.,Dispara en línea recta. Click derecho para girar.,
+QUEEN_NAME,Queen,Reina,
+QUEEN_DSC,Fires in all directions.,Dispara en todas las direcciones.,
+MONKEY_NAME,Dart monkey,Monardo,
+MONKEY_DSC,Shoots darts really fast!,¡Lanza dardos rapidísimo!,
+HDD_NAME,Hard drive,Disco duro,
+HDD_DSC,Launches bouncy disks.,Lanza discos que rebotan.,
+VENDMACH_NAME,Vending Machine,Máquina dispensadora,
+VENDMACH_DSC,Launches fire cans that deal damage in an area.,Lanza latas de fuego que hacen daño en área.,
+GUNSTICK_NAME,Gun on a stick,Pistola en un palo,
+GUNSTICK_DSC,Rotates randomly after each shot!,¡Gira aleatoriamente después de cada disparo!,
+OVERCLOCKER_NAME,Overclocker,Super cargador,
+OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.,
+HAMMER_NAME,Hammer,Martillo,
+HAMMER_DSC,Allows you to place 1 more structure.,Permite colocar 1 estructura más.,
+RUNNINGSHOES_NAME,Running shoes,Zapatos deportivos,
+RUNNINGSHOES_DSC,Sneakers that make you run faster.,Tenis que te hacen correr más rápido.,
+TELESCOPE_NAME,Telescope,Telescopio,
+TELESCOPE_DSC,Lets you see a little further.,Te permite ver un poco más lejos.,
+LUBRICATOR_NAME,Lubricator,Lubricante,
+LUBRICATOR_DSC,Makes projectiles go faster,Aumenta la velocidad de los proyectiles.,
+DUPLICATOR_NAME,Duplication chamber,Cámara de duplicación,
+DUPLICATOR_DSC,Duplicates projectiles,Duplica proyectiles.,
+FROGSTAIL_NAME,Frog's tail,Colita de rana,
+FROGSTAIL_DSC,Gives health regeneration.,Da regeneración de vida.,
+SCOPE_NAME,Scope,Mira,
+SCOPE_DSC,Gives extra range to ranged structures.,Da rango extra a estructuras.,
+GUNPOWDER_NAME,Premium gunpowder,Pólvora premium,
+GUNPOWDER_DSC,Increases structure damage.,Aumenta el daño de las estructuras.,
+MUSHROOM_NAME,Suspicious mushroom,Hongo sospechoso,
+MUSHROOM_DSC,Increases projectile size.,Aumenta el tamaño de los proyectiles.,
+Upgrades----,Upgrades---,Mejoras---,
+UPG_RANGE,Range increased by {0}.,Rango aumentado en {0}.,
+UPG_RANGEALL,Structures gain a {0}% range increase.,Aumenta el rango de las estructuras un {0}%.,
+UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.,
+UPG_DAMAGEALL,Damage of all structures increased by {0}%.,Aumenta el daño de todas las estructuras un {0}%.,
+UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.,
+UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.,
+UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.,
+UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los proyectiles un {0}%.,
+UPG_SIZEALL,Projectile size of all projectiles increased by {0}%.,Aumenta el tamaño de todos los proyectiles un {0}%.,
+UPG_SIZEOWN,Size increased by {0}%.,Tamaño aumentado un {0}%.,
+UPG_SPEED,Projectile speed increased.,Aumenta la velocidad de los proyectiles.,
+UPG_SPEEDALL,Projectile speed increased by {0}%.,Aumenta la velocidad de los proyectiles un {0}%.,
+UPG_DURATION,Projectile duration increased by {0} seconds.,Aumenta la duración de los proyectiles {0} segundos.,
+UPG_DURATION1,Projectile duration increased by 1 second.,Aumenta la duración de los proyectiles 1 segundo.,
+UPG_AMOUNT,Projectile amount increased by {0}.,Cantidad de proyectiles aumentada en {0}.,
+UPG_PASSTH,Projectiles can pass through {0} more enemies.,Los proyectiles pueden atravesar a {0} enemigos más.,
+UPG_PASSTH1,Projectiles can pass through 1 more enemy.,Los proyectiles pueden atravesar a 1 enemigo más.,
+UPG_MOVESPEED,Movement speed increased.,Aumenta la velocidad de movimiento.,
+UPG_VISION,Allows you to see a little further.,Te permite ver un poco más lejos.,
+UPG_EXTRASTR1,Allows you to place 1 more structure.,Permite colocar 1 estructura más.,
+UPG_EXTRAPRJ1,Structures fire 1 more projectile.,Las estrucutras disparan 1 proyectil más.,
+UPG_HEALTHREGEN,Health regeneration augmented to {0} per second.,Regeneración de vida aumentada a {0} por segundo.,
+UPG_QUEEN,Pawn converts into a Queen.,El peón se convierte en Reina.,
+Credits--,Credits--,Créditos,
+STRUCTURED_DEFENDERS,Structured Defenders,Structured Defenders,
+A_GAME_BY,A game by:,Un juego de:,
+THANKS_FOR_PLAYING,Thanks for playing!,¡Gracias por jugar!,

@@ -13,10 +13,14 @@ namespace TowerSurvivors.Localisation
         private static Dictionary<string, string> currentLanguage = new Dictionary<string, string>();
         private static int languageCol = 1;
 
-        public static void InitialiseLanguage(TextAsset csv, string language)
+        public static void SetCSV(TextAsset csv)
+        {
+            Language.csv = csv;
+        }
+
+        public static void InitialiseLanguage(string language)
         {
             currentLanguage.Clear();
-            Language.csv = csv;
 
             //Gets the rows from the csv, fomated like: KEY, English, Spanish.....
             string[] rows = csv.text.Split(new string[] { "\n" }, System.StringSplitOptions.None);
@@ -110,7 +114,12 @@ namespace TowerSurvivors.Localisation
                         string[] row = rows[i].Split(new string[] { "," }, System.StringSplitOptions.None);
                         if(row[0] == key)
                         {
-                            currentLanguage.Add(key, row[languageCol].Trim().Replace(';', ','));
+                            string phrase = row[languageCol].Trim().Replace(';', ',');
+                            if (phrase == "") //If the phrase is empty
+                                return "#MISSING!";
+
+                            //Add the phrase to the dictionary
+                            currentLanguage.Add(key, phrase);
                             //Debug.Log("Language rows: " + currentLanguage.Count);
                             return currentLanguage[key];
                         }
@@ -125,6 +134,17 @@ namespace TowerSurvivors.Localisation
                 //if there was an error reading the csv
                 return "#" + key;
             }
+        }
+
+        public static string[] GetAvailableLanguages()
+        {
+            //Gets the rows from the csv, fomated like: KEY, English, Spanish.....
+            string[] rows = csv.text.Split(new string[] { "\n" }, System.StringSplitOptions.None);
+            string[] firstRow = rows[0].Split(new string[] { "," }, StringSplitOptions.None);
+
+            string[] langs = new string[firstRow.Length - 1];
+            Array.Copy(firstRow, 1, langs, 0, firstRow.Length - 1);
+            return langs;
         }
     }
 }

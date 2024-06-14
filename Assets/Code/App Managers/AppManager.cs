@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TowerSurvivors.Localisation;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace TowerSurvivors
 {
@@ -25,9 +26,10 @@ namespace TowerSurvivors
                 
             DontDestroyOnLoad(this.gameObject);
 
+            Language.SetCSV(languagesCSV);
             if (PlayerPrefs.HasKey("language"))
             {
-                Language.InitialiseLanguage(languagesCSV, PlayerPrefs.GetString("language"));
+                Language.InitialiseLanguage(PlayerPrefs.GetString("language"));
             }
 
             GameSettings.LoadSettings();
@@ -54,7 +56,8 @@ namespace TowerSurvivors
         public void SetLanguage(string language)
         {
             PlayerPrefs.SetString("language", language);
-            Language.InitialiseLanguage(languagesCSV, PlayerPrefs.GetString("language"));
+            Language.InitialiseLanguage(PlayerPrefs.GetString("language"));
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
