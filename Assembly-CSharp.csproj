@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Code\Structures\Roundabout.cs" />
     <Compile Include="Assets\Code\App Managers\SoundClip.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\LanguageOption.cs" />
     <Compile Include="Assets\Code\GUI\Menus\MainMenu.cs" />
     <Compile Include="Assets\Code\GUI\Game HUD\InventoryDebugger.cs" />
     <Compile Include="Assets\Code\Projectiles\AutoDestroy.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Code\GUI\Game HUD\LevelUpOption.cs" />
     <Compile Include="Assets\Code\Game\ObjectPool.cs" />
     <Compile Include="Assets\Code\PassiveItems\Mushroom.cs" />
+    <Compile Include="Assets\Code\GUI\Menus\LanguageSelector.cs" />
     <Compile Include="Assets\Code\PassiveItems\Duplicator.cs" />
     <Compile Include="Assets\Code\Structures\VendingMachine.cs" />
     <Compile Include="Assets\Code\Game\StructureManager.cs" />
@@ -148,8 +150,6 @@
     <Compile Include="Assets\Code\GUI\Game HUD\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\Game HUD\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\GUI\Menus\LanguageSelector.cs" />
-    <Compile Include="Assets\Code\GUI\Menus\LanguageOption.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -1099,16 +1099,16 @@
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">

@@ -18,6 +18,7 @@ namespace TowerSurvivors.Audio
         [Header("Game Music Config")]
         public SoundObject musicObject;
         public SoundClip musicTrack;
+        public bool loopMusic = true;
 
         private void Awake()
         {
@@ -27,9 +28,9 @@ namespace TowerSurvivors.Audio
                 Destroy(gameObject);
         }
 
-        public void PlayMusic(bool loop = true)
+        public void PlayMusic()
         {
-            musicObject.PlayMusic(musicTrack, loop);
+            musicObject.PlayMusic(musicTrack);
         }
 
         public void PlayMusic(SoundClip musicTrack)
@@ -133,7 +134,14 @@ namespace TowerSurvivors.Audio
 
             if (musicTrack)
             {
-                PlayMusic(false);
+                if (loopMusic)
+                {
+                    PlayMusic();
+                }
+                else
+                {
+                    PlaySFX(musicTrack);
+                }
             }
         }
 

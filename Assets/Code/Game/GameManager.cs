@@ -122,7 +122,6 @@ namespace TowerSurvivors.Game
         private void Start()
         {
 
-            AudioPlayer.Instance.PlayMusic(gameMusic);
             secondsPassed = 0;
             _enemiesKilled = 0;
             structuresUpgraded = 0;

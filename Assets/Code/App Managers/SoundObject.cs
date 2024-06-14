@@ -72,7 +72,7 @@ namespace TowerSurvivors.Audio
         /// Plays a music track and loops it.
         /// </summary>
         /// <param name="musicTrack">the music track to be played.</param>
-        public void PlayMusic(SoundClip musicTrack, bool loop = true)
+        public void PlayMusic(SoundClip musicTrack)
         {
             musicMode = true;
             source.spatialBlend = 0;
@@ -80,7 +80,7 @@ namespace TowerSurvivors.Audio
             clip = musicTrack;
             source.clip = musicTrack.clip;
             source.volume = musicTrack.volume * GameSettings.MusicVolume;
-            source.loop = loop;
+            source.loop = true;
             VaryPitch();
             source.Play();
 

@@ -1039,6 +1039,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4869845984762219945, guid: c174a5d91bccac34ba30f77ff4045979, type: 3}
+      propertyPath: loopMusic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869845984762219945, guid: c174a5d91bccac34ba30f77ff4045979, type: 3}
       propertyPath: PoolLenght
       value: 1
       objectReference: {fileID: 0}

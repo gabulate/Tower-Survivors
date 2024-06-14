@@ -143,6 +143,9 @@ namespace TowerSurvivors.GUI
 
         public void OnEnable()
         {
+            if(!Player.Instance)
+                return;
+
             Player.Instance.e_xpChanged.AddListener(UpdateXpBar);
             Player.Instance.e_leveledUp.AddListener(UpdateLevel);
             Player.Health.e_healthChanged.AddListener(UpdateHealth);
