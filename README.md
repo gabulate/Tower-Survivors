@@ -1,5 +1,5 @@
-# Tower-Survivors
-Vampire Survivors clone with Tower Defense mechanics
+# Structured Defenders
+Vampire Survivors clone with Tower Defense mechanics. Made with the Unity engine.
 
 <h3>Software Used</h3>
 <ul>
