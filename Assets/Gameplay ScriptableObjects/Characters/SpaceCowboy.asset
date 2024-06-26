@@ -18,4 +18,4 @@ MonoBehaviour:
   DescriptionKey: SPACECOWBOY_DSC
   startingItem: {fileID: 11400000, guid: 19270c8b433d8904e8e8d389b5d00e6c, type: 2}
   prefab: {fileID: 753270132509385180, guid: 11885bfde19af38478f6ebbd32d71b28, type: 3}
-  price: 200
+  price: 250

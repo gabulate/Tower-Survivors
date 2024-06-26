@@ -18,4 +18,4 @@ MonoBehaviour:
   DescriptionKey: MIMA_DSC
   startingItem: {fileID: 11400000, guid: 23e693e8e0b24c848839e540a4833832, type: 2}
   prefab: {fileID: 9196993661042202410, guid: 14be244fa1f4ff04b91df6c0403f9140, type: 3}
-  price: 200
+  price: 250

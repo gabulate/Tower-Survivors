@@ -18,4 +18,4 @@ MonoBehaviour:
   DescriptionKey: JEN_DSC
   startingItem: {fileID: 11400000, guid: 3cddf92b0c7fec944802abdd3ed334ef, type: 2}
   prefab: {fileID: 9023739777528769515, guid: 74ff8c0c8a037874a9f561da9b4732b5, type: 3}
-  price: 200
+  price: 250
