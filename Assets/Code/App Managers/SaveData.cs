@@ -25,6 +25,7 @@ namespace TowerSurvivors
         public bool chPrisoner = false;
         public bool chSpaceCowboy = false;
         public bool chMima = false;
+        public bool chJen = false;
 
         //Structures
         public bool unCannon = true;

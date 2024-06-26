@@ -23,6 +23,7 @@ namespace TowerSurvivors.GUI
                 "prisoner" => SaveSystem.csd.chPrisoner,
                 "spaceCowboy" => SaveSystem.csd.chSpaceCowboy,
                 "mima" => SaveSystem.csd.chMima,
+                "jen" => SaveSystem.csd.chJen,
                 _ => false,
             };
         }
@@ -49,6 +50,9 @@ namespace TowerSurvivors.GUI
                     break;
                 case "mima":
                     SaveSystem.csd.chMima = true;
+                    break;
+                case "jen":
+                    SaveSystem.csd.chJen = true;
                     break;
             }
 

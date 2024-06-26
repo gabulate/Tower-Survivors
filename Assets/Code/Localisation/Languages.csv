@@ -54,6 +54,8 @@ SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio,vaqueiro espacial
 SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket launcher.,Un tipo ágil; aferrado a su pasado… Tiene un lanza misiles a cachete.,Companheiro ágil; ainda preso ao seu passado… Tem um lançador de foguetes incrível.
 MIMA_NAME,Mima,Mima,Mima
 MIMA_DSC,Is she the real Mima?,¿Es ella la Mima real?,Ela é a verdadeira Mima?
+JEN_NAME,Jen,Jen,Jen
+JEN_DSC,She's just a girl.,Solo es una chica.,Solo é uma menina.
 Structures---,Structures---,Estructuras---,Estruturas ---
 STRUCTURE,Structure,Estructura,Estrutura
 STRUCTURES,Structures,Estructuras,Estruturas
@@ -93,7 +95,7 @@ HDD_NAME,Hard drive,Disco duro,Disco rígido
 HDD_DSC,Launches bouncy disks.,Lanza discos que rebotan.,Lança discos saltitantes.
 VENDMACH_NAME,Vending Machine,Máquina dispensadora,Maquina de vendas
 VENDMACH_DSC,Launches fire cans that deal damage in an area.,Lanza latas de fuego que hacen daño en área.,Lança latas de fogo que causam dano em uma área.
-GUNSTICK_NAME,Gun on a stick,Pistola en un palo,Arma em uma vara
+GUNSTICK_NAME,Comically large gun on a stick,Pistola cómicamente grande en un palo,Arma comicamente grande em uma vara
 GUNSTICK_DSC,Rotates randomly after each shot!,¡Gira aleatoriamente después de cada disparo!,Gira aleatoriamente após cada tiro!
 OVERCLOCKER_NAME,Overclocker,Super cargador,super carregador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.,Faz com que as estruturas funcionem na sua capacidade máxima. Reduz o tempo de recarga de todas as estruturas.

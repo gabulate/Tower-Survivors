@@ -310,11 +310,11 @@ namespace TowerSurvivors.PlayerScripts
             Player.PlayerAnimator.SetFloat("speed", Mathf.Abs(_input.magnitude));
             if (_input.x > 0)
             {
-                Player.Sprite.flipX = false;
+                transform.localScale = new Vector3(1,1,1);
             }
             else if (_input.x < 0)
             {
-                Player.Sprite.flipX = true;
+                transform.localScale = new Vector3(-1, 1, 1);
             }
         }
 

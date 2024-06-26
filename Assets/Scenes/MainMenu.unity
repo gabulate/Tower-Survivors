@@ -344,7 +344,11 @@ PrefabInstance:
     - target: {fileID: 372594759462470655, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
       propertyPath: character
       value: 
-      objectReference: {fileID: 11400000, guid: c2faf611b13ee32428a3962ba668ede9, type: 2}
+      objectReference: {fileID: 11400000, guid: 004a6bfa0ae1a2b45b59030b672dd1ab, type: 2}
+    - target: {fileID: 996880473329176808, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -907825491, guid: 1cfbf3e6c20cf5949b83fdd4663b916a, type: 3}
     - target: {fileID: 996880473612506245, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -431,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 996880473612506246, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
       propertyPath: m_Name
-      value: Engineer (4)
+      value: Jen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76ba021f2de1fde4ca9ca2f362268957, type: 3}
