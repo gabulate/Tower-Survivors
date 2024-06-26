@@ -1,5 +1,5 @@
-# Tower-Survivors
-Vampire Survivors clone with Tower Defense mechanics
+# Structured Defenders
+Vampire Survivors clone with Tower Defense mechanics. Made with the Unity engine.
 
 <h3>Software Used</h3>
 <ul>
@@ -14,3 +14,4 @@ Vampire Survivors clone with Tower Defense mechanics
 
 <a href="https://trello.com/b/gyzyZ28G/tower-survivors">Trello Board</a>
 <a href="https://drive.google.com/drive/folders/1AxqGE2Ii_GCsynkKBQigp4alIicA7Bdr?usp=drive_link">Music Masters</a>
+<a href="https://gabulate.github.io/me/StructuredDefenders">Learn more</a>
