@@ -123,15 +123,20 @@ namespace TowerSurvivors.GUI
             ResolutionsDropdown.ClearOptions();
             List<string> options = new List<string>();
             int resIndex = 0;
+
             for (int i = 0; i < resolutions.Length; i++)
             {
                 if(resolutions[i].height >= 480)
                 {
+                    if (options.Contains(resolutions[i].width + " x " + resolutions[i].height)) //Skips duplicates
+                        continue;
+
                     options.Add(resolutions[i].width + " x " + resolutions[i].height);
                     if (resolutions[i].width == Screen.currentResolution.width &&
-                        resolutions[i].height == Screen.currentResolution.height) resIndex = i;
+                        resolutions[i].height == Screen.currentResolution.height) resIndex = i; //Gets the index of the current resolution
                 }
             }
+
             ResolutionsDropdown.AddOptions(options);
             ResolutionsDropdown.value = resIndex;
             ResolutionsDropdown.RefreshShownValue();
@@ -161,7 +166,6 @@ namespace TowerSurvivors.GUI
             string[] res = ResolutionsDropdown.options[index].text.Split("x", StringSplitOptions.None);
 
             GameSettings.SetResolution(int.Parse(res[0].Trim()), int.Parse(res[1].Trim()));
-            LoadResolutions();
         }
 
         public void SetDisplay(int type)

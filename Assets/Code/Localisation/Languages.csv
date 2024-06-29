@@ -1,6 +1,6 @@
 ﻿KEY,English,Español,Português
 General Info: DON'T USE normal COMMAS; if you need to put a comma; use a semicolon ; it will get converted into a normal comma in the game.,Upgrade keys follow the format UPG_(Stat); Some are for singular forms and have a 1 at the end,Strings can be formatted using {0}; {1}; etc. for when they need a variable value.,O meu português e muito pobre.
-Main Menu Text---,Main Menu Text---,Texto del menú principal---,Texto do menu principal----
+Main Menu Text---,Main Menu Text---,Texto del menú principal---,Texto do menu principal---
 YES,Yes,Sí,Sim
 NO,No,No,Não
 PLAY,Play,Jugar,Jogar
@@ -13,10 +13,10 @@ DISPLAY_SETTINGS,Display settings,Visualización,Mostrar
 SOUND_SETTINGS,Volume settings,Sonido,Volume
 SFX,Sound effects,Efectos de sonido,Efeitos sonoros
 MUSIC,Music,Música,Música
-SELECT_LANGUAGE,Change language (Requires restart):,Cambiar idioma (Requiere reiniciar):,Alterar idioma (requer reinicialização):
+SELECT_LANGUAGE,Change language (Requires restart):,Cambiar idioma (Requiere reiniciar):,Alterar idioma (Requer reinicialização):
 DISPLAY_TYPE,Display:,Mostrar como:,Mostrar como:
 FULLSCREEN,Fullscreen,Pantalla completa,Tela completa
-WINDOWED_FULLSCREEN,Borderless window.,Ventana sin bordes,Janela sem borda
+WINDOWED_FULLSCREEN,Borderless window,Ventana sin bordes,Janela sem borda
 WINDOWED,Window,Ventana,Janela
 RESOLUTION,Resolution:,Resolución:,Resolução:
 RESTORE_DEFAULT_CONFIG,Reset to default settings,Reiniciar todas las configuraciones,Redefinir todas as configurações
@@ -26,7 +26,7 @@ RESUME,Resume,Resumir,Retomar
 CONFIRM_EXIT,Are you sure you want to exit?,¿Seguro que quieres salir?,Tem certeza que quer sair?
 STARTING_ITEM,Starting item:,Ítem inicial:,Ítem inicial:
 BUFFS,Buffs:,Mejoras:,Melhorias:
-UNLOCKED,Already unlocked.,Ya desbloqueado.,Já desbloqueado.
+UNLOCKED,Already unlocked,Ya desbloqueado,Já desbloqueado
 Upgrade Box---,Upgrade Box---,Caja de mejorar estrucutura---,Caixa de atualização ---
 STAT_RANGE,Range,Rango,Faixa
 STAT_DAMAGE,Damage,Daño,Dano
@@ -50,7 +50,7 @@ ENGINEER_NAME,Engineer,Ingeniero,Engenheiro
 ENGINEER_DSC,Trusty engineer; knows his way around structures and monsters.,Ingeniero de confianza; le sabe a las estructuras y monstruos.,Engenheiro de confiança; conhece as estruturas e os monstros.
 PRISONER_NAME,Jacinto,Jacinto,Jacinto
 PRISONER_DSC,Condemned for life for a crime he didn’t commit.,Condenado de por vida por un crimen que no cometió.,Condenado à prisão perpétua por um crime que não cometeu.
-SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio,vaqueiro espacial
+SPACECOWBOY_NAME,Space cowboy,Vaquero del espacio,Vaqueiro Espacial
 SPACECOWBOY_DSC,Swift fellow; still clinging to his past… Has a sick rocket launcher.,Un tipo ágil; aferrado a su pasado… Tiene un lanza misiles a cachete.,Companheiro ágil; ainda preso ao seu passado… Tem um lançador de foguetes incrível.
 MIMA_NAME,Mima,Mima,Mima
 MIMA_DSC,Is she the real Mima?,¿Es ella la Mima real?,Ela é a verdadeira Mima?
@@ -60,7 +60,7 @@ Structures---,Structures---,Estructuras---,Estruturas ---
 STRUCTURE,Structure,Estructura,Estrutura
 STRUCTURES,Structures,Estructuras,Estruturas
 GAME_WON,Victory!,¡Victoria!,Vitória!
-GAME_OVER,Game over,¡Haz muerto!,Fim de Jogo
+GAME_OVER,Game over,¡Has muerto!,Fim de Jogo
 CONTINUE_TO_MENU,Continue to menu,Continuar al menú,Voltar ao menu
 TIME_SURVIVED,Time survived:,Tiempo sobrevivido:,Tempo sobreviveu:
 ENEMIES_KILLED,Enemies killed:,Enemigos eliminados:,Inimigos eliminados:
@@ -93,11 +93,11 @@ MONKEY_NAME,Dart monkey,Monardo,Macaco dardo
 MONKEY_DSC,Shoots darts really fast!,¡Lanza dardos rapidísimo!,Atira dardos muito rápido!
 HDD_NAME,Hard drive,Disco duro,Disco rígido
 HDD_DSC,Launches bouncy disks.,Lanza discos que rebotan.,Lança discos saltitantes.
-VENDMACH_NAME,Vending Machine,Máquina dispensadora,Maquina de vendas
+VENDMACH_NAME,Vending Machine,Máquina dispensadora,Máquina de vendas
 VENDMACH_DSC,Launches fire cans that deal damage in an area.,Lanza latas de fuego que hacen daño en área.,Lança latas de fogo que causam dano em uma área.
 GUNSTICK_NAME,Comically large gun on a stick,Pistola cómicamente grande en un palo,Arma comicamente grande em uma vara
 GUNSTICK_DSC,Rotates randomly after each shot!,¡Gira aleatoriamente después de cada disparo!,Gira aleatoriamente após cada tiro!
-OVERCLOCKER_NAME,Overclocker,Super cargador,super carregador
+OVERCLOCKER_NAME,Overclocker,Super cargador,Super carregador
 OVERCLOCKER_DSC,Runs structures to their maximum capacity! Reduces Cooldown of all structures.,Hace trabajar a las estrucutras a su máxima capacidad. Reduce el enfriamiento de todas las estructuras.,Faz com que as estruturas funcionem na sua capacidade máxima. Reduz o tempo de recarga de todas as estruturas.
 HAMMER_NAME,Hammer,Martillo,Martelo
 HAMMER_DSC,Allows you to place 1 more structure.,Permite colocar 1 estructura más.,Permite colocar mais 1 estrutura.
@@ -124,7 +124,7 @@ UPG_DAMAGE,Damage increased by {0}.,Daño aumentado en {0}.,Dano aumentado em {0
 UPG_DAMAGEALL,Damage of all structures increased by {0}%.,Aumenta el daño de todas las estructuras un {0}%.,Aumenta o dano de todas as estruturas em {0}%.
 UPG_COOLDOWN,Cooldown reduced by {0} seconds.,Enfriamiento reducido por {0} segundos.,Tempo de recarga reduzido por {0} segundos.
 UPG_COOLDOWN1,Cooldown reduced by 1 second.,Enfriamiento reducido por 1 segundo.,Tempo de recarga reduzido por 1 segundo.
-UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.,Tempo de recarga reduzido {0}% em todas as estruturas.
+UPG_COOLDOWNALL,Cooldown reduced by {0}% on all structures.,Enfriamiento reducido {0}% en todas las estructuras.,Tempo de recarga reduzido em {0}% em todas as estruturas.
 UPG_SIZE,Projectile size increased by {0}%.,Aumenta el tamaño de los proyectiles un {0}%.,Aumenta o tamanho do projétil em {0}%.
 UPG_SIZEALL,Projectile size of all projectiles increased by {0}%.,Aumenta el tamaño de todos los proyectiles un {0}%.,Aumenta o tamanho de todos os projéteis em {0}%.
 UPG_SIZEOWN,Size increased by {0}%.,Tamaño aumentado un {0}%.,Tamanho aumentado em {0}%.

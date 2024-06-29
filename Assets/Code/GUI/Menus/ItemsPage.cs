@@ -39,7 +39,6 @@ namespace TowerSurvivors.GUI
 
         private void Start()
         {
-            selected = _defaultItem;
             LoadItems();
         }
 
@@ -124,8 +123,8 @@ namespace TowerSurvivors.GUI
             if (!selected)
             {
                 SelectItem(_defaultItem);
-                ShowItemDeets(_defaultItem);
             }
+            ShowItemDeets(selected);
         }
 
         private void OnDisable()
