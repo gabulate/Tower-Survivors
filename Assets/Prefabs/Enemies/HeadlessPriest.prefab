@@ -203,7 +203,7 @@ MonoBehaviour:
   stunTime: 0.2
   isStunned: 0
   speed: 20
-  damage: 40
+  damage: 30
   attackCooldown: 1
   currentCooldown: 0
   e_die:

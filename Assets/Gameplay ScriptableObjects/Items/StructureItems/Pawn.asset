@@ -16,7 +16,7 @@ MonoBehaviour:
   descriptionKey: PAWN_DSC
   icon: {fileID: 21300000, guid: ae6f1f487e4a3b44f8dea5184beab18f, type: 3}
   prefab: {fileID: 5221503819465962213, guid: 09c283feb3a6f92429b3175ccaea603d, type: 3}
-  probability: 12
+  probability: 10
   price: 200
   levels:
   - neededLevel: 1

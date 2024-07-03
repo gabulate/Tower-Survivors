@@ -19,23 +19,24 @@ MonoBehaviour:
   probability: 10
   price: 200
   levels:
-  - EffectIntensityByLevel: 0.15
+  - EffectIntensityByLevel: 0.2
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.15
-  - EffectIntensityByLevel: 0.3
+      value: 0.2
+  - EffectIntensityByLevel: 0.4
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.3
-  - EffectIntensityByLevel: 0.45
-    upgradeDescriptions:
-    - descriptionKey: UPG_HEALTHREGEN
-      value: 0.45
+      value: 0.4
   - EffectIntensityByLevel: 0.6
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
       value: 0.6
-  - EffectIntensityByLevel: 0.75
+  - EffectIntensityByLevel: 0.8
     upgradeDescriptions:
     - descriptionKey: UPG_HEALTHREGEN
-      value: 0.75
+      value: 0.8
+  - EffectIntensityByLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_HEALTHREGEN
+      value: 1
+  physical: 1

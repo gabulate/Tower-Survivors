@@ -144,7 +144,7 @@ namespace TowerSurvivors.Enemies
         /// True by default, only false in special cases.</param>
         public virtual void TakeDamage(float damage, bool countIfKilled = true)
         {
-            if (isInvincible)
+            if (isInvincible && countIfKilled)
             {
                 return;
             }

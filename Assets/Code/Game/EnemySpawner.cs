@@ -17,6 +17,7 @@ namespace TowerSurvivors.Game
         public GameObject bossPrefab;
 
         public bool activeSpawning = true;
+        public float speed = 1;
         public int MaxEnemies = 30;
         public int currentEnemies = 0;
 
@@ -98,7 +99,7 @@ namespace TowerSurvivors.Game
             if(!activeSpawning)
                 return;
 
-            currentCooldown -= Time.deltaTime;
+            currentCooldown -= Time.deltaTime * speed;
 
             //Check if the queue ran out of enemies, go to the next wave
             if (currentWavePairs.Count == 0)
@@ -239,12 +240,15 @@ namespace TowerSurvivors.Game
 
             for (int i = hits.Length - 1; i >= 0; i--)
             {
+                if (hits[i] == null)
+                    continue;
+
                 Enemy e = hits[i].GetComponent<Enemy>();
-                if(e && e.isAlive)
+                if (e && e.isAlive)
                 {
                     e.ChanceToDropXp = 0;
                     e.TakeDamage(99999, false);
-                    yield return new WaitForSeconds(0.01f);
+                    yield return new WaitForSeconds(0.005f);
                 }
             }
         }
