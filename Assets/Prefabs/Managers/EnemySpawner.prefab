@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossPrefab: {fileID: 7045164159405668869, guid: 0a199b284b5a24449a925ba9596e135b, type: 3}
   activeSpawning: 1
+  speed: 1.5
   MaxEnemies: 200
   currentEnemies: 0
   waves:
@@ -74,8 +75,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2c31b1291ba918448a595d242c3ac78, type: 2}
   - {fileID: 11400000, guid: 442238b04140e634c9c5d08f34d9665c, type: 2}
   - {fileID: 11400000, guid: 386794ffe3e37514693ac5ae8a14fce8, type: 2}
-  totalDuration: 37:10
-  totalEnemies: 5000
+  - {fileID: 11400000, guid: 09d427c1d1f3f444aa39b9b32171c8d4, type: 2}
+  - {fileID: 11400000, guid: c038cc06c61bc104aa921a453c5d748f, type: 2}
+  - {fileID: 11400000, guid: c920c670f6adc324baf29d1ed006f157, type: 2}
+  totalDuration: 47:40
+  totalEnemies: 8512
   currentWave: {fileID: 0}
   currentWavePairs: []
   currentWaveIndex: 0

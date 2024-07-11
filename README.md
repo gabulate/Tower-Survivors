@@ -1,5 +1,18 @@
 # Structured Defenders
-Vampire Survivors clone with Tower Defense mechanics. Made with the Unity engine.
+Vampire Survivors clone with Tower Defense mechanics. Made in the the Unity engine.
+
+<h3>Download Game</h3>
+You can get the released game from 
+<a href="https://gabulate.itch.io/structured-defenders" target="_blank">the official itch.io page.</a>
+
+<hr>
+
+<h2>Relevant links</h2>
+<ul>
+  <li><a href="https://trello.com/b/gyzyZ28G/tower-survivors" target="_blank">Trello Board</a></li>
+  <li>Main Music~</li>
+  <li><a href="https://gabulate.github.io/me/StructuredDefenders" target="_blank">Learn more</a></li>
+</ul>
 
 <h3>Software Used</h3>
 <ul>
@@ -9,9 +22,3 @@ Vampire Survivors clone with Tower Defense mechanics. Made with the Unity engine
   <li>SFXR</li>
   <li>LMMS</li>
 </ul>
-
-<h3>Relevant links</h3>
-
-<a href="https://trello.com/b/gyzyZ28G/tower-survivors">Trello Board</a>
-<a href="https://drive.google.com/drive/folders/1AxqGE2Ii_GCsynkKBQigp4alIicA7Bdr?usp=drive_link">Music Masters</a>
-<a href="https://gabulate.github.io/me/StructuredDefenders">Learn more</a>

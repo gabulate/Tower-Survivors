@@ -38,7 +38,7 @@ namespace TowerSurvivors.PlayerScripts
         }
 
         [SerializeField]
-        private uint _xp = 0;
+        public uint _xp { get; private set; } = 0;
         [SerializeField]
         private uint _XpForNextLevel = 5;
         public uint XpForNextLevel

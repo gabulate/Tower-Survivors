@@ -105,6 +105,10 @@ namespace TowerSurvivors.Game
                     Player.Instance.AddXp(Player.Instance.XpForNextLevel);
                 }
             }
+            if (Input.GetKeyDown(KeyCode.B)) //Debug Info
+            {
+                AssetsHolder.Instance.debugInfo.Toggle(); ;
+            }
         }
 
         public void AddToKillCount(uint amount)

@@ -55,14 +55,14 @@ namespace TowerSurvivors.Game
         private string totalDuration = "";
         [SerializeField, ShowOnly]
         private int totalEnemies = 0;
-        [SerializeField]
-        private EnemyWaveSO currentWave;
-        [SerializeField]
-        private List<WavePair> currentWavePairs;
+        
+        public EnemyWaveSO currentWave;
+        
+        public List<WavePair> currentWavePairs;
         [SerializeField]
         private int currentWaveIndex = 0;
-        [SerializeField]
-        private float currentCooldown;
+        
+        public float currentCooldown;
         //[SerializeField]
         //private float timeTilNextWave = 0;
 
@@ -75,6 +75,13 @@ namespace TowerSurvivors.Game
             currentWave = waves[currentWaveIndex];
             currentCooldown = 0;
             currentWavePairs = ClonePairs(currentWave);
+
+            Player.Health.e_healthChanged.AddListener(ChangeSpeed);
+        }
+
+        private void ChangeSpeed(float currentHealth, float maxHealth)
+        {
+            speed = 0.75f + (currentHealth / maxHealth) * 0.75f;
         }
 
         //Copies the wave pairs by value, not reference
@@ -300,6 +307,11 @@ namespace TowerSurvivors.Game
             int seconds = (int)(timeInSeconds % 60);
 
             return $"{minutes:D2}:{seconds:D2}";
+        }
+
+        private void OnDisable()
+        {
+            Player.Health.e_healthChanged.RemoveListener(ChangeSpeed);
         }
     }
 }
