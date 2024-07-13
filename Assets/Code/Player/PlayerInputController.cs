@@ -24,8 +24,6 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private float _placingRange = 1f;
         [SerializeField]
-        private int _selectedItemIndex = 0;
-        [SerializeField]
         private GameObject _selectedItemGO;
         [SerializeField]
         private Structure _structureSelected;
@@ -62,8 +60,8 @@ namespace TowerSurvivors.PlayerScripts
             if (scrollWheelInput != 0f)
             {
                 int scrollDirection = Mathf.RoundToInt(Mathf.Sign(scrollWheelInput));
-                _selectedItemIndex = (_selectedItemIndex - scrollDirection + 5) % 5;
-                Player.Inventory.SelectItem(_selectedItemIndex);
+                Player.Inventory.selectedIndex = (Player.Inventory.selectedIndex - scrollDirection + 5) % 5;
+                Player.Inventory.SelectItem(Player.Inventory.selectedIndex);
             }
 
             // Handle number key input
@@ -71,8 +69,8 @@ namespace TowerSurvivors.PlayerScripts
             {
                 if (Input.GetKeyDown(KeyCode.Alpha0 + i))
                 {
-                    _selectedItemIndex = i - 1;
-                    Player.Inventory.SelectItem(_selectedItemIndex);
+                    Player.Inventory.selectedIndex = i - 1;
+                    Player.Inventory.SelectItem(Player.Inventory.selectedIndex);
                 }
             }
 
@@ -254,13 +252,7 @@ namespace TowerSurvivors.PlayerScripts
 
         private void SecondaryAction()
         {
-            if (_structureSelected && !StructureManager.Instance.CanPlace())
-            {
-                AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
-                return;
-            }
-
-            if (_structureSelected)
+            if (_structureSelected && StructureManager.Instance.CanPlace())
                 ChangeStructureOrientation();
             else
                 PickUpStructure();
@@ -272,7 +264,10 @@ namespace TowerSurvivors.PlayerScripts
             if (!_hoveredStructure)
                 return;
 
-            Player.Inventory.PickUpStructure(_hoveredStructure);
+            if(Player.Inventory.AvailableStructureSlots() >= 1)
+                Player.Inventory.PickUpStructure(_hoveredStructure);
+            else
+                AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
         }
 
         private void ChangeStructureOrientation()

@@ -149,15 +149,27 @@ namespace TowerSurvivors.PlayerScripts
 
         public void PickUpStructure(Structure structure)
         {
-            InventoryItem itemInSlot = StructureSlots[selectedIndex].GetComponentInChildren<InventoryItem>();
-            if (itemInSlot == null)
+            int slotIndex = selectedIndex;
+
+            InventoryItem itemInS = StructureSlots[slotIndex].GetComponentInChildren<InventoryItem>();
+            if (itemInS != null) //If the selected slot is already taken, try to find an available slot
             {
-                SpawnNewItem(structure.item, StructureSlots[selectedIndex], structure.gameObject);
-                StructureManager.Instance.PickUpStructure(structure);
-                SelectItem(selectedIndex);
-                return;
+                for (int i = 0; i < StructureSlots.Length; i++)
+                {
+                    InventorySlot slot = StructureSlots[i];
+                    InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                    if (itemInSlot == null)
+                    {
+                        slotIndex = i;
+                        break;
+                    }
+                }
             }
 
+            SpawnNewItem(structure.item, StructureSlots[slotIndex], structure.gameObject);
+            StructureManager.Instance.PickUpStructure(structure);
+            SelectItem(slotIndex);
+            return;
         }
 
         /// <summary>
