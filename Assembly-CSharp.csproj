@@ -123,6 +123,7 @@
     <Compile Include="Assets\Code\GUI\Menus\EndGameCredits.cs" />
     <Compile Include="Assets\Code\App Managers\SoundObject.cs" />
     <Compile Include="Assets\Code\Game\LevelUpMenu.cs" />
+    <Compile Include="Assets\Code\GUI\Game HUD\DebugInfoText.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\ItemSO.cs" />
     <Compile Include="Assets\Code\Projectiles\SniperBullet.cs" />
     <Compile Include="Assets\Code\App Managers\SaveData.cs" />
@@ -150,7 +151,6 @@
     <Compile Include="Assets\Code\GUI\Game HUD\InventoryItem.cs" />
     <Compile Include="Assets\Code\Structures\HardDrive.cs" />
     <Compile Include="Assets\Code\GUI\Game HUD\DamageNumberController.cs" />
-    <Compile Include="Assets\Code\GUI\Game HUD\DebugInfoText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

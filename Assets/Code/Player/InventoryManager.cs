@@ -207,6 +207,24 @@ namespace TowerSurvivors.PlayerScripts
         }
 
         /// <summary>
+        /// Returns the number of available structure slots
+        /// </summary>
+        /// <returns>True if there is at least one available slot.</returns>
+        public int AvailableStructureSlots()
+        {
+            int number = 0;
+            for (int i = 0; i < StructureSlots.Length; i++)
+            {
+                InventorySlot slot = StructureSlots[i];
+                InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+                if (itemInSlot == null)
+                    number++;
+            }
+
+            return number;
+        }
+
+        /// <summary>
         /// Indictes if there are any available Passive Item Slots.
         /// </summary>
         /// <returns>True if there is at least one available slot.</returns>

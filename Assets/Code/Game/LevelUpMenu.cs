@@ -72,22 +72,11 @@ namespace TowerSurvivors.Game
             {
                 if (availableItems[i].GetType() == typeof(StructureItemSO))
                 {
-                    //If there are no available item slots
-                    if (!Player.Inventory.AvailableStrucutreSlot())
+                    //If the player is holding 4 or 5 structures, do not offer any more
+                    if (Player.Inventory.AvailableStructureSlots() <= 1)
                     {
                         availableItems.RemoveAt(i);
                     } 
-                    //else if (!StructureManager.Instance.CanPlace()) //If the player has reached maximum allowed structures
-                    //{
-                    //    Structure[] sts = StructureManager.Instance.GetStructures();
-                    //    Structure structure = sts.Where(x => x.item.itemNameKey == availableItems[i].itemNameKey).FirstOrDefault();
-                        
-                    //    //Removes the available item if there are not structures of its kind placed
-                    //    if (!structure)
-                    //    {
-                    //        availableItems.RemoveAt(i);
-                    //    }
-                    //}
                 }
                 else //If item is Passive
                 {

@@ -9,6 +9,7 @@ You can get the released game from
 
 <h2>Relevant links</h2>
 <ul>
+  <li><a href="https://youtu.be/VqbKy6nQXig" target="_blank">Game Release Trailer</a></li>
   <li><a href="https://trello.com/b/gyzyZ28G/tower-survivors" target="_blank">Trello Board</a></li>
   <li>Main Music~</li>
   <li><a href="https://gabulate.github.io/me/StructuredDefenders" target="_blank">Learn more</a></li>
