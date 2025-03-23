@@ -1,4 +1,4 @@
-# Structured Defenders
+#Android port of Structured Defenders
 Vampire Survivors clone with Tower Defense mechanics. Made in the the Unity engine.
 
 <h3>Download Game</h3>
@@ -15,7 +15,7 @@ You can get the released game from
 
 <h3>Software Used</h3>
 <ul>
-  <li>Unity ver: 2021.3.18f</li>
+  <li>Unity ver: 2022.3.60f (Upgraded from main branch for SDK compability)</li>
   <li>Krita</li>
   <li>Audacity</li>
   <li>SFXR</li>
