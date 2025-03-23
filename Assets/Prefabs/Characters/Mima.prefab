@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 9196993661042202414}
   - component: {fileID: 9196993661042202400}
   - component: {fileID: 9196993661042202415}
+  - component: {fileID: 6996168571893821706}
   - component: {fileID: 9196993661042202412}
   - component: {fileID: 9196993661042202413}
   - component: {fileID: 9196993661042202402}
@@ -137,7 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomizeItem: 1
   _level: 1
-  _xp: 0
   _XpForNextLevel: 5
   TotalXpCollected: 0
   e_xpChanged:
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9196993661042202410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4dc03af5dc43534ba2684c10624dfc0, type: 3}
   m_Name: 
@@ -175,9 +175,31 @@ MonoBehaviour:
   _canMove: 1
   _input: {x: 0, y: 0}
   _rb: {fileID: 9196993661042202412}
-  _placingRange: 6.5
-  _selectedItemIndex: 0
+  _placingRange: 15
   _selectedItemGO: {fileID: 0}
+  _structureSelected: {fileID: 0}
+  _hoveredStructure: {fileID: 0}
+  mousePosition: {x: 0, y: 0, z: 0}
+  _mouseHoverRange: 0.15
+--- !u!114 &6996168571893821706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196993661042202410}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f5077479930b94a93073b8fd04aa8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSpeed: 2
+  Speed: 2
+  _canMove: 1
+  _input: {x: 0, y: 0}
+  _rb: {fileID: 0}
+  _placingRange: 15
+  _selectedItemGO: {fileID: 9196993661042202410}
   _structureSelected: {fileID: 0}
   _hoveredStructure: {fileID: 0}
   mousePosition: {x: 0, y: 0, z: 0}

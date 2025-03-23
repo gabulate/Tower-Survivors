@@ -60,10 +60,16 @@ namespace TowerSurvivors.PlayerScripts
         {
             Instance = this;
             Health = GetComponent<PlayerHealth>();
-            PlayerInput = GetComponent<PlayerInputController>();
             Sprite = GetComponentInChildren<SpriteRenderer>();
             PlayerAnimator = GetComponentInChildren<Animator>();
             Inventory = GetComponent<InventoryManager>();
+
+            if (AppManager.Instance.mobileVersion)
+                PlayerInput = GetComponent<PlayerInputMobile>();
+            else
+                PlayerInput = GetComponent<PlayerInputController>();
+
+            PlayerInput.enabled = true;
         }
 
         public void ApplyBuffs()

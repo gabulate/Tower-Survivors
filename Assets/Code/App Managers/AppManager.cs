@@ -11,6 +11,7 @@ namespace TowerSurvivors
     {
         public static AppManager Instance;
         public TextAsset languagesCSV;
+        public bool mobileVersion = false;
 
         public string language = "English";
 

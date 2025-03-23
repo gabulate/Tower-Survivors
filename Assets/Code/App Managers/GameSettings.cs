@@ -23,8 +23,12 @@ namespace TowerSurvivors
             SetFullScreen(PlayerPrefs.GetInt("fullScreen", 0));
             SetVsync(PlayerPrefs.GetInt("vSync", 1));
 
-            SetResolution(PlayerPrefs.GetInt("resX", Screen.currentResolution.width),
+            if (!AppManager.Instance.mobileVersion)
+            {
+                SetResolution(PlayerPrefs.GetInt("resX", Screen.currentResolution.width),
                 PlayerPrefs.GetInt("resY", Screen.currentResolution.height));
+            }
+            
         }
 
         public static void SetLanguage(string language)

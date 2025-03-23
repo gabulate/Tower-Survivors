@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6018600358319625443}
   - component: {fileID: 6018600358319625453}
   - component: {fileID: 6018600358319625442}
+  - component: {fileID: 5074065580842691378}
   - component: {fileID: 6018600358319625441}
   - component: {fileID: 6018600358319625440}
   - component: {fileID: 6018600358319625455}
@@ -136,9 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomizeItem: 1
-  startingItem: {fileID: 11400000, guid: 59c2ce8d05cff134d9dd99fd701c878a, type: 2}
   _level: 1
-  _xp: 0
   _XpForNextLevel: 5
   TotalXpCollected: 0
   e_xpChanged:
@@ -166,7 +165,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6018600358319625447}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4dc03af5dc43534ba2684c10624dfc0, type: 3}
   m_Name: 
@@ -176,8 +175,30 @@ MonoBehaviour:
   _canMove: 1
   _input: {x: 0, y: 0}
   _rb: {fileID: 6018600358319625441}
-  _placingRange: 6.5
-  _selectedItemIndex: 0
+  _placingRange: 15
+  _selectedItemGO: {fileID: 0}
+  _structureSelected: {fileID: 0}
+  _hoveredStructure: {fileID: 0}
+  mousePosition: {x: 0, y: 0, z: 0}
+  _mouseHoverRange: 0.15
+--- !u!114 &5074065580842691378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6018600358319625447}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f5077479930b94a93073b8fd04aa8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialSpeed: 2
+  Speed: 2
+  _canMove: 1
+  _input: {x: 0, y: 0}
+  _rb: {fileID: 6018600358319625441}
+  _placingRange: 15
   _selectedItemGO: {fileID: 0}
   _structureSelected: {fileID: 0}
   _hoveredStructure: {fileID: 0}
@@ -270,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hurtSound: {fileID: 11400000, guid: 43104e2b5e7a76e4da7e94e26658d3b6, type: 2}
-  _isInvincible: 0
+  isInvincible: 0
   isAlive: 1
   health: 11
   maxHealth: 100

@@ -18,30 +18,30 @@ namespace TowerSurvivors.PlayerScripts
         [SerializeField]
         private bool _canMove = true;
         [SerializeField]
-        private Vector2 _input;
+        protected Vector2 _input;
         [SerializeField]
-        private Rigidbody2D _rb;
+        protected Rigidbody2D _rb;
         [SerializeField]
-        private float _placingRange = 1f;
+        protected float _placingRange = 1f;
         [SerializeField]
-        private GameObject _selectedItemGO;
+        protected GameObject _selectedItemGO;
         [SerializeField]
-        private Structure _structureSelected;
+        protected Structure _structureSelected;
         [SerializeField]
-        private Structure _hoveredStructure;
+        protected Structure _hoveredStructure;
 
-        private Camera _cam;
+        protected Camera _cam;
         [SerializeField]
-        private Vector3 mousePosition;
+        protected Vector3 mousePosition;
         [SerializeField]
         private float _mouseHoverRange = 2;
 
-        private void Start()
+        protected virtual void Start()
         {
-            _cam = Camera.main;
+            _cam = Camera.main;   
         }
 
-        void Update()
+        protected virtual void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
@@ -91,7 +91,7 @@ namespace TowerSurvivors.PlayerScripts
             }
         }
 
-        private void PlaceStructure()
+        protected virtual void PlaceStructure()
         {
             //Return if the player isn't holding a structure
             if (_structureSelected == null)
@@ -136,7 +136,7 @@ namespace TowerSurvivors.PlayerScripts
         /// <summary>
         /// Checks the mouse postion, if a structure item is selected and can be placed shows it
         /// </summary>
-        private void CheckMouse()
+        protected virtual void CheckMouse()
         {
             mousePosition = _cam.ScreenToWorldPoint(Input.mousePosition);
             CheckMouseHover();
@@ -195,7 +195,7 @@ namespace TowerSurvivors.PlayerScripts
             _structureSelected.CheckIfPlaceable();
         }
 
-        private void CheckMouseHover()
+        protected void CheckMouseHover()
         {
             Collider2D hit = Physics2D.OverlapCircle(mousePosition, _mouseHoverRange, _structureLayer);
 
@@ -233,7 +233,7 @@ namespace TowerSurvivors.PlayerScripts
             }
         }
 
-        private void CheckForUpgrades()
+        protected void CheckForUpgrades()
         {
             //If a structure is hovered
             if (_hoveredStructure)
@@ -250,7 +250,7 @@ namespace TowerSurvivors.PlayerScripts
                 _structureSelected.OutLine(!_hoveredStructure);
         }
 
-        private void SecondaryAction()
+        protected virtual void SecondaryAction()
         {
             if (_structureSelected && StructureManager.Instance.CanPlace())
                 ChangeStructureOrientation();
@@ -258,7 +258,7 @@ namespace TowerSurvivors.PlayerScripts
                 PickUpStructure();
         }
 
-        private void PickUpStructure()
+        protected void PickUpStructure()
         {
             //If there's no hovered structure return because what would you even pick up cmon man
             if (!_hoveredStructure)
@@ -275,7 +275,7 @@ namespace TowerSurvivors.PlayerScripts
             _structureSelected.ChangeOrientation();
         }
 
-        private void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             Move();
             CheckMouse();
