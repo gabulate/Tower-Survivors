@@ -19,12 +19,12 @@ namespace TowerSurvivors.Structures
 
         protected override void FixedUpdate()
         {
-            if(stats.currentCooldown > 0)
+            if (stats.currentCooldown > 0)
             {
                 stats.currentCooldown -= Time.fixedDeltaTime;
             }
 
-            if(stats.currentCooldown <= 0)
+            if (stats.currentCooldown <= 0)
             {
                 Attack();
             }
@@ -109,7 +109,9 @@ namespace TowerSurvivors.Structures
         public override void EnableStructure(bool enabled)
         {
             base.EnableStructure(enabled);
-            _mouseUI.enabled = !enabled;
+
+            if (!AppManager.Instance.mobileVersion)
+                _mouseUI.enabled = !enabled;
         }
     }
 }

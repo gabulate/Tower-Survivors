@@ -67,7 +67,8 @@ namespace TowerSurvivors.PlayerScripts
             if (AppManager.Instance.mobileVersion)
                 PlayerInput = GetComponent<PlayerInputMobile>();
             else
-                PlayerInput = GetComponent<PlayerInputController>();
+                PlayerInput = GetComponents<PlayerInputController>().
+                FirstOrDefault(controller => !(controller is PlayerInputMobile));
 
             PlayerInput.enabled = true;
         }

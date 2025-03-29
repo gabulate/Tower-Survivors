@@ -74,6 +74,7 @@ namespace TowerSurvivors.PlayerScripts
                 }
             }
 
+            CheckMouse();
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
@@ -270,7 +271,7 @@ namespace TowerSurvivors.PlayerScripts
                 AudioPlayer.Instance.PlaySFX(StructureManager.Instance.cantPlaceSound);
         }
 
-        private void ChangeStructureOrientation()
+        protected virtual void ChangeStructureOrientation()
         {
             _structureSelected.ChangeOrientation();
         }
@@ -278,8 +279,6 @@ namespace TowerSurvivors.PlayerScripts
         protected virtual void FixedUpdate()
         {
             Move();
-            CheckMouse();
-
         }
 
         private void Move()

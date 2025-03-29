@@ -156,6 +156,7 @@
     <Compile Include="Assets\Code\Structures\RocketLauncher.cs" />
     <Compile Include="Assets\Code\Enemies\GroupSpawner.cs" />
     <Compile Include="Assets\Code\App Managers\AppManager.cs" />
+    <Compile Include="Assets\Code\Player\ButtonHoldTracker.cs" />
     <Compile Include="Assets\Code\Enemies\Boss.cs" />
     <Compile Include="Assets\Code\GUI\Game HUD\DebugInfoText.cs" />
     <Compile Include="Assets\Code\PassiveItems\CoinItem.cs" />

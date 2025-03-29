@@ -281,9 +281,12 @@ namespace TowerSurvivors.Structures
             UpdateOrientation();
         }
 
+        /// <summary>
+        /// Method to be overriden by rotatable structures
+        /// </summary>
         public virtual void UpdateOrientation()
         {
-            Debug.LogWarning("Orientation: " + _orientation + ". Changing orientation not implemented yet.");
+            //Debug.LogWarning("Orientation: " + _orientation + ". Changing orientation not implemented yet.");
         }
 
         #endregion

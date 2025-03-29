@@ -114,7 +114,8 @@ namespace TowerSurvivors.Structures
         public override void EnableStructure(bool enabled)
         {
             base.EnableStructure(enabled);
-            _mouseUI.enabled = !enabled;
+            if (!AppManager.Instance.mobileVersion)
+                _mouseUI.enabled = !enabled;
         }
     }
 }
