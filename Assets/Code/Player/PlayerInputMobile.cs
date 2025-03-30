@@ -91,6 +91,11 @@ namespace TowerSurvivors.PlayerScripts
             CheckMouseHover();
             CheckForUpgrades();
 
+            if (isRotating)
+            {
+                mousePosition = Player.Instance.transform.position + Vector3.right * 2.5f;
+            }
+
             //If the player has no structure selected
             if (Player.Inventory.selectedItem == null | (!isTouching & !isRotating))
             {
