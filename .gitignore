@@ -361,3 +361,5 @@ MigrationBackup/
 FodyWeavers.xsd
 
 Library/
+
+user.keystore
