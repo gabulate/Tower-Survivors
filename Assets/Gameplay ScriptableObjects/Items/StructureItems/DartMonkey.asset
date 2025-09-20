@@ -31,7 +31,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -47,7 +47,7 @@ MonoBehaviour:
     projectileSpeed: 10
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -60,10 +60,10 @@ MonoBehaviour:
     attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 13
+    projectileSpeed: 12.5
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -72,30 +72,30 @@ MonoBehaviour:
     - descriptionKey: UPG_DAMAGE
       value: 2.5
     range: 4
-    damage: 10
+    damage: 12.5
     attackCooldown: 0.4
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 13
+    projectileSpeed: 12.5
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_SPEED
-      value: 3
+      value: 2.5
     - descriptionKey: UPG_COOLDOWN
       value: 0.1
     range: 4
-    damage: 10
+    damage: 12.5
     attackCooldown: 0.3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 16
+    projectileSpeed: 15
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -106,8 +106,22 @@ MonoBehaviour:
     attackCooldown: 0.3
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 16
+    projectileSpeed: 15
     duration: 0.5
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.11
+    timeBetweenMultipleShots: 0.15
+    passThroughAmnt: 0
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_RANGE
+      value: 1
+    range: 5
+    damage: 15
+    attackCooldown: 0.3
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 15
+    duration: 0.5
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.15
     passThroughAmnt: 0

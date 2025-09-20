@@ -22,7 +22,7 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions: []
     range: 0
-    damage: 15
+    damage: 20
     attackCooldown: 1.5
     currentCooldown: 0
     areaSize: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
     - descriptionKey: UPG_AMOUNT
       value: 1
     range: 0
-    damage: 20
+    damage: 25
     attackCooldown: 1.5
     currentCooldown: 0
     areaSize: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
     - descriptionKey: UPG_PASSTH1
       value: 1
     range: 0
-    damage: 20
+    damage: 25
     attackCooldown: 1.25
     currentCooldown: 0
     areaSize: 1
@@ -70,7 +70,7 @@ MonoBehaviour:
     - descriptionKey: UPG_AMOUNT
       value: 1
     range: 0
-    damage: 25
+    damage: 30
     attackCooldown: 1.25
     currentCooldown: 0
     areaSize: 1
@@ -86,7 +86,7 @@ MonoBehaviour:
     - descriptionKey: UPG_SPEED
       value: 3
     range: 0
-    damage: 25
+    damage: 30
     attackCooldown: 1
     currentCooldown: 0
     areaSize: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
     - descriptionKey: UPG_COOLDOWN
       value: 0.25
     range: 0
-    damage: 30
+    damage: 35
     attackCooldown: 0.75
     currentCooldown: 0
     areaSize: 1
@@ -113,10 +113,12 @@ MonoBehaviour:
     passThroughAmnt: 2
   - neededLevel: 1
     upgradeDescriptions:
+    - descriptionKey: UPG_DAMAGE
+      value: 5
     - descriptionKey: UPG_AMOUNT
       value: 1
     range: 0
-    damage: 30
+    damage: 40
     attackCooldown: 0.75
     currentCooldown: 0
     areaSize: 1

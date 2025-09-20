@@ -29,41 +29,31 @@ MonoBehaviour:
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
-    duration: 1
+    duration: 1.5
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 2
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_PASSTH
-      value: 2
+      value: 1
+    - descriptionKey: UPG_DURATION
+      value: 0.25
     range: 6.5
     damage: 10
     attackCooldown: 3
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
-    duration: 1
+    duration: 1.75
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 4
+    passThroughAmnt: 3
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
       value: 5
-    range: 6.5
-    damage: 15
-    attackCooldown: 3
-    currentCooldown: 0
-    areaSize: 1
-    projectileSpeed: 7
-    duration: 1
-    projectileAmnt: 1
-    timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 4
-  - neededLevel: 1
-    upgradeDescriptions:
-    - descriptionKey: UPG_COOLDOWN1
+    - descriptionKey: UPG_COOLDOWN
       value: 0.5
     range: 6.5
     damage: 15
@@ -71,49 +61,69 @@ MonoBehaviour:
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
-    duration: 1
+    duration: 1.75
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 4
+    passThroughAmnt: 3
   - neededLevel: 1
     upgradeDescriptions:
+    - descriptionKey: UPG_COOLDOWN
+      value: 0.5
+    - descriptionKey: UPG_SPEED
+      value: 3
+    range: 6.5
+    damage: 15
+    attackCooldown: 2
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 10
+    duration: 1.75
+    projectileAmnt: 1
+    timeBetweenMultipleShots: 0.5
+    passThroughAmnt: 3
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_DAMAGE
+      value: 5
     - descriptionKey: UPG_DURATION
-      value: 0.5
+      value: 0.25
     range: 6.5
-    damage: 15
-    attackCooldown: 2.5
+    damage: 20
+    attackCooldown: 2
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 7
-    duration: 1.5
+    projectileSpeed: 10
+    duration: 2
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 4
+    passThroughAmnt: 3
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
       value: 10
     range: 6.5
-    damage: 25
-    attackCooldown: 2.5
+    damage: 35
+    attackCooldown: 2
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 7
-    duration: 1.5
+    projectileSpeed: 10
+    duration: 2
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
-    passThroughAmnt: 4
+    passThroughAmnt: 3
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DURATION
       value: 0.5
+    - descriptionKey: UPG_PASSTH
+      value: 1
     range: 6.5
-    damage: 25
-    attackCooldown: 2.5
+    damage: 35
+    attackCooldown: 2
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 7
-    duration: 2
+    projectileSpeed: 10
+    duration: 2.5
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 4
@@ -122,12 +132,12 @@ MonoBehaviour:
     - descriptionKey: UPG_COOLDOWN
       value: 0.5
     range: 6.5
-    damage: 25
-    attackCooldown: 2
+    damage: 35
+    attackCooldown: 1.5
     currentCooldown: 0
     areaSize: 1
-    projectileSpeed: 7
-    duration: 2
+    projectileSpeed: 10
+    duration: 2.5
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.5
     passThroughAmnt: 4

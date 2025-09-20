@@ -31,7 +31,7 @@ MonoBehaviour:
     projectileSpeed: 9
     duration: 0.7
     projectileAmnt: 1
-    timeBetweenMultipleShots: 0.5
+    timeBetweenMultipleShots: 0.3
     passThroughAmnt: 0
   - neededLevel: 1
     upgradeDescriptions:
@@ -103,7 +103,7 @@ MonoBehaviour:
       value: 10
     - descriptionKey: UPG_SIZE
       value: 10
-    range: 5
+    range: 7.5
     damage: 35
     attackCooldown: 2
     currentCooldown: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
       value: 0.5
     - descriptionKey: UPG_SIZE
       value: 10
-    range: 5
-    damage: 30
+    range: 7.5
+    damage: 35
     attackCooldown: 1.5
     currentCooldown: 0
     areaSize: 1.5
@@ -135,9 +135,9 @@ MonoBehaviour:
       value: 10
     - descriptionKey: UPG_SPEED
       value: 3
-    range: 5
-    damage: 40
-    attackCooldown: 2.5
+    range: 7.5
+    damage: 45
+    attackCooldown: 1.5
     currentCooldown: 0
     areaSize: 1.5
     projectileSpeed: 12

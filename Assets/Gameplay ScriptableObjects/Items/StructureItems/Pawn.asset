@@ -59,7 +59,7 @@ MonoBehaviour:
     currentCooldown: 0
     areaSize: 1
     projectileSpeed: 7
-    duration: 0.7
+    duration: 1
     projectileAmnt: 1
     timeBetweenMultipleShots: 0.2
     passThroughAmnt: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
   - neededLevel: 1
     upgradeDescriptions:
     - descriptionKey: UPG_DAMAGE
-      value: 1
+      value: 5
     - descriptionKey: UPG_PASSTH1
       value: 1
     range: 1

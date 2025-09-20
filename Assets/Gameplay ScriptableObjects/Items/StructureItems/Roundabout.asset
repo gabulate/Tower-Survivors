@@ -109,3 +109,17 @@ MonoBehaviour:
     projectileAmnt: 3
     timeBetweenMultipleShots: 0.07
     passThroughAmnt: 2
+  - neededLevel: 1
+    upgradeDescriptions:
+    - descriptionKey: UPG_AMOUNT
+      value: 1
+    range: 0
+    damage: 25
+    attackCooldown: 0.6
+    currentCooldown: 0
+    areaSize: 1
+    projectileSpeed: 7
+    duration: 0.7
+    projectileAmnt: 4
+    timeBetweenMultipleShots: 0.07
+    passThroughAmnt: 2
