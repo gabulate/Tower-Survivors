@@ -10,7 +10,7 @@ You can get the released game from
 <h2>Relevant links</h2>
 <ul>
   <li><a href="https://youtu.be/VqbKy6nQXig" target="_blank">Game Release Trailer</a></li>
-  <li><a href="https://gabulate.github.io/me/StructuredDefenders" target="_blank">Learn more</a></li>
+  <li><a href="https://gabulate.com/Gamedev/StructuredDefenders" target="_blank">Learn more</a></li>
 </ul>
 
 <h3>Software Used</h3>
